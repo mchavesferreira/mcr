@@ -20,11 +20,11 @@
 ;====================================================================
 ; CODE SEGMENT
 ;====================================================================
-.include Òbiblioteca.inc"
+.include biblioteca.inc"
 INICIO:
 
 
-	rcall lcd_init	; Inicialização do LCD (VSS=GND VDD=5V VO=GND RS=PD2 RW=GND E=PD3  
+	rcall lcd_init	; InicializaÃ§Äƒo do LCD (VSS=GND VDD=5V VO=GND RS=PD2 RW=GND E=PD3  
                         ;  D4=PD4 D5=PD5 D6=PD6 D7=PD7 A=5V K=GND) 
 loop:
 	rcall lcd_clear	; Chama rotina limpar o LCD e posicionar na linha 0, coluna 0
