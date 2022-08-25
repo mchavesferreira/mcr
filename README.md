@@ -10,7 +10,7 @@ Exemplos:
 https://wokwi.com/projects/340959007153848914  Chip ID<BR>
 <a href=https://wokwi.com/projects/340963795998343762>Teste leitura analógica</a>
 
-
+<br><a href=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png target=_blank><img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout<a/>
 Aula 18/8   Programa <a href=https://wokwi.com/projects/340328764284076626> link1 </a>
 
 Atividade para o dia 11/08/2022.
