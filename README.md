@@ -1,4 +1,8 @@
 # mcr
+Links:
+<a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem</a>
+
+
 Aula 25/8 
 Exemplos:
 https://wokwi.com/projects/340959007153848914  Chip ID
