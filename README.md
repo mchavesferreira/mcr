@@ -7,7 +7,8 @@ Simulador <a href=https://wokwi.com/projects/new/micropython-esp32>ESP32 Online<
 
 Aula 25/8 
 Exemplos:
-https://wokwi.com/projects/340959007153848914  Chip ID
+https://wokwi.com/projects/340959007153848914  Chip ID<BR>
+<a href=https://wokwi.com/projects/340963795998343762>Teste leitura analógica</a>
 
 
 Aula 18/8   Programa <a href=https://wokwi.com/projects/340328764284076626> link1 </a>
