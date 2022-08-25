@@ -1,6 +1,6 @@
 # mcr
 <b>Links:</b><BR>
-<a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem</a><BR>
+<a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a><BR>
 Simulador <a href=https://wokwi.com/projects/new/micropython-esp32>ESP32 Online</a>
 <BR>
 
