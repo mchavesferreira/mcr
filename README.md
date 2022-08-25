@@ -1,4 +1,9 @@
 # mcr
+Aula 25/8 
+Exemplos:
+https://wokwi.com/projects/340959007153848914  Chip ID
+
+
 Aula 18/8   Programa <a href=https://wokwi.com/projects/340328764284076626> link1 </a>
 
 Atividade para o dia 11/08/2022.
