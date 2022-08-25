@@ -1,6 +1,8 @@
 # mcr
-Links:
+Links:<BR>
 <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem</a>
+Simulador <a href=https://wokwi.com/projects/new/micropython-esp32>ESP32 Online</a>
+<BR>
 
 
 Aula 25/8 
