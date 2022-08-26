@@ -3,6 +3,7 @@
 <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a><BR>
 Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
 <BR>
+Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
 
 
 Aula 25/8 
