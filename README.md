@@ -5,6 +5,11 @@ Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
 <BR>
 Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
 
+Aula 01/09
+<BR>01: <a href=https://wokwi.com/projects/341561728616628819>Mapeamento de pinos ESP32</a>
+<BR>02: <a href=https://wokwi.com/projects/341562296506516051>LED RGB e uso de analog_write() para PWM</a>
+<BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
+<BR>04: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
 
 Aula 25/8 
 Uso de Variáveis, #define, funções próprias para I/0 Arduino<BR>
