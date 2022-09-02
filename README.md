@@ -11,6 +11,8 @@ Aula 01/09
 <BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
 <BR>04: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
 <P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Sistema de cores RGB</a>, conversao para a função analog_write(pino,(4095/255)*valortabela);
+<P> <a href=https://wokwi.com/projects/341698810319209042><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/leituraserial_rgb.png border=0>Leitura de cores utilizando serial</a>. Autores: Vinicius e Japa.<BR><BR>
+
 Aula 25/8 
 Uso de Variáveis, #define, funções próprias para I/0 Arduino<BR>
 Exemplos:
