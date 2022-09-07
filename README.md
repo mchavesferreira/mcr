@@ -6,10 +6,15 @@ Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
 Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
 
 Aula 01/09
+<P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
 <BR>01: <a href=https://wokwi.com/projects/341561728616628819>Mapeamento de pinos ESP32</a>
+<P>PWM - Simulando saída analógica
 <BR>02: <a href=https://wokwi.com/projects/341562296506516051>LED RGB e uso de analog_write() para PWM</a>
+<P>Função Debounce e uso de condição de fluxo IF
 <BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
+<P>Imprimindo e lendo na porta serial (UART)
 <BR>04: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
+<P>Exemplos aplicando porta serial e PWM
 <BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>. Autores: Vinicius e Japa
 
 <P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Sistema de cores RGB</a>, conversao para a função analog_write(pino,(4095/255)*valortabela);
