@@ -70,8 +70,8 @@ Aula 01/09
 <BR>02: <a href=https://wokwi.com/projects/341562296506516051>LED RGB e uso de analog_write() para PWM</a>
 <P>Função Debounce e uso de condição de fluxo IF
 <BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
-<P>Imprimindo e lendo na porta serial (UART)
-<details><summary>ver código Serial</summary>
+<P>Imprimindo e lendo na porta serial (UART)<BR>
+<details><summary>code</summary>
 <p>
 #### We can hide anything, even code!
 ```ruby
