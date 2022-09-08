@@ -59,7 +59,19 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>vetor
 <BR>void
 <BR>word 
- <BR><BR> 
+<BR><BR> 
+
+<details><summary>CLICK ME</summary>
+<p>
+
+#### We can hide anything, even code!
+
+```ruby
+   puts "Hello World"
+```
+
+</p>
+</details>
   
 Aula 01/09
 <P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
