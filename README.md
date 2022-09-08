@@ -6,14 +6,14 @@ Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
 Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
 
 <center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
-<B>Funções</b>
-Para controlar a placa Arduino e realizar computações.
+<BR><B>Funções</b>
+<bR>Para controlar a placa Arduino e realizar computações.
 <BR><I>Entradas e Saídas Digitais</i>
 <BR>digitalRead()
 <BR>digitalWrite()
 <BR>pinMode() 
 <BR>
-<BR><B>Entradas e Saídas Analógicas
+  <BR><B>Entradas e Saídas Analógicas</b>
 <BR>analogRead()
 <BR>analogReference()
 <BR>analogWrite() 
