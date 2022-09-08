@@ -70,11 +70,9 @@ Aula 01/09
 <BR>02: <a href=https://wokwi.com/projects/341562296506516051>LED RGB e uso de analog_write() para PWM</a>
 <P>Função Debounce e uso de condição de fluxo IF
 <BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
-<P>Imprimindo e lendo na porta serial (UART)<BR>
+<P>04: Imprimindo e lendo na porta serial (UART)<BR>
 <details><summary>Codigo Serial</summary>
 <p>
-
-#### We can hide anything, even code!
 
 ```ruby
    Serial.begin(115200);
@@ -89,7 +87,7 @@ Aula 01/09
 </details>
 
   
-<BR>04: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
+<BR> <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
 <P>Exemplos aplicando porta serial e PWM
 <BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
 
