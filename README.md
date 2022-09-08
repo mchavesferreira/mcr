@@ -1,10 +1,66 @@
 # mcr
 <b>Links:</b><BR>
-<a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a><BR>
+
 Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
 <BR>
 Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
 
+<center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
+<B>Funções</b>
+Para controlar a placa Arduino e realizar computações.
+<BR><I>Entradas e Saídas Digitais</i>
+<BR>digitalRead()
+<BR>digitalWrite()
+<BR>pinMode() 
+<BR>
+<BR><B>Entradas e Saídas Analógicas
+<BR>analogRead()
+<BR>analogReference()
+<BR>analogWrite() 
+<BR>
+<BR><B>Funções Temporizadoras
+<BR>delay()
+<BR>delayMicroseconds()
+<BR>micros()
+<BR>millis() 
+  <BR>
+  
+<BR><B>Comunicação
+<BR>Serial
+<BR>Stream 
+ <BR>
+<BR><B>Variáveis
+<BR>
+<BR>Tipos de dados e constantes da linguagem Arduino.
+<BR><B>Constantes
+<BR>HIGH | LOW
+<BR>INPUT | OUTPUT | INPUT_PULLUP
+<BR>LED_BUILTIN
+<BR>true | false
+<BR>Constantes de Ponto Flutuante
+<BR>Constantes Inteiras
+ <BR> 
+<BR><B>Tipos de Dados
+<BR>bool
+<BR>boolean
+<BR>byte
+<BR>char
+<BR>double
+<BR>float
+<BR>int
+<BR>long
+<BR>short
+<BR>size_t
+<BR>string
+<BR>String()
+<BR>unsigned char
+<BR>unsigned int
+<BR>unsigned long
+<BR>vetor
+<BR>void
+<BR>word 
+ <BR><BR> 
+  
 Aula 01/09
 <P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
 <BR>01: <a href=https://wokwi.com/projects/341561728616628819>Mapeamento de pinos ESP32</a>
