@@ -61,13 +61,18 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>word 
 <BR><BR> 
 
-<details><summary>CLICK ME</summary>
+<details><summary>Mais detalhes</summary>
 <p>
 
 #### We can hide anything, even code!
 
 ```ruby
-   puts "Hello World"
+  Serial.begin(115200);
+  Serial.println("Please enter your name:");
+  while (!Serial.available()); // Wait for input
+  String name = Serial.readStringUntil('\n');
+  Serial.print("Hello, ");
+  Serial.print(name);
 ```
 
 </p>
