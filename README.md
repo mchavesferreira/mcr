@@ -61,22 +61,7 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>word 
 <BR><BR> 
 
-<details><summary>Mais detalhes</summary>
-<p>
 
-#### We can hide anything, even code!
-
-```ruby
-  Serial.begin(115200);
-  Serial.println("Please enter your name:");
-  while (!Serial.available()); // Wait for input
-  String name = Serial.readStringUntil('\n');
-  Serial.print("Hello, ");
-  Serial.print(name);
-```
-
-</p>
-</details>
   
 Aula 01/09
 <P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
@@ -86,6 +71,19 @@ Aula 01/09
 <P>Função Debounce e uso de condição de fluxo IF
 <BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
 <P>Imprimindo e lendo na porta serial (UART)
+<details><summary>ver código Serial</summary>
+<p>
+#### We can hide anything, even code!
+```ruby
+  Serial.begin(115200);
+  Serial.println("Please enter your name:");
+  while (!Serial.available()); // Wait for input
+  String name = Serial.readStringUntil('\n');
+  Serial.print("Hello, ");
+  Serial.print(name);
+```
+</p>
+</details>  
 <BR>04: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
 <P>Exemplos aplicando porta serial e PWM
 <BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
