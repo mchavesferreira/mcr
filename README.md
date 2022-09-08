@@ -81,7 +81,7 @@ void loop() {
   u8g2.sendBuffer();					// transferindo da memoria interna para display
   delay(1000);
 }  
-
+```
 </p>
 </details>
   
