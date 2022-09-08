@@ -15,9 +15,9 @@ Aula 01/09
 <P>Imprimindo e lendo na porta serial (UART)
 <BR>04: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
 <P>Exemplos aplicando porta serial e PWM
-<BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>. Autores: Vinicius e Japa
+<BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
 
-<P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>, conversao para a função analog_write(pino,(4095/255)*valortabela);
+<P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>
 <P> 
 
 Aula 25/8<BR>
