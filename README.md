@@ -23,13 +23,13 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>delayMicroseconds()
 <BR>micros()
 <BR>millis()
-  <BR>
+<BR>
   
-    <BR><B>Comunicação</b>
+<BR><B>Comunicação</b>
 <BR>Serial
 <BR>Stream 
- <BR>
-   <BR><B>Variáveis</b>
+<BR>
+<BR><B>Variáveis</b>
 <BR>
 <BR>Tipos de dados e constantes da linguagem Arduino.
 <BR><B>Constantes</b>
