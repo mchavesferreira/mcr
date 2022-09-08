@@ -61,8 +61,30 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>word 
 <BR><BR> 
   
+<details><summary>Exemplo Oled</summary>
+<p>
 
-  
+```ruby  
+*/
+#include <U8g2lib.h>
+#include <Wire.h>
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
+
+void setup() {
+  u8g2.begin();
+}
+
+void loop() {
+  u8g2.clearBuffer();					// limpa memoria interna
+  u8g2.setFont(u8g2_font_ncenB08_tr);	// escolha da fonte
+  u8g2.drawStr(15, 10, "IFSP Catanduva");	// escrevendo na memoria interna
+  u8g2.sendBuffer();					// transferindo da memoria interna para display
+  delay(1000);
+}  
+
+</p>
+</details>
+<BR>  
 Aula 01/09
 <P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
 <BR>01: <a href=https://wokwi.com/projects/341561728616628819>Mapeamento de pinos ESP32</a>
