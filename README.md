@@ -64,7 +64,7 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 Aula 08/09
 <BR>Displays LCD, Oled, comunicação I2C
 <BR>  
-  <Br> <img src= width=400 height=225><BR>
+  <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=225><BR>
 <details><summary>Exemplo Oled</summary>
 <p>
 
