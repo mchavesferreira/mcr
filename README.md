@@ -18,21 +18,21 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>analogReference()
 <BR>analogWrite() 
 <BR>
-<BR><B>Funções Temporizadoras
+  <BR><B>Funções Temporizadoras</b>
 <BR>delay()
 <BR>delayMicroseconds()
 <BR>micros()
 <BR>millis() 
   <BR>
   
-<BR><B>Comunicação
+    <BR><B>Comunicação</b>
 <BR>Serial
 <BR>Stream 
  <BR>
-<BR><B>Variáveis
+   <BR><B>Variáveis</b>
 <BR>
 <BR>Tipos de dados e constantes da linguagem Arduino.
-<BR><B>Constantes
+<BR><B>Constantes</b>
 <BR>HIGH | LOW
 <BR>INPUT | OUTPUT | INPUT_PULLUP
 <BR>LED_BUILTIN
