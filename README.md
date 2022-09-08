@@ -84,6 +84,7 @@ void loop() {
 
 </p>
 </details>
+  
 <BR>  
 Aula 01/09
 <P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
@@ -93,6 +94,7 @@ Aula 01/09
 <P>Função Debounce e uso de condição de fluxo IF
 <BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
 <P>04: Imprimindo e lendo na porta serial (UART)<BR>
+  
 <details><summary>Codigo Serial</summary>
 <p>
 
