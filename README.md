@@ -64,6 +64,7 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 Aula 08/09
 <BR>Displays LCD, Oled, comunicação I2C
 <BR>  
+  <Br> <img src= width=400 height=225><BR>
 <details><summary>Exemplo Oled</summary>
 <p>
 
@@ -87,6 +88,10 @@ void loop() {
 ```
 </p>
 </details>
+<BR>Simulações:
+  <BR>01 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
+  <BR>02 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
+
   
 <BR>  
 Aula 01/09
