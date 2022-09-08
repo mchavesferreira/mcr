@@ -22,7 +22,7 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>delay()
 <BR>delayMicroseconds()
 <BR>micros()
-<BR>millis() 
+<BR>millis()
   <BR>
   
     <BR><B>Comunicação</b>
