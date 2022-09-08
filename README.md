@@ -40,7 +40,7 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>Constantes de Ponto Flutuante
 <BR>Constantes Inteiras
  <BR> 
-<BR><B>Tipos de Dados
+   <BR><B>Tipos de Dados</b>
 <BR>bool
 <BR>boolean
 <BR>byte
