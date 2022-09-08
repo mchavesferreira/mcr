@@ -17,20 +17,20 @@ Aula 01/09
 <P>Exemplos aplicando porta serial e PWM
 <BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>. Autores: Vinicius e Japa
 
-<P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Sistema de cores RGB</a>, conversao para a função analog_write(pino,(4095/255)*valortabela);
+<P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>, conversao para a função analog_write(pino,(4095/255)*valortabela);
 <P> 
 
 Aula 25/8<BR>
 Uso de Variáveis, #define e funções próprias para I/0 Arduino<BR>
-<BR>01: GPIOs, leitura e escrita em pinos digitais<a href=https://wokwi.com/projects/339670467067511378>Leitura de pino </a>
-<bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento <a href=https://wokwi.com/projects/340963795998343762>Teste leitura analógica</a>
+<BR>01: GPIOs, leitura e escrita em pinos digitais<a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
+<bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
 
 <br><a href=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png target=_blank><img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout<a/>
 <BR><a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
   
- <BR>Aulas 11 e 18/8<BR>
+ <BR>Aulas 18/8<BR>
   <BR>Variáveis e Operadores</b><BR>
- <BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>  </a>
+ <BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
 
 Atividade para o dia 11/08/2022.
 
