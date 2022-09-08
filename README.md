@@ -60,7 +60,10 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>void
 <BR>word 
 <BR><BR> 
-  
+
+Aula 08/09
+<BR>Displays LCD, Oled, comunicação I2C
+<BR>  
 <details><summary>Exemplo Oled</summary>
 <p>
 
@@ -75,10 +78,10 @@ void setup() {
 }
 
 void loop() {
-  u8g2.clearBuffer();					// limpa memoria interna
+  u8g2.clearBuffer();	// limpa memoria interna
   u8g2.setFont(u8g2_font_ncenB08_tr);	// escolha da fonte
   u8g2.drawStr(15, 10, "IFSP Catanduva");	// escrevendo na memoria interna
-  u8g2.sendBuffer();					// transferindo da memoria interna para display
+  u8g2.sendBuffer(); // transferindo da memoria interna para display
   delay(1000);
 }  
 ```
