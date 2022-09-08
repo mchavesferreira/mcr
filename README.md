@@ -8,7 +8,7 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
 <BR><B>Funções</b>
 <bR>Para controlar a placa Arduino e realizar computações.
-<BR><I>Entradas e Saídas Digitais</i>
+<BR><b>Entradas e Saídas Digitais</b>
 <BR>digitalRead()
 <BR>digitalWrite()
 <BR>pinMode() 
