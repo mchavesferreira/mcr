@@ -40,7 +40,7 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>Constantes de Ponto Flutuante
 <BR>Constantes Inteiras
  <BR> 
-   <BR><B>Tipos de Dados</b>
+<BR><B>Tipos de Dados</b>
 <BR>bool
 <BR>boolean
 <BR>byte
@@ -60,7 +60,19 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>void
 <BR>word 
 <BR><BR> 
-
+  
+  
+#### We can hide anything, even code!
+```ruby
+  Serial.begin(115200);
+  Serial.println("Please enter your name:");
+  while (!Serial.available()); // Wait for input
+  String name = Serial.readStringUntil('\n');
+  Serial.print("Hello, ");
+  Serial.print(name);
+```
+</p>
+</details>
 
   
 Aula 01/09
@@ -73,17 +85,7 @@ Aula 01/09
 <P>Imprimindo e lendo na porta serial (UART)<BR>
 <details><summary>code</summary>
 <p>
-#### We can hide anything, even code!
-```ruby
-  Serial.begin(115200);
-  Serial.println("Please enter your name:");
-  while (!Serial.available()); // Wait for input
-  String name = Serial.readStringUntil('\n');
-  Serial.print("Hello, ");
-  Serial.print(name);
-```
-</p>
-</details>  
+  
 <BR>04: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
 <P>Exemplos aplicando porta serial e PWM
 <BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
