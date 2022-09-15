@@ -63,6 +63,14 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 
 <BR>Aula 15/09
   <BR><B>Trabalho para Bimestre 3:</b><BR>
+    Utilizando o projeto inicial a seguir, crie uma máquina personalizada atenda os seguintes critérios:<BR>
+    -  apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo)
+    - ajustes de pelo menos 02  valores inteiros.
+    - utilize pelo menos 03 leds como saída
+    - nesta primeira entrega do projeto, as perguntas e possíveis respostas poderão ser na porta serial.
+    - na segunda etapa as perguntas e respostas devem utilizar display e botões (exemplos + - enter)
+    - enviar o link da primeira fase no email: mchavesferreira@gmail.com
+    - segunda fase enviar o link na área trabalhos (suap), cada integrante da dupla deve postar.
 https://wokwi.com/projects/342835850626728530
 <BR>
   <BR>
