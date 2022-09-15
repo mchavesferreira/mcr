@@ -61,7 +61,7 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>word 
 <BR><BR> 
 
-<BR>Aula 15/09
+  <BR><i>Aula 15/09</i>
   <BR><B>Trabalho para Bimestre 3:</b><BR>
    <BR> Utilizando o projeto inicial a seguir, crie uma máquina personalizada atenda os seguintes critérios:<BR>
    <BR> -  apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo)
@@ -71,10 +71,14 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
    <BR> - na segunda etapa as perguntas e respostas devem utilizar display e botões (exemplos + - enter) (2,0 pontos)
    <BR> - enviar o link da primeira fase no email: mchavesferreira@gmail.com
    <BR> - segunda fase enviar o link na área trabalhos (suap), cada integrante da dupla deve postar.
-<BR>Link de exemplo inicial: https://wokwi.com/projects/342835850626728530
   <BR> - As duplas não podem ter trabalhos "clones", criatividade e dificuldades serão pontuados
    <BR> - A utilização de PWM e entrada analógica será considerada como maior pontuação.
+   <BR>  <BR>Link de exemplo inicial: https://wokwi.com/projects/342835850626728530
 <BR>
+     <BR></b>Orientações</B> para o código. Utilize switch()/case  para estruturar seu projeto;
+  <BR>A utilização de funções deixam o código limpo e facilmente comprensível
+    <br>Variáveis que serão utlizadas em funções diferentes devem ser globais. Variáveis locais são sempre recomendadas para economia de memória RAM.
+    
   <BR>
 Aula 08/09
 <BR>Displays LCD, Oled, comunicação I2C
