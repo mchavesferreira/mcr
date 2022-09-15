@@ -62,9 +62,10 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR><BR> 
 
 <BR>Aula 15/09
-Trabalho para Bimestre 3:<BR>
+  <BR><B>Trabalho para Bimestre 3:</b><BR>
 https://wokwi.com/projects/342835850626728530
 <BR>
+  <BR>
 Aula 08/09
 <BR>Displays LCD, Oled, comunicação I2C
   <BR>Simulações:
