@@ -62,12 +62,12 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR><BR> 
 
   <BR><i>Aula 15/09</i>
-  <BR><B>Trabalho para Bimestre 3:</b><BR>
+  <BR><B>Trabalho para Bimestre 3: (Etapa 1 15/9 horário de aula, Etapa 2: 23/9 Suap)</b><BR>
    <BR> Utilizando o projeto inicial a seguir, crie uma máquina personalizada (não será considerado máquina de lavar) atenda os seguintes critérios:<BR>
-   <BR> -  apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo)
-   <BR> - ajustes de pelo menos 02  valores inteiros.
-   <BR> - utilize pelo menos 03 leds como saída
-   <BR> - nesta primeira entrega do projeto, as perguntas e possíveis respostas poderão ser na porta serial.(2,0 pontos)
+   <BR> -  apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo);
+   <BR> - ajustes de pelo menos 02  valores inteiros;
+   <BR> - utilize pelo menos 03 leds como saídas;
+   <BR> - nesta primeira entrega do projeto(horário da aula 15/9), as perguntas e possíveis respostas poderão ser na porta serial; (2,0 pontos)
    <BR> - na segunda etapa as perguntas e respostas devem utilizar display e botões (exemplos para botões: + - 1 2 3 Y N enter) (2,0 pontos)
    <BR> - enviar o link da primeira fase no email: mchavesferreira@gmail.com
    <BR> - segunda fase enviar o link na área trabalhos (suap), cada integrante da dupla deve postar.
