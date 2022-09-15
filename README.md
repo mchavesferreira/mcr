@@ -63,7 +63,7 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 
   <BR><i>Aula 15/09</i>
   <BR><B>Trabalho para Bimestre 3:</b><BR>
-   <BR> Utilizando o projeto inicial a seguir, crie uma máquina personalizada atenda os seguintes critérios:<BR>
+   <BR> Utilizando o projeto inicial a seguir, crie uma máquina personalizada (não será considerado máquina de lavar) atenda os seguintes critérios:<BR>
    <BR> -  apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo)
    <BR> - ajustes de pelo menos 02  valores inteiros.
    <BR> - utilize pelo menos 03 leds como saída
