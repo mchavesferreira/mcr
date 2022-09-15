@@ -67,8 +67,8 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
    <BR> -  apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo)
    <BR> - ajustes de pelo menos 02  valores inteiros.
    <BR> - utilize pelo menos 03 leds como saída
-   <BR> - nesta primeira entrega do projeto, as perguntas e possíveis respostas poderão ser na porta serial.
-   <BR> - na segunda etapa as perguntas e respostas devem utilizar display e botões (exemplos + - enter)
+   <BR> - nesta primeira entrega do projeto, as perguntas e possíveis respostas poderão ser na porta serial.(2,0 pontos)
+   <BR> - na segunda etapa as perguntas e respostas devem utilizar display e botões (exemplos + - enter) (2,0 pontos)
    <BR> - enviar o link da primeira fase no email: mchavesferreira@gmail.com
    <BR> - segunda fase enviar o link na área trabalhos (suap), cada integrante da dupla deve postar.
 <BR>Link de exemplo inicial: https://wokwi.com/projects/342835850626728530
