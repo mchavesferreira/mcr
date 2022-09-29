@@ -1,7 +1,7 @@
 Exemplo de Prova
 Utilize projetos realizados anteriormente
 Especifique entradas e saídas  acionando devidamente pull up para entradas 
-Considere a utilização da biblioteca utilizada em sala de aula para o display 16x2, e tempos de atraso. Para cada etapa, o display informará a situação sendo executada por mensagens;  
+Considere a utilização da biblioteca utilizada em sala de aula para o display 16x2 ou OLED, e tempos de atraso. Para cada etapa, o display informará a situação sendo executada por mensagens;  
 Utilize o display para ajustar o tempo de resfriamento TR1 através dos botões “+” “-“ e confirmação “Enter”. Após a confirmação do tempo a máquina inicia o processo; 
 Ao pressionar o botão de START, a esteira M1 e a lâmpada é acionada,  e o cilindro C1 avança, até que a peça passe pelo sensor S1; 
 O cilindro então recua, a peça se desloca até o sensor S2; 
