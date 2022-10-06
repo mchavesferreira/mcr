@@ -53,7 +53,9 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
 <P><P>
   <b>Exemplo Acess-Point Wifi</b><BR>
   <img src=imagens/acesspoint.png>
-  <BR><a href= https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/acess_point/acess_point.ino>Codigo .ino acess point</a>
+  <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/acess_point/acess_point.ino>Codigo .ino acess point</a>
+  <BR><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/acesshtml>Codigo .ino e pagina web em index.h</a>
+  
 
    <P><P>
 Referências:
