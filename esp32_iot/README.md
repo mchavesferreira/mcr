@@ -1,8 +1,8 @@
 <h1>Aplicações de Internet das coisas com ESP32</h1>
-<BR>4 Bimestre/MCR/Prof. Marcos Chaves
+<BR>4° Bimestre/MCR/Prof. Marcos Chaves
 
 <P>07/Outubro/2022
-01- Criando um web server para exibir dados
+##01- Criando um web server para exibir dados
 <BR>Um servidor Web é um programa que usa HTTP (Hypertext Transfer Protocol) para servir os arquivos que formam páginas da Web aos usuários, em resposta às suas solicitações (métodos GET ou POST), que são encaminhadas pelos clientes HTTP de seus computadores ou smartphones.
 Para implementar uma pagina web no Esp32, existem duas maneiras de fazer: <b>Web Server</b> - o servidor web primeiro se conectar ao seu roteador WiFi; ou <b>Acess Point</b> - tornar o Esp32 como ponto de acesso.
 A ideia do Access Point (AP) é criar um ponto de acesso, uma rede WiFi, com nome e senha personalizadas para podermos criar uma rede local e comunicar com o ESP32. 
