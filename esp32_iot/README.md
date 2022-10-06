@@ -17,3 +17,8 @@ Modo nulo: Este modo coloca o WiFi do Esp32 em um estado de baixo consumo, como 
 Formatação Html
 
 <a href=https://www.w3schools.com/htmL/default.asp>Guia de elementos html</a> para a formatação de paginas html.
+
+
+
+Referências:
+https://mundoprojetado.com.br/criar-access-point-com-nodemcu/
