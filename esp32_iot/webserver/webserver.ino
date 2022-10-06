@@ -11,8 +11,8 @@
 #include <WiFi.h>
 
 // Coloque credenciais da rede wifi
-const char* ssid = "Isaweb_1";
-const char* password = "julia3103";
+const char* ssid = "ifspctd2";
+const char* password = "ifspcatanduva";
 
 // configurar porta para webserver 80
 WiFiServer server(80);
