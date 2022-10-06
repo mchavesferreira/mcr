@@ -21,7 +21,7 @@ Modo nulo: Este modo coloca o WiFi do Esp32 em um estado de baixo consumo, como 
 <P><b>Criando paginas html</B></p>
 Todos os servidores web possuem uma página web a ser atendida. Primeiro faça uma página web usando HTML e teste-a no seu computador.
 Você pode testar uma pagina web em seu navegador, utilizando bloco de notas para escrever o código HTML. Salve como index.htm e abra em seu browser.
-<code><HTML>
+<HTML>
 	<HEAD>
 		<TITLE>My first web page</TITLE>
 	</HEAD>
@@ -31,7 +31,7 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
 	</CENTER>	
 </BODY>
 </HTML>
-</code>
+
 
 Formatação Html
 
