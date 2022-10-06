@@ -1,7 +1,7 @@
 <h1>Aplicações de Internet das coisas com ESP32</h1>
 <BR>4° Bimestre/MCR/Prof. Marcos Chaves
-
-	<P>07/Outubro/2022</P>
+<BR>
+	<P>07/Outubro/2022
 <BR>01- Criando um web server para controle e exibição de dados (Dashboard)<BR>
 	
  <BR> <img src=imagens/webserver.png>
@@ -31,11 +31,11 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
 ```ruby
 	<HTML>
 	<HEAD>
-		<TITLE>My first web page</TITLE>
+		<TITLE>Minha primeira pagina web</TITLE>
 	</HEAD>
 <BODY>
 	<CENTER>
-		<B>Hello World.... </B>
+		<B>Olá mundo.... </B>
 	</CENTER>	
 </BODY>
 </HTML>
