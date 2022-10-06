@@ -2,7 +2,10 @@
 <BR>4° Bimestre/MCR/Prof. Marcos Chaves
 
 <P>07/Outubro/2022
-##01- Criando um web server para exibir dados
+<BR>01- Criando um web server para controle e exibição de dados (Dashboard)<BR>
+	
+ <BR> <img src=imagens/webserver.png>
+	
 <BR>Um servidor Web é um programa que usa HTTP (Hypertext Transfer Protocol) para servir os arquivos que formam páginas da Web aos usuários, em resposta às suas solicitações (métodos GET ou POST), que são encaminhadas pelos clientes HTTP de seus computadores ou smartphones.
 Para implementar uma pagina web no Esp32, existem duas maneiras de fazer: <b>Web Server</b> - o servidor web primeiro se conectar ao seu roteador WiFi; ou <b>Acess Point</b> - tornar o Esp32 como ponto de acesso.
 A ideia do Access Point (AP) é criar um ponto de acesso, uma rede WiFi, com nome e senha personalizadas para podermos criar uma rede local e comunicar com o ESP32. 
@@ -33,17 +36,17 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
 </HTML>
 
 
-Formatação Html
+<a href=https://www.w3schools.com/htmL/default.asp>Guia de elementos html</a>. A w3schools disponiliza um vasto tutorial de formatação de elementos em Html e outras formatações para criação de paginas html.
 
-<a href=https://www.w3schools.com/htmL/default.asp>Guia de elementos html</a> para a formatação de paginas html.
+
 
 <P><P>
-  <b>Exemplo Web Server</b><BR>
-  <img src=https://i0.wp.com/randomnerdtutorials.com/wp-content/uploads/2018/07/esp32-we-server.jpg?resize=524%2C276&quality=100&strip=all&ssl=1>
+  <b>Exemplo Estação Wifi</b><BR>
+ <img src=imagens/station.png>
   <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/webserver/webserver.ino>Exemplo Webserver</a>
 
 <P><P>
-  <b>Exemplo Acess-Point</b><BR>
+  <b>Exemplo Acess-Point Wifi</b><BR>
   <img src=imagens/acesspoint.png>
   <BR><a href= https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/acess_point/acess_point.ino>Exemplo acess point</a>
 
