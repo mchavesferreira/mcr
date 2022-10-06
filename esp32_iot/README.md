@@ -1,7 +1,7 @@
 <h1>Aplicações de Internet das coisas com ESP32</h1>
 <BR>4° Bimestre/MCR/Prof. Marcos Chaves
 
-<P>07/Outubro/2022
+	<P>07/Outubro/2022</P>
 <BR>01- Criando um web server para controle e exibição de dados (Dashboard)<BR>
 	
  <BR> <img src=imagens/webserver.png>
@@ -28,7 +28,7 @@ Todos os servidores web possuem uma página web a ser atendida. Primeiro faça u
 Você pode testar uma pagina web em seu navegador, utilizando bloco de notas para escrever o código HTML. Salve como index.htm e abra em seu browser.
 	
 	
-```
+```ruby
 	<HTML>
 	<HEAD>
 		<TITLE>My first web page</TITLE>
