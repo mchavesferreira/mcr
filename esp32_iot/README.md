@@ -5,9 +5,10 @@ A ideia do Access Point (AP) é criar um ponto de acesso, uma rede WiFi, com nom
 O access point é uma opção em locais onde não existe uma rede WiFi para conectar o ESP32, ou então existe, mas ela é instável ou inacessível.
 
 O Esp32 disponiliza 4 modos diferentes de Wifi:
+
 Modo estação:  utilizado para conectar o Esp32 à uma rede WiFi existente. 
 
-Modo SOFTAP: Este é o modo utilizado para criar apenas o ponto de acesso. Por padrão, o IP do NodeMcu será 192.168.4.1.
+Modo SOFTAP (acess point): Este é o modo utilizado para criar apenas o ponto de acesso. Por padrão, o IP do NodeMcu será 192.168.4.1.
 
 Modo STATIONAP: Neste modo o Esp32 é capaz de trabalhar no modo de estação e no modo SOFTAP.
 
