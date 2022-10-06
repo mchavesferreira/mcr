@@ -8,8 +8,8 @@
 	
 <BR>Um servidor Web é um programa que usa HTTP (Hypertext Transfer Protocol) para servir os arquivos que formam páginas da Web aos usuários, em resposta às suas solicitações (métodos GET ou POST), que são encaminhadas pelos clientes HTTP de seus computadores ou smartphones.
 <BR>Para implementar uma pagina web no Esp32, existem duas maneiras de fazer: 
-	<b>Web Server</b> - o servidor web primeiro se conectar ao seu roteador WiFi; ou
-	<b>Acess Point</b> - tornar o Esp32 como ponto de acesso.
+	<BR><b>-Web Server</b> - o servidor web primeiro se conectar ao seu roteador WiFi; ou
+	<BR><b>-Acess Point</b> - tornar o Esp32 como ponto de acesso.
 <BR>A ideia do Access Point (AP) é criar um ponto de acesso, uma rede WiFi, com nome e senha personalizadas para podermos criar uma rede local e comunicar com o ESP32. 
 <BR>O access point é uma opção em locais onde não existe uma rede WiFi para conectar o ESP32, ou então existe, mas ela é instável ou inacessível.
 
@@ -43,14 +43,14 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
 
 
 <P><P>
-  <b>Exemplo Estação Wifi</b><BR>
+  <b>Exemplo Modo Estação</b><BR>
  <img src=imagens/station.png>
-  <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/webserver/webserver.ino>Exemplo Webserver</a>
+  <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/webserver/webserver.ino>Codigo .ino estação</a>
 
 <P><P>
   <b>Exemplo Acess-Point Wifi</b><BR>
   <img src=imagens/acesspoint.png>
-  <BR><a href= https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/acess_point/acess_point.ino>Exemplo acess point</a>
+  <BR><a href= https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/acess_point/acess_point.ino>Codigo .ino acess point</a>
 
    <P><P>
 Referências:
