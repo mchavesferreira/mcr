@@ -6,10 +6,14 @@ O access point é uma opção em locais onde não existe uma rede WiFi para cone
 
 O Esp32 disponiliza 4 modos diferentes de Wifi:
 
-Modo estação:  utilizado para conectar o Esp32 à uma rede WiFi existente. 
+Modo estação:  utilizado para conectar o Esp32 à uma rede WiFi existente. <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/webserver/webserver.ino>Exemplo Webserver</a>
 
-Modo SOFTAP (acess point): Este é o modo utilizado para criar apenas o ponto de acesso. Por padrão, o IP do NodeMcu será 192.168.4.1.
+Modo SOFTAP (acess point): Este é o modo utilizado para criar apenas o ponto de acesso. Por padrão, o IP do NodeMcu será 192.168.4.1. <a href= >Exemplo Acess point</a>
 
 Modo STATIONAP: Neste modo o Esp32 é capaz de trabalhar no modo de estação e no modo SOFTAP.
 
 Modo nulo: Este modo coloca o WiFi do Esp32 em um estado de baixo consumo, como se o módulo do WiFi ficasse desligado.
+
+Formatação Html
+
+<a href=https://www.w3schools.com/htmL/default.asp>Guia de elementos html</a> para a formatação de paginas html.
