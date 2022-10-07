@@ -21,6 +21,9 @@
 - [Interrupções e Funções de tempo](#tempo)
 	- [millis()](#função-millis)
 	- [Interrupção Externa](#Interrupção-externa)
+- [Projetos](#projetos)
+	- [maquina de lavar](#maquina-de-lavar)
+	- [Projeto Avaliação](#projeto-avaliação)
 - [Servidor Web](#servidor-web)
 
 
@@ -199,7 +202,7 @@ Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
 Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
  
 ## Projetos 
-### Maquina de lavar Roupa
+### maquina de lavar
   <BR><i>Aula 15/09</i>
   <BR><B>Trabalho para Bimestre 3: (Etapa 1 15/9 horário de aula, Etapa 2: 23/9 Suap)</b><BR>
    <BR> Utilizando o projeto inicial a seguir, crie uma máquina personalizada (não será considerado máquina de lavar) atenda os seguintes critérios:<BR>
@@ -219,7 +222,9 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
     <br>Variáveis que serão utlizadas em funções diferentes devem ser globais. Variáveis locais são sempre recomendadas para economia de memória RAM.
     
   <BR>
-
+### Projeto Avaliação 
+<P><a href=https://github.com/mchavesferreira/mcr/tree/main/trabalho>Trabalho</a> <B>Revisão da prova bimestre 3</b>
+	  
 Atividade para o dia 11/08/2022.
 
 Acesse o seguinte projeto com este <a href=https://wokwi.com/projects/339673145686360659>link</a>.
@@ -244,7 +249,6 @@ Explore o código que utliza máquina de estados para a mudança através da ló
 ## Servidor Web
 <P><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot>Esp32 como servidor de pagina</a><B> Introdução a internet das coisas </b>
 
-<P><a href=https://github.com/mchavesferreira/mcr/tree/main/trabalho>Trabalho</a> <B>Revisão da prova bimestre 3</b>
 
 
 
