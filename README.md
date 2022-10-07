@@ -10,8 +10,8 @@
 - [Funções principais](#Funçoes-principais)
 - [Variáveis e Operadores](#variaveis-operadores)
 - [GPIOs, leitura e escrita em pinos digitais](#gpio-digital)
-- [Leitura Analógica](#analogRead)
-- [Comunicação Serial](#serial-uart)
+- [Leitura Analógica](#Leitura-analógica)
+- [Comunicação Serial](#Comunicação-serial)
 - [Display](#Display)
 	- [LCD 16x2](#lcd-16x2)
 	- [Oled](#display-oled)
@@ -31,14 +31,14 @@
 
 
 ## GPIO Digital
-	 Uso de Variáveis, #define e funções próprias para I/0 Arduino
-<BR>01: GPIOs, leitura e escrita em pinos digitais<a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
+Uso de Variáveis, #define e funções próprias para I/0 Arduino
+<BR>01: GPIOs, leitura e escrita em pinos digitais. Simulação: <a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
 
-## Analog Read
-<bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
+## Leitura analógica
+<bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento. Simulação: <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
 
-#serial-uart
-<P>Imprimindo e lendo na porta serial (UART)<BR>
+## Comunicação Serial
+Imprimindo e lendo na porta serial (UART)<BR>
   
 <details><summary>Codigo Serial</summary>
 <p>
@@ -56,11 +56,11 @@
 </details>
 
   
-<BR> <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
+<BR>Simulação: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
 <P>Exemplos aplicando porta serial e PWM
 <BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
 
-## Displays
+## Display
  
 <BR>Displays LCD, Oled, comunicação I2C
 ### LCD 16x2
