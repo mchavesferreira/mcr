@@ -7,34 +7,34 @@
 
 ## Aulas
 - [Arduino Referências](#Referências-Arduino)
-- [Funções principais](#supported-protocols)
+- [Funções principais](#Funçoes-principais)
 - [Variáveis e Operadores](#variaveis-operadores)
-- [GPIOs, leitura e escrita em pinos digitais](#read-write-digital)
+- [GPIOs, leitura e escrita em pinos digitais](#gpio-digital)
 - [Leitura Analógica](#analogRead)
 - [Comunicação Serial](#serial-uart)
-- [Display](#display) 
-         - [LCD 16X2](#display-16X2)
-         - [OLED](#display-oled)
+- [Display](#Display)
+	- [LCD 16x2](#lcd-16x2)
+	- [Oled](#display-oled)
 - [Leitura Analógica](#analogRead)
 - [Servidor Web](#using-the-library)
+	- [Station](#Estação-wifi)
+	- [Acess Point](#acess-point)
 
-- [Using the library](#using-the-library)
-	- [A full example](#a-full-example)
-	- [Address check](#address-check)
 
-#variaveis-operadores
+
+## variaveis operadores
   <BR>Variáveis e Operadores</b><BR>  
  <BR>Aula 18/8<BR>
 
  <BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
 
-Aula 25/8<BR>
-##Uso de Variáveis, #define e funções próprias para I/0 Arduino
 
-#read-write-digital
+
+## GPIO Digital
+	 Uso de Variáveis, #define e funções próprias para I/0 Arduino
 <BR>01: GPIOs, leitura e escrita em pinos digitais<a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
 
-#analogRead
+## Analog Read
 <bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
 
 #serial-uart
@@ -60,21 +60,21 @@ Aula 25/8<BR>
 <P>Exemplos aplicando porta serial e PWM
 <BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
 
-#Displays
+## Displays
  
 <BR>Displays LCD, Oled, comunicação I2C
-## LCD 16x2
+### LCD 16x2
   <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
   <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
   
-## Oled   
+### Display Oled   
   <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
   <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
    
-#Interrupção e funções de tempo
-  ##millis()
+## Interrupção e funções de tempo
+  ### millis()
   <br>05 -<a href=https://wokwi.com/projects/342203041946010194> Exemplo função tempo millis()</a>
-  ## Interrupção Externa
+  ### Interrupção Externa
   <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
 <BR>  
  <br><a href=https://wokwi.com/projects/342234932555285074>bomba</a>
@@ -103,7 +103,7 @@ void loop() {
 ```
 </p>
 </details> 
-
+## Pinout ESP32
 <br><a href=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png target=_blank><img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout<a/>
 <BR><a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
 
@@ -111,6 +111,8 @@ void loop() {
 
 ## Referências Arduino
 <center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
+	
+## Funçoes principais
 <BR><B>Funções</b>
 <bR>Para controlar a placa Arduino e realizar computações.
 <BR><b>Entradas e Saídas Digitais</b>
