@@ -7,18 +7,21 @@
 
 ## Aulas
 - [Arduino Referências](#Referências-Arduino)
+- [Pinout Esp32](#pinout-esp32)
+- [Simulador Online](#simulador-wokwi)
 - [Funções principais](#Funçoes-principais)
 - [Variáveis e Operadores](#variaveis-operadores)
 - [GPIOs, leitura e escrita em pinos digitais](#gpio-digital)
-- [Leitura Analógica](#Leitura-analógica)
+- [Tabelas e vetores](#tabelas-vetores)
+- [PWM](#pwm)
 - [Comunicação Serial](#Comunicação-serial)
 - [Display](#Display)
 	- [LCD 16x2](#lcd-16x2)
 	- [Oled](#display-oled)
-- [Leitura Analógica](#analogRead)
-- [Servidor Web](#using-the-library)
-	- [Station](#Estação-wifi)
-	- [Acess Point](#acess-point)
+- [Interrupções e Funções de tempo](#tempo)
+	- [millis()](#função-millis)
+	- [Interrupção Externa](#Interrupção-externa)
+- [Servidor Web](#servidor-web)
 
 
 
@@ -32,8 +35,24 @@
 
 ## GPIO Digital
 Uso de Variáveis, #define e funções próprias para I/0 Arduino
-<BR>01: GPIOs, leitura e escrita em pinos digitais. Simulação: <a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
+<BR>GPIOs, leitura e escrita em pinos digitais. Simulação: <a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
 
+
+##Tabelas Vetores
+<P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
+<BR>01: <a href=https://wokwi.com/projects/341561728616628819> Mapeamento de pinos ESP32</a>
+
+## PWM
+<P>PWM - Simulando saída analógica
+<BR>02: <a href=https://wokwi.com/projects/341562296506516051>LED RGB e uso de analog_write() para PWM</a>
+<P>Função Debounce e uso de condição de fluxo IF
+<BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
+
+
+
+<P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>
+<P> 	
+	
 ## Leitura analógica
 <bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento. Simulação: <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
 
@@ -70,15 +89,6 @@ Imprimindo e lendo na porta serial (UART)<BR>
 ### Display Oled   
   <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
   <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
-   
-## Interrupção e funções de tempo
-  ### millis()
-  <br>05 -<a href=https://wokwi.com/projects/342203041946010194> Exemplo função tempo millis()</a>
-  ### Interrupção Externa
-  <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
-<BR>  
- <br><a href=https://wokwi.com/projects/342234932555285074>bomba</a>
-  
   <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=225><BR>
 <details><summary>Exemplo Oled</summary>
 <p>
@@ -103,6 +113,19 @@ void loop() {
 ```
 </p>
 </details> 
+	  
+## Tempo
+	  
+### Interrupção e funções de tempo
+  ### função millis
+  <br>05 -<a href=https://wokwi.com/projects/342203041946010194> Exemplo função tempo millis()</a>
+	  
+### Interrupção externa
+  <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
+<BR>  
+ <br><a href=https://wokwi.com/projects/342234932555285074>bomba</a>
+  
+
 ## Pinout ESP32
 <br><a href=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png target=_blank><img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout<a/>
 <BR><a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
@@ -168,7 +191,8 @@ void loop() {
 <BR>word 
 <BR><BR> 
 
-## Simulador Online Wokwi
+
+## Simulador Wokwi
 
 Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
 <BR>
@@ -196,33 +220,6 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
     
   <BR>
 
-
-
-  
-<BR>  
-Aula 01/09
-<P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
-<BR>01: <a href=https://wokwi.com/projects/341561728616628819>Mapeamento de pinos ESP32</a>
-<P>PWM - Simulando saída analógica
-<BR>02: <a href=https://wokwi.com/projects/341562296506516051>LED RGB e uso de analog_write() para PWM</a>
-<P>Função Debounce e uso de condição de fluxo IF
-<BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
-
-
-
-<P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>
-<P> 
-
-
-
-
-
-<P><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot>Esp32 como servidor de pagina</a><B> Introdução a internet das coisas </b>
-
-<P><a href=https://github.com/mchavesferreira/mcr/tree/main/trabalho>Trabalho</a> <B>Revisão da prova bimestre 3</b>
-
-
-
 Atividade para o dia 11/08/2022.
 
 Acesse o seguinte projeto com este <a href=https://wokwi.com/projects/339673145686360659>link</a>.
@@ -235,3 +232,19 @@ Explore o código que utliza máquina de estados para a mudança através da ló
 <b>Atividade 11_08a:</b> Modifique o esquema elétrico e o programa para que ele tenha 10 leds alterando em sequência a cada vez que o botão for pressionado e solto.
 
 <b>Atividade 11_08b:</b> Modifique programa para que os leds pisquem em sequência a cada 1 segundo.
+
+
+  
+<BR>  
+
+
+
+
+
+## Servidor Web
+<P><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot>Esp32 como servidor de pagina</a><B> Introdução a internet das coisas </b>
+
+<P><a href=https://github.com/mchavesferreira/mcr/tree/main/trabalho>Trabalho</a> <B>Revisão da prova bimestre 3</b>
+
+
+
