@@ -6,16 +6,21 @@
 
 
 ## Aulas
-- [Arduino Referências](#main-features)
+- [Arduino Referências](#Referências-Arduino)
 - [Funções principais](#supported-protocols)
 - [Variáveis e Operadores](#variaveis-operadores)
 - [GPIOs, leitura e escrita em pinos digitais](#read-write-digital)
 - [Leitura Analógica](#analogRead)
 - [Comunicação Serial](#serial-uart)
-- [Display LCD e Oled](#display)
+- [Display](#display) 
+         - [LCD 16X2](#display-16X2)
+         - [OLED](#display-oled)
 - [Leitura Analógica](#analogRead)
 - [Servidor Web](#using-the-library)
 
+- [Using the library](#using-the-library)
+	- [A full example](#a-full-example)
+	- [Address check](#address-check)
 
 #variaveis-operadores
   <BR>Variáveis e Operadores</b><BR>  
@@ -55,17 +60,56 @@ Aula 25/8<BR>
 <P>Exemplos aplicando porta serial e PWM
 <BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
 
+#Displays
+ 
+<BR>Displays LCD, Oled, comunicação I2C
+## LCD 16x2
+  <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
+  <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
+  
+## Oled   
+  <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
+  <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
+   
+#Interrupção e funções de tempo
+  ##millis()
+  <br>05 -<a href=https://wokwi.com/projects/342203041946010194> Exemplo função tempo millis()</a>
+  ## Interrupção Externa
+  <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
+<BR>  
+ <br><a href=https://wokwi.com/projects/342234932555285074>bomba</a>
+  
+  <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=225><BR>
+<details><summary>Exemplo Oled</summary>
+<p>
+
+```ruby  
+*/
+#include <U8g2lib.h>
+#include <Wire.h>
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
+
+void setup() {
+  u8g2.begin();
+}
+
+void loop() {
+  u8g2.clearBuffer();	// limpa memoria interna
+  u8g2.setFont(u8g2_font_ncenB08_tr);	// escolha da fonte
+  u8g2.drawStr(15, 10, "IFSP Catanduva");	// escrevendo na memoria interna
+  u8g2.sendBuffer(); // transferindo da memoria interna para display
+  delay(1000);
+}  
+```
+</p>
+</details> 
 
 <br><a href=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png target=_blank><img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout<a/>
 <BR><a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
 
 
-<b>Links:</b><BR>
 
-Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
-<BR>
-Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
-
+## Referências Arduino
 <center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
 <BR><B>Funções</b>
 <bR>Para controlar a placa Arduino e realizar computações.
@@ -122,6 +166,14 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR>word 
 <BR><BR> 
 
+## Simulador Online Wokwi
+
+Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
+<BR>
+Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
+ 
+## Projetos 
+### Maquina de lavar Roupa
   <BR><i>Aula 15/09</i>
   <BR><B>Trabalho para Bimestre 3: (Etapa 1 15/9 horário de aula, Etapa 2: 23/9 Suap)</b><BR>
    <BR> Utilizando o projeto inicial a seguir, crie uma máquina personalizada (não será considerado máquina de lavar) atenda os seguintes critérios:<BR>
@@ -141,42 +193,8 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
     <br>Variáveis que serão utlizadas em funções diferentes devem ser globais. Variáveis locais são sempre recomendadas para economia de memória RAM.
     
   <BR>
-Aula 08/09
-<BR>Displays LCD, Oled, comunicação I2C
-  <BR>Simulações:
-  <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
-  <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
-  <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
-  <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
-  <br>05 -<a href=https://wokwi.com/projects/342203041946010194> Exemplo função tempo millis()</a>
-  <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
-<BR>  
- <br><a href=https://wokwi.com/projects/342234932555285074>bomba</a>
-  
-  <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=225><BR>
-<details><summary>Exemplo Oled</summary>
-<p>
 
-```ruby  
-*/
-#include <U8g2lib.h>
-#include <Wire.h>
-U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 
-void setup() {
-  u8g2.begin();
-}
-
-void loop() {
-  u8g2.clearBuffer();	// limpa memoria interna
-  u8g2.setFont(u8g2_font_ncenB08_tr);	// escolha da fonte
-  u8g2.drawStr(15, 10, "IFSP Catanduva");	// escrevendo na memoria interna
-  u8g2.sendBuffer(); // transferindo da memoria interna para display
-  delay(1000);
-}  
-```
-</p>
-</details>
 
   
 <BR>  
