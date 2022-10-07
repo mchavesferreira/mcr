@@ -221,8 +221,9 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
   <BR>A utilização de funções deixam o código limpo e facilmente comprensível
     <br>Variáveis que serão utlizadas em funções diferentes devem ser globais. Variáveis locais são sempre recomendadas para economia de memória RAM.
     
-  <BR>
-### Projeto avaliação 
+
+### projeto avaliação
+	  
 <P><a href=https://github.com/mchavesferreira/mcr/tree/main/trabalho>Trabalho</a> <B>Revisão da prova bimestre 3</b>
 	  
 Atividade para o dia 11/08/2022.
