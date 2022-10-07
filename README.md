@@ -1,8 +1,64 @@
-# mcr
+# Microcontroladores
 
-<P><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot>Esp32 como servidor de pagina</a><B> Introdução a internet das coisas </b>
+ 
+## Utilizando ESP32, Arduino IDE e simulador Wokwi para aprendizado da programação de sistemas embarcados e dispositivos IOT.
 
-<P><a href=https://github.com/mchavesferreira/mcr/tree/main/trabalho>Trabalho</a> <B>Revisão da prova bimestre 3</b>
+
+
+## Aulas
+- [Arduino Referências](#main-features)
+- [Funções principais](#supported-protocols)
+- [Variáveis e Operadores](#variaveis-operadores)
+- [GPIOs, leitura e escrita em pinos digitais](#read-write-digital)
+- [Leitura Analógica](#analogRead)
+- [Comunicação Serial](#serial-uart)
+- [Display LCD e Oled](#display)
+- [Leitura Analógica](#analogRead)
+- [Servidor Web](#using-the-library)
+
+
+#variaveis-operadores
+  <BR>Variáveis e Operadores</b><BR>  
+ <BR>Aula 18/8<BR>
+
+ <BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
+
+Aula 25/8<BR>
+##Uso de Variáveis, #define e funções próprias para I/0 Arduino
+
+#read-write-digital
+<BR>01: GPIOs, leitura e escrita em pinos digitais<a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
+
+#analogRead
+<bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
+
+#serial-uart
+<P>Imprimindo e lendo na porta serial (UART)<BR>
+  
+<details><summary>Codigo Serial</summary>
+<p>
+
+```ruby
+   Serial.begin(115200);
+   Serial.println("Please enter your name:");
+   while (!Serial.available()); // Wait for input
+   String name = Serial.readStringUntil('\n');
+   Serial.print("Hello, ");
+   Serial.print(name);
+```
+
+</p>
+</details>
+
+  
+<BR> <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
+<P>Exemplos aplicando porta serial e PWM
+<BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
+
+
+<br><a href=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png target=_blank><img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout<a/>
+<BR><a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
+
 
 <b>Links:</b><BR>
 
@@ -131,42 +187,21 @@ Aula 01/09
 <BR>02: <a href=https://wokwi.com/projects/341562296506516051>LED RGB e uso de analog_write() para PWM</a>
 <P>Função Debounce e uso de condição de fluxo IF
 <BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
-<P>04: Imprimindo e lendo na porta serial (UART)<BR>
-  
-<details><summary>Codigo Serial</summary>
-<p>
 
-```ruby
-   Serial.begin(115200);
-   Serial.println("Please enter your name:");
-   while (!Serial.available()); // Wait for input
-   String name = Serial.readStringUntil('\n');
-   Serial.print("Hello, ");
-   Serial.print(name);
-```
 
-</p>
-</details>
-
-  
-<BR> <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
-<P>Exemplos aplicando porta serial e PWM
-<BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
 
 <P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>
 <P> 
 
-Aula 25/8<BR>
-Uso de Variáveis, #define e funções próprias para I/0 Arduino<BR>
-<BR>01: GPIOs, leitura e escrita em pinos digitais<a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
-<bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
 
-<br><a href=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png target=_blank><img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout<a/>
-<BR><a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
-  
- <BR>Aulas 18/8<BR>
-  <BR>Variáveis e Operadores</b><BR>
- <BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
+
+
+
+<P><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot>Esp32 como servidor de pagina</a><B> Introdução a internet das coisas </b>
+
+<P><a href=https://github.com/mchavesferreira/mcr/tree/main/trabalho>Trabalho</a> <B>Revisão da prova bimestre 3</b>
+
+
 
 Atividade para o dia 11/08/2022.
 
