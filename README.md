@@ -222,7 +222,7 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
     <br>Variáveis que serão utlizadas em funções diferentes devem ser globais. Variáveis locais são sempre recomendadas para economia de memória RAM.
     
   <BR>
-### Projeto Avaliação 
+### Projeto avaliação 
 <P><a href=https://github.com/mchavesferreira/mcr/tree/main/trabalho>Trabalho</a> <B>Revisão da prova bimestre 3</b>
 	  
 Atividade para o dia 11/08/2022.
