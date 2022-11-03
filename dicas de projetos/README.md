@@ -7,8 +7,8 @@
 - Utilizar maquina de estados de um processo
 - Apresentar dado local em display
 - Relizar leitura analógica
-
-Prazo: 
+- gerar um repositorio no github, com detalhes, código fonte e fotos. Enviar link para o email do professor.
+Prazo: 30/11/2022
 
 ### Projetos, links e idéias para aprender a programação com ESP32
 
