@@ -18,43 +18,41 @@ Participação e desenvolvimento em aula: 10% (caderno, código em sala...)
 ### Projetos, links e idéias para aprender a programação com ESP32
 
 
-
-# Residencial e IOT
+## Residencial e IOT
 Automação Residencial com ESP32 – Controle sua Casa pela Web (Usina info)
 https://www.usinainfo.com.br/blog/automacao-residencial-com-esp32-controle-sua-casa-pela-web/
 
-Curso IOT aplicações em automação com esp32
+## Curso IOT aplicações em automação com esp32
 https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-ide/
 
-ESP32 integração com Alexa. Utilizando a biblioteca Espalexa para acionar GPIOs com nomes reconhecidos pela echo-dot.
+## ESP32 integração com Alexa. Utilizando a biblioteca Espalexa para acionar GPIOs com nomes reconhecidos pela echo-dot.
 https://mjrobot.org/2020/12/31/home-automation-with-alexa/
 
-MQTT aula <BR>  http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=48
+## Protocolo MQTT para IOT
+aula <BR>  http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=48
 
 Aplicativo: Dash MQTT  
 https://play.google.com/store/apps/details?id=net.routix.mqttdash
 
-MQTT Público:  http://www.hivemq.com/demos/websocket-client/
-host:  broker.hivemq.com
-username: mchavesferreira
-password: Embar2022
-topic: movel/acelerax
+MQTT Público:  http://www.hivemq.com/demos/websocket-client/<BR>
+host:  broker.hivemq.com<BR>
+username: mchavesferreira<BR>
+password: Embar2022<BR>
+topic: movel/acelerax<BR>
 
 
-# Estudo de redes
-
-## ESP32-WiFi-Sniffer
+##  Estudo de redes ESP32-WiFi-Sniffer
 O chip WiFi no ESP32 pode ser alternado para o chamado “modo promíscuo”, que permite monitorar pacotes WiFi sem se conectar à própria rede. Em particular, podemos ver os endereços MAC dos dispositivos próximos:
 https://github.com/ESP-EOS/ESP32-WiFi-Sniffer
 
 https://hackmag.com/security/esp32-sniffer/
 
 # Frameworks:
-Utilizando frameworks (pacotes de programas) prontos para iniciar uma automação com poucas ou nenhuma linha de códigos. Alguns frameworks permitem a gravação através do navegador Chrome.
-1- OpenMQTTGateway v1.0.0 - https://docs.openmqttgateway.com/upload/web-install.html
-2 - ESP Easy’s https://espeasy.readthedocs.io/en/latest/index.html
-3 - ESP Web Tools https://esphome.github.io/esp-web-tools/ 
-4 - Tasmota https://tasmota.github.io/docs/
+Utilizando frameworks (pacotes de programas) prontos para iniciar uma automação com poucas ou nenhuma linha de códigos. Alguns frameworks permitem a gravação através do navegador Chrome.<BR>
+1 - OpenMQTTGateway v1.0.0 - https://docs.openmqttgateway.com/upload/web-install.html<BR>
+2 - ESP Easy’s https://espeasy.readthedocs.io/en/latest/index.html<BR>
+3 - ESP Web Tools https://esphome.github.io/esp-web-tools/ <BR>
+4 - Tasmota https://tasmota.github.io/docs/<BR>
 
 
 # Linguagens e programação
