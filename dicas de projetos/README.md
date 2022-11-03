@@ -1,5 +1,15 @@
-Automação Residencial:
+### Projetos, links e idéias para aprender a programação com ESP32
 
+###Sequence Diagram
+                    
+```seq
+CCógico->Esp32: Teste código 
+Note right of China: China thinks\nabout it 
+China-->Andrew: How are you? 
+Andrew->>China: I am good thanks!
+```
+
+## Automação Residencial e IOT
 Automação Residencial com ESP32 – Controle sua Casa pela Web (Usina info)
 https://www.usinainfo.com.br/blog/automacao-residencial-com-esp32-controle-sua-casa-pela-web/
 
