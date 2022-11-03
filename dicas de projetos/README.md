@@ -3,11 +3,13 @@
 ###Sequence Diagram
                     
 ```seq
-CCógico->Esp32: Teste código 
+Andrew->China: Says Hello 
 Note right of China: China thinks\nabout it 
 China-->Andrew: How are you? 
 Andrew->>China: I am good thanks!
 ```
+
+###End
 
 ## Automação Residencial e IOT
 Automação Residencial com ESP32 – Controle sua Casa pela Web (Usina info)
