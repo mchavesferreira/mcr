@@ -11,9 +11,9 @@
 - gerar um repositorio no github, com detalhes, código fonte e fotos. Enviar link para o email do professor.
 Prazo: 30/11/2022
 
-Peso do trabalho na nota final: 50%
-Peso da prova escrita:  35%
-Participação e desenvolvimento em aula: 15% (caderno, código em sala...)
+Peso do trabalho na nota final: 60%
+Peso da prova escrita:  30%
+Participação e desenvolvimento em aula: 10% (caderno, código em sala...)
 
 ### Projetos, links e idéias para aprender a programação com ESP32
 
