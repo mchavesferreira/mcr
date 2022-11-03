@@ -1,17 +1,6 @@
 ### Projetos, links e idéias para aprender a programação com ESP32
 
-###Sequence Diagram
-                    
-```seq
-Andrew->China: Says Hello 
-Note right of China: China thinks\nabout it 
-China-->Andrew: How are you? 
-Andrew->>China: I am good thanks!
-```
-
-###End
-
-## Automação Residencial e IOT
+# Residencial e IOT
 Automação Residencial com ESP32 – Controle sua Casa pela Web (Usina info)
 https://www.usinainfo.com.br/blog/automacao-residencial-com-esp32-controle-sua-casa-pela-web/
 
@@ -22,17 +11,16 @@ ESP32 integração com Alexa. Utilizando a biblioteca Espalexa para acionar GPIO
 https://mjrobot.org/2020/12/31/home-automation-with-alexa/
 
 
+# Estudo de redes
 
-Estudo de redes
-
-ESP32-WiFi-Sniffer
+## ESP32-WiFi-Sniffer
 O chip WiFi no ESP32 pode ser alternado para o chamado “modo promíscuo”, que permite monitorar pacotes WiFi sem se conectar à própria rede. Em particular, podemos ver os endereços MAC dos dispositivos próximos:
 https://github.com/ESP-EOS/ESP32-WiFi-Sniffer
 
 https://hackmag.com/security/esp32-sniffer/
 
-Frameworks:
-Utilizando frameworks (pacotes de programas) prontos para iniciar uma automação com poucas ou nenhuma linha de códigos. Alguns frameworks permitem a gravação utilizando o navegador Chrome.
+# Frameworks:
+Utilizando frameworks (pacotes de programas) prontos para iniciar uma automação com poucas ou nenhuma linha de códigos. Alguns frameworks permitem a gravação através do navegador Chrome.
 1- OpenMQTTGateway v1.0.0 - https://docs.openmqttgateway.com/upload/web-install.html
 2 - ESP Easy’s https://espeasy.readthedocs.io/en/latest/index.html
 3 - ESP Web Tools https://esphome.github.io/esp-web-tools/ 
