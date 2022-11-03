@@ -19,3 +19,10 @@ https://github.com/ESP-EOS/ESP32-WiFi-Sniffer
 
 https://hackmag.com/security/esp32-sniffer/
 
+Frameworks:
+Utilizando frameworks (pacotes de programas) prontos para iniciar uma automação com poucas ou nenhuma linha de códigos. Alguns frameworks permitem a gravação utilizando o navegador Chrome.
+1- OpenMQTTGateway v1.0.0 - https://docs.openmqttgateway.com/upload/web-install.html
+2 - ESP Easy’s https://espeasy.readthedocs.io/en/latest/index.html
+3 - ESP Web Tools https://esphome.github.io/esp-web-tools/ 
+4 - Tasmota https://tasmota.github.io/docs/
+
