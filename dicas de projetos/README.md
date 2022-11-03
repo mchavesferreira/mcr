@@ -9,11 +9,11 @@
 - Apresentar dado local em display
 - Relizar leitura analógica
 - gerar um repositorio no github, com detalhes, código fonte e fotos. Enviar link para o email do professor.
-Prazo: 30/11/2022
+Prazo Trabalho prático: 30/11/2022 (Peso do trabalho na nota final: 60%)
+<BR>
 
-Peso do trabalho na nota final: 60%
-Peso da prova escrita:  30%
-Participação e desenvolvimento em aula: 10% (caderno, código em sala...)
+<BR>Peso da prova escrita:  30%
+<BR>Participação e desenvolvimento em aula: 10% (caderno, código em sala...)
 
 ### Projetos, links e idéias para aprender a programação com ESP32
 
