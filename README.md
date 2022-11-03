@@ -26,7 +26,9 @@
 	- [Projeto Avaliação](#projeto-avaliação)
 - [Servidor Web](#servidor-web)
 
+Aula 03/11/2022
 
+https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos
 
 ## variaveis operadores
   <BR>Variáveis e Operadores</b><BR>  
