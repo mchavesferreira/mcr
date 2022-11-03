@@ -26,13 +26,15 @@ Utilizando frameworks (pacotes de programas) prontos para iniciar uma automaçã
 3 - ESP Web Tools https://esphome.github.io/esp-web-tools/ 
 4 - Tasmota https://tasmota.github.io/docs/
 
+
 # Linguagens e programação
 ## Programando através de blocos
 ### Easycondig
 
+Aprenda a programar o ESP32 para IOT através de videos tutoriais organizado em 3 partes (Stand-alone, Local-Network e Internet)
+http://easycoding.tn/index.php/esp32/  (Videos tutoriais)
 
-
-http://www.easycoding.tn/esp32/demos/code/
+http://www.easycoding.tn/esp32/demos/code/  (ambiente de programação)
 
 ### codeskool
 
