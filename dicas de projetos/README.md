@@ -51,6 +51,8 @@ http://easycoding.tn/index.php/esp32/  (Videos tutoriais)
 
 http://www.easycoding.tn/esp32/demos/code/  (ambiente de programação)
 
+Exemplo XML com código fonte para websever: https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/easycoding_xml.xml
+
 ### codeskool
 
 https://ide.codeskool.cc/
