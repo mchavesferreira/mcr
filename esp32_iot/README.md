@@ -56,6 +56,53 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
   <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/acess_point/acess_point.ino>Codigo .ino acess point</a>
   <BR><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/acesshtml>Codigo .ino e pagina web em index.h</a>
   
+  
+  ### Criando comunicação para IOT
+  
+ ## Acess-Point com programação em blocos
+ 
+ ```javascript
+ /////////////////////////////////
+// Generated with a lot of love//
+// with TUNIOT FOR ESP32     //
+// Website: Easycoding.tn      //
+/////////////////////////////////
+#include <WiFi.h>
+
+IPAddress staticIP69_196(192,168,15,196);
+IPAddress gateway69_196(192,168,15,1);
+IPAddress subnet69_196(255,255,255,0);
+
+void setup()
+{
+Serial.begin(9600);
+
+  WiFi.disconnect();
+  delay(3000);
+  Serial.println("START");
+  WiFi.begin("Isaweb_1","julia3103");
+  while ((!(WiFi.status() == WL_CONNECTED))){
+    delay(300);
+    Serial.print("..");
+
+  }
+  Serial.println("Connected");
+  WiFi.config(staticIP69_196, gateway69_196, subnet69_196);
+  Serial.println("Your IP is");
+  Serial.println((WiFi.localIP()));
+
+}
+
+
+void loop()
+{
+
+    client.println("bom dia");
+
+}
+ 
+ 
+ ```
 
    <P><P>
 Referências:
