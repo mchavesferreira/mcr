@@ -41,7 +41,7 @@ http://www.easycoding.tn/esp32/demos/code/  (ambiente de programação)
 https://ide.codeskool.cc/
 
 ### mpyblockly
-
+Programação visual em micropython para ESP32
 https://mpyblockly.github.io/mpyblockly/
 
 
