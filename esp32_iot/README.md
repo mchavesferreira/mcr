@@ -104,6 +104,11 @@ void loop()
  
  ```
 
+## Enviando dados para nuvem utilizando Thingspeak
+
+## Comunicação de dados IOT utilizando protocolo MQTT
+Saiba mais:  https://www.gta.ufrj.br/ensino/eel878/redes1-2019-1/vf/mqtt/
+
    <P><P>
 Referências:
 <BR>https://mundoprojetado.com.br/criar-access-point-com-nodemcu/
