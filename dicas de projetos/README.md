@@ -1,4 +1,18 @@
+### MCR 2022- Projeto Quarto Bimestre
+
+## Requisitos
+- Utilizar ESP32 montagem prática e simulação
+- Programação com envio de dados na nuvem (Thingspeak e ou MQTT/Dashboard)
+- Leitura de um sensor ou simulado
+- Utilizar maquina de estados de um processo
+- Apresentar dado local em display
+- Relizar leitura analógica
+
+Prazo: 
+
 ### Projetos, links e idéias para aprender a programação com ESP32
+
+
 
 # Residencial e IOT
 Automação Residencial com ESP32 – Controle sua Casa pela Web (Usina info)
