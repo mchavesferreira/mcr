@@ -80,7 +80,7 @@ Serial.begin(9600);
   WiFi.disconnect();
   delay(3000);
   Serial.println("START");
-  WiFi.begin("Isaweb_1","julia3103");
+  WiFi.begin("redewifi","senha");
   while ((!(WiFi.status() == WL_CONNECTED))){
     delay(300);
     Serial.print("..");
