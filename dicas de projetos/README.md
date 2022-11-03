@@ -1,7 +1,8 @@
 ### MCR 2022- Projeto Quarto Bimestre
 
 ## Requisitos
-- Utilizar ESP32 montagem prática e simulação
+- Utilizar ESP32 (Pode pegar do colega de outra turma para apresentar o trabalho prático, podendo ser em protoboard). Montagem prática e simulação
+- Trabalho em dupla.
 - Programação com envio de dados na nuvem (Thingspeak e ou MQTT/Dashboard)
 - Leitura de um sensor ou simulado
 - Utilizar maquina de estados de um processo
