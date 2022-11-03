@@ -26,3 +26,20 @@ Utilizando frameworks (pacotes de programas) prontos para iniciar uma automaçã
 3 - ESP Web Tools https://esphome.github.io/esp-web-tools/ 
 4 - Tasmota https://tasmota.github.io/docs/
 
+# Linguagens e programação
+## Programando através de blocos
+### Easycondig
+
+
+
+http://www.easycoding.tn/esp32/demos/code/
+
+### codeskool
+
+https://ide.codeskool.cc/
+
+### mpyblockly
+
+https://mpyblockly.github.io/mpyblockly/
+
+
