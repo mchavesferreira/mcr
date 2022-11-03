@@ -27,6 +27,16 @@ https://mjrobot.org/2020/12/31/home-automation-with-alexa/
 
 MQTT aula <BR>  http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=48
 
+Aplicativo: Dash MQTT  
+https://play.google.com/store/apps/details?id=net.routix.mqttdash
+
+MQTT Público:  http://www.hivemq.com/demos/websocket-client/
+host:  broker.hivemq.com
+username: mchavesferreira
+password: Embar2022
+topic: movel/acelerax
+
+
 # Estudo de redes
 
 ## ESP32-WiFi-Sniffer
