@@ -272,7 +272,7 @@ A seguir apresentamos links de eventos e revistas ciêntíficas para colaborar c
 	
     -- Artigos Conict (<a href=http://ocs.ifsp.edu.br/index.php/conict> Anais </a>)
  
-- FECCIF	Feira Estadual de Ciência e Cultura do IFSP (a href=http://feccip.com.br> Pagina</a>)
+- FECCIF- Feira Estadual de Ciência e Cultura do IFSP (http://feccip.com.br> Pagina</a>)
 
 Outros:
 - Seleção de projetos <a href=https://github.com/mchavesferreira/mcr/blob/81e149b137445a6df07bdaa17b2f0c46f31eff36/dicas%20de%20projetos/Dicas%20para%20projetos.pdf> Dicas de projetos.pdf</a>
