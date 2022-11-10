@@ -26,7 +26,10 @@
 	- [Projeto Avaliação](#projeto-avaliação)
 - [Servidor Web](#servidor-web)
 
-Aula 03/11/2022
+- [Exemplos de projetos](#Exemplos-de-projetos)
+
+
+Aula 03/11/2022 e 10/11/2022
 
 https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos
 
@@ -253,5 +256,18 @@ Explore o código que utliza máquina de estados para a mudança através da ló
 <P><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot>Esp32 como servidor de pagina</a><B> Introdução a internet das coisas </b>
 
 <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0></a>
+
+
+## Exemplos de projetos
+
+Está faltando imaginação!!! 
+Busque na Internet exemplos para aplicar os conhecimentos sobre a programação com microcontroladores.
+Se o projeto for bem documentado, é possível increvê-lo em feira de ciências, realizá-lo como trabalho de conclusão de curso (TCC), congressos e revistas e eventos ciêntíficos, ou até criar um produto e registá-lo como uma patente.
+A seguir exemplificamos trabalhos apresentados em eventos científicos do Instituto Federal de São Paulo
+- CONICT  
+    -- Trabalhos apresentados em formato online (<a href=https://www.youtube.com/channel/UC4hDqSkORN1rHfyrIIMu9SA/videos>canal youtube</a>)
+    -- Artigos Conict (<a href=http://ocs.ifsp.edu.br/index.php/conict> Anais </a>)
+    
+    
 
 
