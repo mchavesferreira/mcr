@@ -40,6 +40,10 @@ username: mchavesferreira<BR>
 password: Embar2022<BR>
 topic: movel/acelerax<BR>
 
+Exemplo Wokwi, com tópico em IFSP/led
+
+https://wokwi.com/projects/347942096378790483
+
 
 ##  Estudo de redes ESP32-WiFi-Sniffer
 O chip WiFi no ESP32 pode ser alternado para o chamado “modo promíscuo”, que permite monitorar pacotes WiFi sem se conectar à própria rede. Em particular, podemos ver os endereços MAC dos dispositivos próximos:
