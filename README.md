@@ -55,7 +55,8 @@ Uso de Variáveis, #define e funções próprias para I/0 Arduino
 <BR>02: <a href=https://wokwi.com/projects/341562296506516051>LED RGB e uso de analog_write() para PWM</a>
 <P>Função Debounce e uso de condição de fluxo IF
 <BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
-
+<P>PWM e leitura analógia alterando RGB
+<BR><a href=https://wokwi.com/projects/341599671301440083>PWM-Analog</a><P>
 
 
 <P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>
