@@ -261,13 +261,24 @@ Explore o código que utliza máquina de estados para a mudança através da ló
 ## Exemplos de projetos
 
 Está faltando imaginação!!! 
+	
 Busque na Internet exemplos para aplicar os conhecimentos sobre a programação com microcontroladores.
-Se o projeto for bem documentado, é possível increvê-lo em feira de ciências, realizá-lo como trabalho de conclusão de curso (TCC), congressos e revistas e eventos ciêntíficos, ou até criar um produto e registá-lo como uma patente.
-A seguir exemplificamos trabalhos apresentados em eventos científicos do Instituto Federal de São Paulo
+	
+Se o projeto for bem documentado, é possível inscrevê-lo em feira de ciências, realizá-lo como trabalho de conclusão de curso (TCC), apresentá-lo em congressos, revistas e eventos ciêntíficos, ou até criar um produto e registá-lo como uma patente.
+A seguir apresentamos links de eventos e revistas ciêntíficas para colaborar com sua idéia.
 - CONICT  
+	
     -- Trabalhos apresentados em formato online (<a href=https://www.youtube.com/channel/UC4hDqSkORN1rHfyrIIMu9SA/videos>canal youtube</a>)
+	
     -- Artigos Conict (<a href=http://ocs.ifsp.edu.br/index.php/conict> Anais </a>)
-    
+ 
+- FECCIF	Feira Estadual de Ciência e Cultura do IFSP (a href=https://feccif.com.br/> Pagina</a>)
+
+Outros:
+- Seleção de projetos <a href=https://github.com/mchavesferreira/mcr/blob/81e149b137445a6df07bdaa17b2f0c46f31eff36/dicas%20de%20projetos/Dicas%20para%20projetos.pdf> Dicas de projetos.pdf</a>
+
+	- <a href=https://embarcados.com.br> Embarcados </a> Site de uma comunidade sobre sistemas embarcados
+	- 
     
 
 
