@@ -5,14 +5,14 @@
 - Trabalho em dupla.
 - Programação com envio de dados na nuvem (Thingspeak e ou MQTT/Dashboard)
 - Leitura de um sensor ou simulado
-- Utilizar maquina de estados de um processo
+- Utilizar maquina de estados de processo (switch/case)
 - Apresentar dado local em display
 - Relizar leitura analógica
 - gerar um repositorio no github, com detalhes, código fonte e fotos. Enviar link para o email do professor.
-Prazo Trabalho prático: 30/11/2022 (Peso do trabalho na nota final: 60%)
+- Prazo Trabalho prático: 30/11/2022 (Peso do trabalho na nota final: 60%)
 <BR>
 
-<BR>Peso da prova escrita:  30%
+<BR>Peso da prova escrita:  30%  (24/11/2022)
 <BR>Participação e desenvolvimento em aula: 10% (caderno, código em sala...)
 
 ### Projetos, links e idéias para aprender a programação com ESP32
