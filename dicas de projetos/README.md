@@ -5,7 +5,7 @@
 - Trabalho em dupla.
 - Programação com envio de dados na nuvem (Thingspeak e ou MQTT/Dashboard)
 - Leitura de um sensor ou simulado
-- Utilizar maquina de estados de processo (switch/case)
+- Utilizar maquina de estados de processo (switch/case) ou uma sequência de compararações(if/else)
 - Apresentar dado local em display
 - Relizar leitura analógica
 - gerar um repositorio no github, com detalhes, código fonte e fotos. Enviar link para o email do professor.
