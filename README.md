@@ -21,12 +21,12 @@
 - [Interrupções e Funções de tempo](#tempo)
 	- [millis()](#função-millis)
 	- [Interrupção Externa](#Interrupção-externa)
-- [Projetos](#projetos)
-	- [maquina de lavar](#maquina-de-lavar)
-	- [Projeto Avaliação](#projeto-avaliação)
 - [Servidor Web](#servidor-web)
 - [Protocolo MQTT, IOT](#protocolo-mqtt-iot)
 - [Exemplos de projetos](#Exemplos-de-projetos)
+- [Projetos Bimestrais](#projetos-bimestrais)
+	- [maquina de lavar](#maquina-de-lavar)
+	- [Projeto Avaliação](#projeto-avaliação)
 
 
 
@@ -210,8 +210,48 @@ Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
 <BR>
 Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
  
-## Projetos 
-### maquina de lavar
+
+
+
+
+
+
+## Servidor Web
+<P><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot>Esp32 como servidor de pagina</a><B> Introdução a internet das coisas </b>
+
+<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0></a>
+
+
+## Exemplos de projetos
+
+Está faltando imaginação!!! 
+	
+Busque na Internet exemplos para aplicar os conhecimentos sobre a programação com microcontroladores.
+	
+Se o projeto for bem documentado, é possível inscrevê-lo em feira de ciências, realizá-lo como trabalho de conclusão de curso (TCC), apresentá-lo em congressos, revistas e eventos ciêntíficos, ou até criar um produto e registá-lo como uma patente.
+A seguir apresentamos links de eventos e revistas ciêntíficas para colaborar com sua idéia.
+- CONICT  
+	
+    -- Trabalhos apresentados em formato online (<a href=https://www.youtube.com/channel/UC4hDqSkORN1rHfyrIIMu9SA/videos>canal youtube</a>)
+	
+    -- Artigos Conict (<a href=http://ocs.ifsp.edu.br/index.php/conict> Anais </a>)
+ 
+- FECCIF- Feira Estadual de Ciência e Cultura do IFSP (http://feccip.com.br> Pagina</a>)
+
+Outros:
+- Seleção de projetos <a href=https://github.com/mchavesferreira/mcr/blob/81e149b137445a6df07bdaa17b2f0c46f31eff36/dicas%20de%20projetos/Dicas%20para%20projetos.pdf> Dicas de projetos.pdf</a>
+
+	- <a href=https://embarcados.com.br> Embarcados </a> Site de uma comunidade sobre sistemas embarcados
+	- 
+## Protocolo MQTT, IOT
+Uso do protocolo MQTT para envio de mensagens entre dispositivos de internet das coisas (IOT). 
+### Integração com Alexa
+### Frameworks e linguagens de programção com ESP32
+https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos
+
+## Projetos Bimestrais
+	
+### Terceiro Bimestre: maquina de lavar
   <BR><i>Aula 15/09</i>
   <BR><B>Trabalho para Bimestre 3: (Etapa 1 15/9 horário de aula, Etapa 2: 23/9 Suap)</b><BR>
    <BR> Utilizando o projeto inicial a seguir, crie uma máquina personalizada (não será considerado máquina de lavar) atenda os seguintes critérios:<BR>
@@ -251,41 +291,3 @@ Explore o código que utliza máquina de estados para a mudança através da ló
 
   
 <BR>  
-
-
-
-
-
-## Servidor Web
-<P><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot>Esp32 como servidor de pagina</a><B> Introdução a internet das coisas </b>
-
-<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0></a>
-
-
-## Exemplos de projetos
-
-Está faltando imaginação!!! 
-	
-Busque na Internet exemplos para aplicar os conhecimentos sobre a programação com microcontroladores.
-	
-Se o projeto for bem documentado, é possível inscrevê-lo em feira de ciências, realizá-lo como trabalho de conclusão de curso (TCC), apresentá-lo em congressos, revistas e eventos ciêntíficos, ou até criar um produto e registá-lo como uma patente.
-A seguir apresentamos links de eventos e revistas ciêntíficas para colaborar com sua idéia.
-- CONICT  
-	
-    -- Trabalhos apresentados em formato online (<a href=https://www.youtube.com/channel/UC4hDqSkORN1rHfyrIIMu9SA/videos>canal youtube</a>)
-	
-    -- Artigos Conict (<a href=http://ocs.ifsp.edu.br/index.php/conict> Anais </a>)
- 
-- FECCIF- Feira Estadual de Ciência e Cultura do IFSP (http://feccip.com.br> Pagina</a>)
-
-Outros:
-- Seleção de projetos <a href=https://github.com/mchavesferreira/mcr/blob/81e149b137445a6df07bdaa17b2f0c46f31eff36/dicas%20de%20projetos/Dicas%20para%20projetos.pdf> Dicas de projetos.pdf</a>
-
-	- <a href=https://embarcados.com.br> Embarcados </a> Site de uma comunidade sobre sistemas embarcados
-	- 
-## Protocolo MQTT, IOT
-Uso do protocolo MQTT para envio de mensagens entre dispositivos de internet das coisas (IOT). 
-### Integração com Alexa
-### Frameworks e linguagens de programção com ESP32
-https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos
-
