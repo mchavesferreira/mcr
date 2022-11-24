@@ -248,7 +248,7 @@ Outros:
 Uso do protocolo MQTT para envio de mensagens entre dispositivos de internet das coisas (IOT). 
 ### Integração com Alexa
 ### Frameworks e linguagens de programção com ESP32
-https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos
+`<link>` https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos
 
 ## Projetos Bimestrais
 	
