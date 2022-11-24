@@ -31,10 +31,86 @@
 
 
 
+## Referências Arduino
+<center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
 
+## Pinout ESP32
+<br><a href=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png target=_blank><img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout<a/>
+<BR><a href=https://randomnerdtutorials.com/esp32-pinout-reference-gpios/>Configuração I/O</a> para cada pino.
+<BR>Como verificar o ID do chip<a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
+
+## Simulador Wokwi
+
+Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
+<BR>
+Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
+ 
+
+	
+## Funçoes principais
+<details><summary>Conheça as principais funções em wiring disponíveis na IDE Arduino (clique)</summary>
+	
+<BR><B>Funções</b>
+<bR>Para controlar a placa Arduino e realizar computações.
+<BR><b>Entradas e Saídas Digitais</b>
+<BR>digitalRead()
+<BR>digitalWrite()
+<BR>pinMode() 
+<BR>
+  <BR><B>Entradas e Saídas Analógicas</b>
+<BR>analogRead()
+<BR>analogReference()
+<BR>analogWrite() 
+<BR>
+<BR><B>Funções Temporizadoras</b>
+<BR>delay()
+<BR>delayMicroseconds()
+<BR>micros()
+<BR>millis()
+<BR>
+  
+<BR><B>Comunicação</b>
+<BR>Serial
+<BR>Stream 
+<BR>
+<BR><B>Variáveis</b>
+<BR>
+<BR>Tipos de dados e constantes da linguagem Arduino.
+<BR><B>Constantes</b>
+<BR>HIGH | LOW
+<BR>INPUT | OUTPUT | INPUT_PULLUP
+<BR>LED_BUILTIN
+<BR>true | false
+<BR>Constantes de Ponto Flutuante
+<BR>Constantes Inteiras
+ <BR> 
+<BR><B>Tipos de Dados</b>
+<BR>bool
+<BR>boolean
+<BR>byte
+<BR>char
+<BR>double
+<BR>float
+<BR>int
+<BR>long
+<BR>short
+<BR>size_t
+<BR>string
+<BR>String()
+<BR>unsigned char
+<BR>unsigned int
+<BR>unsigned long
+<BR>vetor
+<BR>void
+<BR>word 
+<BR><BR> 
+
+</details>
+
+
+	
 ## variaveis operadores
   <BR>Variáveis e Operadores</b><BR>  
- <BR>Aula 18/8<BR>
 
  <BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
 
@@ -134,82 +210,7 @@ void loop() {
  <br><a href=https://wokwi.com/projects/342234932555285074>bomba</a>
   
 
-## Pinout ESP32
-<br><a href=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png target=_blank><img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout<a/>
-<BR><a href=https://randomnerdtutorials.com/esp32-pinout-reference-gpios/>Configuração I/O</a> para cada pino.
-<BR>Como verificar o ID do chip<a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
 
-
-
-## Referências Arduino
-<center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
-	
-## Funçoes principais
-<details><summary>Conheça as principais funções em wiring disponíveis na IDE Arduino (clique)</summary>
-	
-<BR><B>Funções</b>
-<bR>Para controlar a placa Arduino e realizar computações.
-<BR><b>Entradas e Saídas Digitais</b>
-<BR>digitalRead()
-<BR>digitalWrite()
-<BR>pinMode() 
-<BR>
-  <BR><B>Entradas e Saídas Analógicas</b>
-<BR>analogRead()
-<BR>analogReference()
-<BR>analogWrite() 
-<BR>
-<BR><B>Funções Temporizadoras</b>
-<BR>delay()
-<BR>delayMicroseconds()
-<BR>micros()
-<BR>millis()
-<BR>
-  
-<BR><B>Comunicação</b>
-<BR>Serial
-<BR>Stream 
-<BR>
-<BR><B>Variáveis</b>
-<BR>
-<BR>Tipos de dados e constantes da linguagem Arduino.
-<BR><B>Constantes</b>
-<BR>HIGH | LOW
-<BR>INPUT | OUTPUT | INPUT_PULLUP
-<BR>LED_BUILTIN
-<BR>true | false
-<BR>Constantes de Ponto Flutuante
-<BR>Constantes Inteiras
- <BR> 
-<BR><B>Tipos de Dados</b>
-<BR>bool
-<BR>boolean
-<BR>byte
-<BR>char
-<BR>double
-<BR>float
-<BR>int
-<BR>long
-<BR>short
-<BR>size_t
-<BR>string
-<BR>String()
-<BR>unsigned char
-<BR>unsigned int
-<BR>unsigned long
-<BR>vetor
-<BR>void
-<BR>word 
-<BR><BR> 
-
-</details>
-
-## Simulador Wokwi
-
-Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
-<BR>
-Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
- 
 
 
 
