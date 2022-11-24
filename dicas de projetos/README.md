@@ -1,4 +1,4 @@
-### MCR 2022- Projeto Quarto Bimestre
+###  Projeto Quarto Bimestre
 
 ## Requisitos
 - Utilizar ESP32 (Pode pegar do colega de outra turma para apresentar o trabalho prático, podendo ser em protoboard). Montagem prática e simulação
