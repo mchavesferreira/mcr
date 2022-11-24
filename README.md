@@ -25,13 +25,12 @@
 	- [maquina de lavar](#maquina-de-lavar)
 	- [Projeto Avaliação](#projeto-avaliação)
 - [Servidor Web](#servidor-web)
-
+- [Protocolo MQTT, IOT](#protocolo-mqtt-iot)
 - [Exemplos de projetos](#Exemplos-de-projetos)
 
 
-Aula 03/11/2022 e 10/11/2022
 
-https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos
+
 
 ## variaveis operadores
   <BR>Variáveis e Operadores</b><BR>  
@@ -281,6 +280,9 @@ Outros:
 
 	- <a href=https://embarcados.com.br> Embarcados </a> Site de uma comunidade sobre sistemas embarcados
 	- 
-    
-
+## Protocolo MQTT, IOT
+###Uso do protocolo MQTT para envio de mensagens entre dispositivos de internet das coisas (IOT). 
+### Integração com Alexa
+### Frameworks e linguagens de programção com ESP32
+https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos
 
