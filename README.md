@@ -25,8 +25,8 @@
 - [Protocolo MQTT, IOT](#protocolo-mqtt-iot)
 - [Exemplos de projetos](#Exemplos-de-projetos)
 - [Projetos Bimestrais](#projetos-bimestrais)
-	- [maquina de lavar](#maquina-de-lavar)
-	- [Projeto Avaliação](#projeto-avaliação)
+	- [Terceiro Bimestre](#terceiro-bimestre)
+	- [Quarto Bimestre](#quarto-bimestre)
 
 
 
@@ -251,7 +251,8 @@ https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos
 
 ## Projetos Bimestrais
 	
-### Terceiro Bimestre: maquina de lavar
+### Terceiro Bimestre
+Projetos baseado em uma maquina de lavar
   <BR><i>Aula 15/09</i>
   <BR><B>Trabalho para Bimestre 3: (Etapa 1 15/9 horário de aula, Etapa 2: 23/9 Suap)</b><BR>
    <BR> Utilizando o projeto inicial a seguir, crie uma máquina personalizada (não será considerado máquina de lavar) atenda os seguintes critérios:<BR>
@@ -291,3 +292,22 @@ Explore o código que utliza máquina de estados para a mudança através da ló
 
   
 <BR>  
+
+
+###  Quarto Bimestre
+Projetos para o quarto bimestre
+
+## Requisitos
+- Utilizar ESP32 (Pode pegar do colega de outra turma para apresentar o trabalho prático, podendo ser em protoboard). Montagem prática e simulação
+- Trabalho em dupla.
+- Programação com envio de dados na nuvem (Thingspeak e ou MQTT/Dashboard)
+- Leitura de um sensor ou simulado
+- Utilizar maquina de estados de processo (switch/case) ou uma sequência de compararações(if/else)
+- Apresentar dado local em display
+- Relizar leitura analógica
+- gerar um repositorio no github, com detalhes, código fonte e fotos. Enviar link para o email do professor.
+- Prazo Trabalho prático: 30/11/2022 (Peso do trabalho na nota final: 60%)
+<BR>
+
+<BR>Peso da prova escrita:  30%  (24/11/2022)
+<BR>Participação e desenvolvimento em aula: 10% (caderno, código em sala...)
