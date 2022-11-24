@@ -145,6 +145,8 @@ void loop() {
 <center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
 	
 ## Funçoes principais
+<details><summary>Conheça as principais funções em wiring disponíveis na IDE Arduino (clique)</summary>
+	
 <BR><B>Funções</b>
 <bR>Para controlar a placa Arduino e realizar computações.
 <BR><b>Entradas e Saídas Digitais</b>
@@ -200,6 +202,7 @@ void loop() {
 <BR>word 
 <BR><BR> 
 
+</details>
 
 ## Simulador Wokwi
 
@@ -281,7 +284,7 @@ Outros:
 	- <a href=https://embarcados.com.br> Embarcados </a> Site de uma comunidade sobre sistemas embarcados
 	- 
 ## Protocolo MQTT, IOT
-###Uso do protocolo MQTT para envio de mensagens entre dispositivos de internet das coisas (IOT). 
+Uso do protocolo MQTT para envio de mensagens entre dispositivos de internet das coisas (IOT). 
 ### Integração com Alexa
 ### Frameworks e linguagens de programção com ESP32
 https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos
