@@ -27,7 +27,7 @@ https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-
 
 ## ESP32 integração com Alexa. Utilizando a biblioteca Espalexa para acionar GPIOs com nomes reconhecidos pela echo-dot.
 <BR>Fonte: https://mjrobot.org/2020/12/31/home-automation-with-alexa/<BR>
-<br><a href=https://github.com/mchavesferreira/mcr/blob/main/dicas%20de%20projetos/alexa_casa.ino>Arquivo modificado </a><br> 
+<br>Código fonte de integração com a alexa corrigido: <a href=https://github.com/mchavesferreira/mcr/blob/main/dicas%20de%20projetos/alexa_casa.ino>Alexa controlando luzes</a><br> 
 
 ## Protocolo MQTT para IOT
 aula <BR>  http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=48
