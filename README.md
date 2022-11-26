@@ -22,7 +22,7 @@
 	- [millis()](#função-millis)
 	- [Interrupção Externa](#Interrupção-externa)
 - [Servidor Web](#servidor-web)
-- [Protocolo MQTT, IOT](#protocolo-mqtt-iot)
+- [IOT, Protocolo MQTT e Alexa](#IOT-Protocolo-MQTT-Alexa)
 - [Exemplos de projetos](#Exemplos-de-projetos)
 - [Projetos Bimestrais](#projetos-bimestrais)
 	- [Terceiro Bimestre](#terceiro-bimestre)
@@ -244,11 +244,73 @@ Outros:
 
 	- <a href=https://embarcados.com.br> Embarcados </a> Site de uma comunidade sobre sistemas embarcados
 	- 
-## Protocolo MQTT, IOT
+## IOT, Protocolo MQTT, Alexa
+
 Uso do protocolo MQTT para envio de mensagens entre dispositivos de internet das coisas (IOT). 
+
+
+## Residencial e IOT
+Automação Residencial com ESP32 – Controle sua Casa pela Web (Usina info)
+https://www.usinainfo.com.br/blog/automacao-residencial-com-esp32-controle-sua-casa-pela-web/
+
+## Curso IOT aplicações em automação com esp32
+https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-ide/
+
 ### Integração com Alexa
-### Frameworks e linguagens de programção com ESP32
-`<link>` https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos
+
+ESP32 integração com Alexa. Utilizando a biblioteca Espalexa para acionar GPIOs com nomes reconhecidos pela echo-dot.
+<BR>Fonte: https://mjrobot.org/2020/12/31/home-automation-with-alexa/<BR>
+<br>Código fonte de integração com a alexa corrigido: <a href=https://github.com/mchavesferreira/mcr/blob/main/dicas%20de%20projetos/alexa_casa.ino>Alexa controlando luzes</a><br> 
+
+## Protocolo MQTT para IOT
+aula <BR>  http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=48
+
+Aplicativo: Dash MQTT  
+https://play.google.com/store/apps/details?id=net.routix.mqttdash
+
+MQTT Público:  http://www.hivemq.com/demos/websocket-client/<BR>
+host:  broker.hivemq.com<BR>
+username: mchavesferreira<BR>
+password: Embar2022<BR>
+topic: movel/acelerax<BR>
+
+Exemplo Wokwi, com tópico em IFSP/led
+
+https://wokwi.com/projects/347942096378790483
+
+
+##  Estudo de redes ESP32-WiFi-Sniffer
+O chip WiFi no ESP32 pode ser alternado para o chamado “modo promíscuo”, que permite monitorar pacotes WiFi sem se conectar à própria rede. Em particular, podemos ver os endereços MAC dos dispositivos próximos:
+https://github.com/ESP-EOS/ESP32-WiFi-Sniffer
+
+https://hackmag.com/security/esp32-sniffer/
+
+# Frameworks:
+Utilizando frameworks (pacotes de programas) prontos para iniciar uma automação com poucas ou nenhuma linha de códigos. Alguns frameworks permitem a gravação através do navegador Chrome.<BR>
+1 - OpenMQTTGateway v1.0.0 - https://docs.openmqttgateway.com/upload/web-install.html<BR>
+2 - ESP Easy’s https://espeasy.readthedocs.io/en/latest/index.html<BR>
+3 - ESP Web Tools https://esphome.github.io/esp-web-tools/ <BR>
+4 - Tasmota https://tasmota.github.io/docs/<BR>
+
+
+# Linguagens e programação
+## Programando através de blocos
+### Easycondig
+
+Aprenda a programar o ESP32 para IOT através de videos tutoriais organizado em 3 partes (Stand-alone, Local-Network e Internet)
+http://easycoding.tn/index.php/esp32/  (Videos tutoriais)
+
+http://www.easycoding.tn/esp32/demos/code/  (ambiente de programação)
+
+Exemplo XML com código fonte para websever: https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/easycoding_xml.xml
+
+### codeskool
+
+https://ide.codeskool.cc/
+
+### mpyblockly
+Programação visual em micropython para ESP32
+https://mpyblockly.github.io/mpyblockly/
 
 ## Projetos Bimestrais
 	
