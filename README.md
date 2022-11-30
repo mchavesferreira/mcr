@@ -375,6 +375,7 @@ Projetos para o quarto bimestre
 <BR>Peso da prova escrita:  30%  (24/11/2022)
 <BR>Participação e desenvolvimento em aula: 10% (caderno, código em sala...)
 <BR><B>Compartilhem </b>seu repositório com o professor, adicionando-o como colaborador(login:mchavesferreira) se seu repostório ter o status de Privado.
+<BR>Escreva um texto breve explicando seu projeto, faça upload de fotos, e coloque o nome dos autores.Escreva um texto breve explicando seu projeto, faça upload de fotos, e coloque o nome dos autores. Crie um arquivo README.md na pasta.
 <br><img src=imagens/colaborador.png>
 <BR>
 
