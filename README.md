@@ -369,8 +369,12 @@ Projetos para o quarto bimestre
 - Apresentar dado local em display
 - Relizar leitura analógica
 - gerar um repositorio no github, com detalhes, código fonte e fotos. Enviar link para o email do professor.
-- Prazo Trabalho prático: 30/11/2022 (Peso do trabalho na nota final: 60%)
+- Prazo Trabalho prático: 01/12/2022 (Peso do trabalho na nota final: 60%)
 <BR>
 
 <BR>Peso da prova escrita:  30%  (24/11/2022)
 <BR>Participação e desenvolvimento em aula: 10% (caderno, código em sala...)
+<BR><B>Compartilhem </b>seu repositório com o professor, adicionando-o como colaborador(login:mchavesferreira) se seu repostório ter o status de Privado.
+<br><img src=imagens/colaborador.png>
+<BR>
+
