@@ -11,27 +11,15 @@
 - [Sistemas de clock](#Sistemas-de-clock)
 - [Sistema de Reset](#Sistema-de-Reset)
 - [Assembly-primeiro programa](#Assembly-Primeiro-programa)
-- [Interrupção Externa](#Interrupção)<BR>
-- [Temporização](#Temporização) : Timer 0, Timer 1, Timer 2 e PWM
-- [Conversor AD](#Conversor-AD) 
-- [Comunições Seriais](#Comunicação-Serial) 
-        - [USART]
-        - [SPI]
-        - [I2C]
-- [Memória EEPROM](#Conversor-AD) 
 
 
-- [Projetos e Programas](#Projetos-e-Programas)
-	- [Pisca Led](#Pisca-Led)
-	- [Dislplay 7 Segmentos](#Dislplay-7-Segmentos)
-	- [Display LCD 16x2](#Display-LCD-16x2)
-	- [Maquina de Lavar](#Maquina-de-Lavar)
+
 
 
 
 ## Simulador Wokwi e Atmel Studio
 
-<center><img src=imagens/wokwi_simulador.png></center>
+<center><img src=https://github.com/mchavesferreira/smie/imagens/wokwi_simulador.png></center>
 
 Simulador <a href=https://wokwi.com/projects/341066839950885460>Atmega328P Assembly Online</a>
 
