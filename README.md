@@ -73,7 +73,7 @@ Durante o reset, todos os registradores de E/S são ajustados para seus valores 
 ## Assembly Primeiro programa
 
 Programa Pisca-pisca
-<center><img src=https://github.com/mchavesferreira/smie/imagens/wokwi_simulador.png  width=300 height=300></center>
+<center><img src=https://github.com/mchavesferreira/smie/imagens/pisca.png  width=300 height=300></center>
 	
 Exemplo de um programa para controle de uma caixa d'agua.
 <BR>Defina pinos de entrada e saída. As entradas com push button aterradas e  pull up ativos. O Programa aguarda “Start” ser pressionado, que liga a  Valvula 1 até que sensor cheio seja acionado. O misturador é acionado  por2 segundos. Esvazia-se o tanque até o sensor vazio ser acionado, retornando ao estado inicial. Considere clock 16Mhz.
