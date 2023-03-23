@@ -14,11 +14,6 @@
 
 
 
-Avaliações para Turma 2023-1
-
-- 17/3/2023  - Tarefa Suap: Cronometro com big numbers em lcd simulado em wokwi e/ou proteus;
-- 24/3/2023  - Tarefa Suap: Maquina de lavar com todas etapas simulado em wokwi e/ou protues;
-- 31/3/2023  - Tarefa Suap: Maquina de lavar com todas etapas simulado em wokwi e/ou protues;
 
 
 ## Simulador Wokwi e Atmel Studio
