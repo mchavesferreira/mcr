@@ -18,7 +18,7 @@
 
 ## Simulador Wokwi e Atmel Studio
 
-<center><img src=https://github.com/mchavesferreira/smie/imagens/wokwi_simulador.png></center>
+<center><img src=/mchavesferreira/smie/imagens/wokwi_simulador.png></center>
 
 Simulador <a href=https://wokwi.com/projects/341066839950885460>Atmega328P Assembly Online</a>
 
