@@ -6,6 +6,7 @@
 
 
 ## Aulas
+- [Apostila ESP32](#Apostila-ESP32)
 - [Arduino Referências](#Referências-Arduino)
 - [Pinout Esp32](#pinout-esp32)
 - [Simulador Online](#simulador-wokwi)
@@ -21,13 +22,14 @@
 - [Interrupções e Funções de tempo](#tempo)
 	- [millis()](#função-millis)
 	- [Interrupção Externa](#Interrupção-externa)
+- [Acesso GET POST](#Acesso-GET-POST)
 - [Servidor Web](#servidor-web)
 - [IOT, Protocolo MQTT e Alexa](#IOT-Protocolo-MQTT-Alexa)
 - [Exemplos de projetos](#Exemplos-de-projetos)
-- [Projetos Bimestrais](#projetos-bimestrais)
-	- [Terceiro Bimestre](#terceiro-bimestre)
-	- [Quarto Bimestre](#quarto-bimestre)
 
+
+## Apostila ESP32
+<BR> <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/ESP32.docx>Apostila</a> em desenvolvimento
 
 
 
@@ -211,7 +213,10 @@ void loop() {
   
 
 
+## Acesso GET POST
 
+<BR>Exemplo de aplicação com métodos de acesso URL para uplink ou downlink de informações (payload)
+	
 
 
 
@@ -314,7 +319,7 @@ https://mpyblockly.github.io/mpyblockly/
 
 
 
-	Brincando com Esp32
-	https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-ide/
+Brincando com Esp32
+https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-ide/
 	
 	
