@@ -11,6 +11,9 @@
 - [Sistemas de clock](#Sistemas-de-clock)
 - [Sistema de Reset](#Sistema-de-Reset)
 - [Assembly-primeiro programa](#Assembly-Primeiro-programa)
+- [Primeiro Programa em C](#Primeiro-Programa-em-C)
+- [Lendo Botão](#Lendo-Botão)
+- [Utilizando Macros](#Utilizando-Macros)
 
 
 
@@ -149,28 +152,7 @@ volta:
       RET
 ```
 
-## Interrupção
-	
-### Interrupção Externa
 
-Slide, código para ativação de Int0 e Int1
-<a href=https://github.com/mchavesferreira/smie/tree/main/interrupcao>Exemplo Interrupção externa</a>
-	
-## Temporização
- 
-### Projetos e Programas utilizando Timer 0 e Timer 1 e PWM
-<a href=timer>Códigos</a> utilizando temporização e PWM
-<BR>
-
-## Conversor AD
-Código para conversão AD utilizando periférico interno
-<a href=https:conversor_ad>Saiba mais sobre o conversor AD</a>
-
-## Comunicação Serial
-
-Comunicação UART 
-
-<a href=https:serial>Saiba mais sobre a comunicação serial</a>
 
 ### Pisca Led
 
@@ -217,30 +199,114 @@ ATRASO:					//atraso de aprox. 200ms
 
 Simulação:
 <a href=https://wokwi.com/projects/341066839950885460> Pisca Led</a><br>
- 
-### Dislplay 7 Segmentos
-	
-### Display LCD 16x2
-	
-Montagem Exemplo 4, esteira com display LCD
 
-<img src=imagens/lcd_simulador.png>
-	
-	- LCD  > AVR (arduino);
-	- RS > PD2 (9)
-	- Enable > PD (8)
-  
-Simulação online utilizando LCD16x2: <a href=https://wokwi.com/projects/342964449732198994>Exemplo LCD </a>
+## Primeiro-Programa-em-C
 
-### Maquina de Lavar	
+Este primeiro exemplo de programa com um pisca Led
+
+Código para o primeiro programa
+```java
+
+#define F_CPU 16000000UL // Clock frequency, needed to delay functions
+#include <avr/io.h> // Register definitions
+#include <util/delay.h> // Delay functions
+
+int main(){
+  DDRB |= (1<<PB5); // Define PORTB5 as an output
+  while(1){ // Infinite loop
+  PORTB |= (1<<PB5); // Turn led on
+  _delay_ms(1000); // Wait 1 second
+   PORTB &= ~(1<<PB5); // Turn led off
+  _delay_ms(1000); // Wait another second
+  }
+return 0;
+}
+```
+
+## Utilizando Macros
+
+Conhecendo o recurso de Macros do compilador para simplificar o código
+
+```java
+#define F_CPU 16000000UL	//define a frequencia do microcontrolador 16MHz (necessario para usar as rotinas de atraso)
+#include <avr/io.h> 	    //definiçoeses do componente especificado
+#include <util/delay.h>		//biblioteca para o uso das rotinas de _delay_ms() e _delay_us()
+
+//Definicoeses de macros - empregadas para o trabalho com os bits de uma variavel ou registrador
+
+#define	set_bit(Y,bit_x) (Y|=(1<<bit_x))	//ativa o bit x da variavel Y (coloca em 1)
+#define	clr_bit(Y,bit_x) (Y&=~(1<<bit_x))	//limpa o bit x da variavel Y (coloca em 0) 
+#define tst_bit(Y,bit_x) (Y&(1<<bit_x))  	//testa o bit x da variavel Y (retorna 0 ou 1)
+#define cpl_bit(Y,bit_x) (Y^=(1<<bit_x))	//troca o estado do bit x da variavel Y (complementa)
+
+#define LED PB5				//LED � o substituto de PB5 na programacao     	
+
+//--------------------------------------------------------------------------------------
+int main( )
+{
+    DDRB = 0xFF;			//configura todos os pinos do PORTB como saidas
 	
-Exemplo Maquina de Lavar
+	while(1)				//laco infinito
+    {
+        set_bit(PORTB,LED);	//liga LED
+		_delay_ms(200);		//atraso de 200 ms
+		clr_bit(PORTB,LED);	//desliga LED
+		_delay_ms(200);		//atraso de 200 ms
+    }
+}
+
+```
+
+
+## Lendo Botão
+
+```java
+
+//=====================================================================================	//
+//    LIGANDO E DESLIGANDO UM LED QUANDO UM BOTaO e PRESSIONADO							//
+//===================================================================================== //
+#define F_CPU 16000000UL	/*define a frequ�ncia do microcontrolador 16MHz (necess�rio
+							para usar as rotinas de atraso)*/
+#include <avr/io.h> 	    //definicoes do componente especificado
+#include <util/delay.h>		//biblioteca para as rotinas de _delay_ms() e delay_us()
+
+//Definicoes de macros - para o trabalho com os bits de uma variavel
+
+#define set_bit(Y,bit_x)(Y|=(1<<bit_x))		//ativa o bit x da variavel Y (coloca em 1)
+#define clr_bit(Y,bit_x)(Y&=~(1<<bit_x))	//limpa o bit x da variavel Y (coloca em 0) 
+#define cpl_bit(Y,bit_x)(Y^=(1<<bit_x))		//troca o estado do bit x da variavel Y 
+#define tst_bit(Y,bit_x)(Y&(1<<bit_x))  	//testa o bit x da variavel Y (retorna 0 ou 1)
+
+#define LED   PD2   //LED e o substituto de PD2 na programacao 
+#define BOTAO PD7   //BOTAO e o substituto de PD7 na programacao     	
+//-------------------------------------------------------------------------------------
+int main()
+{
+	DDRD = 0b00000100;	//configura o PORTD, PD2 saida, os demais pinos entradas
+	PORTD= 0b11111111;	/*habilita o pull-up para o botao e apaga o LED (todas as 
+						entradas com pull-ups habilitados)*/
 	
-<a href=https://github.com/mchavesferreira/smie/tree/main/exemplo_5_LCD_maquina_lavar><img src=imagens/maquinadelavar.png border=0>
-Maquina de lavar </a>
+	while(1)								//laco infinito
+	{
+		if(!tst_bit(PIND,BOTAO))			//se o botao for pressionado executa o if
+		{					
+			while(!tst_bit(PIND,BOTAO));	//fica preso ate soltar o botao
+
+			_delay_ms(10);					//atraso de 10 ms para eliminar o ruido do botao
+
+			if(tst_bit(PORTD,LED))			//se o LED estiver apagado, liga o LED
+				clr_bit(PORTD,LED);			
+			else							//se nao apaga o LED
+				set_bit(PORTD,LED);	
+
+			//o comando cpl_bit(PORTD,LED) pode substituir este laco if-else
+		
+		}//if do botao pressionado
 	
-Código AVR assembly
-<a href=https://wokwi.com/projects/341106129478091346>Simulação Maquina de lavar</a> (woki)
+	}//laco infinito
+}
+```
+
 
 Referências:
 [1] Atmega 328P 8-bit AVR Microcontroller with 32K Bytes In-System Programmable Flash - Datasheet
