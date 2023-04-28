@@ -112,6 +112,25 @@ Saiba mais:  https://www.gta.ufrj.br/ensino/eel878/redes1-2019-1/vf/mqtt/
 Utilizando um broker MQTT publico
 	  http://www.hivemq.com/demos/websocket-client/
    <P><P>
+   
+   
+  Características para ESP32
+  https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
+  
+  <P>
+-O que é Wifi  Direct
+https://www.digitaltrends.com/computing/what-is-wi-fi-direct/
+  <P>
+-Aplicação prática com ESP-NOW
+https://www.youtube.com/watch?v=6NsBN42B80Q
+  <P>
+-ESP32 Mesh Desenvolvimento do framework
+https://www.youtube.com/watch?v=8JaK2W0avr0
+
+    <P>
+   <P>
+   
+   
 Referências:
 <BR>https://mundoprojetado.com.br/criar-access-point-com-nodemcu/
 <BR>https://randomnerdtutorials.com/esp32-web-server-arduino-ide/
