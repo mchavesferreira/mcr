@@ -26,6 +26,9 @@
 - [Servidor Web](#servidor-web)
 - [IOT, Protocolo MQTT e Alexa](#IOT-Protocolo-MQTT-Alexa)
 - [Exemplos de projetos](#Exemplos-de-projetos)
+- [Linguagens e ambientes de desenvolvimento]
+- [Livros]
+
 
 
 ## Apostila ESP32
@@ -317,9 +320,39 @@ https://ide.codeskool.cc/
 Programação visual em micropython para ESP32
 https://mpyblockly.github.io/mpyblockly/
 
-
-
 Brincando com Esp32
 https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-ide/
+	
+## FreeRtos
+
+Blink com FreeRtos
+<A href=https://github.com/PacktPublishing/Internet-of-Things-Projects-with-ESP32/blob/master/Chapter01/blinking/main/blinking.c>source code</a>
+	
+	
+#Livros e codigo fonte
+<BR> 
+<img src=https://static.packt-cdn.com/products/9781789956870/cover/smaller> Internet of Things Projects with ESP32, <BR><BR>
+https://download.packt.com/free-ebook/9781789956870,<BR><BR> source code: https://github.com/PacktPublishing/Internet-of-Things-Projects-with-ESP32 <BR><BR>
+https://github.com/PacktPublishing/Developing-IoT-Projects-with-ESP32-2nd-edition<BR>
+https://github.com/PacktPublishing/Internet-of-Things-with-ESP32<BR>
+https://github.com/PacktPublishing/Advanced-ESP32	<BR>
+
+	 Características para ESP32<BR><BR>
+  https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
+<BR><BR>
+-O que é Wifi  Direct<BR>
+https://www.digitaltrends.com/computing/what-is-wi-fi-direct/
+<BR><BR>
+-Aplicação prática com ESP-NOW<BR>
+https://www.youtube.com/watch?v=6NsBN42B80Q<BR>
+<BR><BR>
+-ESP32 Mesh Desenvolvimento do framework<BR>
+https://www.youtube.com/watch?v=8JaK2W0avr0<BR>
+<BR><BR>
+   
+Livros e Codigos fontes<Br><BR>
+https://github.com/PacktPublishing/Advanced-ESP32
+	
+	
 	
 	
