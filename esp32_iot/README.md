@@ -1,7 +1,5 @@
 <h1>Aplicações de Internet das coisas com ESP32</h1>
-<BR>4° Bimestre/MCR/Prof. Marcos Chaves
-<BR>
-	<P>07/Outubro/2022
+
 <BR>01- Criando um web server para controle e exibição de dados (Dashboard)<BR>
 	
  <BR> <img src=imagens/webserver.png>
