@@ -114,21 +114,18 @@ Utilizando um broker MQTT publico
    <P><P>
    
    
-  Características para ESP32
+ Características para ESP32<BR><BR>
   https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
-  
-  <P>
--O que é Wifi  Direct
+<BR><BR>
+-O que é Wifi  Direct<BR>
 https://www.digitaltrends.com/computing/what-is-wi-fi-direct/
-  <P>
--Aplicação prática com ESP-NOW
-https://www.youtube.com/watch?v=6NsBN42B80Q
-  <P>
--ESP32 Mesh Desenvolvimento do framework
-https://www.youtube.com/watch?v=8JaK2W0avr0
-
-    <P>
-   <P>
+<BR><BR>
+-Aplicação prática com ESP-NOW<BR>
+https://www.youtube.com/watch?v=6NsBN42B80Q<BR>
+<BR><BR>
+-ESP32 Mesh Desenvolvimento do framework<BR>
+https://www.youtube.com/watch?v=8JaK2W0avr0<BR>
+<BR><BR>
    
    
 Referências:
