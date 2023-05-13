@@ -25,9 +25,8 @@
 	- [Interrupção Externa](#Interrupção-externa)
 - [Acesso GET POST](#Acesso-GET-POST)
 - [Servidor Web](#servidor-web)
-- [IOT, Protocolo MQTT e Alexa](#IOT-Protocolo-MQTT-Alexa)
+- [ESP32 IOT(#ESP32 IOT)
 - [Exemplos de projetos](#Exemplos-de-projetos)
-- [Cloud para desenvolvimento] (#Cloud-para-desenvolvimento)
 - [Livros]
 
 
@@ -235,19 +234,10 @@ void loop() {
   
 
 
-## Acesso GET POST
+## ESP32 IOT
 
-<BR>Exemplo de aplicação com métodos de acesso URL para uplink ou downlink de informações (payload)
-	
-
-
-
-
-
-## Servidor Web
-<P><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot>Esp32 como servidor de pagina</a><B> Introdução a internet das coisas </b>
-
-<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0></a>
+<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0>Saiba mais...</a><BR>
+<B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
 
 
 ## Exemplos de projetos
