@@ -236,7 +236,7 @@ void loop() {
 
 ### ESP32 IOT
 
-<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0>Saiba mais...</a><BR>
+<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0><BR>Saiba mais...</a><BR>
 <B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
 
 
@@ -286,7 +286,6 @@ https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-
 	
 
 	
-	
 <BR>## Livros e codigo fonte
 <BR> 
 <img src=https://static.packt-cdn.com/products/9781789956870/cover/smaller> Internet of Things Projects with ESP32, <BR><BR>
@@ -297,15 +296,7 @@ https://github.com/PacktPublishing/Advanced-ESP32	<BR>
 Características para ESP32<BR><BR>
   https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
 <BR><BR>
--O que é Wifi  Direct<BR>
-https://www.digitaltrends.com/computing/what-is-wi-fi-direct/
-<BR><BR>
--Aplicação prática com ESP-NOW<BR>
-https://www.youtube.com/watch?v=6NsBN42B80Q<BR>
-<BR><BR>
--ESP32 Mesh Desenvolvimento do framework<BR>
-https://www.youtube.com/watch?v=8JaK2W0avr0<BR>
-<BR><BR>
+
    
 Livros e Codigos fontes<Br><BR>
 https://github.com/PacktPublishing/Advanced-ESP32
