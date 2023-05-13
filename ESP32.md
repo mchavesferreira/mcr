@@ -347,23 +347,23 @@ https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-
 
 Blink com FreeRtos
 <A href=https://github.com/PacktPublishing/Internet-of-Things-Projects-with-ESP32/blob/master/Chapter01/blinking/main/blinking.c>source code</a>
+<BR><BR>
+## Cloud para desenvolvimento
+<BR>#Blynk
+<BR>https://blynk.io/
+<BR>O Blynk foi desenvolvido para ser utilizado em projetos IoT, com ele conseguimoscomunicar através do celular com nossa placa ESP-32 e controlá-la via Wi-fi ouBluetooth.
 
-#Cloud para desenvolvimento
-#Blynk
-https://blynk.io/
-O Blynk foi desenvolvido para ser utilizado em projetos IoT, com ele conseguimoscomunicar através do celular com nossa placa ESP-32 e controlá-la via Wi-fi ouBluetooth.
-
-#IFTT
+<BR>#IFTT
 https://ifttt.com/
 
-#Tago IO
+<BR>#Tago IO
 https://tago.io/
 	
-#Arduino IoT Cloud
+<BR>#Arduino IoT Cloud
 https://cloud.arduino.cc/
 	
 	
-#Livros e codigo fonte
+<BR>## Livros e codigo fonte
 <BR> 
 <img src=https://static.packt-cdn.com/products/9781789956870/cover/smaller> Internet of Things Projects with ESP32, <BR><BR>
 https://download.packt.com/free-ebook/9781789956870,<BR><BR> source code: https://github.com/PacktPublishing/Internet-of-Things-Projects-with-ESP32 <BR><BR>
