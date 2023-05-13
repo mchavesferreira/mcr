@@ -9,6 +9,7 @@
 - [Apostila ESP32](#Apostila-ESP32)
 - [Arduino Referências](#Referências-Arduino)
 - [Pinout Esp32](#pinout-esp32)
+- [Arquitetura Esp32](#arquitetura-esp32)
 - [Simulador Online](#simulador-wokwi)
 - [Funções principais](#Funçoes-principais)
 - [Variáveis e Operadores](#variaveis-operadores)
@@ -44,6 +45,20 @@
 <BR><a href=https://randomnerdtutorials.com/esp32-pinout-reference-gpios/>Configuração I/O</a> para cada pino.
 <BR>Como verificar o ID do chip<a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
 
+# Pinos RTC_GPIO <br><br>
+	Os pinos RTC_GPIO no ESP32 são pinos de entrada/saída que são capazes de operar tanto em modo RTC (Real Time Clock) quanto em modo digital normal. Esses pinos são conectados ao subsistema RTC do chip ESP32 e podem ser usados para uma variedade de funções relacionadas a relógios e temporizadores.
+<br><br>
+O subsistema RTC no ESP32 é responsável por manter um relógio em tempo real com alta precisão, mesmo quando o chip está em modo de baixo consumo de energia ou em modo de hibernação. Os pinos RTC_GPIO podem ser usados para acionar interrupções de baixo consumo de energia no subsistema RTC, permitindo que o chip acorde em momentos específicos para executar tarefas agendadas.
+<br><br>
+Além disso, os pinos RTC_GPIO também podem ser usados para funções de entrada/saída de uso geral no modo digital normal, como outros pinos de entrada/saída do ESP32. Eles suportam diferentes níveis de sinal, incluindo níveis TTL e CMOS, e podem ser configurados como entrada ou saída de acordo com as necessidades do projeto.
+<br><br>
+Em resumo, os pinos RTC_GPIO são úteis para aplicações que envolvem temporizadores, relógios e baixo consumo de energia. Eles permitem que o ESP32 acorde em momentos específicos para executar tarefas agendadas, o que é útil em aplicações de IoT, por exemplo, onde o dispositivo precisa permanecer em modo de baixo consumo de energia na maior parte do tempo para economizar energia.
+<br><br>	
+## Arquitetura Esp32	<BR><BR>
+	<BR> - Mapeamento da memória (pagina 7) <a href=https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf>m<BR>emory</a>
+	<BR> -
+	<bR> -
+	
 ## Simulador Wokwi
 
 Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
