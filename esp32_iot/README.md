@@ -1,4 +1,4 @@
-<h1>Aplicações de Internet das coisas com ESP32</h1>
+<h1>Aplicações de Internet das Coisas com ESP32</h1>
 
 <BR>01- Criando um web server para controle e exibição de dados (Dashboard)<BR>
 	
@@ -152,7 +152,6 @@ ESP32 integração com Alexa. Utilizando a biblioteca Espalexa para acionar GPIO
 ##  Estudo de redes ESP32-WiFi-Sniffer
 O chip WiFi no ESP32 pode ser alternado para o chamado “modo promíscuo”, que permite monitorar pacotes WiFi sem se conectar à própria rede. Em particular, podemos ver os endereços MAC dos dispositivos próximos:
 https://github.com/ESP-EOS/ESP32-WiFi-Sniffer
-
 https://hackmag.com/security/esp32-sniffer/
 
 ## Frameworks:
@@ -182,19 +181,20 @@ https://www.youtube.com/watch?v=8JaK2W0avr0<BR>
 Blink com FreeRtos
 <A href=https://github.com/PacktPublishing/Internet-of-Things-Projects-with-ESP32/blob/master/Chapter01/blinking/main/blinking.c>source code</a>
 <BR><BR>
-## Cloud para desenvolvimento
+	
+### Cloud para desenvolvimento
 <BR>#Blynk
 <BR>https://blynk.io/
-<BR>O Blynk foi desenvolvido para ser utilizado em projetos IoT, com ele conseguimoscomunicar através do celular com nossa placa ESP-32 e controlá-la via Wi-fi ouBluetooth.
+<BR>O Blynk foi desenvolvido para ser utilizado em projetos IoT, com ele conseguimoscomunicar através do celular com nossa placa ESP-32 e controlá-la via Wi-fi ouBluetooth.<BR>
 
-<BR>#IFTT
-https://ifttt.com/
-
-<BR>#Tago IO
-https://tago.io/
+#IFTT
+<BR>https://ifttt.com/
+<BR>
+#Tago IO
+<BR>https://tago.io/<BR>
 	
-<BR>#Arduino IoT Cloud
-https://cloud.arduino.cc/
+#Arduino IoT Cloud
+<BR>https://cloud.arduino.cc/<BR>
 	
    
 Referências:
