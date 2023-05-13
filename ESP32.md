@@ -234,7 +234,7 @@ void loop() {
   
 
 
-## ESP32 IOT
+### ESP32 IOT
 
 <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0>Saiba mais...</a><BR>
 <B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
@@ -260,12 +260,7 @@ Outros:
 - Seleção de projetos <a href=https://github.com/mchavesferreira/mcr/blob/81e149b137445a6df07bdaa17b2f0c46f31eff36/dicas%20de%20projetos/Dicas%20para%20projetos.pdf> Dicas de projetos.pdf</a>
 
 	- <a href=https://embarcados.com.br> Embarcados </a> Site de uma comunidade sobre sistemas embarcados
-	- 
-## IOT, Protocolo MQTT, Alexa
-
-<br>Uso do protocolo MQTT para envio de mensagens entre dispositivos de internet das coisas (IOT). 
-<br><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot>ESP32, exemplos de aplicação, frameworks </a>
-<P>
+	
 
 # Linguagens e programação
 ## Programando através de blocos
