@@ -58,7 +58,8 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
   ### Criando comunicação para IOT
   
  ## Acess-Point com programação em blocos
- 
+ <br><img src=imagens/blocos.png><BR>
+<a href=easycoding.tn target=_blank>Easycoding.tn</a><br><BR>
  ```javascript
  /////////////////////////////////
 // Generated with a lot of love//
@@ -103,7 +104,8 @@ void loop()
  ```
 
 ## Enviando dados para nuvem utilizando Thingspeak
-
+<BR><img src=imagens/thingspeak.png>Thingspeak</a>
+<BR>
 ## Comunicação de dados IOT utilizando protocolo MQTT
 Saiba mais:  https://www.gta.ufrj.br/ensino/eel878/redes1-2019-1/vf/mqtt/
 
