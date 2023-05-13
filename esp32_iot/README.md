@@ -1,5 +1,17 @@
-<h1>Aplicações de Internet das Coisas com ESP32</h1>
-
+<h1>Aplicações de Internet das Coisas com ESP32</h1><BR>
+- [Webserver](#Webserver)
+- [Criando comunicação para IOT](#Criando-comunicação-para-IOT)
+	- [Acess-Point](#Acess-Point)
+	- [Oled](#display-oled)
+- [Residencial e IOT](#Residencial-e-IOT)
+- [Thingspeak](#Residencial-e-IOT)
+- [MQTT](#MQTT)
+- [Integração com Alexa](#Integração-com-Alexa)
+- [Frameworks](#Frameworks)
+- [FreeRtos](#FreeRtos)
+- [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
+	
+## Webserver
 <BR>01- Criando um web server para controle e exibição de dados (Dashboard)<BR>
 	
  <BR> <img src=imagens/webserver.png>
@@ -55,9 +67,9 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
   <BR><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/acesshtml>Codigo .ino e pagina web em index.h</a>
   
   
-  ### Criando comunicação para IOT
+## Criando comunicação para IOT
   
- ## Acess-Point com programação em blocos
+### Acess-Point com programação em blocos
  <br><img src=imagens/blocos.jpg><BR>
 <a href=easycoding.tn target=_blank>Easycoding.tn</a><br><BR>
  ```javascript
@@ -108,16 +120,17 @@ void loop()
 Automação Residencial com ESP32 – Controle sua Casa pela Web (Usina info)
 https://www.usinainfo.com.br/blog/automacao-residencial-com-esp32-controle-sua-casa-pela-web/
 
-## Curso IOT aplicações em automação com esp32
-https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-ide/
+
 	  	  
-## Enviando dados para nuvem utilizando Thingspeak
+## Thingspeak
+<BR>Enviando dados para nuvem utilizando Thingspeak
 <BR><a href=https://thingspeak.com/ target=_blank border=0><img src=imagens/thingspeak.png>Thingspeak</a>
 <BR>
 <BR><a href=https://wokwi.com/projects/364642003805651969>Exemplo online</a><BR>
 	
 	
-## Comunicação de dados IOT utilizando protocolo MQTT
+## MQTT
+<BR>Comunicação de dados IOT utilizando protocolo MQTT
 Saiba mais:  https://www.gta.ufrj.br/ensino/eel878/redes1-2019-1/vf/mqtt/
 
 Utilizando um broker MQTT publico
@@ -142,26 +155,20 @@ Exemplo Wokwi, com tópico em IFSP/led<BR>
 https://wokwi.com/projects/347942096378790483
 	   
 
-### Integração com Alexa
+## Integração com Alexa
 
 ESP32 integração com Alexa. Utilizando a biblioteca Espalexa para acionar GPIOs com nomes reconhecidos pela echo-dot.
 <BR>Fonte: https://mjrobot.org/2020/12/31/home-automation-with-alexa/<BR>
 <br>Código fonte de integração com a alexa corrigido: <a href=https://github.com/mchavesferreira/mcr/blob/main/dicas%20de%20projetos/alexa_casa.ino>Alexa controlando luzes</a><br> 
 
-
-##  Estudo de redes ESP32-WiFi-Sniffer
-O chip WiFi no ESP32 pode ser alternado para o chamado “modo promíscuo”, que permite monitorar pacotes WiFi sem se conectar à própria rede. Em particular, podemos ver os endereços MAC dos dispositivos próximos:
-https://github.com/ESP-EOS/ESP32-WiFi-Sniffer
-https://hackmag.com/security/esp32-sniffer/
-
-## Frameworks:
+## Frameworks
 
 Utilizando frameworks (pacotes de programas) prontos para iniciar uma automação com poucas ou nenhuma linha de códigos. Alguns frameworks permitem a gravação através do navegador Chrome.<BR>
 1 - OpenMQTTGateway v1.0.0 - https://docs.openmqttgateway.com/upload/web-install.html<BR>
 2 - ESP Easy’s https://espeasy.readthedocs.io/en/latest/index.html<BR>
 3 - ESP Web Tools https://esphome.github.io/esp-web-tools/ <BR>
 4 - Tasmota https://tasmota.github.io/docs/<BR>
-	
+5 - <a href=https://esphome.io/ target=_blank>ESPHome 	
    
  Características para ESP32<BR><BR>
   https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
@@ -182,22 +189,30 @@ Blink com FreeRtos
 <A href=https://github.com/PacktPublishing/Internet-of-Things-Projects-with-ESP32/blob/master/Chapter01/blinking/main/blinking.c>source code</a>
 <BR><BR>
 	
-### Cloud para desenvolvimento
-<BR>#Blynk
+## Cloud para desenvolvimento
+### Blynk
 <BR>https://blynk.io/
 <BR>O Blynk foi desenvolvido para ser utilizado em projetos IoT, com ele conseguimoscomunicar através do celular com nossa placa ESP-32 e controlá-la via Wi-fi ouBluetooth.<BR>
 
-#IFTT
+### IFTT
 <BR>https://ifttt.com/
 <BR>
-#Tago IO
+### Tago IO
 <BR>https://tago.io/<BR>
 	
-#Arduino IoT Cloud
+### Arduino IoT Cloud
 <BR>https://cloud.arduino.cc/<BR>
 	
-   
+
+##  Estudo de redes ESP32-WiFi-Sniffer
+O chip WiFi no ESP32 pode ser alternado para o chamado “modo promíscuo”, que permite monitorar pacotes WiFi sem se conectar à própria rede. Em particular, podemos ver os endereços MAC dos dispositivos próximos:
+https://github.com/ESP-EOS/ESP32-WiFi-Sniffer
+https://hackmag.com/security/esp32-sniffer/
+	
+	
 Referências:
+<BR>Curso IOT aplicações em automação com esp32
+https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-ide/
 <BR>https://mundoprojetado.com.br/criar-access-point-com-nodemcu/
 <BR>https://randomnerdtutorials.com/esp32-web-server-arduino-ide/
 <br> https://randomnerdtutorials.com/esp32-access-point-ap-web-server/
