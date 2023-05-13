@@ -45,8 +45,12 @@
 <BR><a href=https://randomnerdtutorials.com/esp32-pinout-reference-gpios/>Configuração I/O</a> para cada pino.
 <BR>Como verificar o ID do chip<a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
 
+# Sensores internos
+
+Os pinos SENSOR_VP e SENSOR_VN são pinos analógicos dedicados para a interface de entrada do sensor Hall interno no microcontrolador ESP32.
+
 # Pinos RTC_GPIO <br><br>
-	Os pinos RTC_GPIO no ESP32 são pinos de entrada/saída que são capazes de operar tanto em modo RTC (Real Time Clock) quanto em modo digital normal. Esses pinos são conectados ao subsistema RTC do chip ESP32 e podem ser usados para uma variedade de funções relacionadas a relógios e temporizadores.
+<BR>Os pinos RTC_GPIO no ESP32 são pinos de entrada/saída que são capazes de operar tanto em modo RTC (Real Time Clock) quanto em modo digital normal. Esses pinos são conectados ao subsistema RTC do chip ESP32 e podem ser usados para uma variedade de funções relacionadas a relógios e temporizadores.
 <br><br>
 O subsistema RTC no ESP32 é responsável por manter um relógio em tempo real com alta precisão, mesmo quando o chip está em modo de baixo consumo de energia ou em modo de hibernação. Os pinos RTC_GPIO podem ser usados para acionar interrupções de baixo consumo de energia no subsistema RTC, permitindo que o chip acorde em momentos específicos para executar tarefas agendadas.
 <br><br>
