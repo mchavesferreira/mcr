@@ -27,7 +27,7 @@
 - [Servidor Web](#servidor-web)
 - [IOT, Protocolo MQTT e Alexa](#IOT-Protocolo-MQTT-Alexa)
 - [Exemplos de projetos](#Exemplos-de-projetos)
-- [Linguagens e ambientes de desenvolvimento]
+- [Cloud para desenvolvimento] (#Cloud-para-desenvolvimento)
 - [Livros]
 
 
@@ -346,6 +346,20 @@ https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-
 
 Blink com FreeRtos
 <A href=https://github.com/PacktPublishing/Internet-of-Things-Projects-with-ESP32/blob/master/Chapter01/blinking/main/blinking.c>source code</a>
+
+##Cloud para desenvolvimento
+#Blynk
+https://blynk.io/
+O Blynk foi desenvolvido para ser utilizado em projetos IoT, com ele conseguimoscomunicar através do celular com nossa placa ESP-32 e controlá-la via Wi-fi ouBluetooth.
+
+#IFTT
+https://ifttt.com/
+
+#Tago IO
+https://tago.io/
+	
+#Arduino IoT Cloud
+https://cloud.arduino.cc/
 	
 	
 #Livros e codigo fonte
@@ -355,8 +369,7 @@ https://download.packt.com/free-ebook/9781789956870,<BR><BR> source code: https:
 https://github.com/PacktPublishing/Developing-IoT-Projects-with-ESP32-2nd-edition<BR>
 https://github.com/PacktPublishing/Internet-of-Things-with-ESP32<BR>
 https://github.com/PacktPublishing/Advanced-ESP32	<BR>
-
-	 Características para ESP32<BR><BR>
+Características para ESP32<BR><BR>
   https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
 <BR><BR>
 -O que é Wifi  Direct<BR>
