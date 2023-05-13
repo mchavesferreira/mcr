@@ -10,6 +10,7 @@
 - [Thingspeak](#Residencial-e-IOT)
 - [MQTT](#MQTT)
 - [Integração com Alexa](#Integração-com-Alexa)
+- [Explorando recursos da comunicação WIFI](#Explorando-recursos-com-a-comunicação-WIFI)
 - [Frameworks](#Frameworks)
 - [FreeRtos](#FreeRtos)
 - [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
@@ -72,7 +73,7 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
   
 ## Criando comunicação para IOT
   
-### Acess-Point com programação em blocos
+### Código de Acess-Point gerado com a programação em blocos
  <br><img src=imagens/blocos.jpg><BR>
 <a href=easycoding.tn target=_blank>Easycoding.tn</a><br><BR>
  ```javascript
@@ -146,7 +147,7 @@ aula <BR>  http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=48
 Aplicativo: Dash MQTT  
 https://play.google.com/store/apps/details?id=net.routix.mqttdash
 
-Exemplo utilizadno broker MQTT Público:  http://www.hivemq.com/demos/websocket-client/<BR>
+Exemplo utilizando broker MQTT Público:  http://www.hivemq.com/demos/websocket-client/<BR>
 Configure os campos:<BR>
 host:  broker.hivemq.com<BR>
 username: mchavesferreira<BR>
@@ -171,10 +172,10 @@ Utilizando frameworks (pacotes de programas) prontos para iniciar uma automaçã
 2 - ESP Easy’s https://espeasy.readthedocs.io/en/latest/index.html<BR>
 3 - ESP Web Tools https://esphome.github.io/esp-web-tools/ <BR>
 4 - Tasmota https://tasmota.github.io/docs/<BR>
-5 - <a href=https://esphome.io/ target=_blank>ESPHome 	
+5 - <a href=https://esphome.io/ target=_blank>ESPHome</a> 	
    
- Características para ESP32<BR><BR>
-  https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
+## Explorando recursos com a comunicação WIFI
+<BR><BR>  https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
 <BR><BR>
 -O que é Wifi  Direct<BR>
 https://www.digitaltrends.com/computing/what-is-wi-fi-direct/
