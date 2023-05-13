@@ -27,7 +27,7 @@
 - [Servidor Web](#servidor-web)
 - [ESP32 IOT](#ESP32-IOT)
 - [Exemplos de projetos](#Exemplos-de-projetos)
-- [Livros]
+- [Livros](#Livros-e-referencias)
 
 
 
@@ -234,7 +234,7 @@ void loop() {
   
 
 
-### ESP32 IOT
+## ESP32 IOT
 
 <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0><BR>Saiba mais...</a><BR>
 <B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
@@ -262,8 +262,8 @@ Outros:
 	- <a href=https://embarcados.com.br> Embarcados </a> Site de uma comunidade sobre sistemas embarcados
 	
 
-# Linguagens e programação
-## Programando através de blocos
+## Linguagens e programação
+<BR>Programando através de blocos
 ### Easycondig
 
 Aprenda a programar o ESP32 para IOT através de videos tutoriais organizado em 3 partes (Stand-alone, Local-Network e Internet)
@@ -286,7 +286,7 @@ https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-
 	
 
 	
-<BR>## Livros e codigo fonte
+## Livros e referencias
 <BR> 
 <img src=https://static.packt-cdn.com/products/9781789956870/cover/smaller> Internet of Things Projects with ESP32, <BR><BR>
 https://download.packt.com/free-ebook/9781789956870,<BR><BR> source code: https://github.com/PacktPublishing/Internet-of-Things-Projects-with-ESP32 <BR><BR>
@@ -295,9 +295,7 @@ https://github.com/PacktPublishing/Internet-of-Things-with-ESP32<BR>
 https://github.com/PacktPublishing/Advanced-ESP32	<BR>
 Características para ESP32<BR><BR>
   https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
-<BR><BR>
-
-   
+<BR><BR> 
 Livros e Codigos fontes<Br><BR>
 https://github.com/PacktPublishing/Advanced-ESP32
 	
