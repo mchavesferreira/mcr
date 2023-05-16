@@ -291,6 +291,9 @@ https://download.packt.com/free-ebook/9781789956870,<BR><BR> source code: https:
 https://github.com/PacktPublishing/Developing-IoT-Projects-with-ESP32-2nd-edition<BR>
 https://github.com/PacktPublishing/Internet-of-Things-with-ESP32<BR>
 https://github.com/PacktPublishing/Advanced-ESP32	<BR>
+https://lastminuteengineers.com/getting-started-with-esp32/
+https://lastminuteengineers.com/electronics/esp32-projects/  Tutorial e Projetos com ESP32	<BR>
+	
 Características para ESP32<BR><BR>
   https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
 <BR><BR> 
