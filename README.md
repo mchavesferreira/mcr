@@ -311,12 +311,16 @@ int main()
 ```
 
 ## Referências Arduino
-<center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
-
+<BR>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem Wiring</a> <BR>
+<BR>
+<a href=https://wokwi.com/projects/344891652101374548>Pisca led em Arduino</a>	
+		
 Materiais:
-https://edisciplinas.usp.br/pluginfile.php/3252633/mod_resource/content/1/Guia_Arduino_Iniciante_Multilogica_Shop.pdf
+<BR>https://edisciplinas.usp.br/pluginfile.php/3252633/mod_resource/content/1/Guia_Arduino_Iniciante_Multilogica_Shop.pdf
 
-https://www.if.ufrgs.br/public/tapf/rodrigues_v25_n4.pdf		
+<BR>https://www.if.ufrgs.br/public/tapf/rodrigues_v25_n4.pdf
+
+<BR>https://edisciplinas.usp.br/pluginfile.php/3252633/mod_resource/content/1/Guia_Arduino_Iniciante_Multilogica_Shop.pdf
 		
 Referências:
 [1] Atmega 328P 8-bit AVR Microcontroller with 32K Bytes In-System Programmable Flash - Datasheet
