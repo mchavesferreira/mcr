@@ -15,6 +15,8 @@
 - [Lendo Botão](#Lendo-Botão)
 - [Utilizando Macros](#Utilizando-Macros)
 
+- [Arduino Referências](#Referências-Arduino)
+
 
 
 
@@ -308,7 +310,14 @@ int main()
 }
 ```
 
+## Referências Arduino
+<center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
 
+Materiais:
+https://edisciplinas.usp.br/pluginfile.php/3252633/mod_resource/content/1/Guia_Arduino_Iniciante_Multilogica_Shop.pdf
+
+https://www.if.ufrgs.br/public/tapf/rodrigues_v25_n4.pdf		
+		
 Referências:
 [1] Atmega 328P 8-bit AVR Microcontroller with 32K Bytes In-System Programmable Flash - Datasheet
 	
