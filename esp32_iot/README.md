@@ -14,6 +14,7 @@
 - [Frameworks](#Frameworks)
 - [FreeRtos](#FreeRtos)
 - [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
+- [ESP32-Cam](#ESP32-Cam)
 	
 ## Webserver
 <BR>01- Criando um web server para controle e exibição de dados (Dashboard)<BR>
@@ -207,7 +208,15 @@ Blink com FreeRtos
 ### Arduino IoT Cloud
 <BR>https://cloud.arduino.cc/<BR>
 	
-
+## ESP32-Cam
+Este dispositivo para prototipação de aplicações, que além dos recursos de WIFI e Bluetooth presente em módulos do Esp32, inclui uma câmera de 2Mp. Suporta câmeras OV2640 e OV7670
+<BR>Pinos do módulo ESP32-Cam
+<img src=https://github.com/mchavesferreira/mcr/blob/main/esp32cam/ESP32-CAM-pinout-mischianti.jpg>
+<P>
+<BR>Conexão utilizando um adaptador USB-TTL para gravação do firmware:
+<BR><img src=https://github.com/mchavesferreira/mcr/blob/main/esp32cam/esp32-cam-upload-sketch-connection-schema-5v.jpg>
+	
+	
 ##  Estudo de redes ESP32-WiFi-Sniffer
 O chip WiFi no ESP32 pode ser alternado para o chamado “modo promíscuo”, que permite monitorar pacotes WiFi sem se conectar à própria rede. Em particular, podemos ver os endereços MAC dos dispositivos próximos:
 https://github.com/ESP-EOS/ESP32-WiFi-Sniffer
