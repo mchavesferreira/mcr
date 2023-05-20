@@ -164,7 +164,14 @@ Exemplo Wokwi, com tópico em IFSP/led<BR>
 
 https://wokwi.com/projects/347942096378790483
 	   
-
+### Exemplo ESP32, mqtt e dashboard node-red
+	   
+<BR>https://wokwi.com/projects/365211000246545409
+<BR>
+<BR>https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/node_red1.json
+<BR>https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/node_red_estudo.json
+	   
+<BR><BR>
 ## Integração com Alexa
 
 ESP32 integração com Alexa. Utilizando a biblioteca Espalexa para acionar GPIOs com nomes reconhecidos pela echo-dot.
