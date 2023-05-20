@@ -1,0 +1,1731 @@
+[
+    {
+        "id": "24ebbb932d554288",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4a7df0c1065e53b2",
+        "type": "group",
+        "z": "24ebbb932d554288",
+        "name": "Text",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "812304460a412a6a",
+            "7535e115314c8cce"
+        ],
+        "x": 54,
+        "y": 79,
+        "w": 412,
+        "h": 82
+    },
+    {
+        "id": "65d30004c1496c92",
+        "type": "group",
+        "z": "24ebbb932d554288",
+        "name": "Gauge",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "1e9fad082b03aa16",
+            "1408888d0f303782",
+            "2ebefc4fa9cc5665"
+        ],
+        "x": 54,
+        "y": 199,
+        "w": 752,
+        "h": 82
+    },
+    {
+        "id": "1f9bcff40567d4d4",
+        "type": "group",
+        "z": "24ebbb932d554288",
+        "name": "Chart",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "2057c92dc2a09d3f",
+            "c6f31a34f968c652",
+            "e0cd5049e3a7a6e7",
+            "525a30eeffaf4a1b",
+            "bb5f35b842352718"
+        ],
+        "x": 54,
+        "y": 319,
+        "w": 772,
+        "h": 162
+    },
+    {
+        "id": "16f88025b63dd8ef",
+        "type": "group",
+        "z": "24ebbb932d554288",
+        "name": "Bar Chart",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "41a56987ad99a59f",
+            "565733d9a196ea1b",
+            "4da195ee24501131",
+            "b44af45c4bedc7b3",
+            "88a33b85cac5eaae",
+            "f3b6d612787eae4c"
+        ],
+        "x": 54,
+        "y": 519,
+        "w": 1232,
+        "h": 122
+    },
+    {
+        "id": "f697deb347549f7d",
+        "type": "group",
+        "z": "24ebbb932d554288",
+        "name": "Pie Chart",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "ed37225d3ec5916f",
+            "fcef724ad3a906c3",
+            "1baa1f3dede4e3fb",
+            "339045e2a702d164",
+            "681a7f8089812238",
+            "b8bde0a7d7ae6667"
+        ],
+        "x": 54,
+        "y": 679,
+        "w": 592,
+        "h": 202
+    },
+    {
+        "id": "b4cb35f407c6fd3f",
+        "type": "group",
+        "z": "24ebbb932d554288",
+        "name": "Polar Chart",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "7bfd97bedf75e679",
+            "06a7ab11ddecdac5",
+            "b129cea19422be95",
+            "83e6578f817b02be",
+            "6c69bc5d55e2dc56",
+            "e71b6d096dc9018e"
+        ],
+        "x": 54,
+        "y": 919,
+        "w": 572,
+        "h": 202
+    },
+    {
+        "id": "72b95070f63bc0fc",
+        "type": "group",
+        "z": "24ebbb932d554288",
+        "name": "Radar Chart",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "b05637431845096b",
+            "128ddba784e535d5",
+            "29042ad2a54642ef",
+            "80b933406ebaca96"
+        ],
+        "x": 54,
+        "y": 1159,
+        "w": 592,
+        "h": 122
+    },
+    {
+        "id": "fd0dfb107c0e767e",
+        "type": "group",
+        "z": "24ebbb932d554288",
+        "name": "Audio Out",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "cff12b04bc4c6a83",
+            "c2828b16f50cc7b0",
+            "c6e07c149fd9523b",
+            "32416ac4cacb531c",
+            "d1f0f3ebc9d096e1",
+            "84c059b9a3be577c",
+            "7c326d74c0a9fab1"
+        ],
+        "x": 54,
+        "y": 1319,
+        "w": 612,
+        "h": 162
+    },
+    {
+        "id": "41e7b6bbcfa384fd",
+        "type": "group",
+        "z": "24ebbb932d554288",
+        "name": "Notifications",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "656b1925bed741ce",
+            "a9b3e2c5ea456130",
+            "1b91db2672fc7e4a",
+            "965b5b00903ef038",
+            "e63bdfbc27400376",
+            "e4a9d6af0566da27",
+            "7bec24dbb42dfb9b",
+            "95f95493941a5d52",
+            "92539e1fdf7b0df6",
+            "4fd00c9c1ded1b61"
+        ],
+        "x": 54,
+        "y": 1539,
+        "w": 972,
+        "h": 222
+    },
+    {
+        "id": "812304460a412a6a",
+        "type": "ui_text",
+        "z": "24ebbb932d554288",
+        "g": "4a7df0c1065e53b2",
+        "group": "b007859f7b041949",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperature",
+        "format": "{{msg.payload.toFixed(2) + \" °C\"}}",
+        "layout": "row-spread",
+        "x": 370,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7535e115314c8cce",
+        "type": "inject",
+        "z": "24ebbb932d554288",
+        "g": "4a7df0c1065e53b2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5.12345",
+        "payloadType": "num",
+        "x": 160,
+        "y": 120,
+        "wires": [
+            [
+                "812304460a412a6a"
+            ]
+        ]
+    },
+    {
+        "id": "1e9fad082b03aa16",
+        "type": "ui_gauge",
+        "z": "24ebbb932d554288",
+        "g": "65d30004c1496c92",
+        "name": "",
+        "group": "a284fdaa38c18f81",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{value | number:2}}°C",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "10",
+        "seg2": "20",
+        "className": "",
+        "x": 710,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1408888d0f303782",
+        "type": "inject",
+        "z": "24ebbb932d554288",
+        "g": "65d30004c1496c92",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 240,
+        "wires": [
+            [
+                "2ebefc4fa9cc5665"
+            ]
+        ]
+    },
+    {
+        "id": "2ebefc4fa9cc5665",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "65d30004c1496c92",
+        "name": "Random Temperature Value",
+        "func": "// Create random Temperature value between 0 and 30 °C\nmsg.payload = Math.random() * 30\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 240,
+        "wires": [
+            [
+                "1e9fad082b03aa16"
+            ]
+        ]
+    },
+    {
+        "id": "2057c92dc2a09d3f",
+        "type": "ui_chart",
+        "z": "24ebbb932d554288",
+        "g": "1f9bcff40567d4d4",
+        "name": "",
+        "group": "641235355f36f5d7",
+        "order": 1,
+        "width": 10,
+        "height": 6,
+        "label": "Temperatures",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "cubic",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": "30",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "1",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 720,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c6f31a34f968c652",
+        "type": "inject",
+        "z": "24ebbb932d554288",
+        "g": "1f9bcff40567d4d4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 170,
+        "y": 360,
+        "wires": [
+            [
+                "e0cd5049e3a7a6e7",
+                "bb5f35b842352718"
+            ]
+        ]
+    },
+    {
+        "id": "e0cd5049e3a7a6e7",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "1f9bcff40567d4d4",
+        "name": "Random Temperature Values",
+        "func": "msg.payload = Math.random() * 100\nmsg.topic = \"Temp 1\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 360,
+        "wires": [
+            [
+                "2057c92dc2a09d3f"
+            ]
+        ]
+    },
+    {
+        "id": "525a30eeffaf4a1b",
+        "type": "ui_button",
+        "z": "24ebbb932d554288",
+        "g": "1f9bcff40567d4d4",
+        "name": "",
+        "group": "641235355f36f5d7",
+        "order": 3,
+        "width": 8,
+        "height": 1,
+        "passthru": false,
+        "label": "Clear Chart",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 490,
+        "y": 440,
+        "wires": [
+            [
+                "2057c92dc2a09d3f"
+            ]
+        ]
+    },
+    {
+        "id": "bb5f35b842352718",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "1f9bcff40567d4d4",
+        "name": "Random Temperature Values",
+        "func": "msg.payload = Math.random() * 100\nmsg.topic = \"Temp 2\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 400,
+        "wires": [
+            [
+                "2057c92dc2a09d3f"
+            ]
+        ]
+    },
+    {
+        "id": "41a56987ad99a59f",
+        "type": "ui_chart",
+        "z": "24ebbb932d554288",
+        "g": "16f88025b63dd8ef",
+        "name": "",
+        "group": "93fae4f98fb26898",
+        "order": 1,
+        "width": 10,
+        "height": 6,
+        "label": "12-Month Temperatures",
+        "chartType": "horizontalBar",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "50",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": true,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 1150,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "565733d9a196ea1b",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "16f88025b63dd8ef",
+        "name": "12-Month Temperature Data",
+        "func": "var tempData = []\n\nconst months = [\n    \"Jan\",\n    \"Feb\",\n    \"Mar\",\n    \"Apr\",\n    \"May\",\n    \"Jun\",\n    \"Jul\",\n    \"Aug\",\n    \"Sep\",\n    \"Oct\",\n    \"Nov\",\n    \"Dec\"\n]\n\nfor (i = 0; i < months.length; i++) {\n    const dataSet = {\n        \"temp\" : Math.random() * 30,\n        \"month\" : months[i]\n    }\n    tempData.push(dataSet)\n}\n\nmsg.payload = tempData\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 560,
+        "wires": [
+            [
+                "4da195ee24501131"
+            ]
+        ]
+    },
+    {
+        "id": "4da195ee24501131",
+        "type": "split",
+        "z": "24ebbb932d554288",
+        "g": "16f88025b63dd8ef",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 670,
+        "y": 560,
+        "wires": [
+            [
+                "b44af45c4bedc7b3"
+            ]
+        ]
+    },
+    {
+        "id": "b44af45c4bedc7b3",
+        "type": "change",
+        "z": "24ebbb932d554288",
+        "g": "16f88025b63dd8ef",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload.month",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.temp",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 560,
+        "wires": [
+            [
+                "41a56987ad99a59f"
+            ]
+        ]
+    },
+    {
+        "id": "88a33b85cac5eaae",
+        "type": "ui_button",
+        "z": "24ebbb932d554288",
+        "g": "16f88025b63dd8ef",
+        "name": "",
+        "group": "93fae4f98fb26898",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Show Data",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "565733d9a196ea1b"
+            ]
+        ]
+    },
+    {
+        "id": "f3b6d612787eae4c",
+        "type": "ui_button",
+        "z": "24ebbb932d554288",
+        "g": "16f88025b63dd8ef",
+        "name": "",
+        "group": "93fae4f98fb26898",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Clear Data",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 890,
+        "y": 600,
+        "wires": [
+            [
+                "41a56987ad99a59f"
+            ]
+        ]
+    },
+    {
+        "id": "ed37225d3ec5916f",
+        "type": "ui_chart",
+        "z": "24ebbb932d554288",
+        "g": "f697deb347549f7d",
+        "name": "",
+        "group": "dd885df6ad54c298",
+        "order": 1,
+        "width": 10,
+        "height": 6,
+        "label": "Sales",
+        "chartType": "pie",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": "75",
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "x": 570,
+        "y": 720,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fcef724ad3a906c3",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "f697deb347549f7d",
+        "name": "Phone Sales",
+        "func": "msg.payload = Math.random() * 100\nmsg.topic = \"Phones\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 720,
+        "wires": [
+            [
+                "ed37225d3ec5916f"
+            ]
+        ]
+    },
+    {
+        "id": "1baa1f3dede4e3fb",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "f697deb347549f7d",
+        "name": "Laptop Sales",
+        "func": "msg.payload = Math.random() * 100\nmsg.topic = \"Laptops\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 760,
+        "wires": [
+            [
+                "ed37225d3ec5916f"
+            ]
+        ]
+    },
+    {
+        "id": "339045e2a702d164",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "f697deb347549f7d",
+        "name": "Tablet Sales",
+        "func": "msg.payload = Math.random() * 100\nmsg.topic = \"Tablets\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 800,
+        "wires": [
+            [
+                "ed37225d3ec5916f"
+            ]
+        ]
+    },
+    {
+        "id": "681a7f8089812238",
+        "type": "ui_button",
+        "z": "24ebbb932d554288",
+        "g": "f697deb347549f7d",
+        "name": "",
+        "group": "dd885df6ad54c298",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Clear Data",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "",
+        "x": 370,
+        "y": 840,
+        "wires": [
+            [
+                "ed37225d3ec5916f"
+            ]
+        ]
+    },
+    {
+        "id": "b8bde0a7d7ae6667",
+        "type": "ui_button",
+        "z": "24ebbb932d554288",
+        "g": "f697deb347549f7d",
+        "name": "",
+        "group": "dd885df6ad54c298",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Show Data",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "",
+        "x": 150,
+        "y": 720,
+        "wires": [
+            [
+                "fcef724ad3a906c3",
+                "1baa1f3dede4e3fb",
+                "339045e2a702d164"
+            ]
+        ]
+    },
+    {
+        "id": "7bfd97bedf75e679",
+        "type": "ui_chart",
+        "z": "24ebbb932d554288",
+        "g": "b4cb35f407c6fd3f",
+        "name": "",
+        "group": "c99b4d50d24216dc",
+        "order": 1,
+        "width": 10,
+        "height": 6,
+        "label": "Sales",
+        "chartType": "polar-area",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "No Data Available",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 550,
+        "y": 960,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "06a7ab11ddecdac5",
+        "type": "ui_button",
+        "z": "24ebbb932d554288",
+        "g": "b4cb35f407c6fd3f",
+        "name": "",
+        "group": "c99b4d50d24216dc",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Show Data",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 960,
+        "wires": [
+            [
+                "83e6578f817b02be",
+                "6c69bc5d55e2dc56",
+                "e71b6d096dc9018e"
+            ]
+        ]
+    },
+    {
+        "id": "b129cea19422be95",
+        "type": "ui_button",
+        "z": "24ebbb932d554288",
+        "g": "b4cb35f407c6fd3f",
+        "name": "",
+        "group": "c99b4d50d24216dc",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Clear Data",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 350,
+        "y": 1080,
+        "wires": [
+            [
+                "7bfd97bedf75e679"
+            ]
+        ]
+    },
+    {
+        "id": "83e6578f817b02be",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "b4cb35f407c6fd3f",
+        "name": "Phone Sales",
+        "func": "msg.payload = Math.random()* 100\nmsg.topic = \"Phones\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 960,
+        "wires": [
+            [
+                "7bfd97bedf75e679"
+            ]
+        ]
+    },
+    {
+        "id": "6c69bc5d55e2dc56",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "b4cb35f407c6fd3f",
+        "name": "Laptop Sales",
+        "func": "msg.payload = Math.random()* 100\nmsg.topic = \"Laptops\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1000,
+        "wires": [
+            [
+                "7bfd97bedf75e679"
+            ]
+        ]
+    },
+    {
+        "id": "e71b6d096dc9018e",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "b4cb35f407c6fd3f",
+        "name": "Tablet Sales",
+        "func": "msg.payload = Math.random()* 100\nmsg.topic = \"Tablets\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 1040,
+        "wires": [
+            [
+                "7bfd97bedf75e679"
+            ]
+        ]
+    },
+    {
+        "id": "b05637431845096b",
+        "type": "ui_chart",
+        "z": "24ebbb932d554288",
+        "g": "72b95070f63bc0fc",
+        "name": "",
+        "group": "d28ce36e84a59828",
+        "order": 1,
+        "width": 10,
+        "height": 6,
+        "label": "Budget",
+        "chartType": "radar",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "No Data Available",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "100",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 560,
+        "y": 1200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "128ddba784e535d5",
+        "type": "ui_button",
+        "z": "24ebbb932d554288",
+        "g": "72b95070f63bc0fc",
+        "name": "",
+        "group": "d28ce36e84a59828",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Clear Data",
+        "tooltip": "Clear data on Chart",
+        "color": "",
+        "bgcolor": "red",
+        "className": "",
+        "icon": "",
+        "payload": "[]",
+        "payloadType": "json",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 350,
+        "y": 1240,
+        "wires": [
+            [
+                "b05637431845096b"
+            ]
+        ]
+    },
+    {
+        "id": "29042ad2a54642ef",
+        "type": "ui_button",
+        "z": "24ebbb932d554288",
+        "g": "72b95070f63bc0fc",
+        "name": "",
+        "group": "d28ce36e84a59828",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Show Data",
+        "tooltip": "Show data on Chart",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 1200,
+        "wires": [
+            [
+                "80b933406ebaca96"
+            ]
+        ]
+    },
+    {
+        "id": "80b933406ebaca96",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "72b95070f63bc0fc",
+        "name": "Budget",
+        "func": "// Create random budget for allocated budget and acutal spending\n// Creates array with 3 random numbers ranging from 0 to 100\nconst allocated_budget = Array.from({length: 3}, () => Math.random() * 100)\nconst actual_spending = Array.from({length: 3}, () => Math.random() * 100)\n\n// Create data Object\nconst data = {\n    \"series\" : [\"actual\",\"allocated\"],\n    \"data\" : [actual_spending,allocated_budget],\n    \"labels\" : [\"Phones\",\"Laptops\",\"Tablets\"]\n}\n\n// write data to msg.payload\nmsg.payload = [data]\n\n// return data object\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 1200,
+        "wires": [
+            [
+                "b05637431845096b"
+            ]
+        ]
+    },
+    {
+        "id": "cff12b04bc4c6a83",
+        "type": "ui_audio",
+        "z": "24ebbb932d554288",
+        "g": "fd0dfb107c0e767e",
+        "name": "",
+        "group": "e169516c809e1bb3",
+        "voice": "com.apple.speech.synthesis.voice.daniel",
+        "always": "",
+        "x": 580,
+        "y": 1360,
+        "wires": []
+    },
+    {
+        "id": "c2828b16f50cc7b0",
+        "type": "ui_button",
+        "z": "24ebbb932d554288",
+        "g": "fd0dfb107c0e767e",
+        "name": "",
+        "group": "e169516c809e1bb3",
+        "order": 3,
+        "width": 5,
+        "height": 1,
+        "passthru": false,
+        "label": "Speech",
+        "tooltip": "Speech Text",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "This is my text",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 140,
+        "y": 1360,
+        "wires": [
+            [
+                "d1f0f3ebc9d096e1"
+            ]
+        ]
+    },
+    {
+        "id": "c6e07c149fd9523b",
+        "type": "ui_text_input",
+        "z": "24ebbb932d554288",
+        "g": "fd0dfb107c0e767e",
+        "name": "",
+        "label": "Text To Speech",
+        "tooltip": "Enter the text you want to be read",
+        "group": "e169516c809e1bb3",
+        "order": 1,
+        "width": 10,
+        "height": 1,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 160,
+        "y": 1400,
+        "wires": [
+            [
+                "32416ac4cacb531c"
+            ]
+        ]
+    },
+    {
+        "id": "32416ac4cacb531c",
+        "type": "change",
+        "z": "24ebbb932d554288",
+        "g": "fd0dfb107c0e767e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Text",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d1f0f3ebc9d096e1",
+        "type": "change",
+        "z": "24ebbb932d554288",
+        "g": "fd0dfb107c0e767e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Text",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "level",
+                "pt": "msg",
+                "to": "Volume",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 1360,
+        "wires": [
+            [
+                "cff12b04bc4c6a83"
+            ]
+        ]
+    },
+    {
+        "id": "84c059b9a3be577c",
+        "type": "ui_slider",
+        "z": "24ebbb932d554288",
+        "g": "fd0dfb107c0e767e",
+        "name": "",
+        "label": "Volume",
+        "tooltip": "",
+        "group": "e169516c809e1bb3",
+        "order": 2,
+        "width": 5,
+        "height": 1,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "20",
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 140,
+        "y": 1440,
+        "wires": [
+            [
+                "7c326d74c0a9fab1"
+            ]
+        ]
+    },
+    {
+        "id": "7c326d74c0a9fab1",
+        "type": "change",
+        "z": "24ebbb932d554288",
+        "g": "fd0dfb107c0e767e",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "Volume",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 1440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "656b1925bed741ce",
+        "type": "ui_toast",
+        "z": "24ebbb932d554288",
+        "g": "41e7b6bbcfa384fd",
+        "position": "prompt",
+        "displayTime": "3",
+        "highlight": "red",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "Cancel",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 590,
+        "y": 1580,
+        "wires": [
+            [
+                "965b5b00903ef038"
+            ]
+        ]
+    },
+    {
+        "id": "a9b3e2c5ea456130",
+        "type": "ui_button",
+        "z": "24ebbb932d554288",
+        "g": "41e7b6bbcfa384fd",
+        "name": "",
+        "group": "d725af890aebfeb2",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Start Login",
+        "tooltip": "Start the Login Process",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 1580,
+        "wires": [
+            [
+                "1b91db2672fc7e4a"
+            ]
+        ]
+    },
+    {
+        "id": "1b91db2672fc7e4a",
+        "type": "change",
+        "z": "24ebbb932d554288",
+        "g": "41e7b6bbcfa384fd",
+        "name": "Initial Login",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Login",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Please enter your Name",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 1580,
+        "wires": [
+            [
+                "656b1925bed741ce"
+            ]
+        ]
+    },
+    {
+        "id": "965b5b00903ef038",
+        "type": "switch",
+        "z": "24ebbb932d554288",
+        "g": "41e7b6bbcfa384fd",
+        "name": "Check Login",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Cancel",
+                "vt": "str"
+            },
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "false",
+        "repair": false,
+        "outputs": 3,
+        "x": 370,
+        "y": 1660,
+        "wires": [
+            [
+                "e63bdfbc27400376"
+            ],
+            [
+                "7bec24dbb42dfb9b"
+            ],
+            [
+                "92539e1fdf7b0df6"
+            ]
+        ]
+    },
+    {
+        "id": "e63bdfbc27400376",
+        "type": "change",
+        "z": "24ebbb932d554288",
+        "g": "41e7b6bbcfa384fd",
+        "name": "Login Cancelled",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Login Cancelled",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Login Process has been Cancelled by the User",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 600,
+        "y": 1640,
+        "wires": [
+            [
+                "e4a9d6af0566da27"
+            ]
+        ]
+    },
+    {
+        "id": "e4a9d6af0566da27",
+        "type": "ui_toast",
+        "z": "24ebbb932d554288",
+        "g": "41e7b6bbcfa384fd",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "red",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 850,
+        "y": 1640,
+        "wires": []
+    },
+    {
+        "id": "7bec24dbb42dfb9b",
+        "type": "change",
+        "z": "24ebbb932d554288",
+        "g": "41e7b6bbcfa384fd",
+        "name": "Login Failed",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "Login Failed",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "Name cant be empty",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 1680,
+        "wires": [
+            [
+                "95f95493941a5d52"
+            ]
+        ]
+    },
+    {
+        "id": "95f95493941a5d52",
+        "type": "ui_toast",
+        "z": "24ebbb932d554288",
+        "g": "41e7b6bbcfa384fd",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "red",
+        "sendall": false,
+        "outputs": 1,
+        "ok": "Try Again",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 810,
+        "y": 1680,
+        "wires": [
+            [
+                "1b91db2672fc7e4a"
+            ]
+        ]
+    },
+    {
+        "id": "92539e1fdf7b0df6",
+        "type": "function",
+        "z": "24ebbb932d554288",
+        "g": "41e7b6bbcfa384fd",
+        "name": "Login Complete Message",
+        "func": "// read text in msg.payload\nconst inp = msg.payload\n\n// set notification text\nmsg.topic = \"Login Successful\"\nmsg.payload = \"Welcome \" + inp\n\n// return msg Object\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 1720,
+        "wires": [
+            [
+                "4fd00c9c1ded1b61"
+            ]
+        ]
+    },
+    {
+        "id": "4fd00c9c1ded1b61",
+        "type": "ui_toast",
+        "z": "24ebbb932d554288",
+        "g": "41e7b6bbcfa384fd",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "green",
+        "sendall": false,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 910,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "b007859f7b041949",
+        "type": "ui_group",
+        "name": "Function",
+        "tab": "c16b14bf1dceba15",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a284fdaa38c18f81",
+        "type": "ui_group",
+        "name": "Function",
+        "tab": "424609d3f59a5919",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "641235355f36f5d7",
+        "type": "ui_group",
+        "name": "Function",
+        "tab": "864b451c064548f3",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "93fae4f98fb26898",
+        "type": "ui_group",
+        "name": "Function",
+        "tab": "a07e435a3a0251e7",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dd885df6ad54c298",
+        "type": "ui_group",
+        "name": "Function",
+        "tab": "7da32361575dc2ea",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false
+    },
+    {
+        "id": "c99b4d50d24216dc",
+        "type": "ui_group",
+        "name": "Function",
+        "tab": "780fcd06a36f8f80",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d28ce36e84a59828",
+        "type": "ui_group",
+        "name": "Function",
+        "tab": "ad35f079cc3fbe09",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e169516c809e1bb3",
+        "type": "ui_group",
+        "name": "Function",
+        "tab": "f19a4278c19306dc",
+        "order": 1,
+        "disp": true,
+        "width": 10,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d725af890aebfeb2",
+        "type": "ui_group",
+        "name": "Function",
+        "tab": "2b0c9c70b6151dd8",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c16b14bf1dceba15",
+        "type": "ui_tab",
+        "name": "Text",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "424609d3f59a5919",
+        "type": "ui_tab",
+        "name": "Gauge",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "864b451c064548f3",
+        "type": "ui_tab",
+        "name": "Chart",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a07e435a3a0251e7",
+        "type": "ui_tab",
+        "name": "Chart",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7da32361575dc2ea",
+        "type": "ui_tab",
+        "name": "Chart",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "780fcd06a36f8f80",
+        "type": "ui_tab",
+        "name": "Chart",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "ad35f079cc3fbe09",
+        "type": "ui_tab",
+        "name": "Chart",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f19a4278c19306dc",
+        "type": "ui_tab",
+        "name": "Audio",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2b0c9c70b6151dd8",
+        "type": "ui_tab",
+        "name": "Notification",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]
