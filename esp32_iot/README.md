@@ -15,6 +15,11 @@
 - [FreeRtos](#FreeRtos)
 - [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
 - [ESP32-Cam](#ESP32-Cam)
+- Dashboard
+
+https://www.youtube.com/watch?v=KndZoTMCRsA
+Aveiro Tech City Living Lab
+
 	
 ## Webserver
 <BR>01- Criando um web server para controle e exibição de dados (Dashboard)<BR>
