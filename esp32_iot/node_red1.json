@@ -14,15 +14,16 @@
         "topic": "esp32/ADC",
         "qos": "1",
         "datatype": "auto",
-        "broker": "2ba8bb5e7935c93b",
+        "broker": "744441e276b5ecdc",
         "nl": false,
         "rap": false,
         "inputs": 0,
-        "x": 130,
+        "x": 110,
         "y": 80,
         "wires": [
             [
-                "cf0477102b1f5a74"
+                "cf0477102b1f5a74",
+                "1b7655328c67b03f"
             ]
         ]
     },
@@ -62,7 +63,7 @@
         "property": "payload",
         "action": "",
         "pretty": false,
-        "x": 300,
+        "x": 280,
         "y": 80,
         "wires": [
             [
@@ -76,7 +77,7 @@
         "type": "function",
         "z": "1ec0a21f3604a711",
         "name": "separa_campos",
-        "func": "var analogico = {  payload : msg.payload.analogico } \n\n\nreturn [ analogico ];",
+        "func": "var analogico = {  payload : msg.payload.analogico } \n\nflow.set(\"analogico\", msg.payload.analogico);\n\n\nreturn [ analogico ];",
         "outputs": 1,
         "noerr": 0,
         "initialize": "",
@@ -97,7 +98,7 @@
         "type": "debug",
         "z": "1ec0a21f3604a711",
         "name": "analogico",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -226,7 +227,7 @@
         "topic": "esp32/sensor",
         "qos": "1",
         "datatype": "auto",
-        "broker": "2ba8bb5e7935c93b",
+        "broker": "744441e276b5ecdc",
         "nl": false,
         "rap": false,
         "inputs": 0,
@@ -764,7 +765,7 @@
         "name": "24 hours data",
         "group": "3c1b09fa4c168fdf",
         "order": 1,
-        "width": 11,
+        "width": 16,
         "height": 4,
         "label": "Gráfico temperatura humidade",
         "chartType": "line",
@@ -973,7 +974,7 @@
         "group": "6a4e2e67017b39e7",
         "name": "Tabela com style",
         "order": 1,
-        "width": 11,
+        "width": 12,
         "height": 7,
         "format": "<div layout=\"row\" layout-align=\"start center\">\n  <span flex>Hora</span>\n  <span flex>temperatura</span>\n  <span flex>humidade</span>\n</div>\n<div layout=\"row\" layout-align=\"start center\" ng-repeat=\"row in msg.payload\">\n  <span flex style=\"color: green\">{{row.timeStamp}}</span>\n  <span flex style=\"color: red\">{{row.temperature}} °C</span>\n  <span flex style=\"color: black\">{{row.humidity}}%</span>\n\n</div>\n ",
         "storeOutMessages": true,
@@ -1034,7 +1035,7 @@
         "z": "1ec0a21f3604a711",
         "order": 1,
         "group": "e20cd85b889eb118",
-        "width": 3,
+        "width": 8,
         "height": 1,
         "label": "Output 1",
         "labelPlacement": "left",
@@ -1103,7 +1104,7 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "2ba8bb5e7935c93b",
+        "broker": "744441e276b5ecdc",
         "x": 340,
         "y": 560,
         "wires": []
@@ -1114,7 +1115,7 @@
         "z": "1ec0a21f3604a711",
         "name": "Ligar Led IFSP",
         "group": "e20cd85b889eb118",
-        "order": 3,
+        "order": 4,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -1142,7 +1143,7 @@
         "z": "1ec0a21f3604a711",
         "name": "Desligar Led IFSP",
         "group": "e20cd85b889eb118",
-        "order": 4,
+        "order": 6,
         "width": 3,
         "height": 1,
         "passthru": false,
@@ -1172,7 +1173,7 @@
         "topic": "IFSP/led",
         "qos": "2",
         "datatype": "auto-detect",
-        "broker": "2ba8bb5e7935c93b",
+        "broker": "744441e276b5ecdc",
         "nl": false,
         "rap": true,
         "rh": 0,
@@ -1190,7 +1191,7 @@
         "type": "debug",
         "z": "1ec0a21f3604a711",
         "name": "debug 34",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1206,7 +1207,7 @@
         "type": "debug",
         "z": "1ec0a21f3604a711",
         "name": "debug 35",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -1298,52 +1299,155 @@
         ]
     },
     {
-        "id": "42457adee6817586",
-        "type": "ui_spacer",
+        "id": "0cd269f2b2809734",
+        "type": "inject",
         "z": "1ec0a21f3604a711",
-        "name": "spacer",
-        "group": "3c1b09fa4c168fdf",
-        "order": 2,
-        "width": 1,
-        "height": 1
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 150,
+        "y": 1020,
+        "wires": [
+            [
+                "366b1786e6c13561"
+            ]
+        ]
     },
     {
-        "id": "db7deaa7f30905a1",
+        "id": "366b1786e6c13561",
+        "type": "function",
+        "z": "1ec0a21f3604a711",
+        "name": "TagoIO",
+        "func": "var valoranalogico = flow.get(\"analogico\");\n\nreturn {\n    payload: {\n        \n                \"variable\": \"temperature\",\n        \"value\": valoranalogico \n            }\n\n};",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 1020,
+        "wires": [
+            [
+                "9c59f6d04d05ba48",
+                "c9d724bedc52e8a9"
+            ]
+        ]
+    },
+    {
+        "id": "9c59f6d04d05ba48",
+        "type": "mqtt out",
+        "z": "1ec0a21f3604a711",
+        "name": "",
+        "topic": "info/quarto",
+        "qos": "1",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "2ba8bb5e7935c93b",
+        "x": 550,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "c9d724bedc52e8a9",
+        "type": "debug",
+        "z": "1ec0a21f3604a711",
+        "name": "debug 37",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "1b7655328c67b03f",
+        "type": "link out",
+        "z": "1ec0a21f3604a711",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "15d537351b1953d4"
+        ],
+        "x": 225,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "15d537351b1953d4",
+        "type": "link in",
+        "z": "1ec0a21f3604a711",
+        "name": "link in 1",
+        "links": [
+            "1b7655328c67b03f"
+        ],
+        "x": 275,
+        "y": 940,
+        "wires": [
+            [
+                "366b1786e6c13561"
+            ]
+        ]
+    },
+    {
+        "id": "fb30a85bf06dd12e",
         "type": "ui_spacer",
         "z": "1ec0a21f3604a711",
         "name": "spacer",
-        "group": "3c1b09fa4c168fdf",
+        "group": "e20cd85b889eb118",
         "order": 3,
-        "width": 1,
+        "width": 5,
         "height": 1
     },
     {
-        "id": "62c0b8742b770c83",
+        "id": "f5e60368b5554136",
         "type": "ui_spacer",
         "z": "1ec0a21f3604a711",
         "name": "spacer",
-        "group": "3c1b09fa4c168fdf",
-        "order": 4,
-        "width": 1,
-        "height": 1
-    },
-    {
-        "id": "55b5ca4c4debc986",
-        "type": "ui_spacer",
-        "z": "1ec0a21f3604a711",
-        "name": "spacer",
-        "group": "3c1b09fa4c168fdf",
+        "group": "e20cd85b889eb118",
         "order": 5,
-        "width": 1,
+        "width": 5,
         "height": 1
     },
     {
-        "id": "2ba8bb5e7935c93b",
+        "id": "83dac238af3adb4e",
+        "type": "ui_spacer",
+        "z": "1ec0a21f3604a711",
+        "name": "spacer",
+        "group": "e20cd85b889eb118",
+        "order": 7,
+        "width": 5,
+        "height": 1
+    },
+    {
+        "id": "744441e276b5ecdc",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "localhost",
+        "broker": "embarcadosifsp.duckdns.org",
         "port": "1883",
-        "clientid": "ESP32Client",
+        "clientid": "",
         "autoConnect": true,
         "usetls": false,
         "protocolVersion": "4",
@@ -1371,7 +1475,7 @@
         "tab": "3046f6ea24ac700b",
         "order": 2,
         "disp": true,
-        "width": "6",
+        "width": 10,
         "collapse": false
     },
     {
@@ -1381,8 +1485,35 @@
         "tab": "3046f6ea24ac700b",
         "order": 3,
         "disp": true,
-        "width": 7,
+        "width": 12,
         "collapse": false
+    },
+    {
+        "id": "2ba8bb5e7935c93b",
+        "type": "mqtt-broker",
+        "name": "tago_io_mqtt",
+        "broker": "mqtt.tago.io",
+        "port": "1883",
+        "clientid": "ESP32Client",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
     },
     {
         "id": "3c1b09fa4c168fdf",
@@ -1391,7 +1522,7 @@
         "tab": "3046f6ea24ac700b",
         "order": 4,
         "disp": true,
-        "width": 12,
+        "width": 16,
         "collapse": false
     },
     {
@@ -1401,7 +1532,7 @@
         "tab": "3046f6ea24ac700b",
         "order": 5,
         "disp": true,
-        "width": 11,
+        "width": 12,
         "collapse": false
     },
     {
@@ -1411,7 +1542,7 @@
         "tab": "3046f6ea24ac700b",
         "order": 1,
         "disp": true,
-        "width": 3,
+        "width": 8,
         "collapse": false,
         "className": ""
     },
