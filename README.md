@@ -17,7 +17,7 @@
 
 - [Arduino Referências](#Referências-Arduino)
 
-- GPIO Entradas e saídas
+- [GPIO Entradas e saídas](#GPIO-Entradas-e-saídas)
 
 
 
@@ -313,11 +313,13 @@ int main()
 ## Referências Arduino
 <BR>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem Wiring</a> <BR>
 <BR>
-	### Pisca Led
+### Pisca Led
 <BR><a href=https://wokwi.com/projects/344891652101374548>Pisca led em Arduino</a>	
 <BR><BR>	
-	### Utilizando um botão de entrada
-	Edite o circuito anterior "Pisca Led" que tenha um botão entre o pino 7 e GND<BR>
+## GPIO Entradas e saídas
+	
+<BR>Utilizando um botão de entrada
+<BR>Edite o circuito anterior "Pisca Led" que tenha um botão entre o pino 7 e GND<BR>
 <BR>
 	<BR>
 ```java
