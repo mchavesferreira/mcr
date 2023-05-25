@@ -322,7 +322,7 @@ int main()
 <BR>Edite o circuito anterior "Pisca Led" que tenha um botão entre o pino 7 e GND<BR>
 <BR>
 	<BR>
-```java
+      ```java
 #define LED 2
 #define botao 14
 
@@ -343,7 +343,7 @@ void loop() {
   delay(tempo);
 }
 
-	```
+    ```
 	<BR>
 Materiais:
 <BR>https://edisciplinas.usp.br/pluginfile.php/3252633/mod_resource/content/1/Guia_Arduino_Iniciante_Multilogica_Shop.pdf
