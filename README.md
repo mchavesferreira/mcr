@@ -344,7 +344,10 @@ void loop() {
 }
 
 ```
-	<BR> Atividade 2: Acrescente mais dois leds. Modifique o programa anterior, para que estes dois leds permaneçam desligados quando o botão não está pressionado, e alternem entre si, quando o botão está pressionado.<BR>
+<BR> Atividade 2: Acrescente mais dois leds. Modifique o programa anterior, 
+	para que estes dois leds permaneçam desligados quando o botão não está pressionado, 
+	e alternem entre si, quando o botão está pressionado.<BR>
+<BR>
 	<BR>
 Materiais:
 <BR>https://edisciplinas.usp.br/pluginfile.php/3252633/mod_resource/content/1/Guia_Arduino_Iniciante_Multilogica_Shop.pdf
