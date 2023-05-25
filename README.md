@@ -318,9 +318,9 @@ int main()
 <BR><BR>	
 ## GPIO Entradas e saídas
 	
-<BR>Utilizando um botão de entrada
-<BR>Edite o circuito anterior "Pisca Led" que tenha um botão entre o pino 7 e GND<BR>
-<BR>
+<BR>Utilizando  pinos como entrada
+<BR>Atividade 1: Edite o circuito anterior "Pisca Led", acrescentando ao circuito um botão "push button" entre o pino 7 e GND<BR>
+<BR>Copie o código a seguir, modificando-o para este exemplo.
 	
 ```java
 #define LED 2
@@ -344,6 +344,7 @@ void loop() {
 }
 
 ```
+	<BR> Atividade 2: Acrescente mais dois leds. Modifique o programa anterior, para que estes dois leds permaneçam desligados quando o botão não está pressionado, e alternem entre si, quando o botão está pressionado.<BR>
 	<BR>
 Materiais:
 <BR>https://edisciplinas.usp.br/pluginfile.php/3252633/mod_resource/content/1/Guia_Arduino_Iniciante_Multilogica_Shop.pdf
