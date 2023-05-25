@@ -17,7 +17,7 @@
 
 - [Arduino Referências](#Referências-Arduino)
 
-
+- GPIO Entradas e saídas
 
 
 
@@ -313,8 +313,36 @@ int main()
 ## Referências Arduino
 <BR>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem Wiring</a> <BR>
 <BR>
-<a href=https://wokwi.com/projects/344891652101374548>Pisca led em Arduino</a>	
-		
+	### Pisca Led
+<BR><a href=https://wokwi.com/projects/344891652101374548>Pisca led em Arduino</a>	
+<BR><BR>	
+	### Utilizando um botão de entrada
+	Edite o circuito anterior "Pisca Led" que tenha um botão entre o pino 7 e GND<BR>
+<BR>
+	<BR>
+```java
+#define LED 2
+#define botao 14
+
+int tempo=100;
+
+void setup() {
+  pinMode(LED, OUTPUT);
+  pinMode(botao, INPUT_PULLUP); // definir botao de entrada
+}
+
+void loop() {
+  // altera o valor da variavel se pressionado
+  if(digitalRead(botao)) {tempo=500;} else  {tempo=100; } 
+  
+  digitalWrite(LED, HIGH);
+  delay(tempo);
+  digitalWrite(LED, LOW);
+  delay(tempo);
+}
+
+	```
+	<BR>
 Materiais:
 <BR>https://edisciplinas.usp.br/pluginfile.php/3252633/mod_resource/content/1/Guia_Arduino_Iniciante_Multilogica_Shop.pdf
 
