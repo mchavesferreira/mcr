@@ -30,7 +30,7 @@
 
 ## Exemplo Maquina de estados
 
-https://wokwi.com/projects/365704845421563905 <<<  Modelo Flavia
+ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
 
 ## Apostila ESP32
 <BR> <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/ESP32.docx>Apostila</a> em desenvolvimento
