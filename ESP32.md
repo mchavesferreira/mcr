@@ -28,6 +28,9 @@
 - [Livros](#Livros-e-referencias)
 
 
+## Exemplo Maquina de estados
+
+https://wokwi.com/projects/365704845421563905 <<<  Modelo Flavia
 
 ## Apostila ESP32
 <BR> <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/ESP32.docx>Apostila</a> em desenvolvimento
