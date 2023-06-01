@@ -307,4 +307,6 @@ https://github.com/PacktPublishing/Advanced-ESP32
 	
 	
 	
+maquina de lavar
+https://wokwi.com/projects/366331470262146049
 	
