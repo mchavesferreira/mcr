@@ -75,8 +75,28 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
   <img src=imagens/acesspoint.png>
   <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/acess_point/acess_point.ino>Codigo .ino acess point</a>
   <BR><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/acesshtml>Codigo .ino e pagina web em index.h</a>
-   <BR><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/webserver_refresh>Codigo .ino e pagina web em index.h com reflesh </a>
-  
+
+### Webserver com atualização sem recarga da pagina
+  <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/webserverajax/montagem.png><BR>
+  <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/webserverajax/circuito1.jpg><BR>
+ Este exemplo mostra em um pagina web o valor de status ou leitura de pinos do Esp32 sem recarga da pagina.<P>
+ <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/webserverajax/status.jpg><BR>
+<BR>Salve os arquivos: webserver2.ino e index.h em uma pasta. Modifique senha e login de wifi.<BR>
+
+
+   <BR><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/webserverajax>Codigo webAjax </a> <BR>
+
+<BR>
+```java
+  <h1>GPIO 32:<span id="ADCValue"></span></h1><br>
+  <h1>GPIO 33:<span id="gpio1"></span></h1><br>
+  <h1>GPIO 34:<span id="gpio2"></span></h1><br>
+  <h1>Status:<span id="textoserial"></span></h1><br>
+</div>
+ ```
+<BR>
+ O valores são substituidos nos "ID" a cada intervalo de tempo, buscando a String de uma url no próprio microcontrolador.
+ 
 ## Criando comunicação para IOT
   
 ### Código de Acess-Point gerado com a programação em blocos
