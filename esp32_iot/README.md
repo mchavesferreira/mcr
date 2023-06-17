@@ -87,11 +87,13 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
    <BR><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/webserverajax>Codigo webAjax </a> <BR>
 
 <BR>
- ```javascript
+ ```ruby
+   <html>
   <h1>GPIO 32:<span id="ADCValue"></span></h1><br>
   <h1>GPIO 33:<span id="gpio1"></span></h1><br>
   <h1>GPIO 34:<span id="gpio2"></span></h1><br>
   <h1>Status:<span id="textoserial"></span></h1><br>
+  </html>
 
 ```
 <BR>
