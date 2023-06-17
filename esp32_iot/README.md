@@ -93,7 +93,7 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
   <h1>GPIO 34:<span id="gpio2"></span></h1><br>
   <h1>Status:<span id="textoserial"></span></h1><br>
 </div>
- ```
+```
 <BR>
  O valores são substituidos nos "ID" a cada intervalo de tempo, buscando a String de uma url no próprio microcontrolador.
  
