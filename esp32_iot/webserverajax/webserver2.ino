@@ -31,8 +31,8 @@ WebServer server(80);
  int i=0;
 
 //Enter your SSID and PASSWORD
-const char* ssid = "Isaweb_1";
-const char* password = "julia3103";
+const char* ssid = "";
+const char* password = "";
 
 //===============================================================
 // This routine is executed when you open its IP in browser
