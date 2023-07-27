@@ -27,8 +27,8 @@
 <center><img src=imagens/wokwi_simulador.png></center>
 
 
-Simulador <a href=https://wokwi.com/projects/341066839950885460>Atmega328P Assembly Online</a><H1>APARTE AQUI</H1> <<<<<<<br>
-<br><br><br>
+Simulador <a href=https://wokwi.com/projects/341066839950885460>Atmega328P Assembly Online</a><br>
+<br>
 
 
 
