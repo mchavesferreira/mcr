@@ -38,6 +38,7 @@
 <BR>Exercício 1: Elabore um script que gere um número aleatório cada vez que um botão é pressionado. Imprimir na porta serial.
 
 <BR>Exercício 2: Repita o exercício 1, porém o número aleatório deve ser apresentado em uma sequência de leds de 1 a 10. Utilize mapeamento de pinos.
+<BR> https://wokwi.com/projects/341561728616628819
 
 ## Exemplo Maquina de estados
 
