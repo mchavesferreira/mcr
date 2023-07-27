@@ -35,8 +35,9 @@
 <BR>https://www.arduino.cc/reference/pt/language/functions/random-numbers/random/
 
 
-<BR>Projeto: Elabore um script que gere um número aleatório cada vez que um botão é pressionado. Imprimir na porta serial.
+<BR>Exercício 1: Elabore um script que gere um número aleatório cada vez que um botão é pressionado. Imprimir na porta serial.
 
+<BR>Exercício 2: Repita o exercício 1, porém o número aleatório deve ser apresentado em uma sequência de leds de 1 a 10. Utilize mapeamento de pinos.
 
 ## Exemplo Maquina de estados
 
