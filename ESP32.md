@@ -27,6 +27,9 @@
 - [Exemplos de projetos](#Exemplos-de-projetos)
 - [Livros](#Livros-e-referencias)
 
+<BR><BR>
+<H1>Lorena, hoje 27/7/2023, veremos isso:</H1>
+<BR><BR>
 ## Conhecendo funções Wiring
 
 #random()
