@@ -34,8 +34,6 @@
 <BR>A função random() gera números pseudoaleatórios.
 <BR>https://www.arduino.cc/reference/pt/language/functions/random-numbers/random/
 
-<BR>
-<BR>https://www.arduino.cc/reference/pt/language/functions/random-numbers/randomseed/
 
 <BR>Projeto: Elabore um script que gere um número aleatório cada vez que um botão é pressionado. Imprimir na porta serial.
 
