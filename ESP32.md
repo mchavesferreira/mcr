@@ -32,7 +32,7 @@
 <BR></BR>- Leitura Analógica
 <BR></BR>- Função map
 <BR></BR>- Comparações (if/else/>/<=)
-<BR>Utilize o seguinte <a href=https://wokwi.com/projects/340963795998343762>exemplo</a> de leitura analógica, onde um potênciometro ligado a um potênciometro, realiza a conversão em valor binário.
+<BR>Utilize o seguinte <a href=https://wokwi.com/projects/340963795998343762>exemplo</a> de leitura analógica, onde um potênciometro ligado a uma das entradas AD(conversor analógico-digital), realiza a conversão em valor binário.
 <br>A função <a href=https://www.arduino.cc/reference/pt/language/functions/math/map/>map</a> é utlizada como uma regra de conversão linear.
 <BR>Modifique o exemplo utlizando as saídas para acionar proporcionalmente os 5 leds em função da entrada.
 <BR><BR>
