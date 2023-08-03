@@ -28,8 +28,10 @@
 - [Livros](#Livros-e-referencias)
 
 <BR><BR>
-<H1>Lorena, hoje 27/7/2023, veremos isso:</H1>
+<H1>Lorena, hoje 03/08/2023, veremos isso:</H1>
 <BR><BR>
+
+<BR>27/7 -<BR>
 ## Conhecendo funções Wiring
 
 #random()
