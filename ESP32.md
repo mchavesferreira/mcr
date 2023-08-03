@@ -37,6 +37,7 @@
 <br>A função <a href=https://www.arduino.cc/reference/pt/language/functions/math/map/>map</a> é utlizada como uma regra de conversão linear.
 <BR>Modifique o exemplo utlizando as saídas para acionar proporcionalmente os 5 leds em função da entrada.
 <BR><BR>
+<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32/qrcode_ad.jpg>
 
 <BR>27/7 -<BR>
 ## Conhecendo funções Wiring
