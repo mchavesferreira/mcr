@@ -30,7 +30,7 @@
 <BR><BR>
 <H1>Lorena, hoje 10/08/2023, hoje iríamos  gravar o primeiro programa para o ESP32, pois você não trouxe o cabo mini-usb.</H1>
 <BR><img src=https://www.lojamundi.com.br/imagens/produtos/Raspberry-Pi-Cabo-mini-USB.webp width=200 height=200>
-<BR> <a href=https://embarcados.com.br/como-programar-o-esp32-na-arduino-ide/>Como gravar o esp32 com Arduino</a>
+<BR> <a href=https://www.blogdarobotica.com/2021/08/24/como-programar-a-placa-esp32-no-arduino-ide>Como gravar o esp32 com Arduino</a>
 <hr>
 <BR></BR>- Leitura Analógica
 <BR></BR>- Função map
