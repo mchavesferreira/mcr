@@ -28,7 +28,7 @@
 - [Livros](#Livros-e-referencias)
 
 <BR><BR>
-<H1>Lorena, hoje 10/08/2023,vamos gravar o primeiro programa para o ESP32.</H1>
+<H1>Lorena, hoje 10/08/2023, hoje iríamos  gravar o primeiro programa para o ESP32, mas você não trouxe o cabo miniusb.</H1>
 <BR> <a href=https://embarcados.com.br/como-programar-o-esp32-na-arduino-ide/>Como gravar o esp32 com Arduino</a>
 <hr>
 <BR></BR>- Leitura Analógica
