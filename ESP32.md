@@ -28,12 +28,11 @@
 - [Livros](#Livros-e-referencias)
 
 <BR><BR>
-<H1>Lorena, hoje 10/08/2023, hoje iríamos  gravar o primeiro programa para o ESP32, pois você não trouxe o cabo mini-usb.</H1>
+<H1>Lorena, hoje 17/08/2023, você está com o cabo mini-usb? Se sim, vamos programar um pisca led e realizar a leitura de entradas digitais e analógicas.</H1>
 <BR><img src=https://www.lojamundi.com.br/imagens/produtos/Raspberry-Pi-Cabo-mini-USB.webp width=200 height=200>
 <BR> <a href=https://www.blogdarobotica.com/2021/08/24/como-programar-a-placa-esp32-no-arduino-ide>Como gravar o esp32 com Arduino</a>
 <hr>
 <BR></BR>- Leitura Analógica
-<BR></BR>- Função map
 <BR></BR>- Comparações (if/else/>/<=)
 	<BR><img src=esp32/adcesp32.png><BR>
 <BR>Utilize o seguinte <a href=https://wokwi.com/projects/340963795998343762>exemplo</a> de leitura analógica, onde um potênciometro ligado a uma das entradas AD(conversor analógico-digital), realiza a conversão em valor binário.
