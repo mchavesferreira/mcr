@@ -28,18 +28,23 @@
 - [Livros](#Livros-e-referencias)
 
 <BR><BR>
-<H1>Lorena, hoje 17/08/2023, você está com o cabo mini-usb? Se sim, vamos programar um pisca led e realizar a leitura de entradas digitais e analógicas.</H1>
-<BR><img src=https://www.lojamundi.com.br/imagens/produtos/Raspberry-Pi-Cabo-mini-USB.webp width=200 height=200>
-<BR> <a href=https://www.blogdarobotica.com/2021/08/24/como-programar-a-placa-esp32-no-arduino-ide>Como gravar o esp32 com Arduino</a>
-<hr>
+<H1>Lorena, hoje 24/08/2023, você está com o cabo mini-usb que realmente funcione?
+Vamos programar na prática uma entrada analógica</H1>
 <BR></BR>- Leitura Analógica
 <BR></BR>- Comparações (if/else/>/<=)
-	<BR><img src=esp32/adcesp32.png><BR>
+<BR><img src=esp32/adcesp32.png><BR>
 <BR>Utilize o seguinte <a href=https://wokwi.com/projects/340963795998343762>exemplo</a> de leitura analógica, onde um potênciometro ligado a uma das entradas AD(conversor analógico-digital), realiza a conversão em valor binário.
 <br>A função <a href=https://www.arduino.cc/reference/pt/language/functions/math/map/>map</a> é utlizada como uma regra de conversão linear.
 <BR>Modifique o exemplo utlizando as saídas para acionar proporcionalmente os 5 leds em função da entrada.
 <BR><BR>
 <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32/qrcode_ad.jpg>
+
+<BR>
+<BR><B>Utilizando a IDE Arduino</B>
+<BR><img src=https://www.lojamundi.com.br/imagens/produtos/Raspberry-Pi-Cabo-mini-USB.webp width=200 height=200>
+<BR> <a href=https://www.blogdarobotica.com/2021/08/24/como-programar-a-placa-esp32-no-arduino-ide>Como gravar o esp32 com Arduino</a>
+<hr>
+
 
 <BR>27/7 -<BR>
 ## Conhecendo funções Wiring
