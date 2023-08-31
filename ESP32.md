@@ -28,8 +28,9 @@
 - [Livros](#Livros-e-referencias)
 
 <BR><BR>
-<H1>Lorena, hoje 24/08/2023, você está com o cabo mini-usb que realmente funcione?
-Vamos programar na prática uma entrada analógica</H1>
+<H1>Lorena, hoje 31/08/2023, hoje não vamos utilizar o cabo usb-mini. Vamos revisar uso de memórias, apreender sobre millis e conhecer o display Oled para realizar o trabalho</H1>
+	<BR>
+Vamos programar na prática uma entrada analógica
 <BR></BR>- Leitura Analógica
 <BR></BR>- Comparações (if/else/>/<=)
 <BR><img src=esp32/adcesp32.png width=300 height=300><BR>
