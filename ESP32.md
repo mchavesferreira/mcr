@@ -28,9 +28,48 @@
 - [Livros](#Livros-e-referencias)
 
 <BR><BR>
-<H1>Lorena, hoje 31/08/2023, hoje não vamos utilizar o cabo usb-mini. Vamos revisar uso de memórias, apreender sobre millis e conhecer o display Oled para realizar o trabalho</H1>
+<H1>Lorena, hoje 14/09/2023, o projeto da máquina está pronto? Tem orientações no suap </H1><BR>
+	
+
+
+## Tempo
+	  
+### Interrupção e funções de tempo
+<BR><BR><B>Uso de millis() no lugar de delays()</b>
+  ### função millis
+  <br>05 -<a href=https://wokwi.com/projects/342203041946010194> Exemplo função tempo millis()</a>
+  
+### Display Oled   
+  <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
+  <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
+  <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=225><BR>
+<details><summary>Exemplo Oled</summary>
+<p>
+
+```ruby  
+*/
+#include <U8g2lib.h>
+#include <Wire.h>
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
+
+void setup() {
+  u8g2.begin();
+}
+
+void loop() {
+  u8g2.clearBuffer();	// limpa memoria interna
+  u8g2.setFont(u8g2_font_ncenB08_tr);	// escolha da fonte
+  u8g2.drawStr(15, 10, "IFSP Catanduva");	// escrevendo na memoria interna
+  u8g2.sendBuffer(); // transferindo da memoria interna para display
+  delay(1000);
+}  
+```
+</p>
+</details> 
+
+   
 	<BR>
-Vamos programar na prática uma entrada analógica
+<BR></BR><b></b>Aula prática uma entrada analógica</b>
 <BR></BR>- Leitura Analógica
 <BR></BR>- Comparações (if/else/>/<=)
 <BR><img src=esp32/adcesp32.png width=300 height=300><BR>
@@ -229,40 +268,8 @@ Imprimindo e lendo na porta serial (UART)<BR>
 ### LCD 16x2
   <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
   <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
-  
-### Display Oled   
-  <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
-  <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
-  <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=225><BR>
-<details><summary>Exemplo Oled</summary>
-<p>
 
-```ruby  
-*/
-#include <U8g2lib.h>
-#include <Wire.h>
-U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
 
-void setup() {
-  u8g2.begin();
-}
-
-void loop() {
-  u8g2.clearBuffer();	// limpa memoria interna
-  u8g2.setFont(u8g2_font_ncenB08_tr);	// escolha da fonte
-  u8g2.drawStr(15, 10, "IFSP Catanduva");	// escrevendo na memoria interna
-  u8g2.sendBuffer(); // transferindo da memoria interna para display
-  delay(1000);
-}  
-```
-</p>
-</details> 
-	  
-## Tempo
-	  
-### Interrupção e funções de tempo
-  ### função millis
-  <br>05 -<a href=https://wokwi.com/projects/342203041946010194> Exemplo função tempo millis()</a>
 	  
 ### Interrupção externa
   <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
