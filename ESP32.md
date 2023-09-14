@@ -30,8 +30,20 @@
 <BR><BR>
 <H1>Lorena, hoje 14/09/2023, o projeto da máquina está pronto? Tem orientações no suap </H1><BR>
 	
+<BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
 
 
+<BR><BR>Máquina de macarrão:
+<BR><BR>https://wokwi.com/projects/343824918481207891
+
+<BR><BR>Maquina de bolos:
+<BR><BR>https://wokwi.com/projects/343896310503440979
+
+
+<BR><BR>Máquina de sorvete:
+<BR><BR>https://wokwi.com/projects/343353681787224660 
+<BR><BR> https://wokwi.com/projects/343718518644015698
+<BR><BR>
 ## Tempo
 	  
 ### Interrupção e funções de tempo
