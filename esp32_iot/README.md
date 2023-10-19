@@ -16,6 +16,7 @@
 - [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
 - [ESP32-Cam](#ESP32-Cam)
 - Dashboard
+- [Links interessantes](#Links-interessantes)
 
 https://www.youtube.com/watch?v=KndZoTMCRsA
 Aveiro Tech City Living Lab
@@ -255,3 +256,14 @@ https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-
 <BR>https://randomnerdtutorials.com/esp32-web-server-arduino-ide/
 <br> https://randomnerdtutorials.com/esp32-access-point-ap-web-server/
 <br> https://circuits4you.com/2016/12/16/esp8266-web-server-html/
+
+
+#Links-interessantes
+
+
+## DNS
+<BR><BR> Consultar propagação DNS
+<BR><BR> https://www.whatsmydns.net/
+<BR><BR> Registro traceroute Registro.br
+<BR><BR> https://registro.br/tecnologia/ferramentas/traceroute/
+
