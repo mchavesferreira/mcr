@@ -11,8 +11,8 @@
 #include <WiFi.h>
 
 // Coloque credenciais da rede wifi
-const char* ssid = "ifspcatanduva";
-const char* password = "ifspcatanduva";
+const char* ssid = "ifspcatanduva";    // rede wifi internet de sua casa
+const char* password = "ifspcatanduva";  // senha da sua rede wifi
 
 // configurar porta para webserver 80
 WiFiServer server(80);
@@ -58,7 +58,7 @@ void setup() {
   Serial.println("");
   Serial.println("WiFi connected.");
   Serial.println("IP address: ");
-  Serial.println(WiFi.localIP());
+  Serial.println(WiFi.localIP());  /// ip do esp conectado a sua rede
   Serial.print("ESP Board MAC Address:  ");
   Serial.println(WiFi.macAddress());
   Serial.print("RRSI: ");
