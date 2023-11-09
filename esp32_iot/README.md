@@ -70,8 +70,14 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
   <b>Exemplo Modo Estação</b><BR>
  <img src=imagens/station.png>
   <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/webserver/webserver.ino>Codigo .ino estação</a>
-<P> Observe o exemplo a seguir que cria um codigo html a partir utilizando o esp32 como servidor para controlar dois leds.
-```ruby
+
+<P><P>
+  <b>Exemplo Acess-Point Wifi</b><BR>
+  <img src=imagens/acesspoint.png>
+  <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/acess_point/acess_point.ino>Codigo .ino acess point</a>
+<p></p>
+ <P> Observe o exemplo a seguir que cria um codigo html a partir utilizando o esp32 como servidor para controlar dois leds. </P>
+```javascript
  <!DOCTYPE html><html>
 <head><meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:,">
@@ -86,12 +92,9 @@ text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}
 <p><a href="/27/on"><button class="button">ON</button></a></p>
 </body></html>
 
-```
+ ```
 </P>
-<P><P>
-  <b>Exemplo Acess-Point Wifi</b><BR>
-  <img src=imagens/acesspoint.png>
-  <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/acess_point/acess_point.ino>Codigo .ino acess point</a>
+
   <BR><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/acesshtml>Codigo .ino e pagina web em index.h</a>
 
 ### Webserver com atualização sem recarga da pagina
