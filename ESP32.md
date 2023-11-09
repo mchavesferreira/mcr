@@ -28,7 +28,8 @@
 - [Livros](#Livros-e-referencias)
 
 <BR><BR>
-<H1>Lorena, hoje 09/11/2023, </H1>agora já sabe que dispositivos na internet utilizam identificações de rede (ip, mac, ...). Vamos criar paginas para o Esp32.<BR> [ESP32 IOT](#ESP32-IOT)
+<H1>Lorena, hoje 09/11/2023, </H1>agora já sabe que dispositivos na internet utilizam identificações de rede (ip, mac, ...). Vamos criar paginas para o Esp32.<BR>
+Exemplos <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot> IOT </a> <BR>
 	
 <BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
 >>>> https://wokwi.com/projects/375842607540556801
