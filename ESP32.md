@@ -28,7 +28,7 @@
 - [Livros](#Livros-e-referencias)
 
 <BR><BR>
-<H1>Lorena, hoje 14/09/2023, o projeto da máquina está pronto? Tem orientações no suap </H1><BR>
+<H1>Lorena, hoje 09/11/2023, </H1>agora já sabe que dispositivos na internet utilizam identificações de rede (ip, mac, ...). Vamos criar paginas para o Esp32.<BR>
 	
 <BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
 >>>> https://wokwi.com/projects/375842607540556801
