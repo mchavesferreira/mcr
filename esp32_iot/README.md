@@ -79,18 +79,15 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
  <P> Observe o exemplo a seguir que cria um codigo html a partir utilizando o esp32 como servidor para controlar dois leds. </P>
 ```javascript
  /////////////////////////////////
-// Generated with a lot of love//
-// with TUNIOT FOR ESP32     //
-// Website: Easycoding.tn      //
 /////////////////////////////////
 
-<head><meta name="viewport" content="width=device-width, initial-scale=1">
+
 <link rel="icon" href="data:,">
 <style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}
 .button { background-color: #4CAF50; border: none; color: white; padding: 16px 40px;
 text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}
-.button2 {background-color: #555555;}</style></head>
-<body><h1>ESP32 Web Server</h1>
+.button2 {background-color: #555555;}</style>
+<h1>ESP32 Web Server</h1>
 <p>GPIO 26 - State off</p>
 <p><a href="/26/on"><button class="button">ON</button></a></p>
 <p>GPIO 27 - State off</p>
