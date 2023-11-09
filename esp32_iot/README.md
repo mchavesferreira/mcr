@@ -77,7 +77,7 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
   <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/acess_point/acess_point.ino>Codigo .ino acess point</a>
 <p></p>
  <P> Observe o exemplo a seguir que cria um codigo html a partir utilizando o esp32 como servidor para controlar dois leds. </P>
-
+<a href=acess_point/exemplo_botao.html target=_blank>html de resposta</a><P></P>
 
   <BR><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/acesshtml>Codigo .ino e pagina web em index.h</a>
 
