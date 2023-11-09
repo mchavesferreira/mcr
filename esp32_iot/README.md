@@ -70,7 +70,24 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
   <b>Exemplo Modo Estação</b><BR>
  <img src=imagens/station.png>
   <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/webserver/webserver.ino>Codigo .ino estação</a>
+<P> Observe o exemplo a seguir que cria um codigo html a partir utilizando o esp32 como servidor para controlar dois leds.
+```ruby
+ <!DOCTYPE html><html>
+<head><meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="data:,">
+<style>html { font-family: Helvetica; display: inline-block; margin: 0px auto; text-align: center;}
+.button { background-color: #4CAF50; border: none; color: white; padding: 16px 40px;
+text-decoration: none; font-size: 30px; margin: 2px; cursor: pointer;}
+.button2 {background-color: #555555;}</style></head>
+<body><h1>ESP32 Web Server</h1>
+<p>GPIO 26 - State off</p>
+<p><a href="/26/on"><button class="button">ON</button></a></p>
+<p>GPIO 27 - State off</p>
+<p><a href="/27/on"><button class="button">ON</button></a></p>
+</body></html>
 
+```
+</P>
 <P><P>
   <b>Exemplo Acess-Point Wifi</b><BR>
   <img src=imagens/acesspoint.png>
