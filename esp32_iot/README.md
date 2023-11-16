@@ -159,11 +159,19 @@ https://www.usinainfo.com.br/blog/automacao-residencial-com-esp32-controle-sua-c
 	
 ## MQTT
 <BR>Comunicação de dados IOT utilizando protocolo MQTT
+<img src=imagens/mqtt-publish-subscribe.png><br>Mqtt.org
+
 Saiba mais:  https://www.gta.ufrj.br/ensino/eel878/redes1-2019-1/vf/mqtt/
 
+Broker:
 Utilizando um broker MQTT publico
 	  http://www.hivemq.com/demos/websocket-client/
    <P><P>
+Referências:<BR>
+https://wiki.foz.ifpr.edu.br/wiki/index.php/Arduino:_MQTT
+https://mqtt.org/
+
+
  
 ## Protocolo MQTT para IOT
 aula <BR>  http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=48
