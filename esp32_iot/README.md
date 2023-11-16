@@ -160,8 +160,10 @@ https://www.usinainfo.com.br/blog/automacao-residencial-com-esp32-controle-sua-c
 ## MQTT
 <BR>Comunicação de dados IOT utilizando protocolo MQTT
 <img src=imagens/mqtt-publish-subscribe.png><br>Mqtt.org
+<img src=imagens/mqtt_mensagem.png><BR>
 
 Saiba mais:  https://www.gta.ufrj.br/ensino/eel878/redes1-2019-1/vf/mqtt/
+
 
 Broker:
 Utilizando um broker MQTT publico
@@ -170,6 +172,9 @@ Utilizando um broker MQTT publico
 Referências:<BR>
 https://wiki.foz.ifpr.edu.br/wiki/index.php/Arduino:_MQTT
 https://mqtt.org/
+https://embarcados.com.br/mqtt-protocolos-para-iot/
+https://aws.amazon.com/pt/what-is/mqtt/
+https://embarcados.com.br/mqtt-protocolos-para-iot/
 
 
  
