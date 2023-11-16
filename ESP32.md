@@ -28,7 +28,8 @@
 - [Livros](#Livros-e-referencias)
 
 <BR><BR>
-<H1>Lorena, hoje 09/11/2023, </H1>agora já sabe que dispositivos na internet utilizam identificações de rede (ip, mac, ...). Vamos criar paginas para o Esp32.<BR>
+<H1>Lorena por que você veio?? então vamos hoje aprender sobre o protocolo mais interessante para IOT, o MQTT.<BR>
+	
 Exemplos <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot> IOT </a> <BR>
 	
 <BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
