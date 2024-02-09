@@ -5,7 +5,11 @@
 
 <B><h1>- <a href=https://github.com/mchavesferreira/mcr/blob/main/mcr.md> Aulas Atmega328P </A></h1>
 
-<BR><h1>Sugestão de lista de compras para montagem de projetos com ESP32</h1><BR>
+<BR><h1>Sugestão de lista de compras para montagem de projetos com ESP32</h1>
+<BR>
+<BR>-Esp32  Devkit Esp32-wroom-32 - 30 Pinos - Tipo C
+<BR><img src=imagens/ESP32_tipoC.png width=200 height=200>
+<BR>https://produto.mercadolivre.com.br/MLB-3456778444-esp32-doit-devkit-esp32-wroom-32-30-pinos-tipo-c-_JM
 
 <BR>-Display Oled 0.96 I2c Branco ou Azul 
 <BR><img src=imagens/oled.png>
@@ -22,10 +26,7 @@
 <BR>-Protoboard 830 Furos
 <BR><img src=imagens/protoboard.png>
 <BR>https://produto.mercadolivre.com.br/MLB-1934614556-protoboard-830-furos-breadboard-830-pontos-_JM
-<BR>
-<BR>-Esp32  Devkit Esp32-wroom-32 - 30 Pinos - Tipo C
-<BR><img src=imagens/ESP32.png>
-<BR>https://produto.mercadolivre.com.br/MLB-3456778444-esp32-doit-devkit-esp32-wroom-32-30-pinos-tipo-c-_JM
+
 <BR>
 <BR>-Minimo 5 Leds, resistores, botões Push-buttons
 <BR><img src=imagens/leds_resistor.png>
