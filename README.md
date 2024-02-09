@@ -11,8 +11,8 @@
 <BR><img src=imagens/ESP32_tipoC.png width=200 height=200>
 <BR>https://produto.mercadolivre.com.br/MLB-3456778444-esp32-doit-devkit-esp32-wroom-32-30-pinos-tipo-c-_JM
 
-<BR>-Display Oled 0.96 I2c Branco ou Azul 
-<BR><img src=imagens/oled.png>
+<BR>-Display Oled 0.96 I2c Branco/amarelo ou Azul 
+<BR><img src=imagens/display_oled.png width=200 height=200>
 <BR>https://produto.mercadolivre.com.br/MLB-2844134920-display-oled-branco-096-i2c-arduino-pic-_JM
 <BR>
 <BR>-Cabo Wire Jumper 20cm 40 Fios Fêmea-macho Protoboard 
