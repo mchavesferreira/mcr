@@ -343,7 +343,9 @@ https://mpyblockly.github.io/mpyblockly/
 Brincando com Esp32
 https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-ide/
 	
-
+### Comunicando com google excel
+Unleash the Power of ChatGPTs Code Interpreter: Crafting a Dynamic ESP32 Data Logger with DHT22 and Google Sheets
+https://robu.in/unleash-the-power-of-chatgpts-code-interpreter-crafting-a-dynamic-esp32-data-logger-with-dht22-and-google-sheets/
 	
 ## Livros e referencias
 <BR> 
