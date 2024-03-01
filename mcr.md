@@ -49,6 +49,10 @@ Instruções principais para a movimentação de bytes na memória do Atmega328
 
 <center><img src=imagens/pinout_atmega328P.png></center>
 
+## Atmega 328p
+
+https://youtu.be/q9hdLVaBdvM?si=qtBKph2J_WjbxWr6&t=30  Video Laser fibra
+
 ## Diagrama de blocos
 O Atmel® ATmega328P é um microcontrolador CMOS de 8 bits de baixa potência baseado na arquitetura RISC aprimorada AVR®. Ao executar instruções poderosas em um único ciclo de clock, o ATmega328P atinge taxas de transferência de aproximadamente 1MIPS por MHz, permitindo otimizar consumo de energia versus a velocidade de processamento.[1]
 <center><img src=imagens/diagrama_blocos.png></center
