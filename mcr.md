@@ -27,17 +27,6 @@
 -
 -   
 - 
-- [Configuração de pinos](#Configuração-de-pinos)
-- [Diagrama de blocos](#Diagrama-de-blocos)
-
-- 
-- [C - Primeiro Programa](#Primeiro-Programa-em-C)
-- [Lendo Botão](#Lendo-Botão)
-- [Utilizando Macros](#Utilizando-Macros)
-
-- [Arduino Referências](#Referências-Arduino)
-
-- [GPIO Entradas e saídas](#GPIO-Entradas-e-saídas)
 
 
  
@@ -73,7 +62,7 @@ Para maximizar o desempenho e o paralelismo, o AVR usa uma arquitetura harvard �
 ## Sistemas de clock
 
 Principais sistemas de clock do AVR® e sua distribuição. Todos os clock não precisam estar ativos em um determinado momento. Para reduzir o consumo de energia, os relógios dos módulos que não estão sendo usados podem ser interrompidos usando diferentes modos de suspensão, conforme descrito na Seção "Modes Sleep Gerenciamento de energia e modos de suspensão". 
-<center><img src=https://github.com/mchavesferreira/mcr/imagens/distribuicaoclock_f_8_1.png></center>
+
 Para maximizar o desempenho e o paralelismo, o AVR usa uma arquitetura harvard – com memórias e barramentos separados para programa e dados. As instruções na memória do programa são executadas com um pipelining de nível único. Enquanto uma instrução está sendo executada, a próxima instrução é pré-buscada na memória do programa. Este conceito permite que as instruções sejam executadas em cada ciclo de clock. A memória do programa é uma memória flash reprogramável no sistema.[1]
 
 ## Sistema de Reset
@@ -178,6 +167,7 @@ Exemplo de um programa para controle de reservatório.
 
 #### Programa controle de reservatório
 
+<details><summary>Código Exemplo reservatório</summary>
 ```java
 //--------------------------------------------------------------------------- //
 // EXEMPLO 					  //	
@@ -233,7 +223,7 @@ volta:
       BRNE volta
       RET
 ```
-
+</details>
 
 ## Programação em Alto Nível, C
 
