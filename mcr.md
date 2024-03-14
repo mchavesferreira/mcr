@@ -1,18 +1,35 @@
 
-# Microcontroladores Atmega328P
+# Microcontroladores 
 
-
-<BR>[<a href=https://github.com/mchavesferreira/mcr/blob/main/ESP32.md>Home  </A>]<BR>
+# Atmega328P 
 
 ## Utilizando Atmega328P para a compreensão e funcionamento de microprocessadores e microcontroladores em geral utilizando a linguagem Assembly.
 
-## Sumário
-- [Programas e Simuladores](#simulador-wokwi-e-Atmel-Studio)
+## Aulas Turma 2024
+### 1° Bimestre
+- 08/02  - Introdução a Disciplina, Histórico sobre microprocessadores
+- 22/02 -  Arquitetura de funcionamento de um microprocessador genérico
+- 29/02 -  Arquitetura AVR Atmega 328P
+- 07/02 -  Primeiras instruções assembly para Atmega328P
+- 14/02 -  Programa: Pisca Pisca, Lendo Botão
+- 21/03 -  Display 7 segmentos 
+- 28/03 -  Projeto microcontrolado Assembly
+- 04/04 -  Avaliação Escrita
+- 11/04 -  Revisão da Avaliação, Entrega de projeto
+### 2° Bimestre
+- 18/04 -
+- 25/04 -
+- 02/05 -
+- 09/05 -
+- 16/05 -
+- 23/05 -
+- 30/05 -
+-
+-     [Programas e Simuladores](#simulador-wokwi-e-Atmel-Studio)
 - [Mapeamento de Memória](#Mapeamento-de-memória)
 - [Configuração de pinos](#Configuração-de-pinos)
 - [Diagrama de blocos](#Diagrama-de-blocos)
-- [Sistemas de clock](#Sistemas-de-clock)
-- [Sistema de Reset](#Sistema-de-Reset)
+
 - [Assembly-primeiro programa](#Assembly-Primeiro-programa)
 - [C - Primeiro Programa](#Primeiro-Programa-em-C)
 - [Lendo Botão](#Lendo-Botão)
