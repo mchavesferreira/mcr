@@ -152,7 +152,7 @@ Exemplo de um programa para controle de reservatório.
 <br><BR>Solução:
 <br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
 	<Br>
-<details><summary>Ilustrando o primeiro programa (clique)</summary>
+<details><summary>Ilustração da Solução (clique)</summary>
 <p>
 <br><img src=imagens/oprojeto.jpg>
 <br><img src=imagens/configuracaopinos.jpg>
