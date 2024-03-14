@@ -165,14 +165,13 @@ Exemplo de um programa para controle de reservatório.
 </p>
 </details>
 
-#### Programa controle de reservatório
+<details><summary>Código Solução Controle Reservatório</summary>
+<p>
 
-<details><summary>Código Exemplo reservatório</summary>
-```java
+```ruby 
 //--------------------------------------------------------------------------- //
 // EXEMPLO 					  //	
 //--------------------------------------------------------------------------- //
-
 
 .ORG 0x000				
 
@@ -224,6 +223,7 @@ volta:
       RET
 ```
 </details>
+
 
 ## Programação em Alto Nível, C
 
