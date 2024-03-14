@@ -9,28 +9,28 @@
 ### 1° Bimestre
 - 08/02  - Introdução a Disciplina, Histórico sobre microprocessadores
 - 22/02 -  Arquitetura de funcionamento de um microprocessador genérico
-- 29/02 -  Arquitetura AVR Atmega 328P
-- 07/02 -  Primeiras instruções assembly para Atmega328P
-- 14/02 -  Programa: Pisca Pisca, Lendo Botão
-- 21/03 -  Display 7 segmentos 
+- 29/02 -  Arquitetura AVR Atmega 328P, [Mapeamento de Memória](#Mapeamento-de-memória)
+- 07/02 -  Primeiras instruções assembly para Atmega328P. 
+- 14/02 -  [Programa Pisca Led](#Programa-Pisca-Led), [Programa Reservatorio](#Programa-Reservatorio)
+- 21/03 -  Simulador Wowki, Display 7 segmentos 
 - 28/03 -  Projeto microcontrolado Assembly
 - 04/04 -  Avaliação Escrita
 - 11/04 -  Revisão da Avaliação, Entrega de projeto
 ### 2° Bimestre
-- 18/04 -
-- 25/04 -
+- 18/04 - Introdução ao ESP32
+- 25/04 - Programação Alto Nível, C
 - 02/05 -
 - 09/05 -
 - 16/05 -
 - 23/05 -
 - 30/05 -
 -
--     [Programas e Simuladores](#simulador-wokwi-e-Atmel-Studio)
-- [Mapeamento de Memória](#Mapeamento-de-memória)
+-   
+- 
 - [Configuração de pinos](#Configuração-de-pinos)
 - [Diagrama de blocos](#Diagrama-de-blocos)
 
-- [Assembly-primeiro programa](#Assembly-Primeiro-programa)
+- 
 - [C - Primeiro Programa](#Primeiro-Programa-em-C)
 - [Lendo Botão](#Lendo-Botão)
 - [Utilizando Macros](#Utilizando-Macros)
@@ -40,22 +40,6 @@
 - [GPIO Entradas e saídas](#GPIO-Entradas-e-saídas)
 
 
-
-## Simulador Wokwi e Atmel Studio
-
-<center><img src=imagens/wokwi_simulador.png></center>
-
-
-Simulador <a href=https://wokwi.com/projects/341066839950885460>Atmega328P Assembly Online</a><br>
-<br>
-
-
-
-Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a><P>
-
-Atmel Studio:<a href=http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe>Atmel Studio 7.0</a><BR>
-  
-Gravador para firmware .hex utilizando bootloader Arduino: <a href=https://github.com/mchavesferreira/smie/blob/main/hexloader.zip>Hexloader</a>
  
 ## Mapeamento-de-memória
  
@@ -98,12 +82,83 @@ Para maximizar o desempenho e o paralelismo, o AVR usa uma arquitetura harvard �
 
 Durante o reset, todos os registradores de E/S são ajustados para seus valores iniciais, e o programa inicia a execução a partir do vetor de reset. Para o Atmel® ATmega328P, a instrução colocada no vetor de reset deve ser uma instrução RJMP – salto relativo – para a rotina de manipulação de reset. Se o programa nunca habilita uma fonte de interrupção, os vetores de interrupção não são usados e o código de programa regular pode ocupar nesses locais. Este também é o caso se o vetor de reset estiver na seção de aplicação enquanto os vetores de interrupção estiverem na seção de inicialização. As portas de E/S do AVR® são imediatamente redefinidas para seu estado inicial quando uma fonte de redefinição fica ativa. Isso não requer que nenhuma fonte de relógio esteja em execução. Após todas as fontes de reset ficarem inativas, um contador de atraso é invocado, estendendo o reset interno. Isso permite que a potência atinja um nível estável antes do início da operação normal. O tempo limite do contador de atraso é definido pelo usuário através dos fusíveis SUT e CKSEL. 
 
-## Assembly Primeiro programa
+## Programa Pisca Led
 
-Programa Pisca-pisca
-<center><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/pisca.png  width=300 height=300></center>
-	
-Exemplo de um programa para controle de uma caixa d'agua.
+Programa Pisca Led
+<center><a href=https://wokwi.com/projects/341066839950885460><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/pisca.png  width=300 height=300 border=0></a></center>
+
+ ```ruby  
+; Pisca LED on PB5(Arduino Uno pin 13)
+#define __SFR_OFFSET 0
+
+#include "avr/io.h"  
+
+.global main   ; obrigatorio simulador
+
+.ORG 0x000
+main:
+  LDI R16,0b11111111		//carrega R16 com o valor 0xFF
+	OUT DDRB,R16
+
+principal:
+  sbi   PORTB, 5 ; Seta o pino da porta   
+  call  ATRASO
+  cbi   PORTB, 5   ; Clear(0) o pino da porta   
+  call  ATRASO
+  rjmp principal
+
+ATRASO:
+	LDI R19,80	
+volta:		
+	DEC  R17			//decrementa R17, comeÁa com 0x00
+	BRNE volta 			//enquanto R17 > 0 fica decrementando R17
+	DEC  R18			//decrementa R18, comeÁa com 0x00
+	BRNE volta			//enquanto R18 > 0 volta decrementar R18
+	DEC  R19			//decrementa R19
+	BRNE volta
+  ret
+; Exemplo Pisca Led Avr Projetos
+
+```
+
+
+### Pisca Led com biblioteca
+
+<details><summary>Código Exemplo Pisca Led com utilização de biblioteca para delay</summary>
+<p>
+
+```ruby  
+*/
+//--------------------------------------------------------------------------- //
+//		Fonte: AVR e Arduino: Técnicas de Projeto, 2a ed. - 2012.					  //	
+//--------------------------------------------------------------------------- //
+
+.equ LED   = PB5  		//LED é o substituto de PB5 na programação 
+
+.ORG 0x000				//endereço de início de escrita do código 
+rjmp INICIO
+.include "lib328Pv01.inc"
+INICIO:
+	LDI R16,0xFF		//carrega R16 com o valor 0xFF
+	OUT DDRB,R16		//configura todos os pinos do PORTB como saída
+
+PRINCIPAL:
+      SBI PORTB, LED		//coloca o pino PB5 em 5V
+      ldi delay_time, 2 	; Carrega delay_time com
+      rcall delay_seconds	; Chama rotina de atraso
+	 CBI PORTB, LED 	//coloca o pino PB5 em 0V
+	 RCALL ATRASO		//chama a sub-rotina de atraso
+	 RJMP PRINCIPAL 	//volta para PRINCIPAL
+```
+</p>
+</details> 
+
+
+
+### Programa-Reservatorio
+
+Exemplo de um programa para controle de reservatório.
+
 <BR>Defina pinos de entrada e saída. As entradas com push button aterradas e  pull up ativos. O Programa aguarda “Start” ser pressionado, que liga a  Valvula 1 até que sensor cheio seja acionado. O misturador é acionado  por2 segundos. Esvazia-se o tanque até o sensor vazio ser acionado, retornando ao estado inicial. Considere clock 16Mhz.
 <br><BR>Solução:
 <br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
@@ -120,8 +175,9 @@ Exemplo de um programa para controle de uma caixa d'agua.
 <br><img src=imagens/atraso.jpg>
 </p>
 </details>
-	
-Código para o primeiro programa
+
+#### Programa controle de reservatório
+
 ```java
 //--------------------------------------------------------------------------- //
 // EXEMPLO 					  //	
@@ -179,54 +235,7 @@ volta:
 ```
 
 
-
-### Pisca Led
-
-<details><summary>Código Exemplo Pisca Led</summary>
-<p>
-
-```ruby  
-*/
-//--------------------------------------------------------------------------- //
-//		Fonte: AVR e Arduino: Técnicas de Projeto, 2a ed. - 2012.					  //	
-//--------------------------------------------------------------------------- //
-
-.equ LED   = PB5  		//LED é o substituto de PB5 na programação 
-
-.ORG 0x000				//endereço de início de escrita do código 
-rjmp INICIO
-.include "lib328Pv01.inc"
-INICIO:
-	LDI R16,0xFF		//carrega R16 com o valor 0xFF
-	OUT DDRB,R16		//configura todos os pinos do PORTB como saída
-
-PRINCIPAL:
-      SBI PORTB, LED		//coloca o pino PB5 em 5V
-      ldi delay_time, 2 	; Carrega delay_time com
-      rcall delay_seconds	; Chama rotina de atraso
-	 CBI PORTB, LED 	//coloca o pino PB5 em 0V
-	 RCALL ATRASO		//chama a sub-rotina de atraso
-	 RJMP PRINCIPAL 	//volta para PRINCIPAL
-
-
-ATRASO:					//atraso de aprox. 200ms
-	LDI R19,16	
- volta:		
-	DEC  R17			//decrementa R17, começa com 0x00
-	BRNE volta 			//enquanto R17 > 0 fica decrementando R17
-	DEC  R18			//decrementa R18, começa com 0x00
-	BRNE volta			//enquanto R18 > 0 volta decrementar R18
-	DEC  R19			//decrementa R19
-	BRNE volta			//enquanto R19 > 0 vai para volta
-	RET	
-```
-</p>
-</details> 
-
-Simulação:
-<a href=https://wokwi.com/projects/341066839950885460> Pisca Led</a><br>
-
-## Primeiro-Programa-em-C
+## Programação em Alto Nível, C
 
 Este primeiro exemplo de programa com um pisca Led
 
@@ -379,7 +388,15 @@ Materiais:
 <BR>https://www.if.ufrgs.br/public/tapf/rodrigues_v25_n4.pdf
 
 <BR>https://edisciplinas.usp.br/pluginfile.php/3252633/mod_resource/content/1/Guia_Arduino_Iniciante_Multilogica_Shop.pdf
-		
+
+
+
+## Simulador Wokwi e Atmel Studio
+
+Atmel Studio:<a href=http://studio.download.atmel.com/7.0.2389/as-installer-7.0.2389-full.exe>Atmel Studio 7.0</a><BR>
+  
+Gravador para firmware .hex utilizando bootloader Arduino: <a href=https://github.com/mchavesferreira/smie/blob/main/hexloader.zip>Hexloader</a>
+  
 Referências:
 [1] Atmega 328P 8-bit AVR Microcontroller with 32K Bytes In-System Programmable Flash - Datasheet
 	
