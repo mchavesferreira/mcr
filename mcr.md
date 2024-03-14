@@ -126,7 +126,7 @@ volta:
 
 .ORG 0x000				//endereço de início de escrita do código 
 rjmp INICIO
-.include "lib328Pv01.inc"
+.include "lib328Pv03.inc"
 INICIO:
 	LDI R16,0xFF		//carrega R16 com o valor 0xFF
 	OUT DDRB,R16		//configura todos os pinos do PORTB como saída
@@ -142,7 +142,7 @@ PRINCIPAL:
 </p>
 </details> 
 
-
+Biblioteca: <a href=https://raw.githubusercontent.com/mchavesferreira/mcr/main/programas_livro/lib328Pv03.inc>lib328Pv01.inc</a>
 
 ### Programa-Reservatorio
 
