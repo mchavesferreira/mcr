@@ -10,6 +10,9 @@
 - 08/02  - Introdução a Disciplina, Histórico sobre microprocessadores
 - 22/02 -  Arquitetura de funcionamento de um microprocessador genérico
 - 29/02 -  Arquitetura AVR Atmega 328P, [Mapeamento de Memória](#Mapeamento-de-memória)
+- 
+Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
+
 - 07/02 -  Primeiras instruções assembly para Atmega328P. 
 - 14/02 -  [Programa Pisca Led](#Programa-Pisca-Led), [Programa Reservatorio](#Programa-Reservatorio)
 - 21/03 -  Simulador Wowki, Display 7 segmentos 
