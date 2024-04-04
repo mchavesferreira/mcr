@@ -14,8 +14,8 @@
 - 14/02 -  [Programa Pisca Led](#Programa-Pisca-Led), [Programa Reservatorio](#Programa-Reservatorio)
 - 21/03 -  Simulador Wowki, Display 7 segmentos 
 - 28/03 -  Projeto microcontrolado Assembly
-- 04/04 -  Avaliação Escrita
-- 11/04 -  Revisão da Avaliação, Entrega de projeto
+- 04/04 -  Trabalho em Grupo
+- 11/04 -  Avaliação Escrita
 ### 2° Bimestre
 - 18/04 - Introdução ao ESP32
 - 25/04 - Programação Alto Nível, C
