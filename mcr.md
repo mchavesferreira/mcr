@@ -229,15 +229,25 @@ Simulação:  https://wokwi.com/projects/394247093827346433
 ![image](https://github.com/mchavesferreira/mcr/assets/63993080/27ddaed6-5094-4fbb-9d0a-9be1c036123c)
 
 <h1>Trabalho em Grupo</h1>
--Modifique o projeto de simulação anterior para atender este projeto. Envie este link no SUAP Trabalho 1. Utilizando wokwi, 
+
+-Modifique o projeto de simulação anterior para atender este projeto. Envie este link no SUAP Trabalho 1. Utilizando wokwi, SALVE O PROJETO COM LOCK.
+
 -Elabore um exemplo de programação utilizando AVR Atmega 328P em assembly para automação de processos da seguinte figura: 
+
 -Ao ligar a máquina, aguarda-se pressionar o botão1. Então a válvula V4 é fechada (High) e V1 é acionada por 4 segundos.
+
 -A válvula V2 é acionada até que o sensor nível1 seja acionado.
+
 -A válvula V3 é acionada por 2 segundos.
+
 -O misturador M1 é acionado por 3 segundos.
+
 -A válvula V4 é acionada por 2 segundo para esvaziar parcialmente o tanque.
+
 -A válvula V2 é acionada por 5 segundos para diluir novamente a solução.
+
 -O misturador é acionado por  4 segundos. Em seguida o tanque é esvaziado totalmente, abrindo-se a válvula V4 até o sensor nível 0 seja acionado.
+
 -Volta-se ao estado inicial. Use botão2 como botão de emergência em qualquer etapa, desligando saídas e voltando ao estado inicial.
 
 
