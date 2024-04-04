@@ -49,6 +49,28 @@ https://youtu.be/q9hdLVaBdvM?si=qtBKph2J_WjbxWr6&t=30  Video Laser fibra
 ## Pinos Arduino UNO
 ![tabela_arduino](https://github.com/mchavesferreira/mcr/assets/63993080/315726ac-c35e-4365-84e5-910684880c2a)
 
+| Nome do Pino (Porta) | Descrição no Arduino | Funções Principais          |
+|----------------------|----------------------|-----------------------------|
+| PC0                  | A0                   | ADC0, PCINT8                |
+| PC1                  | A1                   | ADC1, PCINT9                |
+| PC2                  | A2                   | ADC2, PCINT10               |
+| PC3                  | A3                   | ADC3, PCINT11               |
+| PC4                  | A4 (SDA)             | ADC4, PCINT12, SDA (TWI)    |
+| PC5                  | A5 (SCL)             | ADC5, PCINT13, SCL (TWI)    |
+| PD0                  | 0 (RX)               | RXD, PCINT16                |
+| PD1                  | 1 (TX)               | TXD, PCINT17                |
+| PD2                  | 2                    | INT0, PCINT18               |
+| PD3                  | 3 (PWM)              | OC2B, INT1, PCINT19         |
+| PD4                  | 4                    | XCK, T0, PCINT20            |
+| PD5                  | 5 (PWM)              | OC0B, T1, PCINT21           |
+| PD6                  | 6 (PWM)              | AIN0, OC0A, PCINT22         |
+| PD7                  | 7                    | AIN1, PCINT23               |
+| PB0                  | 8                    | ICP1, CLKO, PCINT0          |
+| PB1                  | 9 (PWM)              | OC1A, PCINT1                |
+| PB2                  | 10 (PWM, SS)         | OC1B, SS, PCINT2            |
+| PB3                  | 11 (PWM, MOSI)       | MOSI, OC2A, PCINT3          |
+| PB4                  | 12 (MISO)            | MISO, PCINT4                |
+| PB5                  | 13 (SCK, LED)        | SCK, PCINT5                 |
 
 
 
