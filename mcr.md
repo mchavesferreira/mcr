@@ -226,7 +226,8 @@ volta:
 
 Simulação:  https://wokwi.com/projects/394247093827346433
 
-![image](https://github.com/mchavesferreira/mcr/assets/63993080/27ddaed6-5094-4fbb-9d0a-9be1c036123c)
+![image](https://github.com/mchavesferreira/mcr/assets/63993080/fee83e1b-24d9-4df6-bfa0-f8256ef35413)
+
 
 <h1>Trabalho em Grupo</h1>
 
