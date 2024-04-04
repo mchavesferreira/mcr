@@ -224,6 +224,10 @@ volta:
 ```
 </details>
 
+Simulação:  https://wokwi.com/projects/394247093827346433
+
+![image](https://github.com/mchavesferreira/mcr/assets/63993080/27ddaed6-5094-4fbb-9d0a-9be1c036123c)
+
 
 ## Programação em Alto Nível, C
 
