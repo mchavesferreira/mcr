@@ -280,7 +280,7 @@ Simulação:  https://wokwi.com/projects/394247093827346433
 
 -O misturador é acionado por  4 segundos. Em seguida o tanque é esvaziado totalmente, abrindo-se a válvula V4 até o sensor nível 0 seja acionado.
 
--Volta-se ao estado inicial. Use botão2 como botão de emergência em qualquer etapa, desligando saídas e voltando ao estado inicial.
+-Volta-se ao estado inicial, desligando saídas.
 
 
 
