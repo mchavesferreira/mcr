@@ -27,10 +27,7 @@
 - [Exemplos de projetos](#Exemplos-de-projetos)
 - [Livros](#Livros-e-referencias)
 
-<BR><BR>
-<H1>Lorena por que você veio?? então vamos hoje aprender sobre o protocolo mais interessante para IOT, o MQTT.<BR>
-	
-Exemplos <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot> IOT </a> <BR>
+
 	
 <BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
 >>>> https://wokwi.com/projects/375842607540556801
