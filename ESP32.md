@@ -146,7 +146,7 @@ Além disso, os pinos RTC_GPIO também podem ser usados para funções de entrad
 Em resumo, os pinos RTC_GPIO são úteis para aplicações que envolvem temporizadores, relógios e baixo consumo de energia. Eles permitem que o ESP32 acorde em momentos específicos para executar tarefas agendadas, o que é útil em aplicações de IoT, por exemplo, onde o dispositivo precisa permanecer em modo de baixo consumo de energia na maior parte do tempo para economizar energia.
 <br><br>	
 ## Arquitetura Esp32	<BR><BR>
-	<BR> - Mapeamento da memória (pagina 7) <a href=https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf>m<BR>emory</a>
+	<BR> - Mapeamento da memória (pagina 7) <a href=https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf>memory</a>
 	<BR> -
 	<bR> -
 	
