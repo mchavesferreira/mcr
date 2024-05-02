@@ -34,41 +34,137 @@ Além disso, existem pinos com características específicas que os tornam adequ
 Os pinos destacados em verde estão OK para usar. Os destacados em amarelo também estão OK para uso, mas é necessário prestar atenção porque eles podem ter um comportamento inesperado principalmente na inicialização. Os pinos destacados em vermelho não são recomendados para uso como entradas ou saídas
 
 
-
-| GPIO | Entrada    | Saída | Observações                                                           |
-|------|------------|-------|-----------------------------------------------------------------------|
-| 0    | com pull-up| OK    | emite sinal PWM na inicialização, deve ser LOW para entrar no modo de gravação |
-| 1    | pino TX    | OK    | saída de debug na inicialização                                       |
-| 2    | OK         | OK    | conectado ao LED onboard, deve ser deixado flutuando ou LOW para entrar no modo de gravação |
-| 3    | OK         | pino RX| HIGH na inicialização                                                 |
-| 4    | OK         | OK    |                                                                       |
-| 5    | OK         | OK    | emite sinal PWM na inicialização, pino de configuração                |
-| 6    | x          | x     |<span style="color:red;">conectado ao flash SPI integrado</span>                                   |
-| 7    | x          | x     |<span style="color:red;"> conectado ao flash SPI integrado</span>                                      |
-| 8    | x          | x     | <span style="color:red;">conectado ao flash SPI integrado</span>                                      |
-| 9    | x          | x     | <span style="color:red;">conectado ao flash SPI integrado</span>                                      |
-| 10   | x          | x     | <span style="color:red;">conectado ao flash SPI integrado</span>                                      |
-| 11   | x          | x     | <span style="color:red;">conectado ao flash SPI integrado</span>                                      |
-| 12   | OK         | OK    | a inicialização falha se estiver puxado para HIGH, pino de configuração|
-| 13   | OK         | OK    |                                                                       |
-| 14   | OK         | OK    | emite sinal PWM na inicialização                                      |
-| 15   | OK         | OK    | emite sinal PWM na inicialização, pino de configuração                |
-| 16   | OK         | OK    |                                                                       |
-| 17   | OK         | OK    |                                                                       |
-| 18   | OK         | OK    |                                                                       |
-| 19   | OK         | OK    |                                                                       |
-| 21   | OK         | OK    |                                                                       |
-| 22   | OK         | OK    |                                                                       |
-| 23   | OK         | OK    |                                                                       |
-| 25   | OK         | OK    |                                                                       |
-| 26   | OK         | OK    |                                                                       |
-| 27   | OK         | OK    |                                                                       |
-| 32   | OK         | OK    |                                                                       |
-| 33   | OK         | OK    |                                                                       |
-| 34   | OK         |       | apenas entrada                                                        |
-| 35   | OK         |       | apenas entrada                                                        |
-| 36   | OK         |       | apenas entrada                                                        |
-| 39   | OK         |       | apenas entrada                                                        |
+<table border="1">
+  <tr>
+    <th>GPIO</th>
+    <th>Entrada</th>
+    <th>Saída</th>
+    <th>Observações</th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>com pull-up</td>
+    <td>OK</td>
+    <td>emite sinal PWM na inicialização, deve ser LOW para entrar no modo de gravação</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>pino TX</td>
+    <td>OK</td>
+    <td>saída de debug na inicialização</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td>conectado ao LED onboard, deve ser deixado flutuando ou LOW para entrar no modo de gravação</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>OK</td>
+    <td>pino RX</td>
+    <td>HIGH na inicialização</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td>emite sinal PWM na inicialização, pino de configuração</td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>x</td>
+    <td>x</td>
+    <td>conectado ao flash SPI integrado</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>x</td>
+    <td>x</td>
+    <td>conectado ao flash SPI integrado</td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>x</td>
+    <td>x</td>
+    <td>conectado ao flash SPI integrado</td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>x</td>
+    <td>x</td>
+    <td>conectado ao flash SPI integrado</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>x</td>
+    <td>x</td>
+    <td>conectado ao flash SPI integrado</td>
+  </tr>
+  <tr>
+    <td>11</td>
+    <td>x</td>
+    <td>x</td>
+    <td>conectado ao flash SPI integrado</td>
+  </tr>
+  <tr>
+    <td>12</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td>a inicialização falha se estiver puxado para HIGH, pino de configuração</td>
+  </tr>
+  <tr>
+    <td>13</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>14</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td>emite sinal PWM na inicialização</td>
+  </tr>
+  <tr>
+    <td>15</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td>emite sinal PWM na inicialização, pino de configuração</td>
+  </tr>
+  <tr>
+    <td>16</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>17</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>18</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>19</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>OK</td>
+    <td>OK</td>
 
 ## Pinos apenas para entrada
 
