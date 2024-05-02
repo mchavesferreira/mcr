@@ -48,7 +48,7 @@ Os pinos destacados em verde estão OK para usar. Os destacados em amarelo tamb�
   </tr>
   <tr>
     <td>1</td>
-    <td style="color: red;>pino TX</td>
+    <td style="color: red;">pino TX</td>
     <td>OK</td>
     <td>saída de debug na inicialização</td>
   </tr>
