@@ -245,3 +245,7 @@ A corrente máxima absoluta por GPIO é de 40mA de acordo com a seção "Condiç
 ##  Sensor de Efeito Hall Integrado no ESP32
 
 O ESP32 também possui um sensor de efeito hall integrado que detecta mudanças no campo magnético ao seu redor.
+
+Fonte:  
+<BR><a href=https://randomnerdtutorials.com/esp32-pinout-reference-gpios/>Configuração I/O</a> para cada pino.
+
