@@ -28,27 +28,9 @@
 - [Livros](#Livros-e-referencias)
 
 
-
-<BR>27/7 -<BR>
 ## Conhecendo funções Wiring
 
-#random()
 
-<BR>A função random() gera números pseudoaleatórios.
-<BR>https://www.arduino.cc/reference/pt/language/functions/random-numbers/random/
-
-
-<BR>Exercício 1: Elabore um script que gere um número aleatório cada vez que um botão é pressionado. Imprimir na porta serial.
-
-<BR>Exercício 2: Repita o exercício 1, porém o número aleatório deve ser apresentado em uma sequência de leds de 1 a 10. Utilize mapeamento de pinos.
-<BR> https://wokwi.com/projects/341561728616628819
-
-## Exemplo Maquina de estados
-
-ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
-<BR>
-<BR>
-<BR>Exemplo maquina de estados com switch-case https://wokwi.com/projects/366328860646770689
 
 ## Apostila ESP32
 <BR> <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/ESP32.docx>Apostila</a> em desenvolvimento
@@ -227,6 +209,24 @@ Imprimindo e lendo na porta serial (UART)<BR>
 
 <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0><BR>Saiba mais...</a><BR>
 <B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
+
+#random()
+
+<BR>A função random() gera números pseudoaleatórios.
+<BR>https://www.arduino.cc/reference/pt/language/functions/random-numbers/random/
+
+
+<BR>Exercício 1: Elabore um script que gere um número aleatório cada vez que um botão é pressionado. Imprimir na porta serial.
+
+<BR>Exercício 2: Repita o exercício 1, porém o número aleatório deve ser apresentado em uma sequência de leds de 1 a 10. Utilize mapeamento de pinos.
+<BR> https://wokwi.com/projects/341561728616628819
+
+## Exemplo Maquina de estados
+
+ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
+<BR>
+<BR>
+<BR>Exemplo maquina de estados com switch-case https://wokwi.com/projects/366328860646770689
 
 
 ## Exemplos de projetos
