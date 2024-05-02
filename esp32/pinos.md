@@ -43,12 +43,12 @@ Os pinos destacados em verde estão OK para usar. Os destacados em amarelo tamb�
 | 3    | OK         | pino RX| HIGH na inicialização                                                 |
 | 4    | OK         | OK    |                                                                       |
 | 5    | OK         | OK    | emite sinal PWM na inicialização, pino de configuração                |
-| 6    | x          | x     | conectado ao flash SPI integrado                                      |
-| 7    | x          | x     | conectado ao flash SPI integrado                                      |
-| 8    | x          | x     | conectado ao flash SPI integrado                                      |
-| 9    | x          | x     | conectado ao flash SPI integrado                                      |
-| 10   | x          | x     | conectado ao flash SPI integrado                                      |
-| 11   | x          | x     | conectado ao flash SPI integrado                                      |
+| 6    | x          | x     |<span style="color:red;">conectado ao flash SPI integrado</span>                                   |
+| 7    | x          | x     |<span style="color:red;"> conectado ao flash SPI integrado</span>                                      |
+| 8    | x          | x     | <span style="color:red;">conectado ao flash SPI integrado</span>                                      |
+| 9    | x          | x     | <span style="color:red;">conectado ao flash SPI integrado</span>                                      |
+| 10   | x          | x     | <span style="color:red;">conectado ao flash SPI integrado</span>                                      |
+| 11   | x          | x     | <span style="color:red;">conectado ao flash SPI integrado</span>                                      |
 | 12   | OK         | OK    | a inicialização falha se estiver puxado para HIGH, pino de configuração|
 | 13   | OK         | OK    |                                                                       |
 | 14   | OK         | OK    | emite sinal PWM na inicialização                                      |
