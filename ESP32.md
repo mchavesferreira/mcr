@@ -54,7 +54,7 @@ void setup() {
   pinMode(LED_PIN, OUTPUT);  // Configura o pino do LED como saída
 }
 
- ```ruby  
+ ```
 
 #### Configurando um pino como entrada com pull-up:
 
