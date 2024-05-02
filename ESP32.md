@@ -7,7 +7,10 @@
 
 ## Aulas
 
-25/04 - Introdução ao ESP32
+25/04 - Introdução ao ESP32 (Conhecendo  Referências Arduino e Simulador wokwi)
+
+02/05 - Explorando GPIO Entradas e saídas (Pinout ESP32, GPIO Digital)
+
 
 ## Simulador Wokwi
 
@@ -16,10 +19,9 @@ Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
 Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
  
 ## Referências Arduino
+
 <center>  <a href=https://www.arduino.cc/reference/pt/ target=_blank>Arduino Referência de Linguagem C</a> </center><BR>
 
-
-02/05 - Explorando GPIO Entradas e saídas
 
 ## Pinout ESP32
 
@@ -29,38 +31,22 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 
 ## GPIO Digital
 
-Uso de Variáveis, #define e funções próprias para I/0 Arduino
+### Função digitalWrite()
+
+Definição:
+A função digitalWrite() é usada para escrever um valor HIGH (alto) ou LOW (baixo) em um pino digital configurado como saída. Isso é fundamental para controlar dispositivos externos como LEDs, relés, e outros componentes digitais.
+
+### Função digitalRead()
+
+Definição:
+A função digitalRead() é usada para ler o estado de um pino digital configurado como entrada. Isso permite detectar se um pino está recebendo um sinal HIGH ou LOW, que é útil para ler o estado de botões, sensores digitais, e outros dispositivos de entrada.
+
+### pinMode()
+
+A função pinMode() é essencial no desenvolvimento de projetos com microcontroladores, como o ESP32, ao usar a IDE do Arduino. Ela é usada para configurar um pino específico como entrada (INPUT), saída (OUTPUT), ou outros modos especiais como entrada com pull-up interno (INPUT_PULLUP). Essa função determina como o pino especificado se comportará, seja lendo sinais de sensores, botões e outros dispositivos, ou controlando LEDs, relés, e outros atuadores.
+
 <BR>GPIOs, leitura e escrita em pinos digitais. Simulação: <a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
 
-09/05 -
-
-- [Apostila ESP32](#Apostila-ESP32)
-- [Arduino Referências](#Referências-Arduino)
-- [Pinout Esp32](#pinout-esp32)
-- [Arquitetura Esp32](#arquitetura-esp32)
-- [Simulador Online](#simulador-wokwi)
-- [Funções principais](#Funçoes-principais)
-- [Variáveis e Operadores](#variaveis-operadores)
-- [GPIOs, leitura e escrita em pinos digitais](#gpio-digital)
-- [Tabelas e vetores](#tabelas-vetores)
-- [PWM](#pwm)
-- [Comunicação Serial](#Comunicação-serial)
-- [Display](#Display)
-	- [LCD 16x2](#lcd-16x2)
-	- [Oled](#display-oled)
-- [Interrupções e Funções de tempo](#tempo)
-	- [millis()](#função-millis)
-	- [Interrupção Externa](#Interrupção-externa)
-- [ESP32 IOT](#ESP32-IOT)
-- [Exemplos de projetos](#Exemplos-de-projetos)
-- [Livros](#Livros-e-referencias)
-
-
-
-## Apostila ESP32
-<BR> <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/ESP32.docx>Apostila</a> em desenvolvimento
-
-<BR> <a href=https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf>Datasheet ESP32</a>
 
 
 ## Funçoes principais
@@ -125,6 +111,39 @@ Uso de Variáveis, #define e funções próprias para I/0 Arduino
 </details>
 
 
+
+- [Apostila ESP32](#Apostila-ESP32)
+- [Arduino Referências](#Referências-Arduino)
+- [Pinout Esp32](#pinout-esp32)
+- [Arquitetura Esp32](#arquitetura-esp32)
+- [Simulador Online](#simulador-wokwi)
+- [Funções principais](#Funçoes-principais)
+- [Variáveis e Operadores](#variaveis-operadores)
+- [GPIOs, leitura e escrita em pinos digitais](#gpio-digital)
+- [Tabelas e vetores](#tabelas-vetores)
+- [PWM](#pwm)
+- [Comunicação Serial](#Comunicação-serial)
+- [Display](#Display)
+	- [LCD 16x2](#lcd-16x2)
+	- [Oled](#display-oled)
+- [Interrupções e Funções de tempo](#tempo)
+	- [millis()](#função-millis)
+	- [Interrupção Externa](#Interrupção-externa)
+- [ESP32 IOT](#ESP32-IOT)
+- [Exemplos de projetos](#Exemplos-de-projetos)
+- [Livros](#Livros-e-referencias)
+
+
+
+## Apostila ESP32
+<BR> <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/ESP32.docx>Apostila</a> em desenvolvimento
+
+<BR> <a href=https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf>Datasheet ESP32</a>
+
+
+
+
+
 ## ID do chip
 
 No ESP32, o "ID do chip" (Chip ID) refere-se a um identificador único atribuído ao chip. Esse ID pode ser usado para várias finalidades, incluindo a diferenciação entre múltiplos dispositivos na mesma rede ou para fins de segurança e autenticação.
@@ -151,6 +170,9 @@ Mapeamento da memória (pagina 7) <a href=https://www.espressif.com/sites/defaul
 
 	
 ## variaveis operadores
+
+Uso de Variáveis, #define e funções próprias para I/0 Arduino
+
   <BR>Variáveis e Operadores</b><BR>  
 
  <BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
