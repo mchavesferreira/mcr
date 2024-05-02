@@ -33,7 +33,6 @@ Além disso, existem pinos com características específicas que os tornam adequ
 
 Os pinos destacados em verde estão OK para usar. Os destacados em amarelo também estão OK para uso, mas é necessário prestar atenção porque eles podem ter um comportamento inesperado principalmente na inicialização. Os pinos destacados em vermelho não são recomendados para uso como entradas ou saídas
 
- 
 <table border="1">
   <tr>
     <th>GPIO</th>
@@ -165,6 +164,76 @@ Os pinos destacados em verde estão OK para usar. Os destacados em amarelo tamb�
     <td>21</td>
     <td>OK</td>
     <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>27</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>32</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>OK</td>
+    <td>OK</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>OK</td>
+    <td></td>
+    <td>apenas entrada</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>OK</td>
+    <td></td>
+    <td>apenas entrada</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>OK</td>
+    <td></td>
+    <td>apenas entrada</td>
+  </tr>
+  <tr>
+    <td>39</td>
+    <td>OK</td>
+    <td></td>
+    <td>apenas entrada</td>
+  </tr>
+</table>
+
 
 ## Pinos apenas para entrada
 
