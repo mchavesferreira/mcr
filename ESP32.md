@@ -6,6 +6,34 @@
 
 
 ## Aulas
+
+25/04 - Introdução ao ESP32
+
+## Simulador Wokwi
+
+Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
+<BR>
+Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
+ 
+## Referências Arduino
+<center>  <a href=https://www.arduino.cc/reference/pt/ target=_blank>Arduino Referência de Linguagem C</a> </center><BR>
+
+
+02/05 - Explorando GPIO Entradas e saídas
+
+## Pinout ESP32
+
+<img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout>
+
+<br><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/pinos.md> Conheça sobre a configuração de pinos </a>
+
+## GPIO Digital
+
+Uso de Variáveis, #define e funções próprias para I/0 Arduino
+<BR>GPIOs, leitura e escrita em pinos digitais. Simulação: <a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
+
+09/05 -
+
 - [Apostila ESP32](#Apostila-ESP32)
 - [Arduino Referências](#Referências-Arduino)
 - [Pinout Esp32](#pinout-esp32)
@@ -34,8 +62,6 @@
 
 <BR> <a href=https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf>Datasheet ESP32</a>
 
-## Referências Arduino
-<center>  <a href=https://www.arduino.cc/reference/pt/ target=_blank>Arduino Referência de Linguagem C</a> </center><BR>
 
 ## Funçoes principais
 
@@ -98,12 +124,6 @@
 
 </details>
 
-## Pinout ESP32
-
-<img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout>
-
-<br><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/pinos.md> Conheça sobre a configuração de pinos </a>
-
 
 ## ID do chip
 
@@ -124,18 +144,10 @@ Esse ID é especialmente útil em aplicações de Internet das Coisas (IoT), ond
 Mapeamento da memória (pagina 7) <a href=https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf>memory</a>
 	
 	
-## Simulador Wokwi
-
-Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
-<BR>
-Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
- 
 
 
-## GPIO Digital
 
-Uso de Variáveis, #define e funções próprias para I/0 Arduino
-<BR>GPIOs, leitura e escrita em pinos digitais. Simulação: <a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
+
 
 	
 ## variaveis operadores
@@ -199,7 +211,7 @@ Imprimindo e lendo na porta serial (UART)<BR>
 ### Interrupção externa
   <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
 <BR>  
- <br><a href=https://wokwi.com/projects/342234932555285074>bomba</a>
+ <br><a href=https://wokwi.com/projects/342234932555285074>Uso de interrupção</a>
   
 
 
