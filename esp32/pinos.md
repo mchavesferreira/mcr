@@ -140,9 +140,8 @@ Os pinos ADC do ESP32 não têm um comportamento linear. Provavelmente, você n�
 
 Figura: Comportamento dos pinos ADC do ESP32.
 
-GPT
 
-Conversor Digital para Analógico (DAC)
+## Conversor Digital para Analógico (DAC)
 
 Existem 2 canais DAC de 8 bits no ESP32 para converter sinais digitais em saídas de sinal de tensão analógica. Estes são os canais DAC:
 
