@@ -8,7 +8,7 @@ Há muitas questões sobre como usar os GPIOs do ESP32. Quais pinos você deve u
 
 A figura abaixo ilustra a pinagem do ESP-WROOM-32. Você pode usá-la como referência se estiver usando um chip ESP32 avulso para construir uma placa personalizada:
 
-<img src=board.png width=300 height=300>
+<img src=board.png>
 
 Nota: nem todos os GPIOs são acessíveis em todas as placas de desenvolvimento, mas cada GPIO específico funciona da mesma maneira, independentemente da placa de desenvolvimento que você está usando. Se você está apenas começando com o ESP32, recomendamos a leitura do nosso guia: Introdução à Placa de Desenvolvimento ESP32.
 
@@ -137,7 +137,7 @@ Os canais de entrada ADC possuem uma resolução de 12 bits. Isso significa que 
 
 Os pinos ADC do ESP32 não têm um comportamento linear. Provavelmente, você não conseguirá distinguir entre 0 e 0,1V ou entre 3,2 e 3,3V. Você precisa ter isso em mente ao usar os pinos ADC. Você obterá um comportamento semelhante ao mostrado na figura a seguir.
 
-
+<img src=conversorad.png>
 Figura: Comportamento dos pinos ADC do ESP32.
 
 
