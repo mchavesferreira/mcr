@@ -46,7 +46,8 @@ A função digitalRead() é usada para ler o estado de um pino digital configura
 A função pinMode() é essencial no desenvolvimento de projetos com microcontroladores, como o ESP32, ao usar a IDE do Arduino. Ela é usada para configurar um pino específico como entrada (INPUT), saída (OUTPUT), ou outros modos especiais como entrada com pull-up interno (INPUT_PULLUP). Essa função determina como o pino especificado se comportará, seja lendo sinais de sensores, botões e outros dispositivos, ou controlando LEDs, relés, e outros atuadores.
 
 #### Configurando um pino como entrada com pull-up:
-´´´rubby
+
+´´´ruby
 #define BUTTON_PIN 0  // Define o número do pino para um botão
 
 void setup() {
