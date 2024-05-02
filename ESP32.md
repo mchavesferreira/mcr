@@ -28,75 +28,6 @@
 - [Livros](#Livros-e-referencias)
 
 
-	
-<BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
->>>> https://wokwi.com/projects/375842607540556801
-
-
-<BR><BR>Máquina de macarrão:
-<BR><BR>https://wokwi.com/projects/343824918481207891
-
-<BR><BR>Maquina de bolos:
-<BR><BR>https://wokwi.com/projects/343896310503440979
-
-
-<BR><BR>Máquina de sorvete:
-<BR><BR>https://wokwi.com/projects/343353681787224660 
-<BR><BR> https://wokwi.com/projects/343718518644015698
-<BR><BR>
-## Tempo
-	  
-### Interrupção e funções de tempo
-<BR><BR><B>Uso de millis() no lugar de delays()</b>
-  ### função millis
-  <br>05 -<a href=https://wokwi.com/projects/342203041946010194> Exemplo função tempo millis()</a>
-  
-### Display Oled   
-  <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
-  <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
-  <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=225><BR>
-<details><summary>Exemplo Oled</summary>
-<p>
-
-```ruby  
-*/
-#include <U8g2lib.h>
-#include <Wire.h>
-U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
-
-void setup() {
-  u8g2.begin();
-}
-
-void loop() {
-  u8g2.clearBuffer();	// limpa memoria interna
-  u8g2.setFont(u8g2_font_ncenB08_tr);	// escolha da fonte
-  u8g2.drawStr(15, 10, "IFSP Catanduva");	// escrevendo na memoria interna
-  u8g2.sendBuffer(); // transferindo da memoria interna para display
-  delay(1000);
-}  
-```
-</p>
-</details> 
-
-   
-	<BR>
-<BR></BR><b></b>Aula prática uma entrada analógica</b>
-<BR></BR>- Leitura Analógica
-<BR></BR>- Comparações (if/else/>/<=)
-<BR><img src=esp32/adcesp32.png width=300 height=300><BR>
-<BR>Utilize o seguinte <a href=https://wokwi.com/projects/340963795998343762>exemplo</a> de leitura analógica, onde um potênciometro ligado a uma das entradas AD(conversor analógico-digital), realiza a conversão em valor binário e utiizando uma função converte o valor em Volts.
-<BR>Uma condição de comparação aciona um led. Monte e modifique o programa e circuito para 3 faixas de valores.
-<br>
-<BR><BR>
-<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32/qrcode_ad.jpg>
-
-<BR>
-<BR><B>Utilizando a IDE Arduino</B>
-<BR><img src=https://www.lojamundi.com.br/imagens/produtos/Raspberry-Pi-Cabo-mini-USB.webp width=200 height=200>
-<BR> <a href=https://www.blogdarobotica.com/2021/08/24/como-programar-a-placa-esp32-no-arduino-ide>Como gravar o esp32 com Arduino</a>
-<hr>
-
 
 <BR>27/7 -<BR>
 ## Conhecendo funções Wiring
@@ -128,23 +59,25 @@ ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
 <center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
 
 ## Pinout ESP32
-<br><a href=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png target=_blank><img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout<a/>
-<BR><a href=https://randomnerdtutorials.com/esp32-pinout-reference-gpios/>Configuração I/O</a> para cada pino.
+
+<img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout>
+
+<br><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/pinos.md> Conheça sobre a configuração de pinos </a>
+
+
+## ID do chip
+
+No ESP32, o "ID do chip" (Chip ID) refere-se a um identificador único atribuído ao chip. Esse ID pode ser usado para várias finalidades, incluindo a diferenciação entre múltiplos dispositivos na mesma rede ou para fins de segurança e autenticação.
+
+O ID do chip no ESP32 é tipicamente derivado do endereço MAC do dispositivo, que é único para cada chip. Isso significa que cada ESP32 tem um ID do chip que pode ser considerado único, ajudando a evitar colisões e conflitos em sistemas onde múltiplos dispositivos precisam ser identificados de forma inequívoca.
+
+Para obter o ID do chip em um programa, os desenvolvedores geralmente usam funções específicas da API do ESP-IDF ou do ambiente de desenvolvimento que estão utilizando, como o Arduino. Por exemplo, no ambiente Arduino, você pode usar a função ESP.getEfuseMac() para obter o ID do chip, que retorna o endereço MAC do dispositivo, e então processá-lo conforme necessário para seu uso específico.
+
+Esse ID é especialmente útil em aplicações de Internet das Coisas (IoT), onde a identificação única de cada dispositivo é crucial para a comunicação e controle de rede.
+
 <BR>Como verificar o ID do chip<a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
 
-# Sensores internos
 
-Os pinos SENSOR_VP e SENSOR_VN são pinos analógicos dedicados para a interface de entrada do sensor Hall interno no microcontrolador ESP32.
-
-# Pinos RTC_GPIO <br><br>
-<BR>Os pinos RTC_GPIO no ESP32 são pinos de entrada/saída que são capazes de operar tanto em modo RTC (Real Time Clock) quanto em modo digital normal. Esses pinos são conectados ao subsistema RTC do chip ESP32 e podem ser usados para uma variedade de funções relacionadas a relógios e temporizadores.
-<br><br>
-O subsistema RTC no ESP32 é responsável por manter um relógio em tempo real com alta precisão, mesmo quando o chip está em modo de baixo consumo de energia ou em modo de hibernação. Os pinos RTC_GPIO podem ser usados para acionar interrupções de baixo consumo de energia no subsistema RTC, permitindo que o chip acorde em momentos específicos para executar tarefas agendadas.
-<br><br>
-Além disso, os pinos RTC_GPIO também podem ser usados para funções de entrada/saída de uso geral no modo digital normal, como outros pinos de entrada/saída do ESP32. Eles suportam diferentes níveis de sinal, incluindo níveis TTL e CMOS, e podem ser configurados como entrada ou saída de acordo com as necessidades do projeto.
-<br><br>
-Em resumo, os pinos RTC_GPIO são úteis para aplicações que envolvem temporizadores, relógios e baixo consumo de energia. Eles permitem que o ESP32 acorde em momentos específicos para executar tarefas agendadas, o que é útil em aplicações de IoT, por exemplo, onde o dispositivo precisa permanecer em modo de baixo consumo de energia na maior parte do tempo para economizar energia.
-<br><br>	
 ## Arquitetura Esp32	<BR><BR>
 
 
@@ -157,7 +90,6 @@ Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
 <BR>
 Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
  
-
 	
 ## Funçoes principais
 <details><summary>Conheça as principais funções em wiring disponíveis na IDE Arduino (clique)</summary>
@@ -220,17 +152,17 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 </details>
 
 
+## GPIO Digital
+
+Uso de Variáveis, #define e funções próprias para I/0 Arduino
+<BR>GPIOs, leitura e escrita em pinos digitais. Simulação: <a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
+
 	
 ## variaveis operadores
   <BR>Variáveis e Operadores</b><BR>  
 
  <BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
 
-
-
-## GPIO Digital
-Uso de Variáveis, #define e funções próprias para I/0 Arduino
-<BR>GPIOs, leitura e escrita em pinos digitais. Simulação: <a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
 
 
 ## Tabelas Vetores
