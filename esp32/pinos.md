@@ -33,7 +33,7 @@ Além disso, existem pinos com características específicas que os tornam adequ
 
 Os pinos destacados em verde estão OK para usar. Os destacados em amarelo também estão OK para uso, mas é necessário prestar atenção porque eles podem ter um comportamento inesperado principalmente na inicialização. Os pinos destacados em vermelho não são recomendados para uso como entradas ou saídas
 
-
+ 
 <table border="1">
   <tr>
     <th>GPIO</th>
