@@ -28,9 +28,6 @@
 - [Livros](#Livros-e-referencias)
 
 
-## Conhecendo funções Wiring
-
-
 
 ## Apostila ESP32
 <BR> <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/ESP32.docx>Apostila</a> em desenvolvimento
@@ -38,42 +35,10 @@
 <BR> <a href=https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf>Datasheet ESP32</a>
 
 ## Referências Arduino
-<center>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem C</a> </center><BR>
+<center>  <a href=https://www.arduino.cc/reference/pt/ target=_blank>Arduino Referência de Linguagem C</a> </center><BR>
 
-## Pinout ESP32
-
-<img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout>
-
-<br><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/pinos.md> Conheça sobre a configuração de pinos </a>
-
-
-## ID do chip
-
-No ESP32, o "ID do chip" (Chip ID) refere-se a um identificador único atribuído ao chip. Esse ID pode ser usado para várias finalidades, incluindo a diferenciação entre múltiplos dispositivos na mesma rede ou para fins de segurança e autenticação.
-
-O ID do chip no ESP32 é tipicamente derivado do endereço MAC do dispositivo, que é único para cada chip. Isso significa que cada ESP32 tem um ID do chip que pode ser considerado único, ajudando a evitar colisões e conflitos em sistemas onde múltiplos dispositivos precisam ser identificados de forma inequívoca.
-
-Para obter o ID do chip em um programa, os desenvolvedores geralmente usam funções específicas da API do ESP-IDF ou do ambiente de desenvolvimento que estão utilizando, como o Arduino. Por exemplo, no ambiente Arduino, você pode usar a função ESP.getEfuseMac() para obter o ID do chip, que retorna o endereço MAC do dispositivo, e então processá-lo conforme necessário para seu uso específico.
-
-Esse ID é especialmente útil em aplicações de Internet das Coisas (IoT), onde a identificação única de cada dispositivo é crucial para a comunicação e controle de rede.
-
-<BR>Como verificar o ID do chip<a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
-
-
-## Arquitetura Esp32	<BR><BR>
-
-
-Mapeamento da memória (pagina 7) <a href=https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf>memory</a>
-	
-	
-## Simulador Wokwi
-
-Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
-<BR>
-Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
- 
-	
 ## Funçoes principais
+
 <details><summary>Conheça as principais funções em wiring disponíveis na IDE Arduino (clique)</summary>
 	
 <BR><B>Funções</b>
@@ -132,6 +97,39 @@ Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/d
 <BR><BR> 
 
 </details>
+
+## Pinout ESP32
+
+<img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout>
+
+<br><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/pinos.md> Conheça sobre a configuração de pinos </a>
+
+
+## ID do chip
+
+No ESP32, o "ID do chip" (Chip ID) refere-se a um identificador único atribuído ao chip. Esse ID pode ser usado para várias finalidades, incluindo a diferenciação entre múltiplos dispositivos na mesma rede ou para fins de segurança e autenticação.
+
+O ID do chip no ESP32 é tipicamente derivado do endereço MAC do dispositivo, que é único para cada chip. Isso significa que cada ESP32 tem um ID do chip que pode ser considerado único, ajudando a evitar colisões e conflitos em sistemas onde múltiplos dispositivos precisam ser identificados de forma inequívoca.
+
+Para obter o ID do chip em um programa, os desenvolvedores geralmente usam funções específicas da API do ESP-IDF ou do ambiente de desenvolvimento que estão utilizando, como o Arduino. Por exemplo, no ambiente Arduino, você pode usar a função ESP.getEfuseMac() para obter o ID do chip, que retorna o endereço MAC do dispositivo, e então processá-lo conforme necessário para seu uso específico.
+
+Esse ID é especialmente útil em aplicações de Internet das Coisas (IoT), onde a identificação única de cada dispositivo é crucial para a comunicação e controle de rede.
+
+<BR>Como verificar o ID do chip<a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
+
+
+## Arquitetura Esp32	<BR><BR>
+
+
+Mapeamento da memória (pagina 7) <a href=https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf>memory</a>
+	
+	
+## Simulador Wokwi
+
+Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
+<BR>
+Teclas de atalho e tutorial para o <a href=https://docs.wokwi.com/pt-BR/guides/diagram-editor> Simulador Wokwi</a>
+ 
 
 
 ## GPIO Digital
