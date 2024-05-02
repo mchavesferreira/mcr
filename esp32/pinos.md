@@ -61,7 +61,7 @@ Os pinos destacados em verde est√£o OK para usar. Os destacados em amarelo tamb√
   <tr>
     <td>3</td>
     <td>OK</td>
-    <td style="color: red;>pino RX</td>
+    <td style="color: red;">pino RX</td>
     <td>HIGH na inicializa√ß√£o</td>
   </tr>
   <tr>
@@ -78,20 +78,20 @@ Os pinos destacados em verde est√£o OK para usar. Os destacados em amarelo tamb√
   </tr>
   <tr>
     <td>6</td>
-    <td style="color: red;>x</td>
-    <td style="color: red;>x</td>
+    <td style="color: red;">x</td>
+    <td style="color: red;">x</td>
     <td>conectado ao flash SPI integrado</td>
   </tr>
   <tr>
     <td>7</td>
-    <td style="color: red;>x</td>
-    <td style="color: red;>x</td>
+    <td style="color: red;">x</td>
+    <td style="color: red;">x</td>
     <td>conectado ao flash SPI integrado</td>
   </tr>
   <tr>
     <td>8</td>
-    <td style="color: red;>x</td>
-    <td style="color: red;>x</td>
+    <td style="color: red;">x</td>
+    <td style="color: red;">x</td>
     <td>conectado ao flash SPI integrado</td>
   </tr>
   <tr>
@@ -102,8 +102,8 @@ Os pinos destacados em verde est√£o OK para usar. Os destacados em amarelo tamb√
   </tr>
   <tr>
     <td>10</td>
-    <td style="color: red;>x</td>
-    <td style="color: red;>x</td>
+    <td style="color: red;">x</td>
+    <td style="color: red;">x</td>
     <td>conectado ao flash SPI integrado</td>
   </tr>
   <tr>
