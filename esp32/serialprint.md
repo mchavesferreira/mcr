@@ -433,7 +433,7 @@ void loop() {
   }
 }
 ```
-<details>
+</details>
     
 3 - Imprimindo e lendo na porta serial (UART)<BR>
 
