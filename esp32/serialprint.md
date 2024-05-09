@@ -5,6 +5,7 @@ A comunicação serial é um processo fundamental no desenvolvimento de projetos
 ## Comunicações Assíncronas: UART - Universal Asynchronous Receiver/Transmitter (UART) 
 
 ![image](https://github.com/mchavesferreira/mcr/assets/63993080/0863b2cf-8b89-437b-bdcd-02d2f85ea9fb)
+
 Como dois dispositivos se comunicam através do UART
 
 ### Comunicações Síncronas: SPI, I2C
@@ -30,11 +31,13 @@ Por padrão, apenas UART0 e UART2 podem ser usados. Para usar o UART1, temos que
 
 A comunicação entre dois dispositivos UART pode ser simplex, full-duplex ou half-duplex. A comunicação simplex é um tipo de comunicação unidirecional em que o sinal se move de um UART para outro. Ele não permite que o UART receptor envie sinais de volta. Um full-duplex ocorre quando ambos os dispositivos podem transmitir e receber comunicações ao mesmo tempo. Half-duplex é quando os dispositivos se revezam para transmitir e receber.
 
-O módulo ESP32 fornece três portas universais de receptores e transmissores assíncronos (UART), como UART0, UART1 e UART2, que funcionam no nível TTL de 3,3 V. Essas três interfaces seriais são suportadas por hardware. Cada um deles expõe 4 pinos: RX, TX, RTS e CTS. No entanto, o Arduino IDE usa apenas pinos RX e TX.
+## Portas Seriais 
 
-
-    - Serial0 (UART0): Geralmente usado para comunicação USB-to-Serial e programação, conectado à porta USB do ESP32.
-    - Serial1 (UART1) e Serial2 (UART2): Disponíveis para uso geral, não conectadas por padrão para permitir comunicação livre com periféricos externos.
+O módulo ESP32 fornece três portas universais de receptores e transmissores assíncronos (UART), como UART0, UART1 e UART2, que funcionam no nível TTL de 3,3 V. Essas três interfaces seriais são suportadas por hardware. Cada um deles expõe 4 pinos: RX, TX, RTS 
+### Serial0 (UART0): 
+Geralmente usado para comunicação USB-to-Serial e programação, conectado à porta USB do ESP32.
+### Serial1 (UART1) e Serial2 (UART2):
+Disponíveis para uso geral, não conectadas por padrão para permitir comunicação livre com periféricos externos.
 
 ## Função Serial.begin()
 
