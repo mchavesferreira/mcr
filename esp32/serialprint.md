@@ -77,6 +77,40 @@ Disponíveis para uso geral, não conectadas por padrão para permitir comunica�
     No Parity: Não é adicionado um bit de paridade aos dados. O bit de paridade é usado para checagem de erros; a ausência dele significa que essa checagem não ocorrerá.
     1 Stop Bit: Após os bits de dados e o bit de paridade, um bit de parada é adicionado para sinalizar o final do pacote de dados.
 
+## Exemplo comunicação ASCII
+
+Vamos considerar o envio da mensagem "IFSP" usando a codificação ASCII através de uma conexão serial.
+
+Mensagem e Codificação ASCII
+
+Cada caractere em ASCII é representado por um byte (8 bits). A mensagem "IFSP" consiste nos seguintes caracteres e seus correspondentes códigos ASCII em hexadecimal:
+
+    I = 0x49
+    F = 0x46
+    S = 0x53
+    P = 0x50
+
+### Transmissão Serial com Configuração SERIAL_8N1
+
+Com a configuração SERIAL_8N1 (8 bits de dados, sem paridade, 1 bit de parada), cada caractere enviado precisará de:
+
+    8 bits para o dado
+    0 bits de paridade
+    1 bit de parada
+
+Isso totaliza 9 bits por caractere.
+
+### Cálculo do Tempo de Transmissão
+
+O tempo de transmissão de cada caractere depende da taxa de baud_rate escolhida. O baud_rate define quantos bits são transmitidos por segundo. Por exemplo, se escolhermos uma taxa de baud_rate de 9600 bps (bits por segundo), podemos calcular o tempo necessário para transmitir a mensagem "IFSP".
+Cálculo:
+
+Tempo por caractere=Total de bits por caractereBaud rateTempo por caractere=Baud rateTotal de bits por caractere​
+
+Tempo por caractere=9 bits9600 bits/segundo≈0,0009375 segundos por caractereTempo por caractere=9600 bits/segundo9 bits​≈0,0009375 segundos por caractere
+
+Tempo total para "IFSP"=4 caracteres×0,0009375 segundos/caractere=0,00375 segundosTempo total para "IFSP"=4 caracteres×0,0009375 segundos/caractere=0,00375 segundos
+
 ## Função Serial.begin()
 
 A função Serial.begin() é usada para inicializar a porta serial0 com uma taxa de transmissão específica (baud rate), configurando a velocidade na qual os dados são enviados e recebidos através da porta serial. Esta função é essencial para estabelecer a comunicação entre o microcontrolador e o computador ou outro dispositivo serial.
