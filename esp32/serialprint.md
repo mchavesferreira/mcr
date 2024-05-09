@@ -238,8 +238,17 @@ O tempo de transmissão de cada caractere depende da taxa de baud_rate escolhida
 
 ![Captura de tela 2024-05-09 081841](https://github.com/mchavesferreira/mcr/assets/63993080/d7db9158-3bcf-4d4d-8986-cac42324635a)
 
+Tabela de tempos para a mensagem "IFSP" com diferentes baud_rates:
 
-## Função Serial.begin()
+| Baud Rate (bps) | Tempo por Caractere (s)    | Tempo Total para "IFSP" (s) |
+|-----------------|----------------------------|-----------------------------|
+| 9600            | 0.0009375                  | 0.00375                     |
+| 19200           | 0.00046875                 | 0.001875                    |
+| 38400           | 0.000234375                | 0.0009375                   |
+| 115200          | 0.000078125                | 0.0003125                   |
+
+
+## Programação com IDE-Arduino: Função Serial.begin()
 
 A função Serial.begin() é usada para inicializar a porta serial0 com uma taxa de transmissão específica (baud rate), configurando a velocidade na qual os dados são enviados e recebidos através da porta serial. Esta função é essencial para estabelecer a comunicação entre o microcontrolador e o computador ou outro dispositivo serial.
 
