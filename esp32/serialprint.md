@@ -112,6 +112,9 @@ No caso dos microcontroladores, como os da família AVR ou usando a plataforma A
 
 A tabela ASCII que se segue contém os caracteres que são comumente utilizados e podem ser transmitidos através de comunicação serial. A transmissão destes caracteres é bastante comum em contextos onde é necessário enviar comandos, texto ou dados formatados de forma legível:
 
+<details><summary>Tabela ASCII</summary>
+<p>
+
 | Dec | Hex | Char |       Descrição       |
 |-----|-----|------|-----------------------|
 |  32 |  20 |      | Espaço                |
@@ -210,6 +213,7 @@ A tabela ASCII que se segue contém os caracteres que são comumente utilizados 
 | 125 |  7D |  }   | Chave direita         |
 | 126 |  7E |  ~   | Tilde                 |
 
+</details>
 
 ## Exemplo comunicação ASCII
 
@@ -248,11 +252,14 @@ Tabela de tempos para a mensagem "IFSP" com diferentes baud_rates:
 | 115200          | 0.000078125                | 0.0003125                   |
 
 
-## Programação com IDE-Arduino: Função Serial.begin()
+## Programação com IDE-Arduino: 
 
+### Função Serial.begin()
 A função Serial.begin() é usada para inicializar a porta serial0 com uma taxa de transmissão específica (baud rate), configurando a velocidade na qual os dados são enviados e recebidos através da porta serial. Esta função é essencial para estabelecer a comunicação entre o microcontrolador e o computador ou outro dispositivo serial.
 
-### Sintaxe
+Referência:  https://www.arduino.cc/reference/pt/language/functions/communication/serial/
+
+#### Sintaxe
  ```ruby 
 Serial.begin(baud_rate);
  ```
@@ -273,6 +280,32 @@ void loop() {
 }
 
  ```
+
+Serial.print(): Imprime dados na porta serial em como texto ASCII (facilmente legível, diferentemente dos valores binários). Essa função pode assumir várias formas. números são impressos usando um caractere ASCII para cada dígito. 
+
+Serial.println(): Imprime dados na porta serial como texto ASCII seguido pelo caractere de retorno de carruagem (ASCII 13, ou '\r') 
+
+#### Prática implemente o seguinte código e confira o resultado:
+
+ ```ruby 
+    Serial.print(78, BIN);
+    Serial.print("\t");
+
+    Serial.print(78, OCT);
+   Serial.print(13);
+
+    Serial.print(78, DEC);
+  Serial.print("\r");
+
+    Serial.print(78, HEX);
+
+    Serial.print(1.23456, 0);
+
+    Serial.print(1.23456, 2);
+
+    Serial.print(1.23456, 4);
+ ```
+
 
 ## Serial1.begin() e Serial2.begin()
 
@@ -314,5 +347,111 @@ A biblioteca HardwareSerial.h é uma parte fundamental do framework Arduino, usa
    - config: Configurações de bits de dados, paridade e bits de parada. Por exemplo, SERIAL_8N1 indica 8 bits de dados, sem paridade, 1 bit de parada.
    - RX_PIN, TX_PIN: Os números dos pinos para receber (RX) e transmitir (TX) dados. No ESP32, esses pinos são flexíveis e podem ser definidos pelo usuário, facilitando a integração com outros módulos e sensores.
 
-    
+### Função Serial.read()
 
+A função lê dados recebidos na porta serial.
+
+ ```ruby
+int incomingByte = 0; // variável para o dado recebido
+
+void setup() {
+  Serial.begin(9600); // abre a porta serial, configura a taxa de transferência para 9600 bps
+}
+
+void loop() {
+  // apenas responde quando dados são recebidos:
+  if (Serial.available() > 0) {
+    // lê do buffer o dado recebido:
+    incomingByte = Serial.read();
+
+    // responde com o dado recebido:
+    Serial.print("Eu Recebi: ");
+    Serial.println(incomingByte, DEC);
+  }
+}
+ ```
+
+Serial.available(): Retorna o número de bytes (caracteres) disponíveis para leitura da porta serial. 
+
+###  Serial.readStringUntil()
+
+Serial.readStringUntil() ê caracteres do buffer serial e os move para uma String. A função termina se o caractere terminador é encontrado, ou se ocorre time-out.
+
+
+Práticas:
+ 1- Combine o exemplo de acionamento do Led com comunicação serial, imprimindo uma mensagem com a cor acionada:
+
+ https://wokwi.com/projects/339670467067511378
+
+ 2 - Acionando LEDs com a comunicação serial:
+
+Para criar um exemplo utilizando a comunicação serial no Arduino onde diferentes letras acionam diferentes LEDs, podemos escrever um código que escuta a porta serial por entradas específicas ('A', 'S', 'D') e aciona os LEDs correspondentes (LEDs conectados aos pinos 10, 9 e 8) de acordo com a entrada recebida.
+
+<details><summary>Codigo Serial/LED</summary>
+<p>
+    
+ ```ruby
+// Definindo os pinos dos LEDs
+int ledPinA = 10;  // LED para o caractere 'A'
+int ledPinS = 9;   // LED para o caractere 'S'
+int ledPinD = 8;   // LED para o caractere 'D'
+
+void setup() {
+  // Inicia a comunicação serial a 9600 bps
+  Serial.begin(9600);
+  
+  // Configura os pinos dos LEDs como saída
+  pinMode(ledPinA, OUTPUT);
+  pinMode(ledPinS, OUTPUT);
+  pinMode(ledPinD, OUTPUT);
+  
+  // Garante que todos os LEDs começam desligados
+  digitalWrite(ledPinA, LOW);
+  digitalWrite(ledPinS, LOW);
+  digitalWrite(ledPinD, LOW);
+}
+
+void loop() {
+  // Verifica se há dados disponíveis para ler na porta serial
+  if (Serial.available() > 0) {
+    // Lê o próximo caractere disponível
+    char receivedChar = Serial.read();
+    
+    // Desliga todos os LEDs para garantir que apenas um fica aceso por vez
+    digitalWrite(ledPinA, LOW);
+    digitalWrite(ledPinS, LOW);
+    digitalWrite(ledPinD, LOW);
+    
+    // Aciona o LED correspondente ao caractere recebido
+    if (receivedChar == 'A') {
+      digitalWrite(ledPinA, HIGH);
+    } else if (receivedChar == 'S') {
+      digitalWrite(ledPinS, HIGH);
+    } else if (receivedChar == 'D') {
+      digitalWrite(ledPinD, HIGH);
+    }
+  }
+}
+```
+<details>
+    
+3 - Imprimindo e lendo na porta serial (UART)<BR>
+
+
+
+<details><summary>Codigo Serial</summary>
+<p>
+
+```ruby
+   Serial.begin(115200);
+   Serial.println("Por favor qual o seu nome:");
+   while (!Serial.available()); // Wait for input
+   String name = Serial.readStringUntil('\n');
+   Serial.print("Olá, ");
+   Serial.print(name);
+```
+
+</p>
+</details>
+
+Exemplo da comunicação serial: https://wokwi.com/projects/397406587999082497
