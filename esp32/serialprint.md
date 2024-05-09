@@ -2,13 +2,11 @@
 
 A comunicação serial é um processo fundamental no desenvolvimento de projetos com Arduino e ESP32, utilizado para enviar e receber dados entre o microcontrolador e o computador ou outros dispositivos. É uma ferramenta essencial para depuração, configuração e operação remota de sistemas embarcados.  Os dados são transferidos bit a bit digitalmente na forma de bits de um dispositivo para outro. Comunicações seriais são classíficadas quanto ao sincronimos entre síncronas (presença do clock) ou assíncronas (sem clock de referência).
 
-## Comunicações Assíncronas: UART - Universal Asynchronous Receiver/Transmitter (UART) 
+### Funções dos Pinos RX e TX
 
 ![image](https://github.com/mchavesferreira/mcr/assets/63993080/0863b2cf-8b89-437b-bdcd-02d2f85ea9fb)
 
 Como dois dispositivos se comunicam através do UART
-
-### Funções dos Pinos RX e TX
 
 TX (Transmitir): O pino TX é utilizado para enviar dados do ESP32 para outro dispositivo. Isso pode incluir o envio de comandos para um módulo GSM, coordenadas para um dispositivo GPS, ou simplesmente para comunicação de dados para um computador ou outro microcontrolador. No ESP32, diferentes pinos podem ser configurados como TX para as diferentes UARTs disponíveis.
 
@@ -16,11 +14,20 @@ RX (Receber): O pino RX é usado para receber dados de outros dispositivos. Isso
 
 Ao conectar o ESP32 a outros dispositivos, certifique-se de que os níveis de tensão dos pinos RX e TX sejam compatíveis, e lembre-se de conectar o TX do ESP32 ao RX do dispositivo receptor e vice-versa. Utilizar resistores de pull-up ou pull-down pode ser necessário para estabilizar os níveis lógicos em ambientes com ruído elétrico ou longas distâncias de transmissão.
 
-### Comunicações Síncronas: SPI, I2C
+### Comunicações Síncronas: 
 
-![Serial communication](https://github.com/mchavesferreira/mcr/assets/63993080/b245763b-464d-436d-8484-f270fb7e2549)
+O emissor envia um sinal de clock junto com os dados: a cada transição ascendente/descendente do clock, o valor dos dados é lido pelo receptor. São exemplos de comunicação síncronas as SPI I2C.
 
-A comunicação serial geralmente é usada para:
+![_clock](https://github.com/mchavesferreira/mcr/assets/63993080/5aa5f122-1154-410f-9d10-454755171f0f)
+
+## Comunicações Assíncronas: UART - Universal Asynchronous Receiver/Transmitter (UART) 
+
+Refere-se à sincronização remetente-destinatário. O remetente envia dados a uma determinada velocidade baseada e um protocolo de transmissão.
+
+![taxaex](https://github.com/mchavesferreira/mcr/assets/63993080/4f5c4ccf-ba47-4c0a-bc25-67627b24303c)
+
+
+## A comunicação serial geralmente é usada para:
 
 ### Depuração: 
 Permite ao desenvolvedor enviar dados do microcontrolador para um terminal no computador, facilitando a verificação de variáveis, o estado do programa e a ocorrência de erros.
@@ -65,7 +72,18 @@ Disponíveis para uso geral, não conectadas por padrão para permitir comunica�
 | 921600          | Comunicação extremamente rápida|
 | 1000000         | Máxima taxa para aplicações específicas|
 
-## Paridade 
+## Tamanho do Frame
+
+O grupo de bits é transmitido/recebido em um bloco (frame) composto pelos bits de dados, bits de sincronização (bits de início e parada) e, opcionalmente, por um bit de paridade para a conferência de erro. A USART aceita várias combinações possíveis de formato de dados:
+
+! Um bit de início.
+! 5, 6, 7, 8 ou 9 bits de dados.
+! Bit de paridade par, ímpar ou nenhum.
+! Um ou dois bits de parada.
+
+![frame](https://github.com/mchavesferreira/mcr/assets/63993080/c603219a-f5dd-453c-acc9-55c5771e327f)
+
+Paridade 
 
 | Termo | Significado                          |
 |-------|--------------------------------------|
@@ -77,11 +95,15 @@ Disponíveis para uso geral, não conectadas por padrão para permitir comunica�
     No Parity: Não é adicionado um bit de paridade aos dados. O bit de paridade é usado para checagem de erros; a ausência dele significa que essa checagem não ocorrerá.
     1 Stop Bit: Após os bits de dados e o bit de paridade, um bit de parada é adicionado para sinalizar o final do pacote de dados.
 
+## Comunicação ASCII
+
+No caso dos microcontroladores, como os da família AVR ou usando a plataforma Arduino, as funções de comunicação serial podem transmitir tanto caracteres ASCII quanto dados binários, dependendo de como são programadas. 
+
+
+
 ## Exemplo comunicação ASCII
 
 Vamos considerar o envio da mensagem "IFSP" usando a codificação ASCII através de uma conexão serial.
-
-Mensagem e Codificação ASCII
 
 Cada caractere em ASCII é representado por um byte (8 bits). A mensagem "IFSP" consiste nos seguintes caracteres e seus correspondentes códigos ASCII em hexadecimal:
 
