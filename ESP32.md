@@ -11,6 +11,7 @@
 
 02/05 - Explorando GPIO Entradas e saídas (Pinout ESP32, GPIO Digital)
 
+09/05  - Comunicação Serial:  https://github.com/mchavesferreira/mcr/blob/main/esp32/serialprint.md
 
 ## Simulador Wokwi
 
