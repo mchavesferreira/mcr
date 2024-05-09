@@ -8,6 +8,14 @@ A comunicação serial é um processo fundamental no desenvolvimento de projetos
 
 Como dois dispositivos se comunicam através do UART
 
+### Funções dos Pinos RX e TX
+
+TX (Transmitir): O pino TX é utilizado para enviar dados do ESP32 para outro dispositivo. Isso pode incluir o envio de comandos para um módulo GSM, coordenadas para um dispositivo GPS, ou simplesmente para comunicação de dados para um computador ou outro microcontrolador. No ESP32, diferentes pinos podem ser configurados como TX para as diferentes UARTs disponíveis.
+
+RX (Receber): O pino RX é usado para receber dados de outros dispositivos. Isso permite ao ESP32 receber informações, como dados de sensores, respostas de comandos AT de um módulo Wi-Fi ou GSM, ou comandos de um computador. Assim como os pinos TX, os pinos RX podem ser configurados para diferentes UARTs no ESP32.
+
+Ao conectar o ESP32 a outros dispositivos, certifique-se de que os níveis de tensão dos pinos RX e TX sejam compatíveis, e lembre-se de conectar o TX do ESP32 ao RX do dispositivo receptor e vice-versa. Utilizar resistores de pull-up ou pull-down pode ser necessário para estabilizar os níveis lógicos em ambientes com ruído elétrico ou longas distâncias de transmissão.
+
 ### Comunicações Síncronas: SPI, I2C
 
 ![Serial communication](https://github.com/mchavesferreira/mcr/assets/63993080/b245763b-464d-436d-8484-f270fb7e2549)
@@ -38,6 +46,36 @@ O módulo ESP32 fornece três portas universais de receptores e transmissores as
 Geralmente usado para comunicação USB-to-Serial e programação, conectado à porta USB do ESP32.
 ### Serial1 (UART1) e Serial2 (UART2):
 Disponíveis para uso geral, não conectadas por padrão para permitir comunicação livre com periféricos externos.
+
+## Baud Rate
+
+| Baud Rate (bps) | Uso Comum                     |
+|-----------------|-------------------------------|
+| 300             | Modems antigos, comunicação lenta|
+| 1200            | Comunicação lenta, sistemas legados|
+| 2400            | Comunicação básica de dados   |
+| 4800            | GPS, dados em baixa velocidade|
+| 9600            | Padrão para muitos dispositivos, incluindo GPS|
+| 19200           | Comunicação em melhor velocidade|
+| 38400           | Uso geral, mais rápido        |
+| 57600           | Comunicação de alta velocidade|
+| 115200          | Padrão de alta velocidade para microcontroladores|
+| 230400          | Comunicação muito rápida      |
+| 460800          | Comunicação muito rápida      |
+| 921600          | Comunicação extremamente rápida|
+| 1000000         | Máxima taxa para aplicações específicas|
+
+## Paridade 
+
+| Termo | Significado                          |
+|-------|--------------------------------------|
+| 8     | 8 bits de dados por pacote           |
+| N     | No Parity (Sem bit de paridade)      |
+| 1     | 1 Stop Bit (Um bit de parada)        |
+
+    8 bits de dados: Cada pacote de dados enviado contém 8 bits de informações.
+    No Parity: Não é adicionado um bit de paridade aos dados. O bit de paridade é usado para checagem de erros; a ausência dele significa que essa checagem não ocorrerá.
+    1 Stop Bit: Após os bits de dados e o bit de paridade, um bit de parada é adicionado para sinalizar o final do pacote de dados.
 
 ## Função Serial.begin()
 
