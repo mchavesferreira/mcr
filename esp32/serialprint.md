@@ -3,6 +3,9 @@
 A comunicação serial é um processo fundamental no desenvolvimento de projetos com Arduino e ESP32, utilizado para enviar e receber dados entre o microcontrolador e o computador ou outros dispositivos. É uma ferramenta essencial para depuração, configuração e operação remota de sistemas embarcados.
 Uso da Comunicação Serial
 
+![Serial communication](https://github.com/mchavesferreira/mcr/assets/63993080/b245763b-464d-436d-8484-f270fb7e2549)
+
+
 No contexto do Arduino e do ESP32, a comunicação serial geralmente é usada para:
 
 ### Depuração: 
