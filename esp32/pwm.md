@@ -27,6 +27,7 @@ Exemplo da comunicação serial: https://wokwi.com/projects/397406587999082497
 <P>PWM - Simulando saída analógica
 
 PWM (Pulse Width Modulation) é uma técnica de modulação utilizada para controlar a potência fornecida a dispositivos eletrônicos, variando a largura de pulso de um sinal digital de acordo com uma frequência fixa. No ESP32, o PWM é implementado de maneira eficiente utilizando o hardware interno do microcontrolador.
+
 Sugestões de Aplicação para PWM no ESP32
 
 ## Controle de Motores:
@@ -36,8 +37,10 @@ Motores DC: Controlar a velocidade de rotação de motores DC.
 Servomotores: Ajustar a posição dos servos.
 
 ##  Controle de Iluminação:
-        LEDs: Variar a intensidade luminosa de LEDs e fitas de LED.
-        Lâmpadas: Controlar a luminosidade de lâmpadas incandescentes ou halógenas.
+
+LEDs: Variar a intensidade luminosa de LEDs e fitas de LED.
+
+Lâmpadas: Controlar a luminosidade de lâmpadas incandescentes ou halógenas.
 
 ##  Geradores de Sinais:
 
