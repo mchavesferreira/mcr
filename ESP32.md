@@ -1,6 +1,8 @@
 # Microcontroladores
 
-## Thais Miler, hoje 16 de maio, vamos aprender e praticar PWM, e se você não fez a tarefa da semana passada, vamos juntar os conhecimentos. Clique a seguir na data de hoje.
+## Oi Thais,
+
+Hoje, vamos aprender e praticar PWM! Estou confiante de que você vai se sair muito bem. Caso não tenha feito a tarefa da semana passada, não se preocupe. Vamos aproveitar esta oportunidade para juntar os conhecimentos e seguir em frente.
  
 ### Utilizando ESP32, Arduino IDE e simulador Wokwi para aprendizado da programação de sistemas embarcados e dispositivos IOT.
 
