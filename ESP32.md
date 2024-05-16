@@ -1,5 +1,6 @@
 # Microcontroladores
 
+## Thais Miler, hoje 16 de maio, vamos aprender e praticar PWM, e se você não fez a tarefa da semana passada, vamos juntar os conhecimentos. Clique a seguir na data de hoje.
  
 ## Utilizando ESP32, Arduino IDE e simulador Wokwi para aprendizado da programação de sistemas embarcados e dispositivos IOT.
 
@@ -12,6 +13,8 @@
 02/05 - Explorando GPIO Entradas e saídas (Pinout ESP32, GPIO Digital)
 
 09/05  - Comunicação Serial:  https://github.com/mchavesferreira/mcr/blob/main/esp32/serialprint.md
+
+16/05  - PWM:  https://github.com/mchavesferreira/mcr/blob/main/esp32/pwm.md
 
 ## Simulador Wokwi
 
@@ -214,17 +217,7 @@ Uso de Variáveis, #define e funções próprias para I/0 Arduino
 <P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
 <BR>01: <a href=https://wokwi.com/projects/341561728616628819> Mapeamento de pinos ESP32</a>
 
-## PWM
-<P>PWM - Simulando saída analógica
-<BR>02: <a href=https://wokwi.com/projects/341562296506516051>LED RGB e uso de analog_write() para PWM</a>
-<P>Função Debounce e uso de condição de fluxo IF
-<BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
-<P>PWM e leitura analógia alterando RGB
-<BR><a href=https://wokwi.com/projects/341599671301440083>PWM-Analog</a><P>
 
-
-<P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>
-<P> 	
 	
 ## Leitura analógica
 <bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento. Simulação: <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
