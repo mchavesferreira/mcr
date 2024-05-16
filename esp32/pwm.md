@@ -23,6 +23,8 @@
 
 Exemplo da comunicação serial: https://wokwi.com/projects/397406587999082497
 
+Exemplo com pergunta e IF:  https://wokwi.com/projects/398045854579066881
+
 # PWM
 <P>PWM - Simulando saída analógica
 
