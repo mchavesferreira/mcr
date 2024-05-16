@@ -437,7 +437,9 @@ void loop() {
 
 Exemplo:  https://wokwi.com/projects/397413115618262017
 
-# TAREFA SUAP:
+# TAREFA SUAP 09/05/2024:
+
+Exemplo:  https://wokwi.com/projects/397413115618262017
 
 Utilize o exemplo acima para criar o seguinte projeto com simulação ESP32, salve e envie a URL(endereço wokwi do projeto) em tarefa.
 
@@ -448,7 +450,6 @@ Utilize o exemplo acima para criar o seguinte projeto com simulação ESP32, sal
 GPIO21, delay(300) GPIO18 delay(200) GPIO5
 - A letra 'B' apaga todos os leds.
 - A letra 'A' acende todos os leds.
- 
     
 3 - Imprimindo e lendo na porta serial (UART)<BR>
 
