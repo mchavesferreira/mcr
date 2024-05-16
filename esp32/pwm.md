@@ -25,6 +25,32 @@ Exemplo da comunicação serial: https://wokwi.com/projects/397406587999082497
 
 Exemplo com pergunta e IF:  https://wokwi.com/projects/398045854579066881
 
+
+
+# TAREFA SUAP 16/05/2024:
+
+Exemplo com pergunta e IF:  https://wokwi.com/projects/398045854579066881
+
+Utilize o exemplo com pergunta através da porta serial tratados em sala de aula e o código já solicitado na tarefa 09/05, modifique para atender aos seguintes requisitos:
+
+Utilize o exemplo acima para criar o seguinte projeto com simulação ESP32, salve e envie a URL(endereço wokwi do projeto) em tarefa.
+
+-Estabeleça a comunicação serial.
+
+-4 Leds estão ligados respectivamente no pinos GPIO 21, 19, 18 e 5.
+
+Na função loop() implemente as seguintes tarefas:
+
+-Pergunte quantos leds deseja acender entre 1 e 4 leds?
+
+-Pergunte o intervalo de tempo em ms (favor digitar entre 100 e 5000)?
+
+. Receba e String e converta em inteiro ambas as respotas. Crie regras (IF) analisando se foi digitado entre 1 e 4 na primeira pergunta e entre 100 e 5000 na segunda pergunta.
+
+. Utilize estas respostas para piscar a quantidade de leds escolhido e no intervalo de tempo respondidoA letra 'A' acende todos os leds.
+
+Continue lendo o teclado neste loop, sendo que ao digitar a letra 'a', o programa retorna ao inicio solicitando as perguntas.
+
 # PWM
 <P>PWM - Simulando saída analógica
 
@@ -134,11 +160,12 @@ void loop() {
 Exemplo da comunicação serial: https://wokwi.com/projects/397406587999082497
 
 
-# TAREFA SUAP 16/05/2024:
+# TAREFA SUAP 23/05/2024:
 
 Exemplo:  https://wokwi.com/projects/397413115618262017
 
-Utilize o exemplo da tarefa anterior e modifique para atender aos requisitos, substititua apenas ligar os LED por controle de intensidade PWM.
+Utilize o exemplos tratados em sala de aula sobre PWM, e modifique para atender aos seguintes requisitos
+Controle  LED por controle de intensidade PWM através de teclas do teclado inseridos na porta serial.
 
 Salve com um novo nome e envie a URL(endereço wokwi do projeto) em tarefa.
 
@@ -148,7 +175,7 @@ Salve com um novo nome e envie a URL(endereço wokwi do projeto) em tarefa.
 - A letra 'B' apaga todos os leds.
 - A letra 'G' acende todos os leds.
 
-## Próxima Aula
+## Próxima Aula 30/05/2024
 
 <P>PWM e leitura analógia alterando RGB
  
