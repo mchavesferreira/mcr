@@ -2,7 +2,7 @@
 
 ## Oi Thais,
 
-Hoje, vamos aprender sobre como mostrar seus resultados utilizando o display Oled
+Hoje, vamos aprender sobre PWM.
  
 ### Utilizando ESP32, Arduino IDE e simulador Wokwi para aprendizado da programação de sistemas embarcados e dispositivos IOT.
 
@@ -16,9 +16,9 @@ Hoje, vamos aprender sobre como mostrar seus resultados utilizando o display Ole
 
 09/05  - Comunicação Serial:  https://github.com/mchavesferreira/mcr/blob/main/esp32/serialprint.md
 
-16/05  - PWM:  https://github.com/mchavesferreira/mcr/blob/main/esp32/pwm.md
+16/05 e 23/5  - PWM:  https://github.com/mchavesferreira/mcr/blob/main/esp32/pwm.md
 
-23/05  - Diplay Oled : https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md
+06/06  - Diplay Oled : https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md
 
 ## Simulador Wokwi
 
