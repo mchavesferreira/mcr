@@ -48,6 +48,8 @@ O protocolo I2C (Inter-Integrated Circuit) é um protocolo de comunicação seri
 3. **Topologia Mestre-Escravo**:
    - Um dispositivo mestre controla a comunicação, enquanto os dispositivos escravos respondem às solicitações do mestre.
 
+![diagrama](https://github.com/mchavesferreira/mcr/assets/63993080/2f5eafa2-350e-40cc-9596-3b0ce3398b90)
+
 4. **Comunicação Bidirecional**:
    - Permite tanto leitura quanto escrita de dados entre o mestre e os escravos.
 
@@ -61,6 +63,8 @@ O protocolo I2C (Inter-Integrated Circuit) é um protocolo de comunicação seri
 
 1. **Início da Comunicação**:
    - O mestre inicia a comunicação gerando uma condição de START (um nível alto para baixo na linha SDA enquanto SCL está alto).
+     
+![start_stop](https://github.com/mchavesferreira/mcr/assets/63993080/c349b904-6a36-45e0-892b-27a4afb6e458)
 
 2. **Endereçamento**:
    - O mestre envia o endereço do dispositivo escravo com o qual deseja comunicar-se seguido por um bit de leitura/escrita (0 para escrita e 1 para leitura).
@@ -75,6 +79,8 @@ O protocolo I2C (Inter-Integrated Circuit) é um protocolo de comunicação seri
 
 5. **Fim da Comunicação**:
    - A comunicação é encerrada com uma condição de STOP (um nível baixo para alto na linha SDA enquanto SCL está alto).
+
+![pacote_i2c](https://github.com/mchavesferreira/mcr/assets/63993080/8d5a6e9d-8202-4f2b-953c-c004f3fd89d2)
 
 ## Vantagens do I2C
 
@@ -92,8 +98,6 @@ O protocolo I2C (Inter-Integrated Circuit) é um protocolo de comunicação seri
 Uma aplicação comum do I2C é a leitura de sensores. Por exemplo, um sensor de temperatura DS1307 pode ser conectado a um microcontrolador como o ATmega328P, utilizando o barramento I2C para enviar leituras de temperatura periodicamente ao microcontrolador.
 
 Para uma implementação detalhada, consulte a documentação específica do microcontrolador e os datasheets dos dispositivos I2C utilizados. O livro "AVR e Arduino Técnicas de Projeto" contém um capítulo dedicado ao TWI (I2C) que detalha a implementação do protocolo em microcontroladores AVR, incluindo exemplos práticos e código fonte.
-
-Se precisar de mais detalhes específicos ou exemplos de código, estou à disposição para ajudar!
 
 
 
