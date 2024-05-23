@@ -1,3 +1,110 @@
+# Display SSD1306 OLED
+
+O SSD1306 é um controlador de display OLED (Organic Light Emitting Diode) com uma resolução típica de 128x64 pixels. É amplamente utilizado em sistemas embarcados devido ao seu baixo consumo de energia, alta eficiência, e excelente qualidade de imagem. O display SSD1306 pode ser encontrado em diversos dispositivos de consumo e projetos DIY (Do It Yourself), especialmente na comunidade maker e em projetos com microcontroladores como Arduino e ESP32.
+
+## Características Principais do Display SSD1306
+
+1. **Tecnologia OLED**:
+   - Displays OLED não requerem backlight, pois cada pixel emite sua própria luz. Isso resulta em maior contraste e ângulos de visão amplos.
+   - Baixo consumo de energia, especialmente em imagens com muitos pixels apagados (pretos).
+
+2. **Resolução**:
+   - Típica de 128x64 pixels, mas também existem variantes com resoluções diferentes (e.g., 128x32).
+
+3. **Interfaces de Comunicação**:
+   - **I2C (Inter-Integrated Circuit)**: Utiliza dois pinos (SDA e SCL) para comunicação, ideal para economizar pinos no microcontrolador.
+   - **SPI (Serial Peripheral Interface)**: Protocolo mais rápido que o I2C, utiliza mais pinos mas oferece maior velocidade de comunicação.
+   - Algumas versões suportam também a interface paralela.
+
+4. **Controlador SSD1306**:
+   - O controlador SSD1306 gerencia a memória gráfica e controla cada pixel do display.
+   - Possui memória interna (GDDRAM - Graphic Display Data RAM) de 1KB para armazenar o estado dos pixels.
+
+## Funcionamento Básico
+
+### Inicialização
+
+Antes de usar o display, é necessário inicializá-lo. Isso envolve enviar uma série de comandos de configuração para o controlador SSD1306. A sequência de inicialização pode variar dependendo do fabricante do módulo, mas geralmente inclui:
+
+1. **Configuração da exibição**: Definição do modo de endereçamento, configuração da altura e largura do display, e outras configurações básicas.
+2. **Controle de energia**: Ativação do conversor de carga interna, configuração do nível de contraste, entre outros ajustes de energia.
+3. **Ligação do display**: Envio do comando para ligar o display e iniciar a exibição.
+
+### Comunicação
+
+#### Via I2C
+
+Para comunicação I2C, os pinos típicos usados são:
+
+- **SDA (Data)**: Linha de dados.
+- **SCL (Clock)**: Linha de clock.
+- **VCC**: Alimentação (geralmente 3.3V ou 5V).
+- **GND**: Terra.
+
+O endereço I2C do SSD1306 pode ser 0x3C ou 0x3D, dependendo da configuração do módulo (alguns módulos têm um pino de seleção de endereço).
+
+#### Via SPI
+
+Para comunicação SPI, os pinos típicos usados são:
+
+- **MOSI (Master Out Slave In)**: Linha de dados de saída do mestre.
+- **SCLK (Serial Clock)**: Linha de clock.
+- **CS (Chip Select)**: Seleção do chip (ativa o dispositivo SPI).
+- **DC (Data/Command)**: Seleção entre dados e comandos.
+- **RST (Reset)**: Linha de reset para inicializar o display.
+- **VCC**: Alimentação (geralmente 3.3V ou 5V).
+- **GND**: Terra.
+
+### Controle de Pixel
+
+O display SSD1306 organiza os pixels em uma matriz de 128x64 (ou 128x32). Cada pixel pode ser controlado individualmente através de comandos específicos enviados ao controlador. A memória gráfica (GDDRAM) é mapeada diretamente para os pixels do display.
+
+### Biblioteca de Controle
+
+Existem várias bibliotecas disponíveis que facilitam o uso do display SSD1306, como:
+
+- **Adafruit SSD1306**: Popular biblioteca para Arduino.
+- **U8g2**: Biblioteca universal para displays gráficos, suporta uma ampla gama de displays, incluindo o SSD1306.
+- **ESP8266/ESP32 SSD1306**: Biblioteca otimizada para microcontroladores ESP8266 e ESP32.
+
+## Exemplo de Código com Arduino e I2C
+
+```cpp
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+
+#define SCREEN_WIDTH 128
+#define SCREEN_HEIGHT 64
+
+// Endereço I2C do SSD1306
+#define OLED_RESET -1
+Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
+
+void setup() {
+  // Inicializa o display
+  if(!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
+    Serial.println(F("Falha na inicialização do SSD1306"));
+    for(;;);
+  }
+
+  // Limpa o buffer do display
+  display.clearDisplay();
+
+  // Define o tamanho do texto
+  display.setTextSize(1);
+  display.setTextColor(SSD1306_WHITE);
+  
+  // Exemplo de texto
+  display.setCursor(0,0);
+  display.println(F("Hello, world!"));
+  display.display();
+}
+
+void loop() {
+  // Nada a fazer no loop
+}
+
 
 
 ### Display Oled  + ESP32
@@ -102,6 +209,8 @@ Para uma implementação detalhada, consulte a documentação específica do mic
 
 
 Referências:
+
+https://embetronicx.com/tutorials/linux/device-drivers/i2c-linux-device-driver-using-raspberry-pi/#SSD1306_OLED
 
 https://blog.arduinoomega.com/entendo-o-protocolo-i2c/
 
