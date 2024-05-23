@@ -2,7 +2,7 @@
 
 ## Oi Thais,
 
-Hoje, vamos aprender e praticar PWM! Estou confiante de que você vai se sair muito bem. Caso não tenha feito a tarefa da semana passada, não se preocupe. Vamos aproveitar esta oportunidade para juntar os conhecimentos e seguir em frente.
+Hoje, vamos aprender sobre como mostrar seus resultados utilizando o display Oled
  
 ### Utilizando ESP32, Arduino IDE e simulador Wokwi para aprendizado da programação de sistemas embarcados e dispositivos IOT.
 
@@ -17,6 +17,8 @@ Hoje, vamos aprender e praticar PWM! Estou confiante de que você vai se sair mu
 09/05  - Comunicação Serial:  https://github.com/mchavesferreira/mcr/blob/main/esp32/serialprint.md
 
 16/05  - PWM:  https://github.com/mchavesferreira/mcr/blob/main/esp32/pwm.md
+
+23/05  - Diplay Oled
 
 ## Simulador Wokwi
 
