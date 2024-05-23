@@ -18,7 +18,7 @@ Hoje, vamos aprender sobre como mostrar seus resultados utilizando o display Ole
 
 16/05  - PWM:  https://github.com/mchavesferreira/mcr/blob/main/esp32/pwm.md
 
-23/05  - Diplay Oled
+23/05  - Diplay Oled : https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md
 
 ## Simulador Wokwi
 
