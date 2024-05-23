@@ -11,6 +11,9 @@ O SSD1306 é um controlador de display OLED (Organic Light Emitting Diode) com u
 2. **Resolução**:
    - Típica de 128x64 pixels, mas também existem variantes com resoluções diferentes (e.g., 128x32).
 
+![SSD1306-pages-columns](https://github.com/mchavesferreira/mcr/assets/63993080/311cf145-cfdd-4245-838e-4bfb95c1215c)
+
+
 3. **Interfaces de Comunicação**:
    - **I2C (Inter-Integrated Circuit)**: Utiliza dois pinos (SDA e SCL) para comunicação, ideal para economizar pinos no microcontrolador.
    - **SPI (Serial Peripheral Interface)**: Protocolo mais rápido que o I2C, utiliza mais pinos mas oferece maior velocidade de comunicação.
@@ -19,6 +22,10 @@ O SSD1306 é um controlador de display OLED (Organic Light Emitting Diode) com u
 4. **Controlador SSD1306**:
    - O controlador SSD1306 gerencia a memória gráfica e controla cada pixel do display.
    - Possui memória interna (GDDRAM - Graphic Display Data RAM) de 1KB para armazenar o estado dos pixels.
+   - Integração: Inclui controle de contraste, RAM de display e oscilador, reduzindo componentes externos e consumo de energia.
+   - Brilho: Controle de brilho de 256 níveis.
+   - Tensão de Operação:  1.65V a 3.3V, Painel OLED: 7V a 15V
+
 
 ## Funcionamento Básico
 
@@ -106,10 +113,15 @@ void loop() {
 }
 
 
+```
 
-### Display Oled  + ESP32
-  <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
-  <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
+
+### Simuladores
+
+  <BR>-<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
+  
+  <BR>-<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
+  
   <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=325><BR>
 <details><summary>Exemplo Oled</summary>
 <p>
