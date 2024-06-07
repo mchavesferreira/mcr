@@ -1,12 +1,5 @@
 # Microcontroladores
 
-## Oi Thais,
-
-Hoje, vamos aprender sobre PWM.
- 
-### Utilizando ESP32, Arduino IDE e simulador Wokwi para aprendizado da programação de sistemas embarcados e dispositivos IOT.
-
-
 
 ## Aulas
 
