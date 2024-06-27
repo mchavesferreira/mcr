@@ -3,6 +3,8 @@
 
 ## Aulas
 
+27/06 - Aula prática com ESP32
+
 25/04 - Introdução ao ESP32 (Conhecendo  Referências Arduino e Simulador wokwi)
 
 02/05 - Explorando GPIO Entradas e saídas (Pinout ESP32, GPIO Digital)
@@ -194,9 +196,17 @@ Esse ID é especialmente útil em aplicações de Internet das Coisas (IoT), ond
 Mapeamento da memória (pagina 7) <a href=https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf>memory</a>
 	
 	
+## Aula prática ESP32
 
+Comunicação  Serial
 
+https://wokwi.com/projects/401871586327571457
 
+Pisca Led
+
+https://wokwi.com/projects/339670467067511378
+
+![esp32-led-wiring-diagram](https://github.com/mchavesferreira/mcr/assets/63993080/e9eb1095-144c-46ec-96a2-2628b59b60e2)
 
 
 	
