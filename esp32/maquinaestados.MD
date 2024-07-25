@@ -1,9 +1,5 @@
 # Máquina de estados
 
-Comparação Lado a Lado
-Abordagem	Vantagens	Desvantagens
-if	Simples de entender para pequenas lógicas	Pode se tornar complexo e difícil de manter para lógicas mais complicadas
-switch/case	Melhor organização e clareza em lógicas complexas	Pode ser um pouco mais difícil de entender inicialmente para iniciantes
 
 A máquina de estados com switch/case é mais organizada e escalável para lógicas de controle de processos mais complexos. A abordagem com if é mais direta, mas pode rapidamente se tornar difícil de gerenciar à medida que a complexidade do processo aumenta.
 
@@ -23,7 +19,7 @@ Para ilustrar o uso de máquina de estados na programação de um ESP32, vamos c
 
 7- Quando o sensor 3 é acionado, o processo é finalizado e volta ao início.
 
-
+<img src=https://github.com/mchavesferreira/mcr/blob/main/esp32/imagens/exemplo_maquia.png> 
 
 
 ## Abordagem Utilizando if
