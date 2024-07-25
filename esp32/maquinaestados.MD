@@ -9,13 +9,13 @@ A máquina de estados com switch/case é mais organizada e escalável para lógi
 
 Para ilustrar o uso de máquina de estados na programação de um ESP32, vamos comparar lado a lado as abordagens utilizando if e switch/case. O exemplo envolve o controle de uma esteira rolante, onde:
 
-    1- Ao pressionar o botão de start, a esteira liga.
-    2- A esteira permanece ligada até que um objeto alcance o sensor 1.
-    3- Quando o sensor 1 é acionado, uma válvula V1 é ativada por 2 segundos.
-    4- A esteira é religada e continua até alcançar o sensor 2.
-    5- Ao atingir o sensor 2, uma válvula V2 é ativada por 3 segundos.
-    6- A esteira é religada e continua até o sensor 3.
-    7- Quando o sensor 3 é acionado, o processo é finalizado e volta ao início.
+1- Ao pressionar o botão de start, a esteira liga.
+2- A esteira permanece ligada até que um objeto alcance o sensor 1.
+3- Quando o sensor 1 é acionado, uma válvula V1 é ativada por 2 segundos.
+4- A esteira é religada e continua até alcançar o sensor 2.
+5- Ao atingir o sensor 2, uma válvula V2 é ativada por 3 segundos.
+6- A esteira é religada e continua até o sensor 3.
+7- Quando o sensor 3 é acionado, o processo é finalizado e volta ao início.
 
 Abordagem Utilizando if
 
