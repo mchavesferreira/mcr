@@ -24,9 +24,11 @@ Para ilustrar o uso de máquina de estados na programação de um ESP32, vamos c
 7- Quando o sensor 3 é acionado, o processo é finalizado e volta ao início.
 
 
+
+
 ## Abordagem Utilizando if
 
-´´´´java
+ ```ruby  
 #define LED1 2
 #define LED2 4
 #define LED3 5
@@ -81,11 +83,20 @@ switch (estado) {
 }
 
 
-´´´
+ ```
 
 
 ## Abordagem Utilizando switch/case
 
+ ```ruby  
+
+
+ ```
+
+
+Verifique sobre requisitos de pino
+
+https://github.com/mchavesferreira/mcr/blob/main/esp32/pinos.md
 
 
 
