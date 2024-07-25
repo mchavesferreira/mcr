@@ -3,6 +3,8 @@
 
 ## Aulas
 
+25/07 - Maquina de estados (abordagem if e switch/case)
+
 27/06 - Aula prática com ESP32
 
 25/04 - Introdução ao ESP32 (Conhecendo  Referências Arduino e Simulador wokwi)
