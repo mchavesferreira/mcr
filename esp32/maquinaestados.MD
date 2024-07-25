@@ -24,59 +24,91 @@ Para ilustrar o uso de máquina de estados na programação de um ESP32, vamos c
 
 ## Abordagem Utilizando if
 
+https://wokwi.com/projects/404403833606235137
+
  ```ruby  
-#define LED1 2
-#define LED2 4
-#define LED3 5
-#define botao 14
+#define esteira 5
+#define valvula1 4
+#define valvula2 2
+#define start 14
+#define sensor1 27
+#define sensor2 26
+#define sensor3 25
 
 int tempo=1000;
-int estado=0;
+int etapa=1;
 
 void setup() {
-  pinMode(LED1, OUTPUT);
-  pinMode(LED2, OUTPUT);
-  pinMode(LED3, OUTPUT);
-  pinMode(botao, INPUT_PULLUP); // definir botao de entrada
-  Serial.begin(115200);
-  Serial.println("Inicio setup");
-    delay(3000);
+  pinMode(esteira, OUTPUT);  // led verde
+  pinMode(valvula1, OUTPUT); // led amarelo
+  pinMode(valvula2, OUTPUT);  // led vermelho
+  pinMode(start, INPUT_PULLUP); // definir botao de entrada
+  pinMode(sensor1, INPUT_PULLUP);  // define entrada, em aberto nivel alto
+  pinMode(sensor2, INPUT_PULLUP);  // define entrada, em aberto nivel alto
+  pinMode(sensor3, INPUT_PULLUP);  // define entrada, em aberto nivel alto
 }
 
 void loop() {
 
-switch (estado) {
-  case 0:
-      Serial.println("Estado=0");
-      digitalWrite(LED1, HIGH);
-      if(!digitalRead(botao)) { estado=1; }
-    break;
-  case 1:
-    Serial.println("Estado=1");
-     digitalWrite(LED1, LOW);
-      digitalWrite(LED2, HIGH);
-      delay(2000);
-      estado=2;
-    break;
-  case 2:
-    Serial.println("Estado=2");
-     digitalWrite(LED2, LOW);
-      digitalWrite(LED3, HIGH);
-      delay(2000);
-      estado=3;
-    break;  
-  case 3:
-    Serial.println("Estado=3");
-     digitalWrite(LED3, LOW);
-     estado=0;
-     delay(2000);
-    break;  
- 
-}  // fim do switch
+  if(etapa==1)
+     { 
+       if(!digitalRead(start))
+         {
+         digitalWrite(esteira, HIGH);
+         etapa=2;
+         }
+     }
 
- //
-     
-}
+
+  if(etapa==2)
+     { 
+       if(!digitalRead(sensor1))
+         {
+         digitalWrite(esteira, LOW);
+         etapa=3;
+         }
+     }
+
+  if(etapa==3)
+     { 
+         digitalWrite(valvula1, HIGH);
+         delay(2000);
+         digitalWrite(valvula1, LOW);
+         etapa=4;
+      }
+
+  if(etapa==4)
+     { 
+         digitalWrite(esteira, HIGH);
+         if(!digitalRead(sensor2))
+           {
+           digitalWrite(esteira, LOW);
+           etapa=5;
+          }
+      }
+  
+ if(etapa==5)
+     { 
+         digitalWrite(valvula2, HIGH);
+         delay(3000);
+         digitalWrite(valvula2, LOW);
+         etapa=6;
+      }
+
+  if(etapa==6)
+     { 
+         digitalWrite(esteira, HIGH);
+         if(!digitalRead(sensor3))
+           {
+           digitalWrite(esteira, LOW);
+           etapa=1;
+          }
+      }
+
+  }
+
+
+
 
 
  ```
@@ -84,7 +116,87 @@ switch (estado) {
 
 ## Abordagem Utilizando switch/case
 
+https://wokwi.com/projects/404407325257579521
+
  ```ruby  
+
+#define esteira 5
+#define valvula1 4
+#define valvula2 2
+#define start 14
+#define sensor1 27
+#define sensor2 26
+#define sensor3 25
+
+int tempo=1000;
+int etapa=1;
+
+void setup() {
+  pinMode(esteira, OUTPUT);  // led verde
+  pinMode(valvula1, OUTPUT); // led amarelo
+  pinMode(valvula2, OUTPUT);  // led vermelho
+  pinMode(start, INPUT_PULLUP); // definir botao de entrada
+  pinMode(sensor1, INPUT_PULLUP);  // define entrada, em aberto nivel alto
+  pinMode(sensor2, INPUT_PULLUP);  // define entrada, em aberto nivel alto
+  pinMode(sensor3, INPUT_PULLUP);  // define entrada, em aberto nivel alto
+
+}
+
+void loop() {
+
+switch (etapa) {
+
+  case 1: 
+       if(!digitalRead(start))
+         {
+         digitalWrite(esteira, HIGH);
+         etapa=2;
+         }
+   break;
+
+ case 2:  
+       if(!digitalRead(sensor1))
+         {
+         digitalWrite(esteira, LOW);
+         etapa=3;
+         }
+ break;
+
+ case 3: 
+         digitalWrite(valvula1, HIGH);
+         delay(2000);
+         digitalWrite(valvula1, LOW);
+         etapa=4;
+  break;
+
+ case 4: 
+         digitalWrite(esteira, HIGH);
+         if(!digitalRead(sensor2))
+           {
+           digitalWrite(esteira, LOW);
+           etapa=5;
+          }
+   break;
+
+ case 5: 
+         digitalWrite(valvula2, HIGH);
+         delay(3000);
+         digitalWrite(valvula2, LOW);
+         etapa=6;
+   break;
+
+ case 6: 
+         digitalWrite(esteira, HIGH);
+         if(!digitalRead(sensor3))
+           {
+           digitalWrite(esteira, LOW);
+           etapa=1;
+           }
+  break;
+  
+  }  // fim switch
+
+} // fim loop
 
 
  ```
