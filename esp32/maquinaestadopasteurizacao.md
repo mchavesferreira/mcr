@@ -47,7 +47,7 @@ Exemplo de Código
 
 ### Aqui está um exemplo de código para o ESP32 que realiza essa conversão:
 
-´´´ java
+ ```ruby 
 
 const int potPin = 34; // Pino ao qual o sensor está conectado
 
@@ -69,7 +69,7 @@ void loop() {
 }
 
 
-´´´
+ ```
 
 ## Exemplos WOKWI
 
