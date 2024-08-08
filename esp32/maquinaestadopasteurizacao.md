@@ -43,9 +43,9 @@ A fórmula para converter o valor bruto (RAW) lido do ADC para uma temperatura e
 
 <img src=imagens/formula.png>
 
-Exemplo de Código
+### Exemplo de Código
 
-### Aqui está um exemplo de código para o ESP32 que realiza essa conversão:
+Aqui está um exemplo de código para o ESP32 que realiza essa conversão:
 
  ```ruby 
 
