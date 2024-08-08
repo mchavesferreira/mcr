@@ -3,6 +3,8 @@
 
 ## Aulas
 
+08/08 -  <a href=esp32/maquinaestadospasteurizacao.MD> Projeto Pasteurização </a>
+
 25/07 - <a href=esp32/maquinaestados.MD> Maquina de estados (abordagem if e switch/case) </a>
 
 27/06 - Aula prática com ESP32
