@@ -11,7 +11,7 @@ Desenvolva um sistema de controle para um processo de pasteurização de leite e
 
 Aquecimento Inicial: O leite é aquecido até 63°C.
     
-Manutenção da Temperatura: O leite é mantido a 63°C por 30 minutos.
+Manutenção da Temperatura: O leite é mantido a 63°C por 30 segundos.
     
 Resfriamento Inicial: O leite é resfriado rapidamente até 4°C.
     
