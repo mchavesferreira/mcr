@@ -2,6 +2,7 @@
 
 
 ## Aulas
+22/08  - Displays LCD e Oled
 
 08/08 -  <a href=esp32/maquinaestadopasteurizacao.md> Projeto Pasteurização </a>
 
@@ -263,6 +264,9 @@ Imprimindo e lendo na porta serial (UART)<BR>
   <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
   <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
 
+### Oled
+ 
+-<a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md> Display Oled</a>
 
 	  
 ### Interrupção externa
