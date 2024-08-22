@@ -3,6 +3,7 @@
 
 ## Aulas
 22/08  - Displays LCD e Oled
+      - [Display](#Display)
 
 08/08 -  <a href=esp32/maquinaestadopasteurizacao.md> Projeto Pasteurização </a>
 
