@@ -235,6 +235,44 @@ Uso de Variáveis, #define e funções próprias para I/0 Arduino
 ## Leitura analógica
 <bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento. Simulação: <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
 
+## millis()
+
+
+# Uso da Função `millis()` no Arduino para Temporizações sem Bloqueio
+
+A função `millis()` no Arduino é uma ferramenta poderosa para realizar temporizações sem bloquear a execução do programa. Diferente da função `delay()`, que pausa a execução de todo o código por um período especificado, `millis()` permite que o Arduino continue processando outras tarefas enquanto monitora o tempo.
+
+## Como Funciona
+
+A função `millis()` retorna o número de milissegundos que se passaram desde que o Arduino foi ligado ou reiniciado. Utilizando essa função, é possível implementar temporizações em seu código sem impedir o funcionamento de outras partes do programa.
+
+## Exemplo Prático
+
+Imagine que você quer fazer um LED piscar a cada segundo sem interromper a execução de outras funcionalidades. Isso pode ser feito com `millis()` da seguinte forma:
+
+```ruby
+const int pinoLed = 13; // Pino onde o LED está conectado
+unsigned long tempoAnterior = 0; // Armazena o último momento em que o LED foi alterado
+const long intervalo = 1000; // Intervalo desejado de 1 segundo (1000 milissegundos)
+
+void setup() {
+  pinMode(pinoLed, OUTPUT); // Define o pino do LED como saída
+}
+
+void loop() {
+  unsigned long tempoAtual = millis(); // Captura o tempo atual
+
+  if (tempoAtual - tempoAnterior >= intervalo) {
+    tempoAnterior = tempoAtual; // Atualiza o tempo anterior
+
+    // Altera o estado do LED
+    int estadoLed = digitalRead(pinoLed);
+    digitalWrite(pinoLed, !estadoLed); // Inverte o estado do LED
+  }
+}
+
+```
+
 ## Comunicação Serial
 Imprimindo e lendo na porta serial (UART)<BR>
   
