@@ -2,6 +2,10 @@
 
 
 ## Aulas
+
+29/08  - Temporização
+ - [millis()](#millis())
+
 22/08  - Displays LCD e Oled
       - [Display](#Display)
 
