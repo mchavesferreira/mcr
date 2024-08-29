@@ -239,8 +239,8 @@ Uso de Variáveis, #define e funções próprias para I/0 Arduino
 ## Leitura analógica
 <bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento. Simulação: <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
 
-## millis()
 
+## millis()
 
 # Uso da Função `millis()` no Arduino para Temporizações sem Bloqueio
 
