@@ -3,6 +3,12 @@
 
 ## Aulas
 
+05/09 - Relógio e Cronometro
+
+Utilize este exemplo de display OLed (https://wokwi.com/projects/342195248670179922) e a função millis() para construir um relogio 
+
+Hora:Minuto:Segundos 
+
 29/08  - Temporização
  - [millis()](#millis())
 
