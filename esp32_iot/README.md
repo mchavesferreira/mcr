@@ -23,7 +23,8 @@ Aveiro Tech City Living Lab
 
 	
 ## Webserver
-<BR>01- Criando um web server para controle e exibição de dados (Dashboard)<BR>
+
+<BR>Criando um web server para controle e exibição de dados (Dashboard)<BR>
 	
  <BR> <img src=imagens/webserver.png>
 	
@@ -34,17 +35,18 @@ Aveiro Tech City Living Lab
 <BR>A ideia do Access Point (AP) é criar um ponto de acesso, uma rede WiFi, com nome e senha personalizadas para podermos criar uma rede local e comunicar com o ESP32. 
 <BR>O access point é uma opção em locais onde não existe uma rede WiFi para conectar o ESP32, ou então existe, mas ela é instável ou inacessível.
 
-O Esp32 disponiliza 4 modos diferentes de Wifi:
+#### O Esp32 disponiliza 4 modos diferentes de Wifi:
 
-Modo estação:  utilizado para conectar o Esp32 à uma rede WiFi existente. 
+##### Modo estação:  utilizado para conectar o Esp32 à uma rede WiFi existente. 
 
-Modo SOFTAP (acess point): Este é o modo utilizado para criar apenas o ponto de acesso. Por padrão, o IP do NodeMcu será 192.168.4.1. 
+#####Modo SOFTAP (acess point): Este é o modo utilizado para criar apenas o ponto de acesso. Por padrão, o IP do NodeMcu será 192.168.4.1. 
 
-Modo STATIONAP: Neste modo o Esp32 é capaz de trabalhar no modo de estação e no modo SOFTAP.
+##### Modo STATIONAP: Neste modo o Esp32 é capaz de trabalhar no modo de estação e no modo SOFTAP.
 
-Modo nulo: Este modo coloca o WiFi do Esp32 em um estado de baixo consumo, como se o módulo do WiFi ficasse desligado.
+##### Modo nulo: Este modo coloca o WiFi do Esp32 em um estado de baixo consumo, como se o módulo do WiFi ficasse desligado.
 
-<P><b>Criando paginas html</B></p>
+### Paginas html
+
 Todos os servidores web possuem uma página web a ser atendida. Primeiro faça uma página web usando HTML e teste-a no seu computador.
 Você pode testar uma pagina web em seu navegador, utilizando bloco de notas para escrever o código HTML. Salve como index.htm e abra em seu browser.
 	
@@ -66,22 +68,30 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
 
 
 
-<P><P>
-  <b>Exemplo Modo Estação</b><BR>
+### Exemplos de códigos modo Estação e Acess-Point
+
+#### Exemplo Modo Estação
+
  <img src=imagens/station.png>
+ 
   <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/webserver/webserver.ino>Codigo .ino estação</a>
 
-<P><P>
-  <b>Exemplo Acess-Point Wifi</b><BR>
+
+#### Exemplo Acess-Point Wifi
+
   <img src=imagens/acesspoint.png>
+  
   <BR><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/acess_point/acess_point.ino>Codigo .ino acess point</a>
 <p></p>
- <P> Observe o exemplo a seguir que cria um codigo html a partir utilizando o esp32 como servidor para controlar dois leds. </P>
+ <P>O exemplo a seguir que cria um codigo html a partir utilizando o esp32 como servidor para controlar dois leds. </P>
 <a href=acess_point/exemplo_botao.html target=_blank>html de resposta</a><P></P>
 
   <BR><a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/acesshtml>Codigo .ino e pagina web em index.h</a>
 
-### Webserver com atualização sem recarga da pagina
+### Webserver com Ajax
+
+O conceito de "web server com AJAX" em uma aplicação ESP32 refere-se à criação de uma interface web onde o ESP32 atua como servidor. Isso permite que dispositivos clientes, como navegadores, se conectem e interajam com ele via uma página web. Usando AJAX (Asynchronous JavaScript and XML), o cliente pode solicitar dados do ESP32 de maneira assíncrona, sem a necessidade de recarregar toda a página web. Essa técnica é muito útil para atualizações dinâmicas, como exibir informações de sensores em tempo real ou enviar comandos para o ESP32, mantendo a interface fluida e responsiva.
+
   <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/webserverajax/montagem.png><BR>
   <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/webserverajax/circuito1.jpg><BR>
  Este exemplo mostra em um pagina web o valor de status ou leitura de pinos do Esp32 sem recarga da pagina.<P>
@@ -95,62 +105,25 @@ Você pode testar uma pagina web em seu navegador, utilizando bloco de notas par
 <BR>
  O valores são substituidos nos "ID" a cada intervalo de tempo, buscando a String de uma url no próprio microcontrolador.
  
-## Criando comunicação para IOT
-  
-### Código de Acess-Point gerado com a programação em blocos
- <br><img src=imagens/blocos.jpg><BR>
-<a href=easycoding.tn target=_blank>Easycoding.tn</a><br><BR>
- ```javascript
- /////////////////////////////////
-// Generated with a lot of love//
-// with TUNIOT FOR ESP32     //
-// Website: Easycoding.tn      //
-/////////////////////////////////
-#include <WiFi.h>
+# Internet das Coisas (IoT)
 
-IPAddress staticIP69_196(192,168,15,196);
-IPAddress gateway69_196(192,168,15,1);
-IPAddress subnet69_196(255,255,255,0);
-
-void setup()
-{
-Serial.begin(9600);
-
-  WiFi.disconnect();
-  delay(3000);
-  Serial.println("START");
-  WiFi.begin("redewifi","senha");
-  while ((!(WiFi.status() == WL_CONNECTED))){
-    delay(300);
-    Serial.print("..");
-
-  }
-  Serial.println("Connected");
-  WiFi.config(staticIP69_196, gateway69_196, subnet69_196);
-  Serial.println("Your IP is");
-  Serial.println((WiFi.localIP()));
-
-}
-
-
-void loop()
-{
-
-    client.println("bom dia");
-
-}
- 
- 
- ```
+A Internet das Coisas (IoT) refere-se à interconexão de dispositivos físicos que podem coletar, processar e trocar dados pela internet. Esses dispositivos, que vão desde sensores, eletrodomésticos, veículos até sistemas industriais, estão equipados com software, sensores e conectividade para interagir e responder a comandos de forma autônoma. O IoT permite a automação e monitoramento de processos em tempo real, tornando possível, por exemplo, o controle remoto de dispositivos em uma casa, como luzes e termostatos, ou o monitoramento de máquinas industriais, aumentando a eficiência, segurança e conveniência.
 
 
 ## Residencial e IOT
-Automação Residencial com ESP32 – Controle sua Casa pela Web (Usina info)
+
+O uso de IoT em uma residência com o ESP32 permite criar um ambiente automatizado e inteligente, conectando dispositivos e sensores através da rede Wi-Fi para monitoramento e controle remoto. Com o ESP32, é possível integrar iluminação, controle de temperatura, segurança, eletrodomésticos e sistemas de irrigação, tornando a casa mais eficiente e conveniente. Por exemplo, o ESP32 pode ser programado para acionar luzes automaticamente ao detectar movimento, ajustar o termostato com base em leituras de temperatura e umidade, ou enviar alertas via smartphone em caso de detecção de intrusos ou eventos inesperados, como vazamentos de água, tudo através de uma interface web ou aplicativos móveis​.
+
+Exemplo:  Automação Residencial com ESP32 – Controle sua Casa pela Web (Usina info)
+
 https://www.usinainfo.com.br/blog/automacao-residencial-com-esp32-controle-sua-casa-pela-web/
 
 
 	  	  
-## Thingspeak
+## Plataformas IOT
+
+### Thingspeak
+
 <BR>Enviando dados para nuvem utilizando Thingspeak
 <BR><a href=https://thingspeak.com/ target=_blank border=0><img src=imagens/thingspeak.png>Thingspeak</a>
 <BR>
