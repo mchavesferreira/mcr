@@ -21,6 +21,37 @@
 https://www.youtube.com/watch?v=KndZoTMCRsA
 Aveiro Tech City Living Lab
 
+# ESP32 em Iot
+
+## IP
+
+IP (Internet Protocol) é um conjunto de regras que permite o envio e recebimento de dados pela internet ou por redes locais. Ele define os endereços IP, que são identificadores numéricos atribuídos a cada dispositivo conectado a uma rede. Esses endereços permitem que os dados sejam enviados para o destino correto. Existem dois tipos principais de endereços IP: IPv4, que é composto por quatro números separados por pontos (ex: 192.168.0.1), e IPv6, que usa uma combinação maior de números e letras para suportar mais dispositivos (ex: 2001:0db8:85a3:0000:0000:8a2e:0370:7334). O IP é essencial para o roteamento de informações entre dispositivos em redes.
+
+## MAC Adress
+
+O MAC address (Media Access Control address) é um identificador único atribuído a dispositivos de rede, como placas de rede Wi-Fi ou Ethernet, usado para identificar cada dispositivo em uma rede local. Ele consiste em um conjunto de 48 bits, normalmente representado como seis pares de dígitos hexadecimais (ex: 00:1A:2B:3C:4D:5E). Diferente de um endereço IP, que pode mudar dependendo da rede, o MAC address é atribuído permanentemente ao hardware pelo fabricante, servindo como um identificador fixo em redes locais.
+
+## Topologia das redes
+
+<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32_iot/imagens/topologiarede.JPG>
+
+Topologia de rede, ou arquitetura de rede, refere-se à forma como os dispositivos e conexões em uma rede estão organizados fisicamente ou logicamente. Existem diferentes tipos de topologias, como:
+
+    Topologia em estrela: Todos os dispositivos estão conectados a um único ponto central, como um switch ou roteador.
+    Topologia em barramento: Todos os dispositivos compartilham uma única linha de comunicação.
+    Topologia em anel: Os dispositivos são conectados em uma estrutura circular, com dados circulando em uma única direção.
+    Topologia em malha: Cada dispositivo está conectado a vários outros, permitindo múltiplos caminhos de comunicação.
+    Topologia ponto-a-ponto: Conecta diretamente dois dispositivos entre si.
+
+Cada topologia tem características específicas em termos de eficiência, custo e complexidade, sendo escolhida conforme as necessidades da rede.
+
+Rede Submarina de fibra ótica: https://www.submarinecablemap.com/
+
+## DNS
+
+https://www.whatsmydns.net
+
+<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32_iot/imagens/dnspropagacao.png>
 	
 ## Webserver
 
