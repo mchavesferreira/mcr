@@ -98,68 +98,6 @@ void loop() {
 
 
 
-## Funçoes principais
-
-<details><summary>Conheça as principais funções em wiring disponíveis na IDE Arduino (clique)</summary>
-	
-<BR><B>Funções</b>
-<bR>Para controlar a placa Arduino e realizar computações.
-<BR><b>Entradas e Saídas Digitais</b>
-<BR>digitalRead()
-<BR>digitalWrite()
-<BR>pinMode() 
-<BR>
-  <BR><B>Entradas e Saídas Analógicas</b>
-<BR>analogRead()
-<BR>analogReference()
-<BR>analogWrite() 
-<BR>
-<BR><B>Funções Temporizadoras</b>
-<BR>delay()
-<BR>delayMicroseconds()
-<BR>micros()
-<BR>millis()
-<BR>
-  
-<BR><B>Comunicação</b>
-<BR>Serial
-<BR>Stream 
-<BR>
-<BR><B>Variáveis</b>
-<BR>
-<BR>Tipos de dados e constantes da linguagem Arduino.
-<BR><B>Constantes</b>
-<BR>HIGH | LOW
-<BR>INPUT | OUTPUT | INPUT_PULLUP
-<BR>LED_BUILTIN
-<BR>true | false
-<BR>Constantes de Ponto Flutuante
-<BR>Constantes Inteiras
- <BR> 
-<BR><B>Tipos de Dados</b>
-<BR>bool
-<BR>boolean
-<BR>byte
-<BR>char
-<BR>double
-<BR>float
-<BR>int
-<BR>long
-<BR>short
-<BR>size_t
-<BR>string
-<BR>String()
-<BR>unsigned char
-<BR>unsigned int
-<BR>unsigned long
-<BR>vetor
-<BR>void
-<BR>word 
-<BR><BR> 
-
-</details>
-
-
 
 - [Apostila ESP32](#Apostila-ESP32)
 - [Arduino Referências](#Referências-Arduino)
@@ -192,6 +130,8 @@ void loop() {
 
 ## Arquitetura
 
+<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/arquitetura_esp32.png>
+
 https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/schematic-checklist.html#flash-and-psram
 
 https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/_images/esp32-sche-core.png
@@ -209,17 +149,28 @@ Esse ID é especialmente útil em aplicações de Internet das Coisas (IoT), ond
 <BR>Como verificar o ID do chip<a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
 
 
-## Arquitetura Esp32	<BR><BR>
+## Memória ESP32 
 
 
 Mapeamento da memória (pagina 7) <a href=https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf>memory</a>
-	
-	
-## Aula prática ESP32
 
-Comunicação  Serial
+### Memória Volátil no ESP32
 
-https://wokwi.com/projects/401871586327571457
+o ESP32, assim como em outros microcontroladores, a memória volátil é a memória que perde seu conteúdo quando o dispositivo é desligado. A memória volátil mais comum no ESP32 é a SRAM (Static Random Access Memory), que armazena variáveis e dados temporários durante a execução de programas.
+
+
+No ESP32, a memória volátil é representada pela SRAM, que está dividida em diferentes blocos:
+
+SRAM1: Usada para armazenar dados e instruções do programa em execução.
+
+SRAM2: Usada para operações de alta velocidade e pode ser mapeada tanto para a memória de dados quanto para a memória de instrução.
+
+RTC FAST RAM: Uma pequena porção de SRAM acessível durante os modos de baixo consumo, como o modo deep sleep.
+
+A memória volátil é essencial para o armazenamento temporário de variáveis e dados que mudam durante a execução de um programa.
+	
+## Exemplos práticos
+
 
 Pisca Led
 
@@ -233,9 +184,9 @@ https://wokwi.com/projects/339670467067511378
 
 Uso de Variáveis, #define e funções próprias para I/0 Arduino
 
-  <BR>Variáveis e Operadores</b><BR>  
+<BR>Variáveis e Operadores</b><BR>  
 
- <BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
+<BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
 
 
 
@@ -255,11 +206,11 @@ Uso de Variáveis, #define e funções próprias para I/0 Arduino
 
 A função `millis()` no Arduino é uma ferramenta poderosa para realizar temporizações sem bloquear a execução do programa. Diferente da função `delay()`, que pausa a execução de todo o código por um período especificado, `millis()` permite que o Arduino continue processando outras tarefas enquanto monitora o tempo.
 
-## Como Funciona
+### Como Funciona
 
 A função `millis()` retorna o número de milissegundos que se passaram desde que o Arduino foi ligado ou reiniciado. Utilizando essa função, é possível implementar temporizações em seu código sem impedir o funcionamento de outras partes do programa.
 
-## Exemplo Prático
+### Exemplo Prático
 
 Imagine que você quer fazer um LED piscar a cada segundo sem interromper a execução de outras funcionalidades. Isso pode ser feito com `millis()` da seguinte forma:
 
@@ -287,6 +238,9 @@ void loop() {
 ```
 
 ## Comunicação Serial
+
+https://wokwi.com/projects/401871586327571457
+
 Imprimindo e lendo na porta serial (UART)<BR>
   
 <details><summary>Codigo Serial</summary>
@@ -327,23 +281,6 @@ Imprimindo e lendo na porta serial (UART)<BR>
  <br><a href=https://wokwi.com/projects/342234932555285074>Uso de interrupção</a>
   
 
-
-## ESP32 IOT
-
-<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0><BR>Saiba mais...</a><BR>
-<B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
-
-#random()
-
-<BR>A função random() gera números pseudoaleatórios.
-<BR>https://www.arduino.cc/reference/pt/language/functions/random-numbers/random/
-
-
-<BR>Exercício 1: Elabore um script que gere um número aleatório cada vez que um botão é pressionado. Imprimir na porta serial.
-
-<BR>Exercício 2: Repita o exercício 1, porém o número aleatório deve ser apresentado em uma sequência de leds de 1 a 10. Utilize mapeamento de pinos.
-<BR> https://wokwi.com/projects/341561728616628819
-
 ## Exemplo Maquina de estados
 
 ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
@@ -352,9 +289,14 @@ ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
 <BR>Exemplo maquina de estados com switch-case https://wokwi.com/projects/366328860646770689
 
 
-## Exemplos de projetos
+## ESP32 IOT
 
-Está faltando imaginação!!! 
+<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0><BR>Saiba mais...</a><BR>
+
+<B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
+
+
+## Exemplos de projetos 
 	
 Busque na Internet exemplos para aplicar os conhecimentos sobre a programação com microcontroladores.
 	
@@ -411,6 +353,7 @@ https://lastminuteengineers.com/getting-started-with-esp32/
 https://lastminuteengineers.com/electronics/esp32-projects/  Tutorial e Projetos com ESP32	<BR>
 	
 Características para ESP32<BR><BR>
+
   https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
 <BR><BR> 
 Livros e Codigos fontes<Br><BR>
@@ -418,6 +361,4 @@ https://github.com/PacktPublishing/Advanced-ESP32
 	
 	
 	
-maquina de lavar
-https://wokwi.com/projects/366331470262146049
 	
