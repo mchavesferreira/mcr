@@ -158,6 +158,7 @@ Mapeamento da memória (pagina 7) <a href=https://www.espressif.com/sites/defaul
 
 o ESP32, assim como em outros microcontroladores, a memória volátil é a memória que perde seu conteúdo quando o dispositivo é desligado. A memória volátil mais comum no ESP32 é a SRAM (Static Random Access Memory), que armazena variáveis e dados temporários durante a execução de programas.
 
+<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/memoria.jpg>
 
 No ESP32, a memória volátil é representada pela SRAM, que está dividida em diferentes blocos:
 
@@ -169,38 +170,45 @@ RTC FAST RAM: Uma pequena porção de SRAM acessível durante os modos de baixo 
 
 A memória volátil é essencial para o armazenamento temporário de variáveis e dados que mudam durante a execução de um programa.
 
-Memória Dinâmica vs. Memória Estática
+## Memória Dinâmica vs. Memória Estática
 
 A memória volátil pode ser utilizada de duas formas: dinâmica e estática.
-Memória Estática (Static Memory)
+
+##  Memória Estática (Static Memory)
 
 A memória estática se refere a uma maneira de alocar memória que ocorre em tempo de compilação. No caso do ESP32, quando declaramos uma variável global ou local dentro de uma função sem utilizar alocação dinâmica, essa memória é estática. A principal característica da memória estática é que o tamanho e a alocação são definidos antes do programa ser executado, e ela permanece alocada até o final do programa.
 
-Características da memória estática:
+###  Características da memória estática:
 
-    Alocada durante o tempo de compilação.
-    O espaço reservado não muda durante a execução do programa.
-    Mais eficiente em termos de performance, pois a alocação/desalocação não ocorre durante a execução.
-    Usada para variáveis globais e variáveis locais fixas.
+Alocada durante o tempo de compilação.
+
+O espaço reservado não muda durante a execução do programa.
+
+Mais eficiente em termos de performance, pois a alocação/desalocação não ocorre durante a execução.
+
+Usada para variáveis globais e variáveis locais fixas.
 
 Exemplo em C:
 
-c
-
+```ruby
 int contador = 0;  // Variável estática, sempre disponível na memória.
-
-Memória Dinâmica (Dynamic Memory)
+```
+##  Memória Dinâmica (Dynamic Memory)
 
 A memória dinâmica, por outro lado, é alocada em tempo de execução usando funções como malloc, calloc ou realloc. No ESP32, o uso de memória dinâmica pode ser importante em aplicações que precisam lidar com dados de tamanho variável ou que têm necessidades de memória que mudam durante a execução.
 
-Características da memória dinâmica:
+### Características da memória dinâmica:
 
-    Alocada em tempo de execução.
-    O espaço reservado pode mudar dinamicamente durante o programa.
-    Menos eficiente em termos de performance, pois a alocação e desalocação ocorrem enquanto o programa está sendo executado.
-    Requer que o desenvolvedor libere a memória manualmente com free().
+Alocada em tempo de execução.
+
+O espaço reservado pode mudar dinamicamente durante o programa.
+
+Menos eficiente em termos de performance, pois a alocação e desalocação ocorrem enquanto o programa está sendo executado.
+
+Requer que o desenvolvedor libere a memória manualmente com free().
 
 Exemplo em C:
+
 ```ruby
 
 int *buffer;
@@ -213,15 +221,25 @@ free(buffer);  // Liberação da memória.
 
 ### Diferenças principais
 
-.** Memória Estática:**
-        A alocação é fixa e conhecida em tempo de compilação.
-        Usa menos recursos computacionais durante a execução.
-        Mais previsível em termos de uso de memória.
-    Memória Dinâmica:
-        Alocada durante a execução, permite maior flexibilidade.
-        Pode consumir mais recursos durante a execução devido à necessidade de gerenciamento da memória.
-        Requer cuidado com vazamentos de memória, onde a memória alocada não é liberada corretamente.
+#### Memória Estática:
 
+A alocação é fixa e conhecida em tempo de compilação.
+
+Usa menos recursos computacionais durante a execução.
+
+Mais previsível em termos de uso de memória.
+
+####  Memória Dinâmica:
+
+Alocada durante a execução, permite maior flexibilidade.
+
+Pode consumir mais recursos durante a execução devido à necessidade de gerenciamento da memória.
+
+Requer cuidado com vazamentos de memória, onde a memória alocada não é liberada corretamente.
+
+## Memória não volátil
+
+<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/memorianaovolatil.jpg>
 	
 ## Exemplos práticos
 
