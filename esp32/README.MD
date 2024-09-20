@@ -199,10 +199,7 @@ Uso de Variáveis, #define e funções próprias para I/0 Arduino
 ## Leitura analógica
 <bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento. Simulação: <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
 
-
-## millis()
-
-# Uso da Função `millis()` no Arduino para Temporizações sem Bloqueio
+## Uso da Função `millis()` no Arduino para Temporizações sem Bloqueio
 
 A função `millis()` no Arduino é uma ferramenta poderosa para realizar temporizações sem bloquear a execução do programa. Diferente da função `delay()`, que pausa a execução de todo o código por um período especificado, `millis()` permite que o Arduino continue processando outras tarefas enquanto monitora o tempo.
 
@@ -275,7 +272,8 @@ Imprimindo e lendo na porta serial (UART)<BR>
 -<a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md> Display Oled</a>
 
 	  
-### Interrupção externa
+## Interrupção externa
+
   <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
 <BR>  
  <br><a href=https://wokwi.com/projects/342234932555285074>Uso de interrupção</a>
