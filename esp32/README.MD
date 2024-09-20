@@ -168,6 +168,60 @@ SRAM2: Usada para operações de alta velocidade e pode ser mapeada tanto para a
 RTC FAST RAM: Uma pequena porção de SRAM acessível durante os modos de baixo consumo, como o modo deep sleep.
 
 A memória volátil é essencial para o armazenamento temporário de variáveis e dados que mudam durante a execução de um programa.
+
+Memória Dinâmica vs. Memória Estática
+
+A memória volátil pode ser utilizada de duas formas: dinâmica e estática.
+Memória Estática (Static Memory)
+
+A memória estática se refere a uma maneira de alocar memória que ocorre em tempo de compilação. No caso do ESP32, quando declaramos uma variável global ou local dentro de uma função sem utilizar alocação dinâmica, essa memória é estática. A principal característica da memória estática é que o tamanho e a alocação são definidos antes do programa ser executado, e ela permanece alocada até o final do programa.
+
+Características da memória estática:
+
+    Alocada durante o tempo de compilação.
+    O espaço reservado não muda durante a execução do programa.
+    Mais eficiente em termos de performance, pois a alocação/desalocação não ocorre durante a execução.
+    Usada para variáveis globais e variáveis locais fixas.
+
+Exemplo em C:
+
+c
+
+int contador = 0;  // Variável estática, sempre disponível na memória.
+
+Memória Dinâmica (Dynamic Memory)
+
+A memória dinâmica, por outro lado, é alocada em tempo de execução usando funções como malloc, calloc ou realloc. No ESP32, o uso de memória dinâmica pode ser importante em aplicações que precisam lidar com dados de tamanho variável ou que têm necessidades de memória que mudam durante a execução.
+
+Características da memória dinâmica:
+
+    Alocada em tempo de execução.
+    O espaço reservado pode mudar dinamicamente durante o programa.
+    Menos eficiente em termos de performance, pois a alocação e desalocação ocorrem enquanto o programa está sendo executado.
+    Requer que o desenvolvedor libere a memória manualmente com free().
+
+Exemplo em C:
+```ruby
+
+int *buffer;
+buffer = (int *)malloc(10 * sizeof(int));  // Alocação dinâmica de um buffer de 10 inteiros.
+if (buffer != NULL) {
+    // Uso da memória alocada dinamicamente
+}
+free(buffer);  // Liberação da memória.
+```
+
+### Diferenças principais
+
+.** Memória Estática:**
+        A alocação é fixa e conhecida em tempo de compilação.
+        Usa menos recursos computacionais durante a execução.
+        Mais previsível em termos de uso de memória.
+    Memória Dinâmica:
+        Alocada durante a execução, permite maior flexibilidade.
+        Pode consumir mais recursos durante a execução devido à necessidade de gerenciamento da memória.
+        Requer cuidado com vazamentos de memória, onde a memória alocada não é liberada corretamente.
+
 	
 ## Exemplos práticos
 
