@@ -37,21 +37,35 @@ O MAC address (Media Access Control address) é um identificador único atribuí
 
 Topologia de rede, ou arquitetura de rede, refere-se à forma como os dispositivos e conexões em uma rede estão organizados fisicamente ou logicamente. Existem diferentes tipos de topologias, como:
 
-    Topologia em estrela: Todos os dispositivos estão conectados a um único ponto central, como um switch ou roteador.
-    Topologia em barramento: Todos os dispositivos compartilham uma única linha de comunicação.
-    Topologia em anel: Os dispositivos são conectados em uma estrutura circular, com dados circulando em uma única direção.
-    Topologia em malha: Cada dispositivo está conectado a vários outros, permitindo múltiplos caminhos de comunicação.
-    Topologia ponto-a-ponto: Conecta diretamente dois dispositivos entre si.
+- Topologia em estrela: Todos os dispositivos estão conectados a um único ponto central, como um switch ou roteador.
+- 
+- Topologia em barramento: Todos os dispositivos compartilham uma única linha de comunicação.
+- 
+- Topologia em anel: Os dispositivos são conectados em uma estrutura circular, com dados circulando em uma única direção.
+- 
+- Topologia em malha: Cada dispositivo está conectado a vários outros, permitindo múltiplos caminhos de comunicação.
+  
+- Topologia ponto-a-ponto: Conecta diretamente dois dispositivos entre si.
 
 Cada topologia tem características específicas em termos de eficiência, custo e complexidade, sendo escolhida conforme as necessidades da rede.
 
-Rede Submarina de fibra ótica: https://www.submarinecablemap.com/
+Rede Submarina de fibra ótica: 
+
+https://www.submarinecablemap.com/
 
 ## DNS
 
-https://www.whatsmydns.net
+O DNS (Domain Name System) é um sistema que traduz nomes de domínio legíveis por humanos (como www.exemplo.com) em endereços IP numéricos (como 192.168.1.1) que os computadores utilizam para identificar dispositivos e serviços na rede. Funciona como uma espécie de "agenda telefônica" da internet, permitindo que os usuários acessem sites e outros recursos online usando nomes amigáveis, sem precisar memorizar números IP. O DNS é essencial para o funcionamento da internet, facilitando a comunicação entre dispositivos e servidores.
+
+Propagação DNS 
 
 <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32_iot/imagens/dnspropagacao.png>
+
+https://www.whatsmydns.net
+
+
+<BR><BR> Registro traceroute Registro.br
+<BR><BR> https://registro.br/tecnologia/ferramentas/traceroute/
 	
 ## Webserver
 
@@ -70,7 +84,7 @@ https://www.whatsmydns.net
 
 ##### Modo estação:  utilizado para conectar o Esp32 à uma rede WiFi existente. 
 
-#####Modo SOFTAP (acess point): Este é o modo utilizado para criar apenas o ponto de acesso. Por padrão, o IP do NodeMcu será 192.168.4.1. 
+##### Modo SOFTAP (acess point): Este é o modo utilizado para criar apenas o ponto de acesso. Por padrão, o IP do NodeMcu será 192.168.4.1. 
 
 ##### Modo STATIONAP: Neste modo o Esp32 é capaz de trabalhar no modo de estação e no modo SOFTAP.
 
@@ -165,6 +179,8 @@ https://www.usinainfo.com.br/blog/automacao-residencial-com-esp32-controle-sua-c
 <BR>Comunicação de dados IOT utilizando protocolo MQTT
 <img src=imagens/mqtt-publish-subscribe.png><br>Mqtt.org
 <img src=imagens/mqtt_mensagem.png><BR>
+
+O MQTT (Message Queuing Telemetry Transport) é um protocolo de comunicação leve e eficiente, projetado para conectar dispositivos em redes com largura de banda limitada ou conexões instáveis, como em aplicações de Internet das Coisas (IoT). Ele utiliza o modelo de publicação/assinatura, onde os clientes podem publicar mensagens em tópicos específicos ou assinar tópicos para receber atualizações, com a intermediação de um servidor central chamado "broker". O MQTT é otimizado para minimizar o uso de recursos, sendo ideal para dispositivos com pouca capacidade de processamento e energia, como sensores e atuadores.
 
 Saiba mais:  https://www.gta.ufrj.br/ensino/eel878/redes1-2019-1/vf/mqtt/
 
@@ -287,6 +303,7 @@ https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-
 ## DNS
 <BR><BR> Consultar propagação DNS
 <BR><BR> https://www.whatsmydns.net/
+
 <BR><BR> Registro traceroute Registro.br
 <BR><BR> https://registro.br/tecnologia/ferramentas/traceroute/
 
