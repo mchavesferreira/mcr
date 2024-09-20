@@ -1,3 +1,5 @@
+<a href=README.MD><< ESP32 </A>
+
 # Pinos de Entradas e Saídas para ESP32
 
 ## Referência de Pinagem do ESP32: Quais pinos GPIO você deve usar?
@@ -411,6 +413,6 @@ A corrente máxima absoluta por GPIO é de 40mA de acordo com a seção "Condiç
 
 O ESP32 também possui um sensor de efeito hall integrado que detecta mudanças no campo magnético ao seu redor.
 
-Fonte:  
+## Fonte:  
 <BR><a href=https://randomnerdtutorials.com/esp32-pinout-reference-gpios/>Configuração I/O</a> para cada pino.
 
