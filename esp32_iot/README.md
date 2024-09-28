@@ -222,6 +222,9 @@ https://wokwi.com/projects/347942096378790483
 
 
 **Referência oficial** para Node-red:  https://flows.nodered.org/
+
+**Cursos, referências, vídeos e exemplos**. <a href=https://github.com/mchavesferreira/sebe/tree/main/flow_exemplos>Saiba mais sobre nodered<a/>
+
 <BR><BR>
 ## Primeiros exemplos com Nodered
 
