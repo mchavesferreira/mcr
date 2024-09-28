@@ -1,0 +1,23 @@
+[
+    {
+        "id": "1580f6ddfd8751da",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "Alterar variável",
+        "func": "// Recebe os dados da requisição POST\nvar dados = msg.payload;\n\n// Altera a variável booleana com base nos dados recebidos\nif (dados.valor === \"on\") {\n    global.set(\"minha_variavel\", true);\n} else {\n    global.set(\"minha_variavel\", false);\n}\n\n// Envia uma resposta à requisição\nmsg.payload = dados.valor;\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 280,
+        "wires": [
+            [
+                "97680c0cb31ac0f3",
+                "549d2f1ed713a347"
+            ]
+        ]
+    }
+]
