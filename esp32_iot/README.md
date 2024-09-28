@@ -239,7 +239,7 @@ https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/perdido.json
 
 
 <BR><BR>
-## Chatgpt me ajude !!!  
+## Chatgpt, ajudem-me !!!  
 
 Este gpt foi preparado pelo professor para orientar a criação de scripts, programas ou tirar dúvidas sobre a programação para embarcados.
 
