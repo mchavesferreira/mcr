@@ -339,22 +339,31 @@ Instale um plugin no navegador para facilitar a compreensão de um json: <a href
 
 
 
-
-
-
-
-
-
 	   
-### Exemplo ESP32, mqtt e dashboard Node-RED
-<br> Utiizando um tópico:
+# PROJETO IOT
 
-<BR>https://wokwi.com/projects/365211000246545409
-<BR>
-https://wokwi.com/projects/381558252547499009
-<BR>https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/node_red1.json
+## Disciplina IoT  2024
 
-<BR>https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/node_red_estudo.json
+Projeto de IoT com ESP32, Simulação no Wokwi e Integração com Node-RED
+
+***Objetivo do Projeto:***
+
+Desenvolver uma aplicação de Internet das Coisas (IoT) utilizando o microcontrolador ESP32, simulando o sistema no ambiente virtual Wokwi, e posteriormente montando-o fisicamente em uma protoboard. O projeto deverá conectar o ESP32 a uma VPS (Virtual Private Server) executando o Node-RED para enviar e receber dados de sensores simulados por botões e potenciômetros, além de controlar atuadores simulados por LEDs. A comunicação entre o ESP32 e o servidor será realizada via protocolo MQTT.
+
+
+***Requisitos:***
+Os requisitos do projeto incluem a programação do ESP32 para se comunicar via MQTT com o servidor Node-RED, enviando leituras dos sensores e assinando tópicos para o controle dos atuadores. O sistema deve incluir, no mínimo, dois sensores (um analógico e um digital) e um atuador. Os alunos devem compartilhar o código do microcontrolador e o fluxo Node-RED em um repositório GitHub, junto com a documentação explicando o funcionamento e a configuração do projeto.
+
+***Critérios:***
+Os critérios de avaliação incluem a funcionalidade correta da simulação no Wokwi, a montagem física e a integração do ESP32 com o Node-RED via MQTT. Além disso, a qualidade do código, a organização do repositório e a clareza da documentação também serão considerados.
+
+
+***Exemplo de um projeto de turmas anteriores:***
+
+<a href=https://raw.githubusercontent.com/danielgoncalves/iot-e2ppt/refs/heads/main/Imagens/dashboard-mobile.png>
+
+Repositório do autor: https://github.com/danielgoncalves/iot-e2ppt
+
 	   
 <BR><BR>
 ## Integração com Alexa
