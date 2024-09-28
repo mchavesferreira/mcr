@@ -242,7 +242,7 @@ Este gpt foi preparado pelo professor para orientar a criação de scripts, prog
 
 <img src=https://raw.githubusercontent.com/mchavesferreira/img/refs/heads/main/logogpt.png> https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados 
 
-
+<BR><BR>
 ### Exemplos nodered
 
 [flow_exemplos/README.md](https://github.com/mchavesferreira/sebe/tree/main/flow_exemplos)
@@ -250,7 +250,7 @@ Este gpt foi preparado pelo professor para orientar a criação de scripts, prog
 https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/node_red_estudo.json
 
 
-### Trabalhando com mysql, node-red e mqtt
+### Utilizando nodered, mqtt e banco de dados 
 
 Importe para o node-red o flow:
 
@@ -262,7 +262,63 @@ ui_led
 
 node-red-node-mysql
 
-Crie a conexão MQTT local, e conecte ao banco de dados Mysql
+Crie a conexão MQTT local
+
+Conecte a um banco de dados. Utilize uma base de dados existente ou crie uma, o exemplo a seguir exemplifica uma base de dados Mysql
+
+<details><summary>Cria um base de dados mysql</summary>
+<p>
+
+```ruby 
+
+// utilizando o prompt conecte ao banco mysql
+mysql -u root -p
+
+// mostra base de banco de dados
+show databases;
+
+// Cria base de dados
+Create Database sensor; 
+
+// seleciona base de dados
+use sensor;
+
+
+// CRIA TABELA
+CREATE TABLE tempLog (
+    timeStamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    temperature int(11) NOT NULL,
+    humidity int(11) NOT NULL,
+    PRIMARY KEY (timeStamp) );
+
+
+
+// descreve características da base de dados
+describe tempLogo;
+
+// insere uma linha de dados
+INSERT INTO tempLog (temperature, humidity)
+    VALUES ('33','56');
+
+// seleciona todas as linhas da base de dados
+SELECT * FROM tempLog;
+SELECT temperature FROM tempLog;
+SELECT * FROM tempLog limit 1;   // limita 1 linha
+SELECT * FROM tempLog limit 2,3;   // limita 1 linha
+SELECT * FROM tempLog order by timeStamp ASC;
+SELECT * FROM tempLog order by timeStamp DESC;
+SELECT * FROM tempLog where temperature=23;
+SELECT * FROM tempLog WHERE DATE(timeStamp) = CURDATE();
+SELECT * FROM tempLog WHERE DATE_SUB(CURDATE(),INTERVAL 1 DAY);
+
+//apagar linhas da tabela por seleção
+DELETE  from tempLog where humidity=50;
+
+// apagar tabela completa
+DROP TABLE tempLog;
+```
+</p>
+</details> 
 
 A base de dados será a mesma utilizada para o projeto 1, disponível em: https://github.com/mchavesferreira/php_app
 
