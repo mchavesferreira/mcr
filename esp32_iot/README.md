@@ -222,7 +222,7 @@ https://wokwi.com/projects/347942096378790483
 
 
 **Referência oficial** para Node-red:  https://flows.nodered.org/
-
+<BR><BR>
 ## Primeiros exemplos com Nodered
 
 . ***1 - Acesse seu nodered*** em sua vps ou utilize a compartilhada pelo professor 
@@ -235,7 +235,7 @@ http://168.138.131.96:198x
 https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/perdido.json
 
 
-
+<BR><BR>
 ## Chatgpt me ajude !!!  
 
 Este gpt foi preparado pelo professor para orientar a criação de scripts, programas ou tirar dúvidas sobre a programação para embarcados.
@@ -243,11 +243,9 @@ Este gpt foi preparado pelo professor para orientar a criação de scripts, prog
 <img src=https://raw.githubusercontent.com/mchavesferreira/img/refs/heads/main/logogpt.png> https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados 
 
 <BR><BR>
-### Exemplos nodered
+#### Exemplos de flow nodered
 
 [flow_exemplos/README.md](https://github.com/mchavesferreira/sebe/tree/main/flow_exemplos)
-
-https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/node_red_estudo.json
 
 
 ### Utilizando nodered, mqtt e banco de dados 
@@ -264,8 +262,10 @@ node-red-node-mysql
 
 Crie a conexão MQTT local
 
-Conecte a um banco de dados. Utilize uma base de dados existente ou crie uma, o exemplo a seguir exemplifica uma base de dados Mysql
+## Banco de dados Mysql
 
+Conecte a um banco de dados. Utilize uma base de dados existente ou crie uma, o exemplo a seguir exemplifica uma base de dados Mysql
+<BR><BR>
 <details><summary>Cria um base de dados mysql</summary>
 <p>
 
@@ -320,9 +320,13 @@ DROP TABLE tempLog;
 </p>
 </details> 
 
-A base de dados será a mesma utilizada para o projeto 1, disponível em: https://github.com/mchavesferreira/php_app
+<BR><BR>
 
-Simule a conexão utilizando o circuito tratado em aulas anteriores:  https://wokwi.com/projects/365211000246545409
+### Seu primeiro IOT
+
+Utilize esta simulação ou programa seu ESP32 como exemplo de um IoT:<BR>
+
+https://wokwi.com/projects/365211000246545409
 
 
 ### Formato JSON
