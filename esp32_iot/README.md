@@ -214,6 +214,18 @@ topic: movel/acelerax<BR>
 Exemplo Wokwi, com tópico em IFSP/led<BR>
 
 https://wokwi.com/projects/347942096378790483
+
+### Nodered 
+
+Primeiros exemplos:
+
+Acesse seu nodered
+
+http://168.138.131.96:1984
+
+
+
+https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/node_red_estudo.json
 	   
 ### Exemplo ESP32, mqtt e dashboard node-red
 <br> Utiizando um tópico:
