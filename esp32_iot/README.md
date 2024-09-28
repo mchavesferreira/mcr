@@ -12,7 +12,7 @@
 - [Integração com Alexa](#Integração-com-Alexa)
 - [Explorando recursos da comunicação WIFI](#Explorando-recursos-com-a-comunicação-WIFI)
 - [Frameworks](#Frameworks)
-- [FreeRtos](#FreeRtos)
+- [Nodered](#Nodered)  **novo**
 - [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
 - [ESP32-Cam](#ESP32-Cam)
 - Dashboard
@@ -175,7 +175,7 @@ https://www.usinainfo.com.br/blog/automacao-residencial-com-esp32-controle-sua-c
 <BR><a href=https://wokwi.com/projects/364642003805651969>Exemplo online</a><BR>
 	
 	
-## MQTT
+# MQTT
 <BR>Comunicação de dados IOT utilizando protocolo MQTT
 <img src=imagens/mqtt-publish-subscribe.png><br>Mqtt.org
 <img src=imagens/mqtt_mensagem.png><BR>
@@ -185,7 +185,8 @@ O MQTT (Message Queuing Telemetry Transport) é um protocolo de comunicação le
 Saiba mais:  https://www.gta.ufrj.br/ensino/eel878/redes1-2019-1/vf/mqtt/
 
 
-Broker:
+## Broker:
+
 Utilizando um broker MQTT publico
 	  http://www.hivemq.com/demos/websocket-client/
    <P><P>
@@ -198,7 +199,7 @@ https://embarcados.com.br/mqtt-protocolos-para-iot/
 
 
  
-## Protocolo MQTT para IOT
+## O Protocolo MQTT em IOT
 aula <BR>  http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=48
 
 Aplicativo: Dash MQTT  
@@ -217,37 +218,37 @@ https://wokwi.com/projects/347942096378790483
 
 # Nodered 
 
+<img src=https://raw.githubusercontent.com/mchavesferreira/sebe/refs/heads/main/imagens/logonodered.png>
 
-Node-red Oficial:  https://flows.nodered.org/
 
-Node-red Apresentação:  http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=50
+**Referência oficial** para Node-red:  https://flows.nodered.org/
 
-Instalar Node-red: http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=45
-
-Primeiros exemplos:
+## Primeiros exemplos com Nodered
 
 ## Acesse seu nodered
 
 http://168.138.131.96:198x
 
 
-### Ajude-me:  
+Importe este primeiro fluxo:
+
+https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/perdido.json
+
+
+
+## Chatgpt me ajude !!!  
+
+Este gpt foi preparado pelo professor para orientar a criação de scripts, programas ou tirar dúvidas sobre a programação para embarcados.
 
 https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados 
 
-
-- Utilizando um DNS free
-  
- http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=30 Redirecionamento DDNS com DuckDns 
 
 ### Exemplos nodered
 
 [flow_exemplos/README.md](https://github.com/mchavesferreira/sebe/tree/main/flow_exemplos)
 
-
-Importe este primeiro fluxo:
-
 https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/node_red_estudo.json
+
 
 ### Trabalhando com mysql, node-red e mqtt
 
