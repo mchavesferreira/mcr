@@ -12,7 +12,7 @@
 - [Integração com Alexa](#Integração-com-Alexa)
 - [Explorando recursos da comunicação WIFI](#Explorando-recursos-com-a-comunicação-WIFI)
 - [Frameworks](#Frameworks)
-- [Nodered](#Nodered)  **novo**
+- [Node-RED](#Node-RED)  **novo**
 - [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
 - [ESP32-Cam](#ESP32-Cam)
 - Dashboard
@@ -216,19 +216,19 @@ Exemplo Wokwi, com tópico em IFSP/led<BR>
 
 https://wokwi.com/projects/347942096378790483
 
-# Nodered 
+# Node-RED
 
 <img src=https://raw.githubusercontent.com/mchavesferreira/sebe/refs/heads/main/imagens/logonodered.png>
 
 
 **Referência oficial** para Node-red:  https://flows.nodered.org/
 
-**Cursos, referências, vídeos e exemplos**. <a href=https://github.com/mchavesferreira/sebe/tree/main/flow_exemplos>Saiba mais sobre nodered<a/>
+**Cursos, referências, vídeos e exemplos**. <a href=https://github.com/mchavesferreira/sebe/tree/main/flow_exemplos>Saiba mais sobre Node-RED<a/>
 
 <BR><BR>
-## Primeiros exemplos com Nodered
+## Primeiros exemplos com Node-RED
 
-. ***1 - Acesse seu nodered*** em sua vps ou utilize a compartilhada pelo professor 
+. ***1 - Acesse seu Node-RED*** em sua vps ou utilize a compartilhada pelo professor 
 
 http://168.138.131.96:198x
 
@@ -246,12 +246,12 @@ Este gpt foi preparado pelo professor para orientar a criação de scripts, prog
 <img src=https://raw.githubusercontent.com/mchavesferreira/img/refs/heads/main/logogpt.png> https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados 
 
 <BR><BR>
-#### Exemplos de flow nodered
+#### Exemplos de flow Node-RED
 
 [flow_exemplos/README.md](https://github.com/mchavesferreira/sebe/tree/main/flow_exemplos)
 
 
-### Utilizando nodered, mqtt e banco de dados 
+### Utilizando Node-RED, mqtt e banco de dados 
 
 Importe para o node-red o flow:
 
@@ -336,7 +336,7 @@ https://wokwi.com/projects/365211000246545409
 
 <a href=https://github.com/mchavesferreira/sebe/blob/main/flow_exemplos/json.md>Saiba mais sobre o formato json</a>
 
-Importe este exemplo para o nodered: <a href=https://github.com/mchavesferreira/sebe/blob/main/flow_exemplos/cotacao_dolar.json>Exemplo de cotação dolar</a>
+Importe este exemplo para o Node-RED: <a href=https://github.com/mchavesferreira/sebe/blob/main/flow_exemplos/cotacao_dolar.json>Exemplo de cotação dolar</a>
 
 Instale um plugin no navegador para facilitar a compreensão de um json: <a href=https://addons.mozilla.org/en-US/firefox/addon/json_formatter/>firefox</a>
 
