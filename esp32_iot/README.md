@@ -13,6 +13,7 @@
 - [Explorando recursos da comunicação WIFI](#Explorando-recursos-com-a-comunicação-WIFI)
 - [Frameworks](#Frameworks)
 - [Node-RED](#Node-RED)  **novo**
+  [Projeto IoT](#Projeto-IoT)  **novo**
 - [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
 - [ESP32-Cam](#ESP32-Cam)
 - Dashboard
@@ -340,7 +341,7 @@ Instale um plugin no navegador para facilitar a compreensão de um json: <a href
 
 
 	   
-# PROJETO IOT
+# Projeto IoT
 
 ## Disciplina IoT  2024
 
@@ -364,6 +365,9 @@ Os critérios de avaliação incluem a funcionalidade correta da simulação no 
 
 Repositório do autor: https://github.com/danielgoncalves/iot-e2ppt
 
+***Prazo:***
+
+Última Semana de aula da disciplina: 11/10/2024
 	   
 <BR><BR>
 ## Integração com Alexa
