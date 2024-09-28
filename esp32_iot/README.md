@@ -228,7 +228,7 @@ https://wokwi.com/projects/347942096378790483
 <BR><BR>
 ## Primeiros exemplos com Node-RED
 
-. ***1 - Acesse seu Node-RED*** em sua vps ou utilize a compartilhada pelo professor 
+. ***1 - Acesse seu Node-RED*** em sua vps ou utilize a instância compartilhada pelo professor 
 
 http://168.138.131.96:198x
 
