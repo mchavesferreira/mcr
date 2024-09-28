@@ -221,9 +221,9 @@ https://wokwi.com/projects/347942096378790483
 <img src=https://raw.githubusercontent.com/mchavesferreira/sebe/refs/heads/main/imagens/logonodered.png>
 
 
-**Referência oficial** para Node-red:  https://flows.nodered.org/
+**Referência oficial** para Node-RED:  https://flows.nodered.org/
 
-**Cursos, referências, vídeos e exemplos**. <a href=https://github.com/mchavesferreira/sebe/tree/main/flow_exemplos>Saiba mais sobre Node-RED<a/>
+**Cursos, referências, vídeos e exemplos**. <a href=https://github.com/mchavesferreira/sebe/tree/main/flow_exemplos>Saiba mais sobre Node-RED<a/> <<<
 
 <BR><BR>
 ## Primeiros exemplos com Node-RED
@@ -246,14 +246,11 @@ Este gpt foi preparado pelo professor para orientar a criação de scripts, prog
 <img src=https://raw.githubusercontent.com/mchavesferreira/img/refs/heads/main/logogpt.png> https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados 
 
 <BR><BR>
-#### Exemplos de flow Node-RED
-
-[flow_exemplos/README.md](https://github.com/mchavesferreira/sebe/tree/main/flow_exemplos)
 
 
 ### Utilizando Node-RED, mqtt e banco de dados 
 
-Importe para o node-red o flow:
+Importe para o Node-RED o flow:
 
 https://github.com/mchavesferreira/embarcados_freertos/blob/main/exemplo_node_red_mqtt_mysql_dht_sensor.json
 
@@ -349,7 +346,7 @@ Instale um plugin no navegador para facilitar a compreensão de um json: <a href
 
 
 	   
-### Exemplo ESP32, mqtt e dashboard node-red
+### Exemplo ESP32, mqtt e dashboard Node-RED
 <br> Utiizando um tópico:
 
 <BR>https://wokwi.com/projects/365211000246545409
