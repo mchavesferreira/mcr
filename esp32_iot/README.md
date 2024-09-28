@@ -225,12 +225,12 @@ https://wokwi.com/projects/347942096378790483
 
 ## Primeiros exemplos com Nodered
 
-## Acesse seu nodered
+. ***1 - Acesse seu nodered*** em sua vps ou utilize a compartilhada pelo professor 
 
 http://168.138.131.96:198x
 
 
-Importe este primeiro fluxo:
+. ***2 - Importe*** este primeiro fluxo e edite:
 
 https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/perdido.json
 
@@ -240,7 +240,7 @@ https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/perdido.json
 
 Este gpt foi preparado pelo professor para orientar a criação de scripts, programas ou tirar dúvidas sobre a programação para embarcados.
 
-https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados 
+<img src=https://raw.githubusercontent.com/mchavesferreira/img/refs/heads/main/logogpt.png> https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados 
 
 
 ### Exemplos nodered
