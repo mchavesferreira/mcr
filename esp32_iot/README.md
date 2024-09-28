@@ -13,7 +13,7 @@
 - [Explorando recursos da comunicação WIFI](#Explorando-recursos-com-a-comunicação-WIFI)
 - [Frameworks](#Frameworks)
 - [Node-RED](#Node-RED)  **novo**
-  [Projeto IoT](#Projeto-IoT)  **novo**
+- [Projeto IoT](#Projeto-IoT)  **novo**
 - [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
 - [ESP32-Cam](#ESP32-Cam)
 - Dashboard
