@@ -1,5 +1,23 @@
 [
     {
+        "id": "7e696e3fa88a6135",
+        "type": "http in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "url": "/comandoled",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 340,
+        "y": 280,
+        "wires": [
+            [
+                "1580f6ddfd8751da",
+                "549d2f1ed713a347"
+            ]
+        ]
+    },
+    {
         "id": "1580f6ddfd8751da",
         "type": "function",
         "z": "f6f2187d.f17ca8",
@@ -19,5 +37,289 @@
                 "549d2f1ed713a347"
             ]
         ]
+    },
+    {
+        "id": "97680c0cb31ac0f3",
+        "type": "http response",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 880,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "34106767dbeecbcc",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "stat/tasmotatemp32/POWER",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 350,
+        "y": 560,
+        "wires": [
+            [
+                "af7538174cd8a868",
+                "e81f134b2b2fa052"
+            ]
+        ]
+    },
+    {
+        "id": "e81f134b2b2fa052",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "resultpower",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "af7538174cd8a868",
+        "type": "ui_template",
+        "z": "f6f2187d.f17ca8",
+        "tab": "",
+        "name": "Relay state",
+        "group": "39002dd15c031885",
+        "order": 9,
+        "format": "<div layout=\"row\" layout-align=\"space-between\">\n    <p>Relay state</p>\n    <p ng-style=\"{color: msg.payload === 'on' ? 'blue' : 'grey'}\">\n        <b>{{msg.payload === 'on' ? 'on' : 'off'}}</b>\n    </p>\n</div>",
+        "storeOutMessages": false,
+        "fwdInMessages": false,
+        "x": 670,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "81de76f90bed1e2d",
+        "type": "mqtt in",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "stat/tasmota_16ch/POWER2",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "5bd0bd86.98cecc",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 350,
+        "y": 700,
+        "wires": [
+            [
+                "0a2c08f78aa4dfa4"
+            ]
+        ]
+    },
+    {
+        "id": "0a2c08f78aa4dfa4",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "on",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "off",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 560,
+        "y": 700,
+        "wires": [
+            [
+                "9251c9570185e733"
+            ],
+            [
+                "6271f1e94df7cdb9"
+            ]
+        ]
+    },
+    {
+        "id": "9251c9570185e733",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "on",
+                "fromt": "str",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 660,
+        "wires": [
+            [
+                "b59260964570c45b"
+            ]
+        ]
+    },
+    {
+        "id": "6271f1e94df7cdb9",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "change",
+                "p": "payload",
+                "pt": "msg",
+                "from": "off",
+                "fromt": "str",
+                "to": "false",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 750,
+        "y": 760,
+        "wires": [
+            [
+                "b59260964570c45b"
+            ]
+        ]
+    },
+    {
+        "id": "b59260964570c45b",
+        "type": "ui_led",
+        "z": "f6f2187d.f17ca8",
+        "order": 3,
+        "group": "22270f80c7aa35a5",
+        "width": 0,
+        "height": 0,
+        "label": "Saida 2",
+        "labelPlacement": "left",
+        "labelAlignment": "left",
+        "colorForValue": [
+            {
+                "color": "red",
+                "value": "false",
+                "valueType": "bool"
+            },
+            {
+                "color": "green",
+                "value": "true",
+                "valueType": "bool"
+            }
+        ],
+        "allowColorForValueInMessage": false,
+        "showGlow": true,
+        "name": "",
+        "x": 940,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "544b65042b069d8c",
+        "type": "mqtt out",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "topic": "cmnd/tasmotaluminaria/power",
+        "qos": "0",
+        "retain": "",
+        "broker": "",
+        "x": 620,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "0a03d53b08ebce97",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "",
+        "topic": "",
+        "payload": "off",
+        "payloadType": "str",
+        "x": 360,
+        "y": 880,
+        "wires": [
+            [
+                "544b65042b069d8c"
+            ]
+        ]
+    },
+    {
+        "id": "9a7a43160fbe8364",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "on",
+        "payloadType": "str",
+        "x": 360,
+        "y": 920,
+        "wires": [
+            [
+                "544b65042b069d8c"
+            ]
+        ]
+    },
+    {
+        "id": "549d2f1ed713a347",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 340,
+        "wires": []
     }
 ]
