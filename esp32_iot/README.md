@@ -215,25 +215,84 @@ Exemplo Wokwi, com tópico em IFSP/led<BR>
 
 https://wokwi.com/projects/347942096378790483
 
-### Nodered 
+# Nodered 
+
+
+Node-red Oficial:  https://flows.nodered.org/
+
+Node-red Apresentação:  http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=50
+
+Instalar Node-red: http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=45
 
 Primeiros exemplos:
 
-Acesse seu nodered
+## Acesse seu nodered
 
-http://168.138.131.96:1984
+http://168.138.131.96:198x
 
 
+### Ajude-me:  
+
+https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados 
+
+
+- Utilizando um DNS free
+  
+ http://smartcampus.ctd.ifsp.edu.br/blog/index.php?IDselecionado=30 Redirecionamento DDNS com DuckDns 
+
+### Exemplos nodered
+
+[flow_exemplos/README.md](https://github.com/mchavesferreira/sebe/tree/main/flow_exemplos)
+
+
+Importe este primeiro fluxo:
 
 https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/node_red_estudo.json
+
+### Trabalhando com mysql, node-red e mqtt
+
+Importe para o node-red o flow:
+
+https://github.com/mchavesferreira/embarcados_freertos/blob/main/exemplo_node_red_mqtt_mysql_dht_sensor.json
+
+Adicione os nodes faltantes:  
+
+ui_led 
+
+node-red-node-mysql
+
+Crie a conexão MQTT local, e conecte ao banco de dados Mysql
+
+A base de dados será a mesma utilizada para o projeto 1, disponível em: https://github.com/mchavesferreira/php_app
+
+Simule a conexão utilizando o circuito tratado em aulas anteriores:  https://wokwi.com/projects/365211000246545409
+
+
+### Formato JSON
+
+<a href=https://github.com/mchavesferreira/sebe/blob/main/flow_exemplos/json.md>Saiba mais sobre o formato json</a>
+
+Importe este exemplo para o nodered: <a href=https://github.com/mchavesferreira/sebe/blob/main/flow_exemplos/cotacao_dolar.json>Exemplo de cotação dolar</a>
+
+Instale um plugin no navegador para facilitar a compreensão de um json: <a href=https://addons.mozilla.org/en-US/firefox/addon/json_formatter/>firefox</a>
+
+
+
+
+
+
+
+
+
 	   
 ### Exemplo ESP32, mqtt e dashboard node-red
 <br> Utiizando um tópico:
+
 <BR>https://wokwi.com/projects/365211000246545409
 <BR>
-<BR>Utilizando 3 tópicos como alterar para o projeto do 4° Bimestre
 https://wokwi.com/projects/381558252547499009
 <BR>https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/node_red1.json
+
 <BR>https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/node_red_estudo.json
 	   
 <BR><BR>
