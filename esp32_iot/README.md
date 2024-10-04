@@ -265,6 +265,8 @@ Crie a conexão MQTT local
 
 ## Banco de dados Mysql
 
+Saiba mais:  https://github.com/mchavesferreira/sebe/blob/main/bancodados.md
+
 Conecte a um banco de dados. Utilize uma base de dados existente ou crie uma, o exemplo a seguir exemplifica uma base de dados Mysql
 <BR><BR>
 <details><summary>Cria um base de dados mysql</summary>
