@@ -269,7 +269,7 @@ Saiba mais:  https://github.com/mchavesferreira/sebe/blob/main/bancodados.md
 
 Conecte a um banco de dados. Utilize uma base de dados existente ou crie uma, o exemplo a seguir exemplifica uma base de dados Mysql
 <BR><BR>
-<details><summary>Cria um base de dados mysql</summary>
+<details><summary>Clique aqui para ver comandos básicos em mysql</summary>
 <p>
 
 ```ruby 
@@ -359,6 +359,35 @@ Os requisitos do projeto incluem a programação do ESP32 para se comunicar via 
 
 ***Critérios:***
 Os critérios de avaliação incluem a funcionalidade correta da simulação no Wokwi, a montagem física e a integração do ESP32 com o Node-RED via MQTT. Além disso, a qualidade do código, a organização do repositório e a clareza da documentação também serão considerados.
+
+***Modelo 1 de projeto Iot ESP32+Node-RED+mysql***
+Trabalhando com mysql, node-red e mqtt
+
+Importe para o NodeRED o seguinte fluxo:
+
+https://github.com/mchavesferreira/embarcados_freertos/blob/main/exemplo_node_red_mqtt_mysql_dht_sensor.json
+
+Adicione os nodes não instalados em seu NodeRED:  
+
+ui_led 
+
+node-red-node-mysql
+
+Crie a conexão MQTT local, e conecte ao banco de dados Mysql
+
+A tabela de dados será a mesma utilizada para o projeto 1:
+
+```java
+CREATE TABLE tempLog (
+    timeStamp TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    temperature int(11) NOT NULL,
+    humidity int(11) NOT NULL,
+    PRIMARY KEY (timeStamp) );
+```
+
+disponível em: https://github.com/mchavesferreira/php_app
+
+Simule a conexão utilizando o circuito tratado em aulas anteriores, montando posteriormete o circuito em protoboard e personalizando para sua aplicação:  https://wokwi.com/projects/365211000246545409
 
 
 ***Exemplo de um projeto de turmas anteriores:***
