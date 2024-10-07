@@ -12,7 +12,9 @@
 - [Integração com Alexa](#Integração-com-Alexa)
 - [Explorando recursos da comunicação WIFI](#Explorando-recursos-com-a-comunicação-WIFI)
 - [Frameworks](#Frameworks)
-- [Node-RED](#Node-RED)  **novo**
+- [Node-RED](#Node-RED)
+- [Interfaces USART/I2C/SPI](#Interfaces-USART/I2C/SPI)  **novo**
+- [Middlewares/Plataformas para IoT](#Middlewares/Plataformas-para-IoT).**novo**
 - [Projeto IoT](#Projeto-IoT)  **novo**
 - [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
 - [ESP32-Cam](#ESP32-Cam)
@@ -341,7 +343,15 @@ Importe este exemplo para o Node-RED: <a href=https://github.com/mchavesferreira
 Instale um plugin no navegador para facilitar a compreensão de um json: <a href=https://addons.mozilla.org/en-US/firefox/addon/json_formatter/>firefox</a>
 
 
+# Interfaces USART/I2C/SPI
 
+Interfaces USART/I2C/SPI
+
+Slide:
+
+https://github.com/mchavesferreira/sebe/blob/main/slides/Quarta%20Aula%20_%20Interfaces.pdf
+
+# Middlewares/Plataformas para IoT
 	   
 # Projeto IoT
 
