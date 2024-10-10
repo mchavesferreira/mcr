@@ -306,6 +306,10 @@ void loop() {
 
 ```
 
+Uso de 3 led:
+
+https://wokwi.com/projects/411388408286145537
+
 ## Comunicação Serial
 
 https://wokwi.com/projects/401871586327571457
