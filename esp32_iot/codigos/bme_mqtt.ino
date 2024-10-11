@@ -33,34 +33,9 @@ PubSubClient client(espClient);
 //  #define SDA_PIN 8  // GPIO 8 para SDA no ESP32 C3
 //  #define SCL_PIN 9  // GPIO 9 para SCL no ESP32 C3
 
-
-/// FIM AHT
-
 // Definir o endereço I2C do sensor (0x76 ou 0x77)
 #define SEALEVELPRESSURE_HPA (1013.25)
 Adafruit_BME280 bme;  // Objeto do sensor BME280
-
-// Função para conectar no WiFi
-/*
-void setup_wifi() {
-  delay(10);
-  Serial.println();
-  Serial.print("Conectando-se a ");
-  Serial.println(ssid);
-
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(500);
-    Serial.print(".");
-  }
-
-  Serial.println("");
-  Serial.println("WiFi conectado");
-  Serial.println("Endereço IP: ");
-  Serial.println(WiFi.localIP());
-}
-*/
 
 // Função para esperar pela conexão WiFi com timeout (10 segundos por padrão)
 bool waitForConnection(unsigned long timeout = 10000) {
