@@ -29,7 +29,9 @@ const char* mqtt_password = "senha";
 WiFiClient espClient;
 PubSubClient client(espClient);
 
-
+// Definições específicas para ESP32 C3
+//  #define SDA_PIN 8  // GPIO 8 para SDA no ESP32 C3
+//  #define SCL_PIN 9  // GPIO 9 para SCL no ESP32 C3
 
 
 /// FIM AHT
@@ -121,9 +123,12 @@ void reconnect() {
 void setup() {
    delay(5000);
   Serial.begin(115200);
-      Serial.println("Setup inicial... ");
+  Serial.println("Setup inicial... ");
   setup_wifi();
   client.setServer(mqtt_server, 1883);
+
+   // Inicializa o barramento I2C com os pinos corretos
+  // Wire.begin(SDA_PIN, SCL_PIN);  // Definindo GPIO 8 e 9 para SDA e SCL no ESP32 C3
 
   // Inicializa o sensor BME280
   if (!bme.begin(0x76)) {  
