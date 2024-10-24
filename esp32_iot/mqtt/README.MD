@@ -64,7 +64,17 @@ Objetos: Um objeto JSON é uma coleção de pares chave/valor delimitados por ch
 
 Acesse o seguinte exemplo como aplição do mqtt com json
 
-https://wokwi.com/projects/412639452245191681
 
 <img src=imagens/mqtt2mensagem.png>
+
+
+https://wokwi.com/projects/412639452245191681
+
+
+Configure no seu dashboard para android o Path do objeto da mensagem, exemplo 
+
+Topic= esp32/out
+
+path Json= $.analogico
+
 
