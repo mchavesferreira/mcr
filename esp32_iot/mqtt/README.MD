@@ -60,6 +60,11 @@ Objetos: Um objeto JSON é uma coleção de pares chave/valor delimitados por ch
 
 <a href=https://github.com/mchavesferreira/sebe/blob/main/flow_exemplos/json.md> Saiba Mais sobre o mqtt</a>
 
+### exemplo mqtt com mensagem em json
 
+Acesse o seguinte exemplo como aplição do mqtt com json
 
+https://wokwi.com/projects/412639452245191681
+
+<img src=imagens/mqtt2mensagem.png>
 
