@@ -177,7 +177,12 @@ https://www.usinainfo.com.br/blog/automacao-residencial-com-esp32-controle-sua-c
 <BR>
 <BR><a href=https://wokwi.com/projects/364642003805651969>Exemplo online</a><BR>
 	
-	
+
+# MQTT
+
+MQTT (Message Queuing Telemetry Transport) é um protocolo de comunicação leve e eficiente, projetado para conectar dispositivos em redes com largura de banda limitada ou conexões instáveis, como em aplicações de Internet das Coisas (IoT).
+
+<a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD target=_blank>Saiba mais sobre mqtt</a>
 
 
 # Node-RED
