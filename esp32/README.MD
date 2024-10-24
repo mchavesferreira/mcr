@@ -3,6 +3,8 @@
 
 ## Aulas
 
+24/10 - <a href=mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
+
 05/09 - Relógio e Cronometro
 
 Utilize este exemplo de display OLed (https://wokwi.com/projects/342195248670179922) e a função millis() para construir um relogio 
