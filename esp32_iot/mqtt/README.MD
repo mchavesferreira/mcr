@@ -39,3 +39,8 @@ topic: movel/acelerax<BR>
 Exemplo Wokwi, com tópico em IFSP/led<BR>
 
 https://wokwi.com/projects/347942096378790483
+
+
+# Formato Json
+
+<a href=https://github.com/mchavesferreira/sebe/blob/main/flow_exemplos/json.md> Saiba Mais</a>
