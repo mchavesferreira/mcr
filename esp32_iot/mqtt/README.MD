@@ -79,9 +79,7 @@ path Json= $.analogico
 
 # Trabalho 3° bimestre
 
-Seguindo as instruções sobre MQTT e Json neste link
-
-https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD
+Seguindo as instruções sobre MQTT e Json nesta url
 
 e o exemplo de código
 
