@@ -1,8 +1,8 @@
 # MQTT
 
 <BR>Comunicação de dados IOT utilizando protocolo MQTT
-<img src=imagens/mqtt-publish-subscribe.png><br>Mqtt.org
-<img src=imagens/mqtt_mensagem.png><BR>
+<img src=../imagens/mqtt-publish-subscribe.png><br>Mqtt.org
+<img src=../imagens/mqtt_mensagem.png><BR>
 
 O MQTT (Message Queuing Telemetry Transport) é um protocolo de comunicação leve e eficiente, projetado para conectar dispositivos em redes com largura de banda limitada ou conexões instáveis, como em aplicações de Internet das Coisas (IoT). Ele utiliza o modelo de publicação/assinatura, onde os clientes podem publicar mensagens em tópicos específicos ou assinar tópicos para receber atualizações, com a intermediação de um servidor central chamado "broker". O MQTT é otimizado para minimizar o uso de recursos, sendo ideal para dispositivos com pouca capacidade de processamento e energia, como sensores e atuadores.
 
