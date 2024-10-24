@@ -3,7 +3,7 @@
 
 ## Aulas
 
-24/10 - <a href=https://github.com/mchavesferreira/mcr/edit/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
+24/10 - <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
 
 05/09 - Relógio e Cronometro
 
