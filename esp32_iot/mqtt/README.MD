@@ -43,4 +43,20 @@ https://wokwi.com/projects/347942096378790483
 
 # Formato Json
 
-<a href=https://github.com/mchavesferreira/sebe/blob/main/flow_exemplos/json.md> Saiba Mais</a>
+## JSON
+
+O JSON (JavaScript Object Notation) é um formato leve de troca de dados, fácil de ler e escrever para humanos, e simples de analisar e gerar para máquinas. A estrutura de um JSON é construída com base em duas estruturas universais:
+
+Objetos: Um objeto JSON é uma coleção de pares chave/valor delimitados por chaves {}. Cada chave é uma string e é seguida por dois pontos : e o valor correspondente. Os pares chave/valor são separados por vírgulas. Por exemplo:
+
+{
+  "nome": "João",
+  "idade": 30,
+  "casado": true
+}
+
+<a href=https://github.com/mchavesferreira/sebe/blob/main/flow_exemplos/json.md> Saiba Mais sobre o mqtt</a>
+
+
+
+
