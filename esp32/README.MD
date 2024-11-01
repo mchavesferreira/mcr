@@ -2,6 +2,8 @@
 
 
 ## Aulas
+ - Acrescente display o Oled. Planeje seu projeto Iot (<a href=https://github.com/mchavesferreira/mcr/tree/main/dicas%20de%20projetos>Dicas</a>
+31/10 - Colocando em prática o projeto Mqtt e Iot
 
 24/10 - <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
 
