@@ -41,7 +41,6 @@ Hora:Minuto:Segundos
 
 Maquina microntrolada Esp32 com protótipagem em protoboard e conexão mqtt ESP32
 
-Maquina microntrolada Esp32 com protótipagem em protoboard e conexão mqtt ESP32
 
 
 Trabalho em dupla. Postar individualmente citando a dupla. O trabalho deve ser entregue em formato digital com simulação e um pequeno texto explicando sua funcionalidade.
@@ -74,8 +73,14 @@ Crie uma máquina personalizada (não será considerado máquina de lavar e sem�
 
 - alteração de parametros utilizando MQTT.
 
-Link de exemplo inicial: https://wokwi.com/projects/375842607540556801 e topicos em mqtt
+Link de exemplo inicial: https://wokwi.com/projects/375842607540556801 e 
+
+topicos em mqtt
 https://wokwi.com/projects/381558252547499009
+
+Hamburgueria
+
+https://wokwi.com/projects/413925382712666113
 
 Orientações para o código. Utilize switch()/case para estruturar seu projeto;
 
