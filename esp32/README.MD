@@ -36,6 +36,55 @@ Hora:Minuto:Segundos
 
 06/06  - Diplay Oled : https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md
 
+
+# Trabalho
+
+Maquina microntrolada Esp32 com protótipagem em protoboard e conexão mqtt ESP32
+
+Maquina microntrolada Esp32 com protótipagem em protoboard e conexão mqtt ESP32
+
+
+Trabalho em dupla. Postar individualmente citando a dupla. O trabalho deve ser entregue em formato digital com simulação e um pequeno texto explicando sua funcionalidade.
+-Envio do codigo nesta aba do SUAP, apenas se ocorrer um erro, enviar para email mchavesferreira@ifsp.edu.br, arquivos fontes e texto resumo.
+
+Crie uma máquina personalizada (não será considerado máquina de lavar e semáforo) atenda os seguintes critérios e ponderações:
+
+- apresente no mínimo 05 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo); (2,0 pontos)
+- ajustes de pelo menos 02 valores inteiros; (0,5 pontos)
+
+- utilize pelo menos 02 leds como saídas; (0,5 pontos)
+
+- utilize pelo menos 01 entrada analógica (1,0 pontos)
+
+- ajuste em botões será opcional (+1,0 ponto extra se ajuste ser simultaneo Oled e botões)
+
+- perguntas e respostas devem utilizar display Oled e botões (exemplos para botões: + - 1 2 3 Y N enter) (*opcional)
+
+- Alterar no mínimo 3 parametros e botão iniciar e parada de emergência utilizando um app dashboard e protocolo MQTT. (3 ptos)
+
+- As duplas não podem ter trabalhos "clones", criatividade, complexidade e dificuldades serão pontuados; (2,0)
+
+
+- Enviar o link na área trabalhos (suap). TODOS INTEGRANTES de cada integrante da dupla deve postar e apenas UM enviar por email.
+-
+- Utilizar:
+
+
+- entrada analógica
+
+- alteração de parametros utilizando MQTT.
+
+Link de exemplo inicial: https://wokwi.com/projects/375842607540556801 e topicos em mqtt
+https://wokwi.com/projects/381558252547499009
+
+Orientações para o código. Utilize switch()/case para estruturar seu projeto;
+
+A utilização de funções deixam o código limpo e facilmente compreensível
+
+Variáveis que serão utilizadas em funções diferentes devem ser globais. Variáveis locais são sempre recomendadas para economia de memória RAM.
+
+
+
 ## Simulador Wokwi
 
 Simulador <a href=https://wokwi.com/projects/new/esp32>ESP32 Online</a>
