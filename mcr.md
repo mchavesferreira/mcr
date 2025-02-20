@@ -7,26 +7,24 @@
 
 ## Aulas Turma 2024
 ### 1° Bimestre
-- 08/02  - Introdução a Disciplina, Histórico sobre microprocessadores
-- 22/02 -  Arquitetura de funcionamento de um microprocessador genérico
-- 29/02 -  Arquitetura AVR Atmega 328P, [Mapeamento de Memória](#Mapeamento-de-memória)
-- 
+- 20/02  - Introdução a Disciplina, Histórico sobre microprocessadores
+- 27/02 -  Arquitetura de funcionamento de um microprocessador genérico
+- 06/03 -  Arquitetura AVR Atmega 328P, [Mapeamento de Memória](#Mapeamento-de-memória)
+
 Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 
-- 07/02 -  Primeiras instruções assembly para Atmega328P. 
-- 14/02 -  [Programa Pisca Led](#Programa-Pisca-Led), [Programa Reservatorio](#Programa-Reservatorio)
-- 21/03 -  Simulador Wowki, Display 7 segmentos 
-- 28/03 -  Projeto microcontrolado Assembly
-- 04/04 -  Trabalho em Grupo
-- 11/04 -  Avaliação Escrita
+- 13/03 -  Primeiras instruções assembly para Atmega328P. 
+- 20/03 -  [Programa Pisca Led](#Programa-Pisca-Led), [Programa Reservatorio](#Programa-Reservatorio)
+- 27/03 -  Simulador Wowki, Display 7 segmentos 
+- 03/04 -  Projeto microcontrolado Assembly
+- 10/04 -  Trabalho em Grupo
+- 17/04 -  Avaliação Escrita
+- 
 ### 2° Bimestre
-- 18/04 - Introdução ao ESP32
-- 25/04 - Programação Alto Nível, C
-- 02/05 -
-- 09/05 -
-- 16/05 -
-- 23/05 -
-- 30/05 -
+- 08/05 - Introdução ao ESP32
+- 15/05 - Programação Alto Nível, C
+- 22/05 -
+
 -
 -   
 - 
