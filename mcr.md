@@ -5,7 +5,7 @@
 
 ## Utilizando Atmega328P para a compreensão e funcionamento de microprocessadores e microcontroladores em geral utilizando a linguagem Assembly.
 
-## Aulas Turma 2024
+## Aulas Turma 2025
 ### 1° Bimestre
 - 20/02  - Introdução a Disciplina, Histórico sobre microprocessadores
 - 27/02 -  Arquitetura de funcionamento de um microprocessador genérico
