@@ -30,6 +30,18 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 - 
 
 
+
+Arquitetura de funcionamnto de um microprocessador genérico
+
+
+        ORG 100H        ; Início do programa na memória (Endereço 256)
+        LDA #17         ; Carrega o valor 17 no registrador A
+        LDB #9          ; Carrega o valor 9 no registrador B
+        ADD A, B        ; Soma A + B e armazena em A
+        STA 300H        ; Armazena o conteúdo de A na memória 300H
+        HLT             ; Finaliza o programa
+
+ 
  
 ## Mapeamento-de-memória
  
