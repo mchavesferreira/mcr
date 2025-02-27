@@ -42,11 +42,11 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
         HLT             ; Finaliza o programa
 
 ; Definição de memória e registradores:
-; - LDA #XX   -> Carrega o valor imediato XX no registrador A
-; - LDB #XX   -> Carrega o valor imediato XX no registrador B
-; - ADD A, B  -> Soma os valores dos registradores A e B e armazena em A
-; - STA XXXH  -> Armazena o conteúdo de A no endereço de memória XXXH
-; - HLT       -> Finaliza a execução do programa
+- LDA #XX   -> Carrega o valor imediato XX no registrador A
+- LDB #XX   -> Carrega o valor imediato XX no registrador B
+- ADD A, B  -> Soma os valores dos registradores A e B e armazena em A
+- STA XXXH  -> Armazena o conteúdo de A no endereço de memória XXXH
+- HLT       -> Finaliza a execução do programa
 
 ### Arquitetura de von Neumann:
 
@@ -59,7 +59,10 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 Muitos microprocessadores reservam os primeiros endereços de memória (por exemplo, de 0000H a 00FFH) para vetores de interrupção, tabelas de inicialização e rotinas do sistema.
 
 Um vetor de interrupção contém endereços de sub-rotinas que devem ser executadas quando eventos específicos ocorrem, como interrupções de hardware.
-    
+
+Algumas arquiteturas, especialmente as inspiradas nos primeiros microprocessadores como o Intel 8080, Zilog Z80 e 6502, seguem a convenção de reservar os primeiros endereços para registradores mapeados na memória ou para o sistema operacional.
+
+O código do usuário é normalmente carregado a partir de 0100H para evitar sobrescrever esses dados do sistema.
  
 ## Mapeamento-de-memória
  
