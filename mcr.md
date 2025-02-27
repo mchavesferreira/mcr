@@ -33,7 +33,7 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 
 #  Arquitetura de funcionamnto de um microprocessador genérico
 
-![image](https://github.com/user-attachments/assets/442c315d-a553-4576-900f-10889d6d607c)
+
 
 
         ORG 100H        ; Início do programa na memória (Endereço 256)
