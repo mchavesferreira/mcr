@@ -31,7 +31,7 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 
 
 
-##  Arquitetura de funcionamnto de um microprocessador genérico
+#  Arquitetura de funcionamnto de um microprocessador genérico
 
 
         ORG 100H        ; Início do programa na memória (Endereço 256)
@@ -41,7 +41,7 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
         STA 300H        ; Armazena o conteúdo de A na memória 300H
         HLT             ; Finaliza o programa
 
- ; Definição de memória e registradores:
+; Definição de memória e registradores:
 ; - LDA #XX   -> Carrega o valor imediato XX no registrador A
 ; - LDB #XX   -> Carrega o valor imediato XX no registrador B
 ; - ADD A, B  -> Soma os valores dos registradores A e B e armazena em A
@@ -50,14 +50,15 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 
 ### Arquitetura de von Neumann:
 
-    A memória armazena tanto as instruções quanto os dados.
-    O microprocessador executa as instruções sequencialmente.
-    As operações são realizadas na ULA usando os registradores internos.
+- A memória armazena tanto as instruções quanto os dados.
+- O microprocessador executa as instruções sequencialmente.
+- As operações são realizadas na ULA usando os registradores internos.
 
 ### Reservas de Endereço para Vetores de Interrupção e Bootloader
 
-    Muitos microprocessadores reservam os primeiros endereços de memória (por exemplo, de 0000H a 00FFH) para vetores de interrupção, tabelas de inicialização e rotinas do sistema.
-    Um vetor de interrupção contém endereços de sub-rotinas que devem ser executadas quando eventos específicos ocorrem, como interrupções de hardware.
+Muitos microprocessadores reservam os primeiros endereços de memória (por exemplo, de 0000H a 00FFH) para vetores de interrupção, tabelas de inicialização e rotinas do sistema.
+
+Um vetor de interrupção contém endereços de sub-rotinas que devem ser executadas quando eventos específicos ocorrem, como interrupções de hardware.
     
  
 ## Mapeamento-de-memória
