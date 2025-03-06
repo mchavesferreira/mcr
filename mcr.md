@@ -9,6 +9,13 @@
 ### 1° Bimestre
 - 20/02  - Introdução a Disciplina, Histórico sobre microprocessadores
 - 27/02 -  Arquitetura de funcionamento de um microprocessador genérico
+
+Exemplos de circuitos básicos em um microprocessador:
+
+https://circuitverse.org/simulator/51702
+
+https://github.com/viniciusNoleto/Electronic_Components_Example-LOGISIM-CIRC/tree/main
+
 - 06/03 -  Arquitetura AVR Atmega 328P, [Mapeamento de Memória](#Mapeamento-de-memória)
 
 Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
