@@ -43,7 +43,7 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 
 
 
-        ORG 100H        ; Início do programa na memória (Endereço 256)
+        ORG 0H        ; Início do programa na memória (Endereço 256)
         LDA #17         ; Carrega o valor 17 no registrador A
         LDB #9          ; Carrega o valor 9 no registrador B
         ADD A, B        ; Soma A + B e armazena em A
@@ -56,6 +56,20 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 - ADD A, B  -> Soma os valores dos registradores A e B e armazena em A
 - STA XXXH  -> Armazena o conteúdo de A no endereço de memória XXXH
 - HLT       -> Finaliza a execução do programa
+
+O programa na memória flash seria equivalente:
+
+# Tabela de Exportação do Código Assembly
+
+| Endereço | Instrução  | Hexadecimal  | Binário                |
+|----------|-----------|--------------|------------------------|
+| 0x0000   | ORG 0H    | 0000         | 00000000 00000000      |
+| 0x0002   | LDA 17    | 3A11         | 00111010 00010001      |
+| 0x0004   | LDB 9     | 0609         | 00000110 00001001      |
+| 0x0006   | ADD A, B  | 8000         | 10000000 00000000      |
+| 0x0008   | STA 300H  | 3203         | 00110010 00000011      |
+| 0x000A   | HL        | 7600         | 01110110 00000000      |
+
 
 ### Arquitetura de von Neumann:
 
