@@ -38,7 +38,7 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 
 
 
-#  Arquitetura de funcionamnto de um microprocessador genérico
+#  Arquitetura de funcionamento de um microprocessador genérico
 
 
 
@@ -57,9 +57,9 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 - STA XXXH  -> Armazena o conteúdo de A no endereço de memória XXXH
 - HLT       -> Finaliza a execução do programa
 
-O programa na memória flash seria equivalente:
+O programa na memória flash seria equivalente a seguinte tabela de exportação do código Assembly convertido para hexadecimal e binário, considerando que cada instrução ocupará 16 bits (2 bytes). São estes os valores armazenados na memória de programa ROM(ou Flash em versões recentes):
 
-# Tabela de Exportação do Código Assembly
+### Tabela de Exportação do Código Assembly
 
 | Endereço | Instrução  | Hexadecimal  | Binário                |
 |----------|-----------|--------------|------------------------|
@@ -69,6 +69,9 @@ O programa na memória flash seria equivalente:
 | 0x0006   | ADD A, B  | 8000         | 10000000 00000000      |
 | 0x0008   | STA 300H  | 3203         | 00110010 00000011      |
 | 0x000A   | HL        | 7600         | 01110110 00000000      |
+
+
+![processador](https://github.com/user-attachments/assets/cd0111e0-3362-433f-9e02-2d62215ecf9f)
 
 
 ### Arquitetura de von Neumann:
