@@ -6,6 +6,13 @@
 ---
 #### Grupo:
 
+ -Camily Pereira Alberganti
+ -Fernando Henrique das Neves de Albuquerque
+ -João Henrique da Silva Santana
+ -Kaynã Ademir Tinel Andreotti
+ -Leonardo Oliveira da Silva
+ -Miguel Antonio de Francisco
+ 
 #### Orientação:  Prof. Dr. Marcos Aparecido Chaves Ferreira (IFSP Catanduva)
 
 ### Resumo
@@ -89,3 +96,7 @@ Este projeto oferece solução prática para gestão de resíduos no IFSP Catand
 - [On Demand Waste Collection for Smart Cities: A Case Study](https://www.researchgate.net/publication/363490421_On_Demand_Waste_Collection_for_Smart_Cities_A_Case_Study)
 - [The Innovative Benefits Of Smart Waste Management Solutions](https://www.korewireless.com/news/benefits-of-smart-waste-management)
 - [Waste management 2.0 leveraging internet of things for an efficient and eco-friendly smart city solution](https://pmc.ncbi.nlm.nih.gov/articles/PMC11290616/)
+
+
+https://www.nucleodoconhecimento.com.br/engenharia-eletrica/redes-de-lixeiras
+
