@@ -2,10 +2,11 @@
 
 ![ChatGPT Image 26 de mar  de 2025, 13_24_30](https://github.com/user-attachments/assets/570abaef-f57d-4a25-9041-e005449d5d14)
 
-Grupo:
 
-Orientação:  Prof. Dr. Marcos Aparecido Chaves Ferreira (IFSP Catanduva)
 ---
+#### Grupo:
+
+#### Orientação:  Prof. Dr. Marcos Aparecido Chaves Ferreira (IFSP Catanduva)
 
 ### Resumo
 O projeto "Lixeira Eletrônica" ou "Smart Waste Solutions for Sustainable Cities" visa desenvolver lixeiras inteligentes com comunicação IoT para otimizar o gerenciamento de resíduos no IFSP Catanduva e no centro da cidade. Uma unidade usará WiFi para a escola, e outra, LoRaWAN, para o centro, monitorando níveis de preenchimento em tempo real. Alinhado ao projeto SMART CAMPUS, o trabalho será apresentado à SAEC para instalação no município, promovendo sustentabilidade e engajamento comunitário com base nos ODS.
