@@ -1,13 +1,14 @@
-### Key Points
-- Research suggests that smart waste management systems using IoT can improve efficiency and sustainability in cities.  
-- It seems likely that developing a "Smart Lixeira" with WiFi and LoRaWAN communication is feasible using ESP32 and available sensors.  
-- The evidence leans toward benefits like reduced operational costs (up to 30%) and fuel consumption (up to 50%), based on existing studies.  
-- An unexpected detail is that setting up a LoRaWAN network might require installing a gateway, especially if coverage is limited in Catanduva.
+### Projeto Lixeira Eletrônica
+
+![ChatGPT Image 26 de mar  de 2025, 13_24_30](https://github.com/user-attachments/assets/570abaef-f57d-4a25-9041-e005449d5d14)
+
+Grupo:
+
 
 ---
 
 ### Resumo
-O projeto "Smart Lixeira" ou "Smart Waste Solutions for Sustainable Cities" visa desenvolver lixeiras inteligentes com comunicação IoT para otimizar o gerenciamento de resíduos no IFSP Catanduva e no centro da cidade. Uma unidade usará WiFi para a escola, e outra, LoRaWAN, para o centro, monitorando níveis de preenchimento em tempo real. Alinhado ao projeto SMART CAMPUS, o trabalho será apresentado à SAEC para instalação no município, promovendo sustentabilidade e engajamento comunitário com base nos ODS.
+O projeto "Lixeira Eletrônica" ou "Smart Waste Solutions for Sustainable Cities" visa desenvolver lixeiras inteligentes com comunicação IoT para otimizar o gerenciamento de resíduos no IFSP Catanduva e no centro da cidade. Uma unidade usará WiFi para a escola, e outra, LoRaWAN, para o centro, monitorando níveis de preenchimento em tempo real. Alinhado ao projeto SMART CAMPUS, o trabalho será apresentado à SAEC para instalação no município, promovendo sustentabilidade e engajamento comunitário com base nos ODS.
 
 ### Justificativa
 A gestão inteligente de resíduos é essencial para reduzir custos, otimizar coletas e promover a sustentabilidade, alinhando-se aos ODS 11 (Cidades Sustentáveis) e 12 (Consumo Responsável). Estudos indicam potencial de economia de até 30% nos custos operacionais e 50% no consumo de combustível [The Innovative Benefits Of Smart Waste Management Solutions](https://www.korewireless.com/news/benefits-of-smart-waste-management). Este projeto reforça o papel do IFSP na comunidade, contribuindo para um ambiente mais limpo e eficiente.
@@ -26,7 +27,7 @@ O projeto promete reduzir custos, melhorar eficiência e engajar a comunidade, i
 
 ### Survey Note: Pesquisa Profunda sobre o Projeto "Smart Lixeira" para Cidades Inteligentes
 
-Este documento apresenta uma pesquisa detalhada sobre o projeto "Smart Lixeira" ou "Smart Waste Solutions for Sustainable Cities", desenvolvido como iniciativa de formatura para alunos do curso técnico de Mecatrônica do IFSP Catanduva. O foco é criar lixeiras inteligentes com comunicação IoT, utilizando WiFi para uma unidade na escola e LoRaWAN para outra no centro da cidade, integrando-se ao projeto maior SMART CAMPUS. Abaixo, detalham-se resumo, justificativa, pesquisa bibliográfica, metodologia e conclusão, com base em estudos e casos relevantes.
+Este documento apresenta uma pesquisa detalhada sobre o projeto "Smart Lixeira" ou "Smart Waste Solutions for Sustainable Cities", desenvolvido como iniciativa de formatura para alunos do curso técnico de Mecatrônica do IFSP Catanduva. O foco é criar lixeiras inteligentes com comunicação IoT, utilizando WiFi para uma unidade na escola e LoRaWAN para outra no centro da cidade, integrando-se ao projeto maior SMART CAMPUS Catanduva (http://smartcampus.ctd.ifsp.edu.br). Abaixo, detalham-se resumo, justificativa, pesquisa bibliográfica, metodologia e conclusão, com base em estudos e casos relevantes.
 
 #### Resumo
 O projeto propõe o desenvolvimento de lixeiras inteligentes equipadas com tecnologia IoT para aprimorar o gerenciamento de resíduos no IFSP Catanduva e no centro de Catanduva. Uma unidade será instalada na escola usando comunicação WiFi, enquanto outra, no centro da cidade, utilizará LoRaWAN, permitindo monitoramento em tempo real dos níveis de preenchimento para otimizar a coleta de lixo e promover a sustentabilidade. Esta iniciativa integra-se ao projeto SMART CAMPUS, que reúne diversas soluções para o campus e cidades inteligentes.
@@ -75,7 +76,7 @@ Considerando o nível técnico dos alunos, a metodologia prioriza acessibilidade
 | **Aplicação**          | Monitoramento local, como campus escolar      | Monitoramento em larga escala, como centro da cidade |
 
 #### Conclusão
-Este projeto oferece solução prática para gestão de resíduos no IFSP Catanduva e centro da cidade, usando IoT para monitorar e otimizar coletas. Espera-se redução de custos, maior eficiência e menor impacto ambiental, integrando-se ao SMART CAMPUS. A parceria com SAEC pode ampliar o alcance, promovendo desenvolvimento urbano sustentável e alinhando-se aos ODS. Um detalhe inesperado é a possível necessidade de instalar gateway LoRaWAN em Catanduva, dada a incerteza sobre cobertura local, o que pode demandar colaboração com provedores ou comunidade, como TTN.
+Este projeto oferece solução prática para gestão de resíduos no IFSP Catanduva e centro da cidade, usando IoT para monitorar e otimizar coletas. Espera-se redução de custos, maior eficiência e menor impacto ambiental, integrando-se ao SMART CAMPUS. A parceria com SAEC pode ampliar o alcance, promovendo desenvolvimento urbano sustentável e alinhando-se aos ODS. O projeto aproveitará a estrutura de servidor web e gateway em andamento no campus.
 
 #### Key Citations
 - [Smart Waste Management Systems Using IoT: Revolutionize Waste Collection](https://bridgera.com/iot-based-smart-waste-management-system/)
