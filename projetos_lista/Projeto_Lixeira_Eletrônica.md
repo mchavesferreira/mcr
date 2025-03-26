@@ -35,7 +35,7 @@ O projeto propõe o desenvolvimento de lixeiras inteligentes equipadas com tecno
 #### Justificativa
 A gestão de resíduos é um desafio global com impactos ambientais, econômicos e sociais significativos. Sistemas inteligentes baseados em IoT podem reduzir custos operacionais em até 30% e o consumo de combustível em até 50%, conforme estudos como [The Innovative Benefits Of Smart Waste Management Solutions](https://www.korewireless.com/news/benefits-of-smart-waste-management). Otimizando rotas com dados em tempo real, essas soluções diminuem emissões de carbono, melhoram a qualidade do ar e reduzem o uso de aterros, preservando habitats naturais e minimizando emissões de metano.
 
-Para o IFSP Catanduva, o projeto promove engajamento comunitário, demonstrando o compromisso institucional com a sustentabilidade. Alinha-se aos Objetivos de Desenvolvimento Sustentável (ODS), especialmente o ODS 11 (Cidades e Comunidades Sustentáveis) e o ODS 12 (Consumo e Produção Responsáveis), contribuindo para um ambiente urbano mais limpo e eficiente. A apresentação à SAEC, empresa responsável pela coleta na cidade, pode facilitar a instalação no centro, potencialmente reduzindo gastos públicos com coletas desnecessárias.
+Para o IFSP Catanduva, o projeto promove engajamento comunitário, demonstrando o compromisso institucional com a sustentabilidade. Alinha-se aos Objetivos de Desenvolvimento Sustentável (ODS), especialmente o ODS 11 (Cidades e Comunidades Sustentáveis) e o ODS 12 (Consumo e Produção Responsáveis), contribuindo para um ambiente urbano mais limpo e eficiente. A apresentação à SAEC, empresa responsável pela coleta na cidade, pode facilitar a instalação no centro da cidade em uma área de grande circulação, potencialmente reduzindo gastos públicos com coletas desnecessárias.
 
 #### Pesquisa Bibliográfica
 A pesquisa abrangeu artigos, estudos de caso e publicações técnicas sobre gestão inteligente de resíduos com IoT, com ênfase em WiFi, LoRaWAN e ESP32. Recursos-chave incluem:
@@ -53,17 +53,17 @@ Estudos como [Waste management 2.0 leveraging internet of things for an efficien
 #### Metodologia
 Considerando o nível técnico dos alunos, a metodologia prioriza acessibilidade e praticidade, utilizando sensores de mercado e ESP32. As etapas incluem:
 
-1. **Análise de Requisitos:** Definir funcionalidades, como monitorar níveis de preenchimento, enviar alertas quando cheios, e comunicar via WiFi (escola) e LoRaWAN (centro). O sistema integrará lixeiras existentes, minimizando modificações.
+1. **Análise de Requisitos:** Definir funcionalidades, como monitorar níveis de preenchimento, enviar alertas quando cheios, e comunicar via WiFi (escola) e LoRaWAN (centro da cidade). O sistema integrará lixeiras existentes, minimizando modificações.
 
 2. **Seleção de Hardware:** Sensores ultrassônicos (e.g., HC-SR04) para níveis, econômicos e acessíveis. ESP32 suporta WiFi nativamente; para LoRaWAN, requer módulo como SX1276. Considerar suprimento de energia, especialmente para a unidade LoRaWAN, que pode operar a bateria com modos de baixo consumo.
 
-3. **Desenvolvimento de Software:** Programar ESP32 no Arduino IDE. Unidade WiFi conecta à rede da escola, enviando dados a plataformas como ThingSpeak. Unidade LoRaWAN comunica-se com gateway, possivelmente via The Things Network (TTN), dado que a cobertura em Catanduva pode exigir instalação de gateway próprio, conforme verificado em pesquisas sobre redes LoRaWAN no Brasil.
+3. **Desenvolvimento de Software:** Programar ESP32 no Arduino IDE. Unidade WiFi conecta à rede da escola, enviando dados a plataformas como ThingSpeak. Unidade LoRaWAN comunica-se com gateway, possivelmente via The Things Network (TTN), dado que a cobertura em Catanduva pode exigir instalação de gateway próprio, conforme verificado em pesquisas sobre redes LoRaWAN no Brasil. Será utilizada a mesma rede Lorawan do projeto de extensão Miniestações meterológicas do professor orientador.
 
 4. **Integração e Testes:** Montar hardware, integrar sensores e módulos, testar em ambiente controlado para garantir precisão e confiabilidade. Resolver problemas como conectividade ou falhas de sensor.
 
-5. **Implantação:** Instalar unidade WiFi no IFSP, usando infraestrutura escolar. Para o centro, coordenar com SAEC, assegurando conformidade local. A unidade LoRaWAN pode necessitar de gateway, potencialmente em parceria com SAEC.
+5. **Implantação:** Instalar unidade WiFi no IFSP, usando infraestrutura escolar. Para o centro, coordenar com SAEC, assegurando conformidade local e para ambas unidades contar adaptar a uma lixeira fornecida pela SAEC.
 
-6. **Monitoramento e Manutenção:** Criar sistema de visualização (app web/mobile) para níveis e alertas à SAEC. Planejar manutenção, como troca de baterias para LoRaWAN, e garantir segurança de dados contra acessos não autorizados.
+6. **Monitoramento e Manutenção:** Criar sistema de visualização (app web/mobile) simples utilizando Node-red acompanhamento de níveis e alertas. Planejar manutenção, como troca de baterias ou instalação de painel solar para LoRaWAN, e garantir segurança de dados contra acessos não autorizados.
 
 #### Tabela de Comparação: Tecnologias WiFi vs. LoRaWAN
 
