@@ -4,7 +4,7 @@
 
 Grupo:
 
-
+Orientação:  Prof. Dr. Marcos Aparecido Chaves Ferreira (IFSP Catanduva)
 ---
 
 ### Resumo
