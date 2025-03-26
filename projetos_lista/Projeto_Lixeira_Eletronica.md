@@ -7,10 +7,15 @@
 #### Grupo:
 
  -Camily Pereira Alberganti
+ 
  -Fernando Henrique das Neves de Albuquerque
+ 
  -João Henrique da Silva Santana
+ 
  -Kaynã Ademir Tinel Andreotti
+ 
  -Leonardo Oliveira da Silva
+ 
  -Miguel Antonio de Francisco
  
 #### Orientação:  Prof. Dr. Marcos Aparecido Chaves Ferreira (IFSP Catanduva)
