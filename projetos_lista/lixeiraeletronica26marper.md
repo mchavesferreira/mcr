@@ -80,7 +80,7 @@ O sistema adaptará lixeiras existentes, minimizando modificações estruturais 
 
 **Microcontrolador**: Especificar a vesão ESP32S3 ideal para aplicações futuras com machine learningn (IA),  flexibilidade e suporte nativo a WiFi e bluethoo BLE.
 
-**Radio longa distância** módulo SX1278 para comunicação LoRaWAN
+**Radio longa distância** 01 módulo SX1278 para comunicação LoRaWAN
 
 **Alimentação**:
 
@@ -131,6 +131,9 @@ Para escolha do microcontrolador, a melhor opção é ESP32S3
 
 
 Aqui está uma análise atualizada das três versões com os componentes especificados e cálculo detalhado de autonomia:
+
+Considerando o ciclo de 10 minutos em modo de baixo consumo, realiza-se a leitura do  módulo AJ-SR04M sensor de distancia( consumo de 30mA por 3 segundos) e transmite transmissao lorawan com sx1276 consumo 70 mA por 400ms.
+
 
 ## **Versão 1 - Sistema Portátil de Longa Duração**
 **Componentes Principais:**
