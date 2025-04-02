@@ -80,11 +80,16 @@ O sistema adaptará lixeiras existentes, minimizando modificações estruturais 
 
 **Microcontrolador**: Especificar a vesão ESP32S3 ideal para aplicações futuras com machine learningn (IA),  flexibilidade e suporte nativo a WiFi e bluethoo BLE.
 
-**Radio longa distância ** módulo SX1278 para comunicação LoRaWAN
+**Radio longa distância** módulo SX1278 para comunicação LoRaWAN
 
 **Alimentação**:
-- 3 Baterias LiPo 3.7V (para compor 12V)
+
+Este item merece maior atenção, no item a seguir discutimos melhor as opções.
+
+- 3 Baterias LiPo 3.7V recarregável (para compor 12V)
+- 01 pilna Lithium LS14500 AA 3,6V 2400mAh não recarregável
 - 1 painel solar 10W/18V
+- 5 painéis solar 200mA/5V
 - Placa Proteção Bateria Lítio 18650 3s 11,1v 10a Bms
 - Controlador Carga Painel Solar Pwm 12v / 24v 10a
 
@@ -124,6 +129,95 @@ Para escolha do microcontrolador, a melhor opção é ESP32S3
 | **Arquitetura de CPU**       | Xtensa LX6                         | Xtensa LX7                              | RISC-V 32 bits                        |
 | **Ideal para**               | Projetos gerais com Wi-Fi/Bluetooth| Visão computacional, IA, USB e periféricos | Baixo consumo, dispositivos compactos |
 
+
+Aqui está uma análise atualizada das três versões com os componentes especificados e cálculo detalhado de autonomia:
+
+## **Versão 1 - Sistema Portátil de Longa Duração**
+**Componentes Principais:**
+- **Bateria:** Xeno Lithium LS14500 AA 3,6V 2400mAh (R$80)
+- **Regulador:** HT7333 (3.3V 250mA)
+- **Consumo/Ciclo:** 0.0484mAh
+
+**Cálculo de Autonomia:**
+1. Capacidade efetiva (considerando eficiência LDO 90%):
+   $$ \frac{2400mAh \times 3,6V}{3,3V} \times 0,9 = 2378mAh $$
+
+2. Ciclos totais:
+   $$ \frac{2378mAh}{0,0484mAh/ciclo} = 49.132 $$ ciclos
+
+3. Autonomia total:
+   $$ 49.132 \times 10 \text{ min} = 491.320 \text{ min} \approx 341 \text{ dias} $$
+
+**Vantagens:**
+- Compacto e à prova de intempéries
+- Operação estável entre -40°C e 60°C
+
+---
+
+## **Versão 2 - Solar Compacta (Médio Porte)**
+**Componentes Principais:**
+- **Bateria:** LiPo 3.7V 2000mAh (mantido)
+- **Painel Solar:** 1W/5V
+- **Controlador:** TP4056
+
+**Cálculo de Autonomia:**
+1. Autonomia sem sol:
+   $$ \frac{2000mAh}{0,0484mAh/ciclo} \times 10 \text{ min} \approx 287 \text{ dias} $$
+
+2. Recarga diária:
+   $$ \frac{1W \times 4h}{3,7V} = 1081mAh/dia $$
+   (Cobre consumo diário de 69,6mAh)
+
+**Custo Total:** R$170 (bateria R$40 + painel R$50 + controlador R$80)
+
+---
+
+## **Versão 3 - Sistema Híbrido Industrial**
+**Componentes Principais:**
+- **Bateria:** VRLA 12V 9Ah (R$110)
+- **Painel Solar:** 10W/19,5V (R$150)
+- **Controlador:** PWM 10A (R$80)
+
+**Cálculo de Autonomia:**
+1. Capacidade útil (considerando 50% DoD):
+   $$ \frac{9Ah \times 12V \times 0,5}{5V} \times 0,85 = 9.180mAh $$
+
+2. Ciclos totais:
+   $$ \frac{9180mAh}{0,0484mAh/ciclo} = 189.669 $$ ciclos
+
+3. Autonomia:
+   $$ 189.669 \times 10 \text{ min} \approx 3,6 \text{ anos} $$
+
+**Recarga Solar:**
+$$ \frac{10W \times 4h}{12V} = 3,33Ah/dia $$ (37% da capacidade diária)
+
+---
+
+### **Comparativo Técnico**
+
+| Parâmetro          | Versão 1       | Versão 2       | Versão 3       |
+|--------------------|----------------|----------------|----------------|
+| Investimento       | R$ 120         | R$ 170         | R$ 340         |
+| Autonomia (sem sol)| 341 dias       | 287 dias       | 3,6 anos       |
+| Faixa de Temp.     | -40°C ~ 60°C   | 0°C ~ 45°C     | 15°C ~ 35°C    |
+| Eficiência         | 89%            | 78%            | 82%            |
+| Peso               | 150g           | 300g           | 2.800g         |
+| Manutenção         | Troca anual    | Recarga solar  | Verificação bienal |
+
+---
+
+### **Recomendações por Cenário**
+1. **Ambientes Remotos Severos** (estações de montanha):  
+   Versão 1 - Resistente a temperaturas extremas
+
+2. **Áreas Urbanas com Insolação** (parques públicos):  
+   Versão 2 - Autossustentável com baixa pegada ecológica
+
+3. **Centros de Coleta Massiva** (terminais de ônibus):  
+   Versão 3 - Alta capacidade com redundância energética
+
+**Nota Técnica:**  
+Para a Versão 3, o controlador PWM de 10A permite expandir o sistema para até 120W de painéis solares, possibilitando futura integração com sistemas adicionais como compactadores ou displays LCD.
 
 
 
