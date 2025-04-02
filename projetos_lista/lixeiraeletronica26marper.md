@@ -74,19 +74,58 @@ Definir funcionalidades essenciais:
 
 O sistema adaptará lixeiras existentes, minimizando modificações estruturais e priorizando a instalação não-invasiva de sensores e módulos de comunicação.
 
-### 2. Seleção de Hardware
+### 2. Seleção de Materiais
 
-**Sensores**: Ultrassônicos HC-SR04 ou JSN-SR04T (versão à prova d'água) para medir o nível de enchimento, devido ao baixo custo e disponibilidade.
+**Sensores**: Ultrassônicos AJ-SR04M ou JSN-SR04T, ambos a prova d'água) para medir o nível de enchimento, devido ao baixo custo e disponibilidade. Se a lixeira eletrônica for para materiais recicláveis, prever 4 sensores para cada.
 
-**Microcontrolador**: ESP32 para ambas as unidades, devido à flexibilidade e suporte nativo a WiFi.
+**Microcontrolador**: Especificar a vesão ESP32S3 ideal para aplicações futuras com machine learningn (IA),  flexibilidade e suporte nativo a WiFi e bluethoo BLE.
 
-**Conectividade**:
-- Unidade IFSP: ESP32 utilizando WiFi nativo
-- Unidade centro: ESP32 + módulo SX1278 para comunicação LoRaWAN
+**Radio longa distância ** módulo SX1278 para comunicação LoRaWAN
 
 **Alimentação**:
-- Unidade IFSP: Bateria LiPo 3.7V com possibilidade de recarga periódica
-- Unidade centro: Sistema solar com painel fotovoltaico de 6V, bateria LiPo 3.7V e controlador de carga TP4056
+- 3 Baterias LiPo 3.7V (para compor 12V)
+- 1 painel solar 10W/18V
+- Placa Proteção Bateria Lítio 18650 3s 11,1v 10a Bms
+- Controlador Carga Painel Solar Pwm 12v / 24v 10a
+
+##### Características dos materiais
+
+Segue características de escolha para o sensor de distância, compatilidade para ESP32S3, e o custo de 4 unidades para cada lixeira, escolha AJ-SR04M
+
+| Característica              | **AJ-SR04M**                          | **JSN-SR04M-2**                        |
+|----------------------------|----------------------------------------|----------------------------------------|
+| **Tipo de Interface**      | Trigger e Echo separados               | Trigger e Echo unificados (mesmo pino) |
+| **Alimentação**            | 3.0V – 5.5V                            | 5V                                     |
+| **Compatibilidade ESP32**  | Totalmente compatível                  | Requer divisor de tensão               |
+| **Alcance de Medição**     | ~20 cm a 600 cm                        | ~30 cm a 450 cm                        |
+| **Precisão**               | Boa até 4 m                            | Menor precisão em longas distâncias    |
+| **Filtro/Estabilidade**    | Menos protegido contra ruído EMI       | Melhor filtragem e estabilidade        |
+| **Resistência à água**     | IP66 (à prova d'água)                  | IP66 (à prova d'água)                  |
+| **Facilidade de uso**      | Fácil (sem adaptações no código)       | Exige código adaptado (pino único)     |
+| **Custo**                  | Geralmente mais barato                 | Levemente mais caro                    |
+| **Aplicações típicas**     | Irrigação, controle de nível, portões  | Robótica, ESP32, medição externa       |
+
+
+Para escolha do microcontrolador, a melhor opção é ESP32S3
+
+| Característica                | **ESP32-WROOM-32**                 | **ESP32-S3**                            | **ESP32-C3**                          |
+|------------------------------|------------------------------------|-----------------------------------------|---------------------------------------|
+| **CPU**                      | Dual-core Xtensa LX6               | Dual-core Xtensa LX7                    | Single-core RISC-V                    |
+| **Frequência**               | Até 240 MHz                        | Até 240 MHz                             | Até 160 MHz                           |
+| **RAM interna**              | 520 KB                             | Até 512 KB SRAM + 384 KB ROM            | 400 KB SRAM + 384 KB ROM              |
+| **Flash**                    | Até 16 MB (4 MB comum)             | Até 16 MB                               | Até 4 MB                              |
+| **Conectividade Wi-Fi**      | 802.11 b/g/n                       | 802.11 b/g/n                            | 802.11 b/g/n                          |
+| **Bluetooth**                | BT v4.2 (Classic + BLE)            | BLE v5.0 (LE Only)                      | BLE v5.0 (LE Only)                    |
+| **USB nativo**               | ❌ Não                             | ✅ Sim (USB OTG)                        | ✅ Sim (USB CDC/JTAG)                 |
+| **Pinos GPIO disponíveis**   | ~34                                | ~45                                     | ~22                                   |
+| **Aceleração por IA**        | ❌ Não                             | ✅ Sim (TensorFlow Lite / Vector Unit) | ❌ Não                                |
+| **Segurança (cripto/hardware)** | Secure Boot, Flash Encryption     | Secure Boot v2, HMAC, AES, RSA          | Secure Boot, AES-128, SHA-2, RNG     |
+| **Consumo energético**       | Moderado                           | Médio                                   | Muito baixo (ideal para baterias)     |
+| **Arquitetura de CPU**       | Xtensa LX6                         | Xtensa LX7                              | RISC-V 32 bits                        |
+| **Ideal para**               | Projetos gerais com Wi-Fi/Bluetooth| Visão computacional, IA, USB e periféricos | Baixo consumo, dispositivos compactos |
+
+
+
 
 ### 3. Desenvolvimento de Software e Firmware
 
