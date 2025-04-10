@@ -163,68 +163,40 @@ Durante o reset, todos os registradores de E/S são ajustados para seus valores 
 
 Aula 10/04/2025
 
-# copia este codigo  
+# novo codigo
 
  ```ruby  
-//----------------------------------------------------------------------------------------- //
-//		AVR e Arduino: T�cnicas de Projeto, 2a ed. - 2012.									//	
-//----------------------------------------------------------------------------------------- //
-//=========================================================================================	//
-//      LIGANDO E DESLIGANDO UM LED QUANDO UM BOT�O � PRESSIONADO     						//
-//=========================================================================================	//
+//--------------------------------------------------------------------------- //
+//		AVR e Arduino: T�cnicas de Projeto, 2a ed. - 2012.					  //	
+//--------------------------------------------------------------------------- //
 
-//DEFINI��ES
-.equ LED   = PD2  //LED � o substituto de PD2 na programa��o      
-.equ BOTAO = PD7  //BOTAO � o substituto de PD7 na programa��o 
-.def AUX   = R16  /*R16 tem agora o nome de AUX (nem todos os 32 registradores
-					de uso geral podem ser empregados em todas as instru��es) */                             
-//----------------------------------------------------------------------------------------
-.ORG 0x000		//endere�o de in�cio de escrita do c�digo na mem�ria flash
-                //ap�s o reset o contador do programa aponta para c�
-Inicializacoes:
+.equ LED   = PB5  		//LED � o substituto de PB5 na programa��o 
 
-	LDI  AUX,0b00000100	//carrega AUX com o valor 0x04 (1 = sa�da e 0 = entrada)
-	OUT  DDRD,AUX		//configura PORTD, PD2 sa�da e demais pinos entradas
-	LDI  AUX,0b11111111	//habilita o pull-up para o bot�o e apaga o LED (pull-up em todas as entradas)
-	OUT  PORTD,AUX
+.ORG 0x000				//endere�o de in�cio de escrita do c�digo 
 
-	NOP           /*sincroniza��o dos dados do PORT. Necess�rio somente para 
-					uma leitura imediatamente ap�s uma escrita no PORT*/
-//----------------------------------------------------------------------------------------
-//LA�O PRINCIPAL
-//----------------------------------------------------------------------------------------
-Principal:
+INICIO:
+	LDI R16,0xFF		//carrega R16 com o valor 0xFF
+	OUT DDRB,R16		//configura todos os pinos do PORTB como sa�da
 
-	SBIC  PIND,BOTAO   	//verifica se o bot�o foi pressionado, sen�o
-	RJMP  Principal		//volta e fica preso no la�o Principal	 
+PRINCIPAL:
+     SBI PORTB, LED		//coloca o pino PB5 em 5V
+	 RCALL ATRASO		//chama a sub-rotina de atraso
+	 CBI PORTB, LED 	//coloca o pino PB5 em 0V
+	 RCALL ATRASO		//chama a sub-rotina de atraso
+	 RJMP PRINCIPAL 	//volta para PRINCIPAL
 
-Esp_Soltar:	
 
-	SBIS  PIND,BOTAO  	//se o bot�o n�o foi solto, espera soltar
-	RJMP  Esp_Soltar
-	RCALL Atraso      	//ap�s o bot�o ser solto gasta um tempo para eliminar o ru�do proveniente do mesmo
-	SBIC  PORTD,LED    	//se o LED estiver apagado, liga e vice-versa
-	RJMP  Liga
-	SBI   PORTD,LED   	//apaga o LED
-	RJMP  Principal   	//volta ler bot�o
-
-Liga:
-
-	CBI   PORTD,LED   	//liga LED
-	RJMP  Principal   	//volta ler bot�o
-
-//----------------------------------------------------------------------------------------
-//SUB-ROTINA DE ATRASO - Aprox. 12 ms a 16 MHz
-//----------------------------------------------------------------------------------------
-Atraso:
-
-	DEC  R3			//decrementa R3, come�a com 0x00
-	BRNE Atraso 	//enquanto R3 > 0 fica decrementando R3
-	DEC  R2
-	BRNE Atraso		//enquanto R2 > 0 volta decrementar R3
-	RET
-//========================================================================================
-
+ATRASO:					//atraso de aprox. 200ms
+	LDI R19,16	
+ volta:		
+	DEC  R17			//decrementa R17, come�a com 0x00
+	BRNE volta 			//enquanto R17 > 0 fica decrementando R17
+	DEC  R18			//decrementa R18, come�a com 0x00
+	BRNE volta			//enquanto R18 > 0 volta decrementar R18
+	DEC  R19			//decrementa R19
+	BRNE volta			//enquanto R19 > 0 vai para volta
+	RET	
+//---------------------------------------------------------------------------
  ```
 
 Programa Pisca Led
