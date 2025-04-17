@@ -2,22 +2,25 @@
 
 2025
 
-# Prova P1 
+# Prova P1  24/04/2025 
 
-24/04/2025 
+## Trabalho 1, entrega no dia da prova. Disponivel em SUAP
 
- Video Aula Arquitetura Von Neumman 
+## Videos tutoriais
+
+### Video Aula Arquitetura Von Neumman 
  
 https://www.youtube.com/watch?v=uMod3r2ZOJU&list=PLO-6CbqPG8oUPetj7I6bLNCjS7Rk9Supv
 
-Video Aula: Arquitetura AVR
+### Video Aula: Arquitetura AVR
 
 https://www.youtube.com/watch?v=KVz5ry-89n8&list=PLO-6CbqPG8oUPetj7I6bLNCjS7Rk9Supv
 
-Canal Professor Rodrigo Rech
+### Canal Professor Rodrigo Rech
 
 Curso de AVR Básico #01 - Introdução
 https://www.youtube.com/watch?v=wiM6_4IC_4o&list=PLMdNWywlSE5QPsEeT_cXisUT366NS3U8R
+
 
 1° - Bimestre
 <B><h1>- <a href=https://github.com/mchavesferreira/mcr/blob/main/mcr.md> Aulas Atmega328P </A></h1>
