@@ -4,7 +4,9 @@
 
 # Prova P1  24/04/2025 
 
-## Trabalho 1, entrega no dia da prova. Disponivel em SUAP
+## Trabalho 1, disponivel em SUAP, entreguar fisicamente no dia da prova.
+
+<a href=trabalho1.pdf> Baixe o trabalho aqui</a>
 
 ## Videos tutoriais
 
