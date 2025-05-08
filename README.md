@@ -10,6 +10,8 @@
 
 ## Videos tutoriais
 
+Playlist:  https://www.youtube.com/watch?v=uMod3r2ZOJU&list=PLO-6CbqPG8oUPetj7I6bLNCjS7Rk9Supv
+
 ### Video Aula Arquitetura Von Neumman 
  
 https://www.youtube.com/watch?v=uMod3r2ZOJU&list=PLO-6CbqPG8oUPetj7I6bLNCjS7Rk9Supv
