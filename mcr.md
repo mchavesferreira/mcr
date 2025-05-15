@@ -27,10 +27,12 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 - 10/04 -  Trabalho em Grupo
 - 17/04 -  Avaliação Escrita
 - 
-### 2° Bimestre
-- 08/05 - Introdução ao ESP32
-- 15/05 - Programação Alto Nível, C
-- 22/05 -
+## 2° Bimestre
+- 08/05 - Introdução ao C
+- ## 15/05 - Programação Alto Nível, C, Arduino
+                                        (TAREFA: criar conta e um semaforo no Wokwi - 20/03 - #Programa-Pisca-Led
+
+- 22/05 - Prática C com Arduino UNO (semaforo, ...)
 
 -
 -   
