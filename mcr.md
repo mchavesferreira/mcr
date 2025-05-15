@@ -29,8 +29,7 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 - 
 ## 2° Bimestre
 - 08/05 - Introdução ao C
-- ## 15/05 - Programação Alto Nível, C, Arduino
-                                        (TAREFA: criar conta e um semaforo no Wokwi - 20/03 - #Programa-Pisca-Led
+- ### 15/05 - Programação Alto Nível, C, Arduin (TAREFA: criar conta e um semaforo no Wokwi - 20/03 - #Programa-Pisca-Led
 
 - 22/05 - Prática C com Arduino UNO (semaforo, ...)
 
