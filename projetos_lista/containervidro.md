@@ -1,4 +1,3 @@
-Perfeito. Vou realizar uma pesquisa aprofundada sobre iniciativas semelhantes, políticas públicas no Brasil (com foco no estado de São Paulo), ações de incentivo à reciclagem de vidro, e justificativas técnicas e sociais para apoiar o projeto piloto do IFSP Catanduva. Também verificarei a originalidade da proposta tecnológica e potenciais demandas simples que podem ser incluídas. Em breve retorno com um relatório técnico com linguagem acessível e um resumo sucinto conforme solicitado.
 
 
 # Relatório de Apoio ao Projeto Piloto de Container Inteligente para Reciclagem de Vidro – IFSP Catanduva
