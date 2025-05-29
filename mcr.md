@@ -31,9 +31,9 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 - 08/05 - Introdução ao C
 - 15/05 - Programação Alto Nível, C, Arduino, TAREFA: criar conta e um semaforo no Wokwi, modificando   [Programa Pisca Led Arduino](#Programa-Pisca-Led-Arduino)
 
-- 22/05 - Prática C com Arduino UNO (semaforo, ...)
+- 22/05 - Primira Prática C com Arduino UNO (semaforo, ...)
 
--
+- 29/05 - Leitura com botão e configurando entrada pull-up. Uso do Case-switch
 -   
 - 
 
@@ -160,11 +160,12 @@ Para maximizar o desempenho e o paralelismo, o AVR usa uma arquitetura harvard �
 
 Durante o reset, todos os registradores de E/S são ajustados para seus valores iniciais, e o programa inicia a execução a partir do vetor de reset. Para o Atmel® ATmega328P, a instrução colocada no vetor de reset deve ser uma instrução RJMP – salto relativo – para a rotina de manipulação de reset. Se o programa nunca habilita uma fonte de interrupção, os vetores de interrupção não são usados e o código de programa regular pode ocupar nesses locais. Este também é o caso se o vetor de reset estiver na seção de aplicação enquanto os vetores de interrupção estiverem na seção de inicialização. As portas de E/S do AVR® são imediatamente redefinidas para seu estado inicial quando uma fonte de redefinição fica ativa. Isso não requer que nenhuma fonte de relógio esteja em execução. Após todas as fontes de reset ficarem inativas, um contador de atraso é invocado, estendendo o reset interno. Isso permite que a potência atinja um nível estável antes do início da operação normal. O tempo limite do contador de atraso é definido pelo usuário através dos fusíveis SUT e CKSEL. 
 
+# Programas em ASSEMBLY
+
 ## Programa Pisca Led
 
 Aula 10/04/2025
 
-# novo codigo
 
  ```ruby  
 //--------------------------------------------------------------------------- //
@@ -381,7 +382,7 @@ Simulação:  https://wokwi.com/projects/394247093827346433
 
 
 
-## Programação em Alto Nível, C
+# Programação em Alto Nível, C
 
 Este primeiro exemplo de programa com um pisca Led
 
@@ -405,7 +406,7 @@ return 0;
 ```
 <br><a href=https://wokwi.com/projects/363128065545249793>Pisca Led em C</a>
 
-## Utilizando Macros
+## Pisca LED  Utilizando Macros em C
 
 Conhecendo o recurso de Macros do compilador para simplificar o código
 
@@ -440,7 +441,7 @@ int main( )
 ```
 
 
-## Lendo Botão
+## Lendo Botão com macros
 
 ```java
 
@@ -489,10 +490,45 @@ int main()
 }
 ```
 
-## Referências Arduino
+# Programação com IDE Arduino
+
+## Referências
 <BR>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem Wiring</a> <BR>
 <BR>
-### Pisca Led-Arduino
+
+## Referências Arduino
+
+<center>  <a href=https://www.arduino.cc/reference/pt/ target=_blank>Arduino Referência de Linguagem C</a> </center><BR>
+
+## GPIO Digital
+
+### Função digitalWrite()
+
+Definição:
+A função digitalWrite() é usada para escrever um valor HIGH (alto) ou LOW (baixo) em um pino digital configurado como saída. Isso é fundamental para controlar dispositivos externos como LEDs, relés, e outros componentes digitais.
+
+### Função digitalRead()
+
+Definição:
+A função digitalRead() é usada para ler o estado de um pino digital configurado como entrada. Isso permite detectar se um pino está recebendo um sinal HIGH ou LOW, que é útil para ler o estado de botões, sensores digitais, e outros dispositivos de entrada.
+
+### pinMode()
+
+A função pinMode() é essencial no desenvolvimento de projetos com microcontroladores, como o ESP32, ao usar a IDE do Arduino. Ela é usada para configurar um pino específico como entrada (INPUT), saída (OUTPUT), ou outros modos especiais como entrada com pull-up interno (INPUT_PULLUP). Essa função determina como o pino especificado se comportará, seja lendo sinais de sensores, botões e outros dispositivos, ou controlando LEDs, relés, e outros atuadores.
+
+#### Configurando um pino como saída:
+
+ ```ruby  
+#define LED_PIN 2  // Define o número do pino para um LED
+
+void setup() {
+  pinMode(LED_PIN, OUTPUT);  // Configura o pino do LED como saída
+}
+
+ ```
+
+
+### Pisca Led Arduino
 
 
 ```java
@@ -514,24 +550,42 @@ void loop() {
 Clique para abrir o exemplo de pisca led em Arduino no simulador wokwi
 
 
-
 <BR><a href=https://wokwi.com/projects/344891652101374548>Pisca led em Arduino</a>	
 
 <BR><BR>	
 
-#### TAREFA: 
+#### 22/05 TAREFA: 
 Crie uma conta no Wokwi e altere este exemplo para um semaforo. Salve o exemplo para a próxima aula.
 
+# Aula 29/05
 
-## GPIO Entradas e saídas
-	
-<BR>Utilizando  pinos como entrada
+#### Configurando um pino como entrada com pull-up:
+
+Utilizando a função digitalRead();
+
+ ```ruby  
+#define BUTTON_PIN 0  // Define o número do pino para um botão
+
+void setup() {
+  pinMode(BUTTON_PIN, INPUT_PULLUP);  // Configura o pino do botão como entrada com pull-up
+}
+
+void loop() {
+  int buttonState = digitalRead(BUTTON_PIN);  // Lê o estado do botão
+  if (buttonState == LOW) {  // Verifica se o botão está sendo pressionado
+    // Ação a ser realizada quando o botão está pressionado
+  }
+}
+
+ ```
+
+
 <BR>Atividade 1: Edite o circuito anterior "Pisca Led", acrescentando ao circuito um botão "push button" entre o pino 7 e GND<BR>
 <BR>Copie o código a seguir, modificando-o para este exemplo.
 	
 ```java
-#define LED 2
-#define botao 14
+#define LED 13
+#define botao 7
 
 int tempo=100;
 
@@ -555,8 +609,11 @@ void loop() {
 	para que estes dois leds permaneçam desligados quando o botão não está pressionado, 
 	e alternem entre si, quando o botão está pressionado.<BR>
 <BR>
-	<BR>
-Materiais:
+
+<BR>
+
+# Refeências
+
 <BR>https://edisciplinas.usp.br/pluginfile.php/3252633/mod_resource/content/1/Guia_Arduino_Iniciante_Multilogica_Shop.pdf
 
 <BR>https://www.if.ufrgs.br/public/tapf/rodrigues_v25_n4.pdf
