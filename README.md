@@ -26,10 +26,9 @@ Curso de AVR Básico #01 - Introdução
 https://www.youtube.com/watch?v=wiM6_4IC_4o&list=PLMdNWywlSE5QPsEeT_cXisUT366NS3U8R
 
 
-1° - Bimestre
+1° e  2°- Bimestre  
 <B><h1>- <a href=https://github.com/mchavesferreira/mcr/blob/main/mcr.md> Aulas Atmega328P </A></h1>
-
-2°, 3° e 4° Bimestre
+ 3° e 4° Bimestre
 <B><h1>- <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32> Aulas ESP32 </A></h1>
 
 - 
