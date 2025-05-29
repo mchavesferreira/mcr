@@ -500,6 +500,67 @@ int main()
 
 <center>  <a href=https://www.arduino.cc/reference/pt/ target=_blank>Arduino Referência de Linguagem C</a> </center><BR>
 
+## Funçoes principais
+
+<details><summary>Conheça as principais funções em wiring disponíveis na IDE Arduino (clique)</summary>
+	
+<BR><B>Funções</b>
+<bR>Para controlar a placa Arduino e realizar computações.
+<BR><b>Entradas e Saídas Digitais</b>
+<BR>digitalRead()
+<BR>digitalWrite()
+<BR>pinMode() 
+<BR>
+  <BR><B>Entradas e Saídas Analógicas</b>
+<BR>analogRead()
+<BR>analogReference()
+<BR>analogWrite() 
+<BR>
+<BR><B>Funções Temporizadoras</b>
+<BR>delay()
+<BR>delayMicroseconds()
+<BR>micros()
+<BR>millis()
+<BR>
+  
+<BR><B>Comunicação</b>
+<BR>Serial
+<BR>Stream 
+<BR>
+<BR><B>Variáveis</b>
+<BR>
+<BR>Tipos de dados e constantes da linguagem Arduino.
+<BR><B>Constantes</b>
+<BR>HIGH | LOW
+<BR>INPUT | OUTPUT | INPUT_PULLUP
+<BR>LED_BUILTIN
+<BR>true | false
+<BR>Constantes de Ponto Flutuante
+<BR>Constantes Inteiras
+ <BR> 
+<BR><B>Tipos de Dados</b>
+<BR>bool
+<BR>boolean
+<BR>byte
+<BR>char
+<BR>double
+<BR>float
+<BR>int
+<BR>long
+<BR>short
+<BR>size_t
+<BR>string
+<BR>String()
+<BR>unsigned char
+<BR>unsigned int
+<BR>unsigned long
+<BR>vetor
+<BR>void
+<BR>word 
+<BR><BR> 
+
+</details>
+
 ## GPIO Digital
 
 ### Função digitalWrite()
@@ -580,7 +641,7 @@ void loop() {
  ```
 
 
-<BR>Atividade 1: Edite o circuito anterior "Pisca Led", acrescentando ao circuito um botão "push button" entre o pino 7 e GND<BR>
+<BR><B>Atividade 1</b>: Monte o circuito "Pisca Led", agora acrescentando ao circuito um botão "push button" entre o pino 7 e GND<BR>
 <BR>Copie o código a seguir, modificando-o para este exemplo.
 	
 ```java
@@ -605,10 +666,18 @@ void loop() {
 }
 
 ```
-<BR> Atividade 2: Acrescente mais dois leds. Modifique o programa anterior, 
+#### Circuito de simulação para o pisca led Botão https://wokwi.com/projects/432285716099971073
+
+<BR><b> Atividade 2:</b> Acrescente mais dois leds. Modifique o programa anterior, 
 	para que estes dois leds permaneçam desligados quando o botão não está pressionado, 
 	e alternem entre si, quando o botão está pressionado.<BR>
 <BR>
+
+# Semaforo com ESP32
+
+![semaforo_esp32](https://github.com/user-attachments/assets/36976ead-06ea-4dfa-a741-c1806ce6f3d1)
+
+Acesse este exemplo agora implementado com ESP32 https://wokwi.com/projects/401870196210377729
 
 <BR>
 
