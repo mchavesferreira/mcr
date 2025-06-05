@@ -674,6 +674,171 @@ void loop() {
 	e alternem entre si, quando o botão está pressionado.<BR>
 <BR>
 
+### Programa para debounce de botão
+
+```java
+int main()
+{
+
+						entradas com pull-ups habilitados)*/
+	while(1)								//laco infinito
+	{
+                //////// pisca led
+                contador++;
+                _delay_ms(1);		
+                if(contador>500) {  contador=0; cpl_bit(PORTD,LEDPISCA);   }
+                //////// pisca led
+
+		if(!tst_bit(PIND,BOTAO))			//se o botao for pressionado executa o if
+		{					
+			while(!tst_bit(PIND,BOTAO));	//fica preso ate soltar o botao
+			_delay_ms(10);					//atraso de 10 ms para eliminar o ruido do botao
+			if(tst_bit(PORTD,LED))			//se o LED estiver apagado, liga o LED
+				clr_bit(PORTD,LED);			
+			else							//se nao apaga o LED
+				set_bit(PORTD,LED);	
+			//o comando cpl_bit(PORTD,LED) pode substituir este laco if-else	
+		}//if do botao pressionado
+	}//laco infinito
+}
+```
+
+## Maquina de estados
+
+
+### Maquina de estados 
+
+![image](https://github.com/mchavesferreira/smc/assets/63993080/3765f170-1abe-4377-89a2-41d980c8b771)
+
+### Switch-case
+
+A estrutura switch-case é uma técnica eficaz para implementar máquinas de estados em programação de microcontroladores, facilitando o controle de fluxo do programa com base nos valores de uma variável. Aqui está um exemplo simplificado utilizando em uma função:
+```java
+// Exemplo de máquina de estados usando switch-case
+void stateMachineExample(int state) {
+    switch(state) {
+        case 1:
+            // Ação para o estado 1
+            break;
+        case 2:
+            // Ação para o estado 2
+            break;
+        // Adicione mais estados conforme necessário
+        default:
+            // Ação padrão se nenhum estado anterior corresponder
+            break;
+    }
+}
+```
+Este exemplo demonstra a base de uma máquina de estados, onde state determina o fluxo de execução. Cada case representa um estado único, permitindo ações específicas para cada um, e o default oferece uma ação padrão para estados não especificados. Esta abordagem organiza logicamente o código, tornando-o mais legível e fácil de manter.
+
+Compreendendo a mudança de fluxo por meio da chamada de switch-case em um programa principal:
+
+https://wokwi.com/projects/358828863218714625
+
+
+### Código completo para maquina de estados
+
+```java
+
+//=====================================================================================	//
+//		Marquina de estados  e controle de fluxos   							//
+
+//=====================================================================================	//
+
+#define F_CPU 16000000UL	//define a frequencia do microcontrolador - 16MHz
+
+#include <avr/io.h> 	    //defini��es do componente especificado
+#include <util/delay.h>		//biblioteca para o uso das rotinas de _delay_ms e _delay_us()
+#include <avr/pgmspace.h>   //para o uso do PROGMEM, grava��o de dados na mem�ria flash
+
+//Definicoeses de macros para o trabalho com bits
+
+#define	set_bit(y,bit)	(y|=(1<<bit))	//coloca em 1 o bit x da vari�vel Y
+#define	clr_bit(y,bit)	(y&=~(1<<bit))	//coloca em 0 o bit x da vari�vel Y
+#define cpl_bit(y,bit) 	(y^=(1<<bit))	//troca o estado l�gico do bit x da vari�vel Y
+#define tst_bit(y,bit) 	(y&(1<<bit))	//retorna 0 ou 1 conforme leitura do bit
+
+
+// variaveis
+unsigned int tempo=0;
+unsigned char  estado=0;	//declara variavel global
+
+///  funcoes da maquina de lavar
+
+//descricao dos pinos I/O
+// ENTRADAS
+#define botao1 PC0 // botao mais
+#define botao2 PC1 // botao menos
+#define botao3 PC2 // botao ENTER / STOP processo
+
+
+//SAIDAS
+#define LED1 PB4 // motor agitacao
+#define LED2 PB3 // valvula de entrada agua
+#define LED3 PB2 // bomba saida tanque
+
+
+
+
+void etapa0(){
+	       set_bit(PORTB,2);
+	     	if(!tst_bit(PINC,0)) {  clr_bit(PORTB,2);  estado=1; tempo=2000; } //if botao+
+		 	 
+}
+
+
+void etapa1(){
+	      set_bit(PORTB,3);
+
+		 	  if(!tempo) { clr_bit(PORTB,3);   estado=2; tempo=2000; }   //muda de estado 
+			 _delay_ms(1);  // atraso
+			 tempo--;    // decrementa tempo
+}
+
+void etapa2(){
+
+        set_bit(PORTB,4);
+		 	  if(!tempo) {  clr_bit(PORTB,4);   estado=0; tempo=2000; }   //muda de estado 
+			  _delay_ms(1);  // atraso
+			   tempo--;    // decrementa tempo
+}
+
+//--------------------------------------------------------------------------------------
+int main()
+{	
+ 	//declaracao da vari�vel para armazenagem dos digitos
+
+	DDRB = 0b00111111;			//PORT B saida
+	PORTB= 0;		        	//inicia desligado
+	DDRC = 0b00000000;			//PORT C entrada
+  PORTC= 0b11111111;          //PULL UP portC
+	DDRD = 0xFF;				//PORTD como sa�da (display)
+	PORTD= 0xFF;				//desliga o display
+	UCSR0B = 0x00;				//PD0 e PD1 como I/O gen�rico, para uso no Arduino
+
+
+	
+	tempo=1000;   // varial de contagem de tempo
+	while(1) 					//laco infinito
+	{
+		
+		switch(estado)
+		{  //estado inicial
+		    case 0:  etapa0();        break; 
+				case 1:  etapa1();        break; 
+				case 2:  etapa2();        break; 
+
+		}
+
+		
+	}// fim do while
+	
+} // fim do main
+//======================================================================================
+
+```
+
 # Semaforo com ESP32
 
 ![semaforo_esp32](https://github.com/user-attachments/assets/36976ead-06ea-4dfa-a741-c1806ce6f3d1)
@@ -682,7 +847,7 @@ Acesse este exemplo agora implementado com ESP32 https://wokwi.com/projects/4018
 
 <BR>
 
-# Refeências
+# Referências
 
 <BR>https://edisciplinas.usp.br/pluginfile.php/3252633/mod_resource/content/1/Guia_Arduino_Iniciante_Multilogica_Shop.pdf
 
