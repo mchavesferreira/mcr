@@ -1,6 +1,9 @@
 
 
-# Relatório de Apoio ao Projeto Piloto de Container Inteligente para Reciclagem de Vidro – IFSP Catanduva
+# Projeto Piloto de Container Inteligente para Reciclagem de Vidro – IFSP Catanduva/SAEC
+
+<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/projetos_lista/ChatGPT%20Image%203%20de%20jun.%20de%202025%2C%2012_20_06.png>
+
 
 ## Resumo
 
