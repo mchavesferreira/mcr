@@ -4,7 +4,7 @@
 
 <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/projetos_lista/ChatGPT%20Image%203%20de%20jun.%20de%202025%2C%2012_20_06.png width=400 height=400>
 
-
+## Coordenação: Prof. Marcos Aparecido Chaves Ferreira
 ## Resumo
 
 O presente relatório fornece embasamento técnico e social para um projeto piloto desenvolvido por alunos e orientador do IFSP Catanduva, que visa converter um container de reciclagem geral em um **container exclusivo para recicláveis de vidro** com tecnologia embarcada. A proposta envolve pintura diferenciada (contêiner amarelo, conforme sinalização adotada), nova sinalização visual educativa, instalação de sensores (nível de enchimento, vibração) e telemetria (rastreamento por GPS), integrados a um portal web de monitoramento (*Smart Campus*). Neste documento, são levantadas **ações semelhantes realizadas no Brasil**, especialmente no estado de São Paulo, a fim de justificar a viabilidade técnica e os benefícios sociais do projeto. Discutem-se os **benefícios da parceria** com a companhia municipal (SAEC Catanduva) na retomada de Pontos de Entrega Voluntária (PEVs) de vidro, os **impactos positivos da reciclagem de vidro** e da conscientização ambiental da população, e a **importância dos sensores e tecnologias embarcadas** para prevenir vandalismo e melhorar a gestão do descarte. Adicionalmente, verifica-se a originalidade da proposta frente a iniciativas existentes e sugerem-se aprimoramentos simples inspirados em casos de sucesso. Por fim, são citadas **políticas públicas e diretrizes ambientais brasileiras e do estado de São Paulo** que respaldam a iniciativa, alinhando o projeto às normas e objetivos vigentes.
@@ -59,7 +59,7 @@ A inovação central do projeto piloto é a incorporação de **sensores e siste
 
 <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/projetos_lista/ChatGPT%20Image%202%20de%20jun.%20de%202025%2C%2011_55_01.png width=300 height=300>
 <P>
-## Mapa online:  http://smartcampus.ctd.ifsp.edu.br/pev
+<B> Mapa online: </B><a href=http://smartcampus.ctd.ifsp.edu.br/pev targe=_blank>http://smartcampus.ctd.ifsp.edu.br/pev</a>
 
 Todos esses componentes estarão conectados a um **sistema central (portal web)** desenvolvido pelos alunos e orientador, onde os dados serão armazenados, processados e exibidos de forma amigável. Por meio desse portal, a equipe da SAEC ou do projeto poderá **visualizar em tempo real** o nível de cada contêiner, receber alertas (e-mail, SMS, etc.) de evento de vandalismo, e acompanhar no mapa a posição dos equipamentos. Esse tipo de plataforma de gerenciamento em nuvem é apontado na literatura de IoT em resíduos como peça chave para integrar os dispositivos e **gerar inteligência operacional** a partir dos dados coletados. Ou seja, não se trata apenas de instalar sensores isolados, mas de **criar um sistema completo** onde o contêiner torna-se um “nó” de uma rede inteligente de monitoramento de resíduos.
 
