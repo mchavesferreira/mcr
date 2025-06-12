@@ -34,9 +34,10 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 
 - 22/05 - Primira Prática C com Arduino UNO (semaforo, ...)
 
-- 29/05 - Leitura com botão e configurando entrada pull-up. Uso do Case-switch
--   
-- 
+- 29/05 - Leitura com botão e configurando entrada pull-up.
+- 05/6 - Uso do Case-switch UNO
+- 12/6 - Aplicando maquina de estados ESP32
+- Trabalho 2 - Montagem ESP32
 
 
 
@@ -854,6 +855,7 @@ https://wokwi.com/projects/433518731827009537
 
 <details><summary>Código máquina de estados com ESP32</summary>
 	
+```java	
 #define LED1 2
 #define LED2 4
 #define LED3 5
@@ -933,7 +935,7 @@ switch (estado) {
  //
      
 }
-
+```
 </details>
 
 # Trabalho 2
