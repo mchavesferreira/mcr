@@ -838,6 +838,7 @@ int main()
 //======================================================================================
 
 ```
+# Aula 12/06
 
 # Semaforo com ESP32
 
@@ -846,6 +847,98 @@ int main()
 Acesse este exemplo agora implementado com ESP32 https://wokwi.com/projects/401870196210377729
 
 <BR>
+
+## Maquina de estados com ESP32
+
+https://wokwi.com/projects/433518731827009537
+
+<details><summary>Código máquina de estados com ESP32</summary>
+	
+#define LED1 2
+#define LED2 4
+#define LED3 5
+#define botao 14
+
+int tempo=1000;
+int estado=0;
+
+void setup() {
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
+  pinMode(botao, INPUT_PULLUP); // definir botao de entrada
+  Serial.begin(115200);
+  Serial.println("Bem Vindo Jhon");
+    delay(3000);
+}
+/*
+// utilizando funcoes para os cases
+void etapa0(){
+	       digitalWrite(LED1, HIGH);
+	     	if(!digitalRead(botao)) 
+           {  digitalWrite(LED1, LOW); 
+               estado=1; 
+               tempo=2000; } //if botao+		 	 
+}
+
+void etapa1(){
+	     digitalWrite(LED1, LOW);
+      digitalWrite(LED2, HIGH);
+      delay(1);  // atraso
+			 tempo--;    // decrementa tempo
+       if(!tempo) {   tempo=2000;
+                      estado=2;  }
+}
+*/
+
+void loop() {
+
+switch (estado) {
+  case 0:
+      Serial.println("Estado=0");
+      digitalWrite(LED1, HIGH);
+      if(!digitalRead(botao)) {   // verifica se botao pressionado
+           tempo=2000;  // carrega variavel tempo
+           estado=1; }   // muda de estado
+    break;
+  case 1:    
+     digitalWrite(LED1, LOW);
+      digitalWrite(LED2, HIGH);
+      delay(1);  // atraso
+			 tempo--;    // decrementa variavel tempo
+       if(!tempo) {  // compara se tempo=0 
+                      tempo=2000; // carrega variavel tempo
+                      estado=2;  }  // muda de estado
+    break;
+  case 2:
+    Serial.println("Estado=2");
+     digitalWrite(LED2, LOW);
+      digitalWrite(LED3, HIGH);
+      delay(1);  // atraso
+			 tempo--;    // decrementa tempo
+       if(!tempo) {   tempo=2000;
+                      estado=3;  }
+    break;  
+  case 3:
+    Serial.println("Estado=3");
+     digitalWrite(LED3, LOW);
+      delay(1);  // atraso
+			 tempo--;    // decrementa tempo
+       if(!tempo) {   tempo=2000;
+                      estado=0;  }
+    break;  
+ 
+}  // fim do switch
+
+ //
+     
+}
+
+</details>
+
+# Trabalho 2
+## Monte o projeto de reservatório com ESP32 utilizando maquina de estados
+
 
 # Referências
 
