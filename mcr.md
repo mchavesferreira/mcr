@@ -938,6 +938,14 @@ switch (estado) {
 ```
 </details>
 
+### Atividade
+
+#### Exemplo de um programa para controle de reservatório com ESP32
+
+Defina pinos de entrada e saída. As entradas com push button aterradas e pull up ativos. O Programa aguarda “Start” ser pressionado, que liga a Valvula 1 até que sensor cheio seja acionado. O misturador é acionado por2 segundos. Esvazia-se o tanque até o sensor vazio ser acionado, retornando ao estado inicial.. 
+
+![image](https://github.com/mchavesferreira/mcr/assets/63993080/fee83e1b-24d9-4df6-bfa0-f8256ef35413)
+
 # Trabalho 2
 ## Monte o projeto de reservatório com ESP32 utilizando maquina de estados
 
