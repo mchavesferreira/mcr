@@ -952,6 +952,35 @@ Defina pinos de entrada e saída. As entradas com push button aterradas e pull u
 <a href=provacodigoparte2.pdf>Avaliação P1</a>
 
 
+# Exercício: Controle Sequencial com PORTD
+
+Utilize o código exemplo para realizar o projeto 2 utilizando a programação em máquina de estados em um Esp32  e Arduino IDE.
+
+## Configuração Inicial
+
+* Inicie definindo as entradas com **pull-up interno ativado**.
+* Configure os pinos correspondentes às **saídas**.
+* Utilize os GPIO do ESP32  para especificar todos os pinos de **entrada e saída (I/O)**, conforme a tabela apresentada a seguir:
+
+|     |      ||| |     |    |    |
+| ------ | ---------- | --- | --- | --- | -------- | ------- | ----- |
+| Vsaida | Misturador | V3  | V2  | V1  | S. Vazio | S. Max. | START |
+
+## Descrição da Sequência de Operação
+
+* Ao pressionar o botão **START**, a seguinte sequência ocorrerá:
+
+1. A **válvula de saída** será acionada para manter o recipiente fechado, enquanto a **válvula V1** (saída) será aberta por **5 segundos**. *
+2. Em seguida, a **válvula V2** será ligada por **3 segundos**.
+3. Logo após, o **misturador** será ativado por **2 segundos**, com o objetivo de **homogeneizar a mistura**. 
+4. Após esse período, a **válvula V3** será aberta e permanecerá acionada até que o **sensor de nível máximo** detecte a presença de líquido.
+5. Quando o nível máximo for atingido, o **misturador** será novamente ativado por **2 segundos**. 
+6. Por fim, a **válvula de saída** será desligada.
+7. O sistema continuará monitorando até que o **sensor de nível mínimo (vazio)** seja acionado, retornando então ao estado inicial. 
+
+**OBS:** Válvulas V1, V2 e V3 são NF(normalmente fechadas); Válvula de saída NA(normalmente aberta);
+
+<img src=imagens/bimestre2projeto2.png><BR><BR>
 
 
 # Referências
