@@ -947,7 +947,11 @@ Defina pinos de entrada e saída. As entradas com push button aterradas e pull u
 ![image](https://github.com/mchavesferreira/mcr/assets/63993080/fee83e1b-24d9-4df6-bfa0-f8256ef35413)
 
 # Trabalho 2
-## Monte o projeto de reservatório com ESP32 utilizando maquina de estados
+## Monte o projeto de reservatório com ESP32 utilizando maquina de estados para o mesmo projeto aplicado na prova do bimestre anterior
+
+<a href=provacodigoparte2.pdf>Avaliação P1</a>
+
+
 
 
 # Referências
