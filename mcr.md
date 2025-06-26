@@ -952,7 +952,7 @@ Defina pinos de entrada e saída. As entradas com push button aterradas e pull u
 <a href=provacodigoparte2.pdf>Avaliação P1</a>
 
 
-# Exercício: Controle Sequencial com PORTD
+# Avaliação P1
 
 Utilize o código exemplo para realizar o projeto 2 utilizando a programação em máquina de estados em um Esp32  e Arduino IDE.
 
