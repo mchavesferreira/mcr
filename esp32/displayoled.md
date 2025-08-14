@@ -235,14 +235,14 @@ Para uma implementação detalhada, consulte a documentação específica do mic
       }
     }
     //---
-    seconds++;
+    segundos++;
     delay(1000);
     //---
 ```
-## Exemplo de relogio com milis()
+## Exemplo de relogio com millis()
 ```cpp
     //---
-  if ( milis()-tempoanterior>= 1000)
+  if ( millis()-tempoanterior>= 1000)
         {
         tempoanterior=millis();
         segundos();
