@@ -147,6 +147,41 @@ void loop() {
 </p>
 </details> 
 
+## Exemplo com relogio exibindo no display
+
+Utilize o exemplo acima, substituindo "varivel" por "segundos". Exiba os três campos de um relogio e a regra de incremento de um relogio para HH:mm:ss
+
+Exemplo de regra.
+
+ ```cpp
+   
+    if (segundos>= 60) {
+      segundos = 0;
+      minutos++;
+      if (minutos >= 60) {
+        minutos = 0;
+        horas++;
+        if (horas >= 24) {
+          horas = 0;
+        }
+      }
+    }
+    //---
+    segundos++;
+    delay(1000);
+    //---
+```
+## Exemplo de relogio com millis()
+```cpp
+    //---
+  if ( millis()-tempoanterior>= 1000)
+        {
+        tempoanterior=millis();
+        segundos();
+        }
+     //---  
+```
+
 
 ## I2C
 
@@ -219,36 +254,7 @@ Uma aplicação comum do I2C é a leitura de sensores. Por exemplo, um sensor de
 Para uma implementação detalhada, consulte a documentação específica do microcontrolador e os datasheets dos dispositivos I2C utilizados. O livro "AVR e Arduino Técnicas de Projeto" contém um capítulo dedicado ao TWI (I2C) que detalha a implementação do protocolo em microcontroladores AVR, incluindo exemplos práticos e código fonte.
 
 
-## Exempplo de um relogio
 
- ```cpp
-   
-    if (segundos>= 60) {
-      segundos = 0;
-      minutos++;
-      if (minutos >= 60) {
-        minutos = 0;
-        horas++;
-        if (horas >= 24) {
-          horas = 0;
-        }
-      }
-    }
-    //---
-    segundos++;
-    delay(1000);
-    //---
-```
-## Exemplo de relogio com millis()
-```cpp
-    //---
-  if ( millis()-tempoanterior>= 1000)
-        {
-        tempoanterior=millis();
-        segundos();
-        }
-     //---  
-```
 Referências:
 
 https://embetronicx.com/tutorials/linux/device-drivers/i2c-linux-device-driver-using-raspberry-pi/#SSD1306_OLED
