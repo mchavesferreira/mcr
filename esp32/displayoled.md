@@ -165,6 +165,16 @@ segundos++;
 delay(1000);
 ```
 
+```cpp
+//defina variavel
+unsigned long tempoAnterior;
+
+  if ((millis()- tempoAnterior) >= 1000) 
+     {
+     tempoAnterior = millis();
+     segundos++;
+     }
+  ```  
 Por este código
 
 <img width="423" height="205" alt="image" src="https://github.com/user-attachments/assets/e26953c1-890a-45ab-bf49-66fac6fa1432" />
