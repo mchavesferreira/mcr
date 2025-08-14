@@ -158,13 +158,15 @@ Exemplo de regra.
 
 ## Exemplo de relogio com millis()
 ```cpp
-    //---
-  if ( millis()-tempoanterior>= 1000)
+    //--- troque no lugar de " segundos++;  delay(1000);  "
+ unsigned long tempoAnterior;
+
+  if ( millis()-tempoAnterior>= 1000)
         {
-        tempoanterior=millis();
+        tempoAnterior=millis();
         segundos();
         }
-     //---  
+   
 ```
 
 
