@@ -153,24 +153,9 @@ Utilize o exemplo acima, substituindo "varivel" por "segundos". Exiba os três c
 
 Exemplo de regra.
 
- ```cpp
-   
-    if (segundos>= 60) {
-      segundos = 0;
-      minutos++;
-      if (minutos >= 60) {
-        minutos = 0;
-        horas++;
-        if (horas >= 24) {
-          horas = 0;
-        }
-      }
-    }
-    //---
-    segundos++;
-    delay(1000);
-    //---
-```
+<img width="311" height="439" alt="image" src="https://github.com/user-attachments/assets/fffe4640-89d8-49ec-8c45-14141f1e7c34" />
+
+
 ## Exemplo de relogio com millis()
 ```cpp
     //---
