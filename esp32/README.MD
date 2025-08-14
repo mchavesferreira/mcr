@@ -16,8 +16,8 @@
 
 
 
-27/07  - Temporização
- - [millis()](#millis())
+27/07  Temporização (#tempo)
+	- [millis()](#função-millis)
 
 07/08  - Displays LCD e Oled
       - [Display](https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md)
@@ -28,7 +28,6 @@ Utilize este exemplo de display OLed (https://wokwi.com/projects/342195248670179
 
 Hora:Minuto:Segundos 
 
-08/08 -  <a href=esp32/maquinaestadopasteurizacao.md> Projeto Pasteurização </a>
 
 
 
