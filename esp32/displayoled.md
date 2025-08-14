@@ -224,11 +224,11 @@ Para uma implementação detalhada, consulte a documentação específica do mic
  ```cpp
    
     if (segundos>= 60) {
-      seconds = 0;
+      segundos = 0;
       minutos++;
       if (minutos >= 60) {
         minutos = 0;
-        houras++;
+        horas++;
         if (horas >= 24) {
           horas = 0;
         }
