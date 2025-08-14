@@ -157,17 +157,17 @@ Exemplo de regra.
 
 
 ## Exemplo de relogio com millis()
-```cpp
-    //--- troque no lugar de " segundos++;  delay(1000);  "
- unsigned long tempoAnterior;
 
-  if ( millis()-tempoAnterior>= 1000)
-        {
-        tempoAnterior=millis();
-        segundos();
-        }
-   
+Substitua este código com delay:
+
+```cpp
+segundos++;
+delay(1000);
 ```
+
+Por este código
+
+<img width="423" height="205" alt="image" src="https://github.com/user-attachments/assets/e26953c1-890a-45ab-bf49-66fac6fa1432" />
 
 
 ## I2C
