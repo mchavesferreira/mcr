@@ -2,32 +2,7 @@
 
 
 ## Aulas
- - Acrescente display o Oled. Planeje seu projeto Iot (<a href=https://github.com/mchavesferreira/mcr/blob/main/dicas%20de%20projetos/Dicasparaprojetos.pdf>Dicas</a>
-14/11 - Modificando Iot
 
-07/11 - Iniciando projeto Iot
-
-31/10 - Colocando em prática o projeto Mqtt e Iot
-
-24/10 - <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
-
-05/09 - Relógio e Cronometro
-
-Utilize este exemplo de display OLed (https://wokwi.com/projects/342195248670179922) e a função millis() para construir um relogio 
-
-Hora:Minuto:Segundos 
-
-29/08  - Temporização
- - [millis()](#millis())
-
-22/08  - Displays LCD e Oled
-      - [Display](#Display)
-
-08/08 -  <a href=esp32/maquinaestadopasteurizacao.md> Projeto Pasteurização </a>
-
-25/07 - <a href=esp32/maquinaestados.MD> Maquina de estados (abordagem if e switch/case) </a>
-
-27/06 - Aula prática com ESP32
 
 25/04 - Introdução ao ESP32 (Conhecendo  Referências Arduino e Simulador wokwi)
 
@@ -35,9 +10,49 @@ Hora:Minuto:Segundos
 
 09/05  - Comunicação Serial:  https://github.com/mchavesferreira/mcr/blob/main/esp32/serialprint.md
 
-16/05 e 23/5  - PWM:  https://github.com/mchavesferreira/mcr/blob/main/esp32/pwm.md
+25/07 - <a href=esp32/maquinaestados.MD> Maquina de estados (abordagem if e switch/case) </a>
 
-06/06  - Diplay Oled : https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md
+27/06 - Aula prática com ESP32
+
+
+
+27/07  - Temporização
+ - [millis()](#millis())
+
+07/08  - Displays LCD e Oled
+      - [Display](https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md)
+
+14/08 - Relógio e Cronometro
+
+Utilize este exemplo de display OLed (https://wokwi.com/projects/342195248670179922) e a função millis() para construir um relogio 
+
+Hora:Minuto:Segundos 
+
+08/08 -  <a href=esp32/maquinaestadopasteurizacao.md> Projeto Pasteurização </a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+24/10 - <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
+
+
+31/10 - Colocando em prática o projeto Mqtt e Iot
+
+07/11 - Iniciando projeto Iot
+
+ - Acrescente display o Oled. Planeje seu projeto Iot (<a href=https://github.com/mchavesferreira/mcr/blob/main/dicas%20de%20projetos/Dicasparaprojetos.pdf>Dicas</a>
+14/11 - Modificando Iot
 
 
 # Trabalho
