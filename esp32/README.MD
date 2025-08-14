@@ -16,8 +16,7 @@
 
 
 
-27/07  Temporização (#tempo)
-	- [millis()](#função-millis)
+27/07  Temporização  - [millis()](#função-millis())
 
 07/08  - Displays LCD e Oled
       - [Display](https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md)
@@ -347,7 +346,7 @@ Uso de Variáveis, #define e funções próprias para I/0 Arduino
 ## Leitura analógica
 <bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento. Simulação: <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
 
-## Uso da Função `millis()` no Arduino para Temporizações sem Bloqueio
+## Função millis()
 
 A função `millis()` no Arduino é uma ferramenta poderosa para realizar temporizações sem bloquear a execução do programa. Diferente da função `delay()`, que pausa a execução de todo o código por um período especificado, `millis()` permite que o Arduino continue processando outras tarefas enquanto monitora o tempo.
 
