@@ -27,7 +27,7 @@ Exemplo com pergunta e IF:  https://wokwi.com/projects/398045854579066881
 
 
 
-# TAREFA SUAP 16/05/2024:
+# TAREFA :
 
 Exemplo com pergunta e IF:  https://wokwi.com/projects/398045854579066881
 
