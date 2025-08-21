@@ -219,7 +219,7 @@ void IRAM_ATTR funcao_ISR()
 
 void setup() {
 
-  pinMode(GPIO_BOTAO, INPUT);
+  pinMode(GPIO_BOTAO, INPUT_PULLUP);
   attachInterrupt(GPIO_BOTAO, funcao_ISR, RISING);
 
   u8g2.begin();
