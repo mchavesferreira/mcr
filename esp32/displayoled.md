@@ -172,6 +172,21 @@ Por este código
 
 # Utilizando botão com interrupção
 
+O comando `attachInterrupt(pin, função, modo)` serve para vincular uma rotina de serviço de interrupção (ISR) a um pino digital específico. Assim, quando ocorre uma condição definida (como a mudança de nível lógico), o microcontrolador interrompe o fluxo normal do programa e executa imediatamente a função atribuída. Esse recurso é útil para detectar eventos externos com rapidez, como o acionamento de botões, sensores ou sinais de comunicação, sem depender de verificações constantes (*polling*) dentro do `loop()`.
+
+### Tabela de modos do `attachInterrupt`
+
+| Modo      | Significado                                                                    |
+| --------- | ------------------------------------------------------------------------------ |
+| `RISING`  | A interrupção ocorre na **transição de LOW para HIGH** (borda de subida).      |
+| `FALLING` | A interrupção ocorre na **transição de HIGH para LOW** (borda de descida).     |
+| `CHANGE`  | A interrupção ocorre em **qualquer mudança de estado** (LOW→HIGH ou HIGH→LOW). |
+| `HIGH`    | A interrupção é acionada enquanto o pino estiver **em nível lógico alto**.     |
+| `LOW`     | A interrupção é acionada enquanto o pino estiver **em nível lógico baixo**.    |
+
+
+Simulação:   https://wokwi.com/projects/439860789263905793
+
 ```cpp
 #include <U8g2lib.h>
 #include <Wire.h>
