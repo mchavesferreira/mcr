@@ -170,7 +170,64 @@ Por este código
 
 <img width="428" height="233" alt="image" src="https://github.com/user-attachments/assets/3b28d315-5a56-4816-b15d-5c4e617b67b9" />
 
+# Utilizando botão com interrupção
 
+```cpp
+#include <U8g2lib.h>
+#include <Wire.h>
+U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2(U8G2_R0, /* reset=*/ U8X8_PIN_NONE);
+
+#define GPIO_BOTAO 15
+#define TEMPO_DEBOUNCE 100 //ms
+
+ 
+int contador_acionamentos = 0;
+unsigned long tempo_ultimo_acionamento = 0;
+
+
+char buffer[10];
+
+  /* Função ISR (chamada quando há geração da
+interrupção) */
+void IRAM_ATTR funcao_ISR()
+{
+/* Conta acionamentos do botão considerando debounce */
+    if ( (millis() - tempo_ultimo_acionamento) >= TEMPO_DEBOUNCE )
+    {
+       contador_acionamentos++;
+       tempo_ultimo_acionamento = millis();
+    }
+}
+
+
+
+
+void setup() {
+
+  pinMode(GPIO_BOTAO, INPUT);
+  attachInterrupt(GPIO_BOTAO, funcao_ISR, RISING);
+
+  u8g2.begin();
+  u8g2.clearBuffer();					// limpa memoria interna
+  u8g2.setFont(u8g2_font_ncenB08_tr);	// escolha da fonte
+  u8g2.drawStr(15, 10, "IFSP Catanduva");	// escrevendo na memoria interna
+  u8g2.sendBuffer();					// transferindo da memoria interna para display
+  delay(3000);
+}
+
+void loop() {
+   // exemplo
+   
+  u8g2.clearBuffer();					// limpa memoria interna
+  sprintf(buffer, "contador: %d", contador_acionamentos);
+  u8g2.drawStr(15, 10, buffer);  
+  u8g2.sendBuffer();
+
+  delay(1000);
+
+}
+
+```
 ## I2C
 
 # Protocolo I2C
