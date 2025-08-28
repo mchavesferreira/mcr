@@ -81,6 +81,35 @@ Faça a leitura de um pino analogico
 
 https://wokwi.com/projects/440535005748564993
 
+
+## Utililizando niveis
+
+```ruby
+
+
+// variable for storing the potentiometer value
+int valoranalogico = 0;
+
+
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+ 
+}
+
+void loop() {
+  // Reading potentiometer value
+  valoranalogico = analogRead(34);
+  if(valoranalogico<1000){ Serial.print ("Estou calma.."); }
+  if(valoranalogico>=1000 && valoranalogico<2000){  Serial.print ("estressando.."); }
+  if(valoranalogico>=2000){ Serial.print ("ESTRESSADA.."); }
+
+  Serial.println(valoranalogico);
+
+  delay(500);
+}
+
+```
   
 <details><summary>Codigo Serial</summary>
 <p>
