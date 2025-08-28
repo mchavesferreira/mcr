@@ -1,8 +1,9 @@
-
+# Construindo uma maquina (projeto 3° Bimestre)
 	
 <BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
 >>>> https://wokwi.com/projects/375842607540556801
 
+## Exemplos de anos anteriores
 
 <BR><BR>Máquina de macarrão:
 <BR><BR>https://wokwi.com/projects/343824918481207891
@@ -18,7 +19,9 @@
 ## Tempo
 	  
 ### Interrupção e funções de tempo
+
 <BR><BR><B>Uso de millis() no lugar de delays()</b>
+
   ### função millis
   <br>05 -<a href=https://wokwi.com/projects/342203041946010194> Exemplo função tempo millis()</a>
   
@@ -51,8 +54,7 @@ void loop() {
 </details> 
 
    
-	<BR>
-
+	
  
 ## Comunicação Serial
 
