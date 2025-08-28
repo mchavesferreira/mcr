@@ -29,7 +29,16 @@ Utilize este exemplo de display OLed (https://wokwi.com/projects/342195248670179
 Hora:Minuto:Segundos 
 
 
-28/09  - Utilize o proeto de maquina de estados e display construido para relogio,  para alternar paginas de uma maquina.
+
+## 28/08  - Leitura analógica e comunicação serial
+
+
+https://github.com/mchavesferreira/mcr/blob/main/entradaanalogica.md
+
+### Em breve
+
+
+Utilize o projeto de maquina de estados e display construido para relogio,  para alternar paginas de uma maquina.
 
 https://github.com/mchavesferreira/mcr/blob/main/esp32/maquinaestados.MD
 
