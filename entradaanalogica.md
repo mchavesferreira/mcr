@@ -52,6 +52,47 @@ void loop() {
 
    
 	<BR>
+
+ 
+## Comunicação Serial
+
+```ruby
+ void setup() {
+  Serial.begin(115200);
+
+ 
+}
+
+void loop() {
+
+  Serial.println("Oi seja bem vindo");
+  delay(1000);
+}
+```
+
+
+https://wokwi.com/projects/401871586327571457
+
+Imprimindo e lendo na porta serial (UART)<BR>
+  
+<details><summary>Codigo Serial</summary>
+<p>
+
+```ruby
+   Serial.begin(115200);
+   Serial.println("Please enter your name:");
+   while (!Serial.available()); // Wait for input
+   String name = Serial.readStringUntil('\n');
+   Serial.print("Hello, ");
+   Serial.print(name);
+```
+
+</p>
+</details>
+
+  
+<BR>Simulação: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
+
 <BR></BR><b></b>Aula prática uma entrada analógica</b>
 <BR></BR>- Leitura Analógica
 <BR></BR>- Comparações (if/else/>/<=)
