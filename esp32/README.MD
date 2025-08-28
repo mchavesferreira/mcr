@@ -12,7 +12,7 @@
 
 09/05  - Comunicação Serial:  https://github.com/mchavesferreira/mcr/blob/main/esp32/serialprint.md
 
-25/07 - <a href=esp32/maquinaestados.MD> Maquina de estados (abordagem if e switch/case) </a>
+25/07 - <a href=maquinaestados.MD> Maquina de estados (abordagem if e switch/case) </a>
 
 27/06 - Aula prática com ESP32
 
@@ -29,8 +29,15 @@ Utilize este exemplo de display OLed (https://wokwi.com/projects/342195248670179
 Hora:Minuto:Segundos 
 
 
+28/09  - Utilize o proeto de maquina de estados e display construido para relogio,  para alternar paginas de uma maquina.
+
+https://github.com/mchavesferreira/mcr/blob/main/esp32/maquinaestados.MD
 
 
+ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
+<BR>
+<BR>
+<BR>Exemplo maquina de estados com switch-case https://wokwi.com/projects/366328860646770689
 
 
 24/10 - <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
@@ -421,12 +428,6 @@ Imprimindo e lendo na porta serial (UART)<BR>
  <br><a href=https://wokwi.com/projects/342234932555285074>Uso de interrupção</a>
   
 
-## Exemplo Maquina de estados
-
-ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
-<BR>
-<BR>
-<BR>Exemplo maquina de estados com switch-case https://wokwi.com/projects/366328860646770689
 
 
 ## ESP32 IOT
