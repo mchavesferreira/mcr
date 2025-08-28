@@ -74,6 +74,11 @@ void loop() {
 https://wokwi.com/projects/401871586327571457
 
 Imprimindo e lendo na porta serial (UART)<BR>
+
+Faça a leitura de um pino analogico
+
+https://wokwi.com/projects/440535005748564993
+
   
 <details><summary>Codigo Serial</summary>
 <p>
