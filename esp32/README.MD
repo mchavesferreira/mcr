@@ -67,7 +67,7 @@ Maquina microntrolada Esp32 com protótipagem em protoboard e conexão mqtt ESP3
 
 
 Trabalho em dupla. Postar individualmente citando a dupla. O trabalho deve ser entregue em formato digital com simulação e um pequeno texto explicando sua funcionalidade.
--Envio do codigo nesta aba do SUAP, apenas se ocorrer um erro, enviar para email mchavesferreira@ifsp.edu.br, arquivos fontes e texto resumo.
+-Envio do codigo nesta aba do SUAP, apenas se ocorrer um erro, enviar para email, arquivos fontes e texto resumo.
 
 Crie uma máquina personalizada (não será considerado máquina de lavar e semáforo) atenda os seguintes critérios e ponderações:
 
