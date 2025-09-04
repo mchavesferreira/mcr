@@ -1,22 +1,4 @@
-# Construindo uma maquina (projeto 3° Bimestre)
-	
-<BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
->>>> https://wokwi.com/projects/375842607540556801
 
-## Exemplos de anos anteriores
-
-<BR><BR>Máquina de macarrão:
-<BR><BR>https://wokwi.com/projects/343824918481207891
-
-<BR><BR>Maquina de bolos:
-<BR><BR>https://wokwi.com/projects/343896310503440979
-
-
-<BR><BR>Máquina de sorvete:
-<BR><BR>https://wokwi.com/projects/343353681787224660 
-<BR><BR> https://wokwi.com/projects/343718518644015698
-<BR><BR>
-## Tempo
 	  
 ### Interrupção e funções de tempo
 
@@ -140,6 +122,27 @@ void loop() {
 <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32/qrcode_ad.jpg>
 
 <BR>
+
+# Construindo uma maquina (projeto 3° Bimestre)
+	
+<BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
+>>>> https://wokwi.com/projects/375842607540556801
+
+## Exemplos de anos anteriores
+
+<BR><BR>Máquina de macarrão:
+<BR><BR>https://wokwi.com/projects/343824918481207891
+
+<BR><BR>Maquina de bolos:
+<BR><BR>https://wokwi.com/projects/343896310503440979
+
+
+<BR><BR>Máquina de sorvete:
+<BR><BR>https://wokwi.com/projects/343353681787224660 
+<BR><BR> https://wokwi.com/projects/343718518644015698
+<BR><BR>
+## Tempo
+
 <BR><B>Utilizando a IDE Arduino</B>
 <BR><img src=https://www.lojamundi.com.br/imagens/produtos/Raspberry-Pi-Cabo-mini-USB.webp width=200 height=200>
 <BR> <a href=https://www.blogdarobotica.com/2021/08/24/como-programar-a-placa-esp32-no-arduino-ide>Como gravar o esp32 com Arduino</a>
