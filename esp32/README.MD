@@ -42,7 +42,9 @@ https://github.com/mchavesferreira/mcr/blob/main/entradaanalogica.md
 <BR><BR>Máquina de sorvete 1:
 <BR>https://wokwi.com/projects/343353681787224660 
 
-
+<hr>
+<BR>
+<BR>
 ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
 <BR>
 
