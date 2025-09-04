@@ -29,41 +29,47 @@ Utilize este exemplo de display OLed (https://wokwi.com/projects/342195248670179
 Hora:Minuto:Segundos 
 
 
-
-## 28/08  - Leitura analógica e comunicação serial
-
+28/08  - Display, comunicação serial, conversor AD, comparação e conversão da leitura AD
 
 https://github.com/mchavesferreira/mcr/blob/main/entradaanalogica.md
 
-### Em breve
+## 04/09 Interface para uma maquina com display e botões
+
+# Projeto 3° Bimestre
+
+## Exemplos de anos anteriores
+
+<BR><BR>Máquina de macarrão:
+<BR><BR>https://wokwi.com/projects/343824918481207891
+
+<BR><BR>Maquina de bolos:
+<BR><BR>https://wokwi.com/projects/343896310503440979
 
 
-Utilize o projeto de maquina de estados e display construido para relogio,  para alternar paginas de uma maquina.
-
-https://github.com/mchavesferreira/mcr/blob/main/esp32/maquinaestados.MD
-
+<BR><BR>Máquina de sorvete 1:
+<BR><BR>https://wokwi.com/projects/343353681787224660 
+<BR><BR>Máquina de sorvete 2:
+<BR><BR> https://wokwi.com/projects/343718518644015698
+<BR><BR>
 
 ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
 <BR>
-<BR>
-<BR>Exemplo maquina de estados com switch-case https://wokwi.com/projects/366328860646770689
 
 
-24/10 - <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
+/10 - <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
 
 
 31/10 - Colocando em prática o projeto Mqtt e Iot
 
-07/11 - Iniciando projeto Iot
+/11 - Iniciando projeto Iot
 
  - Acrescente display o Oled. Planeje seu projeto Iot (<a href=https://github.com/mchavesferreira/mcr/blob/main/dicas%20de%20projetos/Dicasparaprojetos.pdf>Dicas</a>
-14/11 - Modificando Iot
+/11 - Modificando Iot
 
 
-# Trabalho
+# Trabalho 4° Bimestre
 
 Maquina microntrolada Esp32 com protótipagem em protoboard e conexão mqtt ESP32
-
 
 
 Trabalho em dupla. Postar individualmente citando a dupla. O trabalho deve ser entregue em formato digital com simulação e um pequeno texto explicando sua funcionalidade.
@@ -441,6 +447,31 @@ Imprimindo e lendo na porta serial (UART)<BR>
 <BR>  
  <br><a href=https://wokwi.com/projects/342234932555285074>Uso de interrupção</a>
   
+
+# Construindo uma maquina (projeto 3° Bimestre)
+
+<BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
+
+
+
+## Exemplos de anos anteriores
+
+<BR><BR>Máquina de macarrão:
+<BR><BR>https://wokwi.com/projects/343824918481207891
+
+<BR><BR>Maquina de bolos:
+<BR><BR>https://wokwi.com/projects/343896310503440979
+
+
+<BR><BR>Máquina de sorvete 1
+<BR><BR>https://wokwi.com/projects/343353681787224660 
+
+
+<BR><BR>Máquina de sorvete 2
+
+<BR><BR> https://wokwi.com/projects/343718518644015698
+<BR><BR>
+
 
 
 
