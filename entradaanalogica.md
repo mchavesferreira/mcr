@@ -43,8 +43,6 @@ void loop() {
 ```ruby
  void setup() {
   Serial.begin(115200);
-
- 
 }
 
 void loop() {
@@ -58,6 +56,38 @@ void loop() {
 https://wokwi.com/projects/401871586327571457
 
 Imprimindo e lendo na porta serial (UART)<BR>
+
+
+  
+<details><summary>Codigo Serial</summary>
+<p>
+
+```ruby
+   Serial.begin(115200);
+   Serial.println("Please enter your name:");
+   while (!Serial.available()); // Wait for input
+   String name = Serial.readStringUntil('\n');
+   Serial.print("Hello, ");
+   Serial.print(name);
+```
+
+</p>
+</details>
+
+  
+<BR>Simulação: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
+
+<BR></BR><b></b>Aula prática uma entrada analógica</b>
+<BR></BR>- Leitura Analógica
+<BR></BR>- Comparações (if/else/>/<=)
+<BR><img src=esp32/adcesp32.png width=300 height=300><BR>
+<BR>Utilize o seguinte <a href=https://wokwi.com/projects/340963795998343762>exemplo</a> de leitura analógica, onde um potênciometro ligado a uma das entradas AD(conversor analógico-digital), realiza a conversão em valor binário e utiizando uma função converte o valor em Volts.
+<BR>Uma condição de comparação aciona um led. Monte e modifique o programa e circuito para 3 faixas de valores.
+<br>
+<BR><BR>
+<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32/qrcode_ad.jpg>
+
+<BR>
 
 Faça a leitura de um pino analogico
 
@@ -92,36 +122,7 @@ void loop() {
 }
 
 ```
-  
-<details><summary>Codigo Serial</summary>
-<p>
 
-```ruby
-   Serial.begin(115200);
-   Serial.println("Please enter your name:");
-   while (!Serial.available()); // Wait for input
-   String name = Serial.readStringUntil('\n');
-   Serial.print("Hello, ");
-   Serial.print(name);
-```
-
-</p>
-</details>
-
-  
-<BR>Simulação: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
-
-<BR></BR><b></b>Aula prática uma entrada analógica</b>
-<BR></BR>- Leitura Analógica
-<BR></BR>- Comparações (if/else/>/<=)
-<BR><img src=esp32/adcesp32.png width=300 height=300><BR>
-<BR>Utilize o seguinte <a href=https://wokwi.com/projects/340963795998343762>exemplo</a> de leitura analógica, onde um potênciometro ligado a uma das entradas AD(conversor analógico-digital), realiza a conversão em valor binário e utiizando uma função converte o valor em Volts.
-<BR>Uma condição de comparação aciona um led. Monte e modifique o programa e circuito para 3 faixas de valores.
-<br>
-<BR><BR>
-<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32/qrcode_ad.jpg>
-
-<BR>
 
 # Construindo uma maquina (projeto 3° Bimestre)
 	
