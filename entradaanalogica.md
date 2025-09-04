@@ -136,12 +136,4 @@ Utilize a equação de regra de 3 para converter o valor AD ou valor RAW para o 
 
 
 
-# Construindo uma maquina (projeto 3° Bimestre)
-	
-<BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
->>>> https://wokwi.com/projects/375842607540556801
-
-
-
-
 
