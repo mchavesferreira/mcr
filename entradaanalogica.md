@@ -64,10 +64,10 @@ Imprimindo e lendo na porta serial (UART)<BR>
 
 ```ruby
    Serial.begin(115200);
-   Serial.println("Please enter your name:");
+   Serial.println("Qual é o seu nome? :");
    while (!Serial.available()); // Wait for input
    String name = Serial.readStringUntil('\n');
-   Serial.print("Hello, ");
+   Serial.print("Ola, ");
    Serial.print(name);
 ```
 
