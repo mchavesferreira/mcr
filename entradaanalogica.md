@@ -141,19 +141,7 @@ Utilize a equação de regra de 3 para converter o valor AD ou valor RAW para o 
 <BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
 >>>> https://wokwi.com/projects/375842607540556801
 
-## Exemplos de anos anteriores
-
-<BR><BR>Máquina de macarrão:
-<BR><BR>https://wokwi.com/projects/343824918481207891
-
-<BR><BR>Maquina de bolos:
-<BR><BR>https://wokwi.com/projects/343896310503440979
 
 
-<BR><BR>Máquina de sorvete:
-<BR><BR>https://wokwi.com/projects/343353681787224660 
-<BR><BR> https://wokwi.com/projects/343718518644015698
-<BR><BR>
-## Tempo
 
 
