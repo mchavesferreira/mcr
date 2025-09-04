@@ -37,20 +37,11 @@ https://github.com/mchavesferreira/mcr/blob/main/entradaanalogica.md
 
 # Projeto 3° Bimestre
 
-## Exemplos de anos anteriores
-
-<BR><BR>Máquina de macarrão:
-<BR><BR>https://wokwi.com/projects/343824918481207891
-
-<BR><BR>Maquina de bolos:
-<BR><BR>https://wokwi.com/projects/343896310503440979
-
+## Exemplo de anos anteriores
 
 <BR><BR>Máquina de sorvete 1:
-<BR><BR>https://wokwi.com/projects/343353681787224660 
-<BR><BR>Máquina de sorvete 2:
-<BR><BR> https://wokwi.com/projects/343718518644015698
-<BR><BR>
+<BR>https://wokwi.com/projects/343353681787224660 
+
 
 ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
 <BR>
