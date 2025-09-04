@@ -120,9 +120,17 @@ void loop() {
 
 ## Convertendo valor AD em tensão Volts
 
+Utilize a equação de regra de 3 para converter o valor AD ou valor RAW para o seu equivalente em tensão (volts)
+
+```ruby
+  // Leitura ad 0-4095
+  valoranalogico  = analogRead(34);
+  Tensao= (3.3*valoranalogico)/4095;
+  Serial.println(Tensao);
+```
+  
 <BR>Utilize o seguinte <a href=https://wokwi.com/projects/340963795998343762>exemplo</a> de leitura analógica, onde um potênciometro ligado a uma das entradas AD(conversor analógico-digital), realiza a conversão em valor binário e utiizando uma função converte o valor em Volts.
 
-<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32/qrcode_ad.jpg>
 
 <BR>
 
