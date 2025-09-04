@@ -1,13 +1,11 @@
 
 	  
-### Interrupção e funções de tempo
+# Display, comunicação serial, conversor AD
 
 <BR><BR><B>Uso de millis() no lugar de delays()</b>
 
-  ### função millis
-  <br>05 -<a href=https://wokwi.com/projects/342203041946010194> Exemplo função tempo millis()</a>
-  
-### Display Oled   
+
+##Display Oled   
   <BR>03 -<a href=https://wokwi.com/projects/342195248670179922> Exemplo Oled U8g2lib</a>
   <BR>04 -<a href=https://wokwi.com/projects/342195418005766739> Exemplo Adafruit_SSD1306</a>
   <Br> <img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/oled.png width=400 height=225><BR>
@@ -35,11 +33,10 @@ void loop() {
 </p>
 </details> 
 
-   
-	
- 
+
 ## Comunicação Serial
 
+### Imprimindo texto na porta serial
 ```ruby
  void setup() {
   Serial.begin(115200);
@@ -52,13 +49,10 @@ void loop() {
 }
 ```
 
-
 https://wokwi.com/projects/401871586327571457
 
-Imprimindo e lendo na porta serial (UART)<BR>
+## lendo resposta na porta serial
 
-
-  
 <details><summary>Codigo Serial</summary>
 <p>
 
@@ -74,54 +68,64 @@ Imprimindo e lendo na porta serial (UART)<BR>
 </p>
 </details>
 
-  
-<BR>Simulação: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
+<BR>Simulação: <a href=https://wokwi.com/projects/341561853822894674>Lendo resposta na porta serial</a>
 
+## Conversor Anaógico Digital
 <BR></BR><b></b>Aula prática uma entrada analógica</b>
-<BR></BR>- Leitura Analógica
-<BR></BR>- Comparações (if/else/>/<=)
+
 <BR><img src=esp32/adcesp32.png width=300 height=300><BR>
-<BR>Utilize o seguinte <a href=https://wokwi.com/projects/340963795998343762>exemplo</a> de leitura analógica, onde um potênciometro ligado a uma das entradas AD(conversor analógico-digital), realiza a conversão em valor binário e utiizando uma função converte o valor em Volts.
-<BR>Uma condição de comparação aciona um led. Monte e modifique o programa e circuito para 3 faixas de valores.
-<br>
-<BR><BR>
-<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32/qrcode_ad.jpg>
 
-<BR>
-
-Faça a leitura de um pino analogico
-
-https://wokwi.com/projects/440535005748564993
-
-
-## Utililizando niveis
-
+### Lend um canal AD 
 ```ruby
-
-
-// variable for storing the potentiometer value
 int valoranalogico = 0;
-
-
 void setup() {
   Serial.begin(115200);
-  delay(1000);
- 
+  delay(1000); 
 }
 
 void loop() {
-  // Reading potentiometer value
+  // Lendo o valor de tensao analogica de um potenciomentro
   valoranalogico = analogRead(34);
-  if(valoranalogico<1000){ Serial.print ("Estou calma.."); }
-  if(valoranalogico>=1000 && valoranalogico<2000){  Serial.print ("estressando.."); }
-  if(valoranalogico>=2000){ Serial.print ("ESTRESSADA.."); }
 
   Serial.println(valoranalogico);
 
   delay(500);
 }
+```
+https://wokwi.com/projects/440535005748564993
+
+<BR></BR>
+##  Comparações (if/else/>/<=)
+
+```ruby
+// variavel para armazenar o valor AD
+int valoranalogico = 0;
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+}
+
+void loop() {
+  // Lê o valor analogico sem conversao 0-4095
+  valoranalogico = analogRead(34);
+  // compara valor analogico
+  if(valoranalogico<1000){ Serial.print ("Estou calma.."); }
+  if(valoranalogico>=1000 && valoranalogico<2000){  Serial.print ("estressando.."); }
+  if(valoranalogico>=2000){ Serial.print ("ESTRESSADA.."); }
+  Serial.println(valoranalogico);
+  delay(500);
+}
 
 ```
+
+## Convertendo valor AD em tensão Volts
+
+<BR>Utilize o seguinte <a href=https://wokwi.com/projects/340963795998343762>exemplo</a> de leitura analógica, onde um potênciometro ligado a uma das entradas AD(conversor analógico-digital), realiza a conversão em valor binário e utiizando uma função converte o valor em Volts.
+
+<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32/qrcode_ad.jpg>
+
+<BR>
+
 
 
 # Construindo uma maquina (projeto 3° Bimestre)
