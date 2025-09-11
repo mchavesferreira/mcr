@@ -48,6 +48,10 @@ https://github.com/mchavesferreira/mcr/blob/main/entradaanalogica.md
 ESP32_3led_1botao >>>>  https://wokwi.com/projects/366328229239357441
 <BR>
 
+## 11/09 Exemplo de prova
+
+https://github.com/mchavesferreira/mcr/blob/main/esp32/avalia%C3%A7%C3%A3o_mcr_3bimestre%20com%20delay.doc
+
 
 /10 - <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
 
