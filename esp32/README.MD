@@ -54,6 +54,8 @@ https://github.com/mchavesferreira/mcr/blob/main/esp32/avalia%C3%A7%C3%A3o_mcr_3
 
 Simulado:  https://wokwi.com/projects/441801153171473409
 
+resolucao:   https://github.com/mchavesferreira/mcr/blob/main/esp32/resolucaoprova3.md
+
 /10 - <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
 
 
