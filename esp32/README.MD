@@ -40,7 +40,7 @@ https://github.com/mchavesferreira/mcr/blob/main/entradaanalogica.md
 ### Exemplo de anos anteriores
 
 <BR><BR>Máquina de sorvete 1:
-<BR>https://wokwi.com/projects/343353681787224660 
+<BR>https://wokwi.com/projects/443072496525751297
 
 <hr>
 <BR>
