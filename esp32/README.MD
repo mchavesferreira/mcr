@@ -57,10 +57,11 @@ Simulado:  https://wokwi.com/projects/441805148851773441
 resolucao:   https://github.com/mchavesferreira/mcr/blob/main/esp32/resolucaoprova3.md
 
 ## 4° Bimestre
-/10 - <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
+
+30/10 - <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Projetando IoT com Mqtt e Dashboard</A>
 
 
-31/10 - Colocando em prática o projeto Mqtt e Iot
+- Colocando em prática o projeto Mqtt e Iot, grave o controle de led via Iot
 
 /11 - Iniciando projeto Iot
 
