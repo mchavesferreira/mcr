@@ -99,8 +99,8 @@ host:  broker.hivemq.com<BR>
 
 Topic= mcr/estacao<BR>
 
-path Json= $.humidityin<BR>
+path Json= $.temperatura<BR>
 
-path Json= $.tempinf<BR>
+path Json= $.umidade<BR>
 
 
