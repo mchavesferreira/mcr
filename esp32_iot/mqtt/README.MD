@@ -77,7 +77,7 @@ Topic= esp32/out
 
 path Json= $.analogico
 
-# Trabalho 3° bimestre
+# 06/11/2025 MQTT e Json
 
 Seguindo as instruções sobre MQTT e Json nesta url
 
