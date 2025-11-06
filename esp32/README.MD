@@ -63,7 +63,9 @@ resolucao:   https://github.com/mchavesferreira/mcr/blob/main/esp32/resolucaopro
 
 - Colocando em prática o projeto Mqtt e Iot, grave o controle de led via Iot
 
-/11 - Iniciando projeto Iot
+- 06/11/2025 - exemplo mqtt com mensagem em json <br>
+
+/11 - Iniciando projeto Iot     <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Acesse </a><br>
 
  - Acrescente display o Oled. Planeje seu projeto Iot (<a href=https://github.com/mchavesferreira/mcr/blob/main/dicas%20de%20projetos/Dicasparaprojetos.pdf>Dicas</a>
 /11 - Modificando Iot
