@@ -93,6 +93,14 @@ Cada botão conectado ao esp32 deve ligar e desligar cada led, e pelo aplicativo
 
 Mostre os valores em seu aplicativo dashboard
 
+## Estacao meterologica em Catanduva 
 
+host:  broker.hivemq.com<BR>
+
+Topic= mcr/estacao<BR>
+
+path Json= $.humidityin<BR>
+
+path Json= $.tempinf<BR>
 
 
