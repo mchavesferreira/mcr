@@ -93,7 +93,6 @@ Cada botão conectado ao esp32 deve ligar e desligar cada led, e pelo aplicativo
 
 Mostre os valores em seu aplicativo dashboard
 
-## Entrega o resultado em Trabalho SUAP enviando o link do wokwi e a imagem de seu aplicativo dashboard do celular até 26/10/2024
 
 
 
