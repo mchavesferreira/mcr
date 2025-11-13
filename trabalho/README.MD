@@ -17,9 +17,7 @@ https://wokwi.com/projects/416431906028681217
 
 https://wokwi.com/projects/416431906028681217
 
-Churrascaria na Brasa
 
-https://wokwi.com/projects/415638799847934977 
 
 
 Borracharia
