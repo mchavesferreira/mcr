@@ -65,10 +65,17 @@ resolucao:   https://github.com/mchavesferreira/mcr/blob/main/esp32/resolucaopro
 
 - 06/11/2025 - exemplo mqtt com mensagem em json <br>
 
-/11 - Iniciando projeto Iot     <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Acesse </a><br>
+ Iniciando projeto Iot     <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/mqtt/README.MD>Acesse </a><br>
 
  - Acrescente display o Oled. Planeje seu projeto Iot (<a href=https://github.com/mchavesferreira/mcr/blob/main/dicas%20de%20projetos/Dicasparaprojetos.pdf>Dicas</a>
-/11 - Modificando Iot
+
+### 13/11/2025
+
+-Interpretando o template de código exemplo para a prova: https://github.com/mchavesferreira/mcr/blob/main/trabalho/template.pdf
+
+-Planejamento do projeto final. Utilize exemplos de trabalhos anteriores
+
+-https://github.com/mchavesferreira/mcr/tree/main/trabalho
 
 
 # Trabalho 4° Bimestre
