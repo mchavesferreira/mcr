@@ -1,6 +1,8 @@
 ## projetos de alunos 
 
 
+ Fábrica de Carros Link do Wokwi: https://wokwi.com/projects/415828460252408833   **Utiliza mqtt/dashboard como status da maquina**
+
 
 https://wokwi.com/projects/416427102147871745
 
@@ -30,8 +32,6 @@ https://wokwi.com/projects/416840899265423361
 https://wokwi.com/projects/416805710612114433
 
 https://wokwi.com/projects/416529731227265025
-
- Fábrica de Carros Link do Wokwi: https://wokwi.com/projects/415828460252408833
 
 https://wokwi.com/projects/416450707246983169
 
