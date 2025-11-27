@@ -34,7 +34,9 @@ Configure os campos:<BR>
 host:  broker.hivemq.com<BR>
 username: mchavesferreira<BR>
 password: Embar2022<BR>
-topic: movel/acelerax<BR>
+topic: *** escolha para seu botão<BR>
+Wifi da sala:  ifsp-ibge-1<BR>
+senha: ifspcatanduva<BR>
 
 ## Exemplo Wokwi, com tópico em IFSP/led<BR>
 
