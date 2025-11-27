@@ -38,6 +38,8 @@ topic: *** escolha para seu botão<BR>
 Wifi da sala:  ifsp-ibge-1<BR>
 senha: ifspcatanduva<BR>
 
+Trabalhos de anos anteriores: https://github.com/mchavesferreira/mcr/tree/main/trabalho
+
 ## Exemplo Wokwi, com tópico em IFSP/led<BR>
 
 Acesse o seguinte exemplo como aplição do mqtt, onde um led pode ser controlado seu status com o envio de mensagens para um broker
