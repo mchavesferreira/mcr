@@ -252,6 +252,11 @@ Esse ID é especialmente útil em aplicações de Internet das Coisas (IoT), ond
 
 <BR>Como verificar o ID do chip<a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
 
+## Video Esp32 interno
+
+https://www.youtube.com/watch?v=-Nu0tjDCbbM
+
+
 
 ## Memória ESP32 
 
