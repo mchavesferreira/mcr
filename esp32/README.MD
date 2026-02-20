@@ -1,5 +1,3 @@
-# Curso de Microcontroladdores
-
 # Esp32  
 
 - [Apostila ESP32](#Apostila-ESP32)
@@ -93,10 +91,6 @@ void loop() {
 
 
 <BR>GPIOs, leitura e escrita em pinos digitais. Simulação: <a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
-
-
-
-
 
 
 
