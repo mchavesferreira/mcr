@@ -6,11 +6,22 @@
 
 ## Utilizando Atmega328P para a compreensão e funcionamento de microprocessadores e microcontroladores em geral utilizando a linguagem Assembly.
 
-## Aulas Turma 2025
-### 1° Bimestre
+## Aulas Turma 2026
+
+## 1° Bimestre
 - 20/02  - Introdução a Disciplina, Histórico sobre microprocessadores
 - 27/02 -  Arquitetura de funcionamento de um microprocessador genérico
+- 
+- - Introdução ao C
+- - Programação Alto Nível, C, Arduino, TAREFA: criar conta e um semaforo no Wokwi, modificando   [Programa Pisca Led Arduino](#Programa-Pisca-Led-Arduino)
 
+- - Primira Prática C com Arduino UNO (semaforo, ...)
+
+- - Leitura com botão e configurando entrada pull-up.
+-  - Uso do Case-switch UNO
+-  - Aplicando maquina de estados ESP32
+- Trabalho 2 - Montagem ESP32
+- 
 Exemplos de circuitos básicos em um microprocessador:
 
 https://circuitverse.org/simulator/51702
@@ -21,23 +32,16 @@ https://github.com/viniciusNoleto/Electronic_Components_Example-LOGISIM-CIRC/tre
 
 Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 
-- 13/03 -  Primeiras instruções assembly para Atmega328P. 
-- 20/03 -  [Programa Pisca Led](#Programa-Pisca-Led), [Programa Reservatorio](#Programa-Reservatorio)
-- 27/03 -  Simulador Wowki, Display 7 segmentos 
-- 03/04 -  Projeto microcontrolado Assembly
-- 10/04 -  Trabalho em Grupo
-- 17/04 -  Avaliação Escrita
+
+### 4° Bimestre
+-  -  Primeiras instruções assembly para Atmega328P. 
+-  -  [Programa Pisca Led](#Programa-Pisca-Led), [Programa Reservatorio](#Programa-Reservatorio)
+-  -  Simulador Wowki, Display 7 segmentos 
+- -  Projeto microcontrolado Assembly
+- -  Trabalho em Grupo
+-  -  Avaliação Escrita
 - 
-## 2° Bimestre
-- 08/05 - Introdução ao C
-- 15/05 - Programação Alto Nível, C, Arduino, TAREFA: criar conta e um semaforo no Wokwi, modificando   [Programa Pisca Led Arduino](#Programa-Pisca-Led-Arduino)
 
-- 22/05 - Primira Prática C com Arduino UNO (semaforo, ...)
-
-- 29/05 - Leitura com botão e configurando entrada pull-up.
-- 05/6 - Uso do Case-switch UNO
-- 12/6 - Aplicando maquina de estados ESP32
-- Trabalho 2 - Montagem ESP32
 
 
 
