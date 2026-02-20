@@ -323,7 +323,7 @@ https://github.com/mchavesferreira/sebe/blob/main/slides/quinta_aula_dashboard_a
 	   
 # Projeto IoT
 
-## Disciplina IoT  2024
+## Disciplina IoT  2026
 
 Projeto de IoT com ESP32, Simulação no Wokwi e Integração com Node-RED
 
@@ -376,7 +376,7 @@ Repositório do autor: https://github.com/danielgoncalves/iot-e2ppt
 
 ***Prazo:***
 
-Última Semana de aula da disciplina: 11/10/2024
+Última Semana de aula da disciplina: 20/03/2026
 	   
 <BR><BR>
 ## Integração com Alexa
@@ -388,10 +388,15 @@ ESP32 integração com Alexa. Utilizando a biblioteca Espalexa para acionar GPIO
 ## Frameworks
 
 Utilizando frameworks (pacotes de programas) prontos para iniciar uma automação com poucas ou nenhuma linha de códigos. Alguns frameworks permitem a gravação através do navegador Chrome.<BR>
+
 1 - OpenMQTTGateway v1.0.0 - https://docs.openmqttgateway.com/upload/web-install.html<BR>
+
 2 - ESP Easy’s https://espeasy.readthedocs.io/en/latest/index.html<BR>
+
 3 - ESP Web Tools https://esphome.github.io/esp-web-tools/ <BR>
+
 4 - Tasmota https://tasmota.github.io/docs/<BR>
+
 5 - <a href=https://esphome.io/ target=_blank>ESPHome</a> 	
    
 ## Explorando recursos com a comunicação WIFI
