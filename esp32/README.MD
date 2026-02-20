@@ -23,6 +23,11 @@
 - [Exemplos de projetos](#Exemplos-de-projetos)
 - [Livros](#Livros-e-referencias)
 
+## ESP32 IoT
+
+<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0><BR>Saiba mais...</a><BR>
+
+<B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
  
 ## Referências Arduino
 
@@ -222,12 +227,15 @@ Requer cuidado com vazamentos de memória, onde a memória alocada não é liber
 ## Exemplos práticos
 
 
-Pisca Led
+### Pisca Led
 
 https://wokwi.com/projects/339670467067511378
 
 ![esp32-led-wiring-diagram](https://github.com/mchavesferreira/mcr/assets/63993080/e9eb1095-144c-46ec-96a2-2628b59b60e2)
 
+#### Pisca-led RDG Esp32S3
+
+https://www.phippselectronics.com/esp32-s3-devkitc-1-blink-onboard-rgb-led/?srsltid=AfmBOoof7fWzIlkYRgw8T0ClmNdsBDHrAUJHE5bU1oa9FyKTfL4wS_5w
 
 	
 ## variaveis operadores
@@ -333,7 +341,7 @@ Imprimindo e lendo na porta serial (UART)<BR>
  <br><a href=https://wokwi.com/projects/342234932555285074>Uso de interrupção</a>
   
 
-# Construindo uma maquina (projeto 3° Bimestre)
+# Construindo uma maquina
 
 <BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
 
