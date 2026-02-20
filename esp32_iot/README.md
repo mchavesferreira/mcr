@@ -13,12 +13,11 @@
 - [Explorando recursos da comunicação WIFI](#Explorando-recursos-com-a-comunicação-WIFI)
 - [Frameworks](#Frameworks)
 - [Node-RED](#Node-RED)
-- [Interfaces](#Interfaces) **novo**
-- [Middlewares](#Middlewares) **novo**
-- [Projeto IoT](#Projeto-IoT)  **novo**
+- [Interfaces](#Interfaces) 
+- [Middlewares](#Middlewares) 
+- [Projeto IoT](#Projeto-IoT)  
 - [Cloud para desenvolvimento](#Cloud-para-desenvolvimento)
 - [ESP32-Cam](#ESP32-Cam)
-- Dashboard
 - [Links interessantes](#Links-interessantes)
 
 https://www.youtube.com/watch?v=KndZoTMCRsA
