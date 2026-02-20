@@ -442,8 +442,9 @@ https://github.com/ESP-EOS/ESP32-WiFi-Sniffer
 https://hackmag.com/security/esp32-sniffer/
 	
 	
-Referências:
-<BR>Curso IOT aplicações em automação com esp32
+# Referências:
+
+
 https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-ide/
 <BR>https://mundoprojetado.com.br/criar-access-point-com-nodemcu/
 <BR>https://randomnerdtutorials.com/esp32-web-server-arduino-ide/
@@ -451,13 +452,4 @@ https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-
 <br> https://circuits4you.com/2016/12/16/esp8266-web-server-html/
 
 
-#Links-interessantes
-
-
-## DNS
-<BR><BR> Consultar propagação DNS
-<BR><BR> https://www.whatsmydns.net/
-
-<BR><BR> Registro traceroute Registro.br
-<BR><BR> https://registro.br/tecnologia/ferramentas/traceroute/
 
