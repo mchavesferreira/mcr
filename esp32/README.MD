@@ -1,6 +1,6 @@
 # Curso de Microcontroladdores
 
-# Esp32  (Técnico Integrado)
+# Esp32  
 
 - [Apostila ESP32](#Apostila-ESP32)
 - [Arduino Referências](#Referências-Arduino)
