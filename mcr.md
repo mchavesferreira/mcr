@@ -10,12 +10,13 @@
 
 ## 1° Bimestre
 - 10/02  - Apresentação da disciplina, forma de avaliação, datas das avaliações. Aula expositiva sobre Histórico dos microprocessadores e microcontroladores.
-- 24/02 - Conceitos de microcontroladores, diferenças entre microcontrolador e microprocessador, arquiteturas Havard e Von Neumman
+- 24/02 - Conceitos de microcontroladores, diferenças entre microcontrolador e microprocessador, arquitetura Von Neumman
 - 03/03 - Modelo básico de um programa em C, diretivas, macros e definições, como utilizar o ambiente de desenvolvimento.
 - 10/03 - Programação em alto nível utilizando C para AVR, estrutura básica de programa. Estruturas de Condicionais e repetição. Blocos de declarações (If, for, while, switch).
 - 17/03 - Registradores do ATmega328P, portas digitais, DDRx, PORTx e PINx. Manipulação de bits e controle de GPIO.
 - 24/03 - Código BCD. Utilizando display de 7 segmentos em linguagem C com AVR LibC para o microcontrolador Atmega328P.
-- 31/03 - Avaliação 1. Conteúdos anteriores: Arquitetura, memória, registradores, programação C para AVR Atmega 328P, registradores de I/O. Display de segmentos.
+- 31/03 - Avaliação 1. Conteúdos anteriores: Arhttps://packt.link/gbp/9781803237688.
+quitetura, memória, registradores, programação C para AVR Atmega 328P, registradores de I/O. Display de segmentos.
 - 07/04 - Apresentação de Trabalho T1 - Relatório e Projeto microcontrolado 
 
 #  Arquitetura de funcionamento de um microprocessador genérico
@@ -23,23 +24,9 @@
 ![processador](https://github.com/user-attachments/assets/cd0111e0-3362-433f-9e02-2d62215ecf9f)
 
 
-Exemplos de circuitos básicos em um microprocessador:
-
-https://circuitverse.org/simulator/51702
-
-https://github.com/viniciusNoleto/Electronic_Components_Example-LOGISIM-CIRC/tree/main
 
 
-
-Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
-
-
-
-
-
-
-
-
+## Exemplo de um código para o microprocessador genérico
 
         ORG 0H        ; Início do programa na memória (Endereço 256)
         LDA #17         ; Carrega o valor 17 no registrador A
@@ -70,28 +57,37 @@ O programa na memória flash seria equivalente a seguinte tabela de exportação
 
 
 
-### Arquitetura de von Neumann:
+### Arquitetura de um computador proposta por Von Neumann:
 
 - A memória armazena tanto as instruções quanto os dados.
 - O microprocessador executa as instruções sequencialmente.
 - As operações são realizadas na ULA usando os registradores internos.
-
-### Arquitetura Havard:
-
-
-
  
 
+### Video Aula Arquitetura Von Neumman 
  
-## Configuração de pinos
+https://www.youtube.com/watch?v=uMod3r2ZOJU&list=PLO-6CbqPG8oUPetj7I6bLNCjS7Rk9Supv
 
-<center><img src=imagens/pinout_atmega328P.png></center>
+### Video Aula: Arquitetura AVR
+
+https://www.youtube.com/watch?v=KVz5ry-89n8&list=PLO-6CbqPG8oUPetj7I6bLNCjS7Rk9Supv
+
+### Canal Professor Rodrigo Rech
+
+Curso de AVR Básico #01 - Introdução
+https://www.youtube.com/watch?v=wiM6_4IC_4o&list=PLMdNWywlSE5QPsEeT_cXisUT366NS3U8R
 
 ## Atmega 328p
 
 https://youtu.be/q9hdLVaBdvM?si=qtBKph2J_WjbxWr6&t=30  Video Laser fibra
 
-## Pinos Arduino UNO
+### Configuração de pinos
+
+<center><img src=imagens/pinout_atmega328P.png></center>
+
+
+### Pinos Arduino UNO
+
 ![tabela_arduino](https://github.com/mchavesferreira/mcr/assets/63993080/315726ac-c35e-4365-84e5-910684880c2a)
 
 | Nome do Pino (Porta) | Descrição no Arduino | Funções Principais          |
@@ -121,7 +117,7 @@ https://youtu.be/q9hdLVaBdvM?si=qtBKph2J_WjbxWr6&t=30  Video Laser fibra
 
 ## Diagrama de blocos
 O Atmel® ATmega328P é um microcontrolador CMOS de 8 bits de baixa potência baseado na arquitetura RISC aprimorada AVR®. Ao executar instruções poderosas em um único ciclo de clock, o ATmega328P atinge taxas de transferência de aproximadamente 1MIPS por MHz, permitindo otimizar consumo de energia versus a velocidade de processamento.[1]
-<center><img src=imagens/diagrama_blocos.png></center
+<center><img src=imagens/diagrama_blocos.png height=300 width=300></center
 
 O núcleo AVR® combina um rico conjunto de instruções com 32 registradores de trabalho de uso geral(GPR). Todos os 32 registradores são conectados diretamente à unidade lógica aritmética (ULA), permitindo que dois registradores independentes sejam acessados em uma única instrução executada em um ciclo de clock. A arquitetura resultante é mais eficiente em termos de código, ao mesmo tempo em que alcança rendimentos até dez vezes mais rápidos do que os microcontroladores CISC convencionais.
 O Atmel® ATmega328P fornece os seguintes recursos: 32K bytes de flash programável no sistema com recursos de leitura durante a gravação, 1K bytes EEPROM, 2K bytes SRAM, 23 linhas de E/S de uso geral, 32 registradores de trabalho de uso geral, três temporizadores flexíveis /Contadores com modos de comparação, interrupções internas e externas, um USART programável serial, uma interface serial de 2 fios orientada a byte, uma porta serial SPI, um ADC de 6 canais e 10 bits (8 canais em pacotes TQFP e QFN/MLF) , um temporizador de watchdog programável com oscilador interno e cinco modos de economia de energia selecionáveis por software. O modo ocioso para a CPU enquanto permite que a SRAM, Temporizador/Contadores, USART, interface serial de 2 fios, porta SPI e sistema de interrupção continuem funcionando. O modo de desligamento salva o conteúdo do registro, mas congela o oscilador, desabilitando todas as outras funções do chip até a próxima interrupção ou reinicialização do hardware. No modo de economia de energia, o temporizador assíncrono continua a funcionar, permitindo que o usuário mantenha uma base de temporizador enquanto o restante do dispositivo está dormindo. O modo de redução de ruído ADC para a CPU e todos os módulos de E/S, exceto temporizador assíncrono e ADC, para minimizar o ruído de comutação durante as conversões ADC. No modo de espera, o oscilador de cristal/ressonador está funcionando enquanto o restante do dispositivo está dormindo. Isto permite um arranque muito rápido combinado com um baixo consumo de energia.[1]
@@ -130,7 +126,7 @@ O Atmel® ATmega328P fornece os seguintes recursos: 32K bytes de flash programá
 Core CPU
 A principal função do núcleo da CPU (core CPU) é garantir a execução correta do programa. A CPU deve, portanto, ser capaz de acessar memórias, realizar cálculos, controlar periféricos e lidar com interrupções.
 
-<center><img src=imagens/core_cpu.png></center
+<center><img src=imagens/core_cpu.png height=300 width=300></center
 Diagrama de Blocos da Arquitetura AVR
 
 Para maximizar o desempenho e o paralelismo, o AVR usa uma arquitetura harvard – com memórias e barramentos separados para programa e dados. As instruções na memória do programa são executadas com um pipelining de nível único. Enquanto uma instrução está sendo executada, a próxima instrução é pré-buscada na memória do programa. Este conceito permite que as instruções sejam executadas em cada ciclo de clock. A memória do programa é uma memória flash reprogramável no sistema.[1]
@@ -143,12 +139,12 @@ Para maximizar o desempenho e o paralelismo, o AVR usa uma arquitetura harvard �
 
 ## Sistema de Reset
 
-<center><img src=https:imagens/sistema_reset.png>Lógica Reset</center>
+<center><img src=https:imagens/sistema_reset.png height=300 width=300>Lógica Reset</center>
 
 Durante o reset, todos os registradores de E/S são ajustados para seus valores iniciais, e o programa inicia a execução a partir do vetor de reset. Para o Atmel® ATmega328P, a instrução colocada no vetor de reset deve ser uma instrução RJMP – salto relativo – para a rotina de manipulação de reset. Se o programa nunca habilita uma fonte de interrupção, os vetores de interrupção não são usados e o código de programa regular pode ocupar nesses locais. Este também é o caso se o vetor de reset estiver na seção de aplicação enquanto os vetores de interrupção estiverem na seção de inicialização. As portas de E/S do AVR® são imediatamente redefinidas para seu estado inicial quando uma fonte de redefinição fica ativa. Isso não requer que nenhuma fonte de relógio esteja em execução. Após todas as fontes de reset ficarem inativas, um contador de atraso é invocado, estendendo o reset interno. Isso permite que a potência atinja um nível estável antes do início da operação normal. O tempo limite do contador de atraso é definido pelo usuário através dos fusíveis SUT e CKSEL. 
 
 
-# Programação em Alto Nível, C
+## Programação em Alto Nível, C
 
 Este primeiro exemplo de programa com um pisca Led
 
@@ -261,10 +257,6 @@ int main()
 ## Referências
 <BR>  <a href=https://www.arduino.cc/reference/pt/>Arduino Referência de Linguagem Wiring</a> <BR>
 <BR>
-
-## Referências Arduino
-
-<center>  <a href=https://www.arduino.cc/reference/pt/ target=_blank>Arduino Referência de Linguagem C</a> </center><BR>
 
 ## Funçoes principais
 
@@ -381,10 +373,10 @@ Clique para abrir o exemplo de pisca led em Arduino no simulador wokwi
 
 <BR><BR>	
 
-#### 22/05 TAREFA: 
+#### TAREFA: 
 Crie uma conta no Wokwi e altere este exemplo para um semaforo. Salve o exemplo para a próxima aula.
 
-# Aula 29/05
+# Aula 
 
 #### Configurando um pino como entrada com pull-up:
 
@@ -432,7 +424,9 @@ void loop() {
 }
 
 ```
-#### Circuito de simulação para o pisca led Botão https://wokwi.com/projects/432285716099971073
+#### Circuito de simulação para o pisca led Botão 
+
+https://wokwi.com/projects/432285716099971073
 
 <BR><b> Atividade 2:</b> Acrescente mais dois leds. Modifique o programa anterior, 
 	para que estes dois leds permaneçam desligados quando o botão não está pressionado, 
@@ -607,7 +601,7 @@ int main()
 //======================================================================================
 
 ```
-# Aula 12/06
+# ESP32
 
 # Semaforo com ESP32
 
@@ -714,15 +708,12 @@ Defina pinos de entrada e saída. As entradas com push button aterradas e pull u
 
 ![image](https://github.com/mchavesferreira/mcr/assets/63993080/fee83e1b-24d9-4df6-bfa0-f8256ef35413)
 
-# Trabalho 2
-## Monte o projeto de reservatório com ESP32 utilizando maquina de estados para o mesmo projeto aplicado na prova do bimestre anterior
+# Trabalho 
 
-<a href=provacodigoparte2.pdf>Avaliação P1</a>
+## Monte o projeto de reservatório com ESP32 utilizando maquina de estados 
 
 
-# Avaliação P1
-
-Utilize o código exemplo para realizar o projeto 2 utilizando a programação em máquina de estados em um Esp32  e Arduino IDE.
+Utilize o código exemplo para realizar o projeto  utilizando a programação em máquina de estados em um Esp32  e Arduino IDE.
 
 ## Configuração Inicial
 
@@ -750,26 +741,6 @@ Utilize o código exemplo para realizar o projeto 2 utilizando a programação e
 
 <img src=imagens/bimestre2projeto2.png><BR><BR>
 
-
-
-
-
-## Videos tutoriais
-
-Playlist:  https://www.youtube.com/watch?v=uMod3r2ZOJU&list=PLO-6CbqPG8oUPetj7I6bLNCjS7Rk9Supv
-
-### Video Aula Arquitetura Von Neumman 
- 
-https://www.youtube.com/watch?v=uMod3r2ZOJU&list=PLO-6CbqPG8oUPetj7I6bLNCjS7Rk9Supv
-
-### Video Aula: Arquitetura AVR
-
-https://www.youtube.com/watch?v=KVz5ry-89n8&list=PLO-6CbqPG8oUPetj7I6bLNCjS7Rk9Supv
-
-### Canal Professor Rodrigo Rech
-
-Curso de AVR Básico #01 - Introdução
-https://www.youtube.com/watch?v=wiM6_4IC_4o&list=PLMdNWywlSE5QPsEeT_cXisUT366NS3U8R
 
 
 
