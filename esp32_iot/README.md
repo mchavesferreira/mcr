@@ -388,6 +388,8 @@ ESP32 integração com Alexa. Utilizando a biblioteca Espalexa para acionar GPIO
 
 Utilizando frameworks (pacotes de programas) prontos para iniciar uma automação com poucas ou nenhuma linha de códigos. Alguns frameworks permitem a gravação através do navegador Chrome.<BR>
 
+### firmwares para esp32
+
 1 - OpenMQTTGateway v1.0.0 - https://docs.openmqttgateway.com/upload/web-install.html<BR>
 
 2 - ESP Easy’s https://espeasy.readthedocs.io/en/latest/index.html<BR>
@@ -397,6 +399,17 @@ Utilizando frameworks (pacotes de programas) prontos para iniciar uma automaçã
 4 - Tasmota https://tasmota.github.io/docs/<BR>
 
 5 - <a href=https://esphome.io/ target=_blank>ESPHome</a> 	
+
+6- https://www.theengs.io/
+### frameworks para raspberry
+
+-OpenHAB https://www.openhab.org/
+-Home Assistant https://www.home-assistant.io/
+-Domoticz https://www.domoticz.com/
+-Jeedom  https://www.jeedom.com/
+-Node Red (opens new window)
+-FHEM https://fhem.de/
+
    
 ## Explorando recursos com a comunicação WIFI
 <BR><BR>  https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
