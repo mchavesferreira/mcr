@@ -21,8 +21,155 @@ quitetura, memória, registradores, programação C para AVR Atmega 328P, regist
 
 #  Arquitetura de funcionamento de um microprocessador genérico
 
+A arquitetura ilustrada é um modelo genérico baseado na arquitetura de Von Neumann, onde:
+
+* Programa e dados compartilham o mesmo barramento.
+* A CPU é o elemento central.
+* Memórias e periféricos são acessados por mapeamento de endereço.
+
 ![processador](https://github.com/user-attachments/assets/cd0111e0-3362-433f-9e02-2d62215ecf9f)
 
+## Partes da Arquitetura do Microprocessador 
+
+### 1️⃣ CPU (Unidade Central de Processamento)
+
+É o núcleo do sistema responsável por executar instruções.
+
+#### Componentes internos:
+
+#### 🔹 PC – Program Counter
+
+* Armazena o endereço da próxima instrução a ser executada.
+* É incrementado automaticamente após cada busca de instrução.
+
+#### 🔹 Registrador de Instrução (RI)
+
+* Armazena temporariamente a instrução que foi buscada na memória.
+
+#### 🔹 Decodificador de Instrução
+
+* Interpreta a instrução armazenada no RI.
+* Gera sinais de controle para execução da operação.
+
+#### 🔹 Registradores (A, B, etc.)
+
+* Memórias internas rápidas da CPU.
+* Armazenam operandos e resultados temporários.
+* Exemplo: acumulador.
+
+#### 🔹 ULA – Unidade Lógica e Aritmética
+
+* Executa operações:
+
+  * Aritméticas (soma, subtração)
+  * Lógicas (AND, OR, XOR)
+  * Comparações
+
+---
+
+### 2️⃣ Memória ROM / FLASH – Memória de Programa
+
+* Armazena o código do programa.
+* Conteúdo não volátil.
+* A CPU acessa através do **barramento de endereços**.
+* A figura mostra valores hexadecimais representando instruções.
+
+Função:
+➡ Guardar o firmware.
+
+---
+
+### 3️⃣ Memória RAM – Memória de Dados
+
+* Armazena variáveis e dados temporários.
+* Memória volátil.
+* Usada durante a execução do programa.
+
+Função:
+➡ Armazenar dados manipulados pela CPU.
+
+---
+
+### 4️⃣ Entrada / Saída (I/O)
+
+* Interface com o mundo externo.
+* Pode representar:
+
+  * Sensores
+  * Atuadores
+  * Displays
+  * Portas seriais
+
+Função:
+➡ Permitir comunicação com o ambiente externo.
+
+---
+
+## 🔄 Barramentos do Sistema
+
+A comunicação entre os blocos ocorre através de três barramentos principais:
+
+---
+
+### 🟦 Barramento de Endereços
+
+* Sai da CPU.
+* Define **qual posição de memória será acessada**.
+* Unidirecional.
+
+Exemplo:
+
+```
+CPU → Memória
+```
+
+---
+
+### 🟩 Barramento de Dados
+
+* Transporta dados entre CPU, RAM e I/O.
+* Bidirecional.
+
+Exemplo:
+
+```
+CPU ↔ RAM
+CPU ↔ I/O
+```
+
+---
+
+### 🟧 Barramento de Controle
+
+* Transporta sinais de controle:
+
+  * Leitura (READ)
+  * Escrita (WRITE)
+  * Clock
+  * Reset
+  * Interrupções
+
+Define o tipo de operação que será realizada.
+
+---
+
+## ⚙ Ciclo Básico de Funcionamento
+
+A figura representa o ciclo clássico:
+
+1. **Busca (Fetch)**
+   PC envia endereço → ROM retorna instrução
+
+2. **Decodificação (Decode)**
+   Decodificador interpreta a instrução
+
+3. **Execução (Execute)**
+   ULA realiza operação
+   Resultado pode ir para registradores ou RAM
+
+Esse ciclo se repete continuamente.
+
+---
 
 
 
