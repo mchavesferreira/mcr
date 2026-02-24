@@ -4,24 +4,20 @@
 
 # Atmega328P 
 
-## Utilizando Atmega328P para a compreensão e funcionamento de microprocessadores e microcontroladores em geral utilizando a linguagem Assembly.
+## Utilizando Atmega328P para a compreensão e funcionamento de microprocessadores e microcontroladores em geral
 
 ## Aulas Turma 2026
 
 ## 1° Bimestre
-- 20/02  - Introdução a Disciplina, Histórico sobre microprocessadores
-- 27/02 -  Arquitetura de funcionamento de um microprocessador genérico
-- 
-- - Introdução ao C
-- - Programação Alto Nível, C, Arduino, TAREFA: criar conta e um semaforo no Wokwi, modificando   [Programa Pisca Led Arduino](#Programa-Pisca-Led-Arduino)
+- 10/02  - Apresentação da disciplina, forma de avaliação, datas das avaliações. Aula expositiva sobre Histórico dos microprocessadores e microcontroladores.
+- 24/02 - Conceitos de microcontroladores, diferenças entre microcontrolador e microprocessador, arquiteturas Havard e Von Neumman
+- 03/03 - Modelo básico de um programa em C, diretivas, macros e definições, como utilizar o ambiente de desenvolvimento.
+- 10/03 - Programação em alto nível utilizando C para AVR, estrutura básica de programa. Estruturas de Condicionais e repetição. Blocos de declarações (If, for, while, switch).
+- 17/03 - Registradores do ATmega328P, portas digitais, DDRx, PORTx e PINx. Manipulação de bits e controle de GPIO.
+- 24/03 - Código BCD. Utilizando display de 7 segmentos em linguagem C com AVR LibC para o microcontrolador Atmega328P.
+- 31/03 - Avaliação 1. Conteúdos anteriores: Arquitetura, memória, registradores, programação C para AVR Atmega 328P, registradores de I/O. Display de segmentos.
+- 07/04 - Apresentação de Trabalho T1 - Relatório e Projeto microcontrolado 
 
-- - Primira Prática C com Arduino UNO (semaforo, ...)
-
-- - Leitura com botão e configurando entrada pull-up.
--  - Uso do Case-switch UNO
--  - Aplicando maquina de estados ESP32
-- Trabalho 2 - Montagem ESP32
-- 
 Exemplos de circuitos básicos em um microprocessador:
 
 https://circuitverse.org/simulator/51702
@@ -33,22 +29,12 @@ https://github.com/viniciusNoleto/Electronic_Components_Example-LOGISIM-CIRC/tre
 Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 
 
-### 4° Bimestre
--  -  Primeiras instruções assembly para Atmega328P. 
--  -  [Programa Pisca Led](#Programa-Pisca-Led), [Programa Reservatorio](#Programa-Reservatorio)
--  -  Simulador Wowki, Display 7 segmentos 
-- -  Projeto microcontrolado Assembly
-- -  Trabalho em Grupo
--  -  Avaliação Escrita
-- 
+
 
 
 
 
 #  Arquitetura de funcionamento de um microprocessador genérico
-
-
-
 
         ORG 0H        ; Início do programa na memória (Endereço 256)
         LDA #17         ; Carrega o valor 17 no registrador A
