@@ -224,7 +224,6 @@ https://www.youtube.com/watch?v=KVz5ry-89n8&list=PLO-6CbqPG8oUPetj7I6bLNCjS7Rk9S
 Curso de AVR Básico #01 - Introdução
 https://www.youtube.com/watch?v=wiM6_4IC_4o&list=PLMdNWywlSE5QPsEeT_cXisUT366NS3U8R
 
-## Q
 
 ## Atmega 328p
 
@@ -440,6 +439,11 @@ int main()
 <BR><BR> 
 
 </details>
+
+## Programação em blocos e Arduino
+
+<img width="1214" height="643" alt="image" src="https://github.com/user-attachments/assets/912546e5-8eb2-477e-9cd2-6945574e4c04" />
+
 
 ## GPIO Digital
 
