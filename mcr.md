@@ -9,8 +9,8 @@
 ## Aulas Turma 2026
 
 ## 1° Bimestre
-- 10/02  - Apresentação da disciplina, forma de avaliação, datas das avaliações. Aula expositiva sobre Histórico dos microprocessadores e microcontroladores.
-- 24/02 - Conceitos de microcontroladores, diferenças entre microcontrolador e microprocessador, arquitetura Von Neumman
+- 10/02  - Apresentação da disciplina, forma de avaliação, datas das avaliações. Aula expositiva sobre Histórico dos microprocessadores e microcontroladores. (Slide suap)
+- 24/02 - Conceitos de microcontroladores, diferenças entre microcontrolador e microprocessador, arquitetura Von Neumman (Slide suap)
 - 03/03 - Modelo básico de um programa em C, diretivas, macros e definições, como utilizar o ambiente de desenvolvimento.
 - 10/03 - Programação em alto nível utilizando C para AVR, estrutura básica de programa. Estruturas de Condicionais e repetição. Blocos de declarações (If, for, while, switch).
 - 17/03 - Registradores do ATmega328P, portas digitais, DDRx, PORTx e PINx. Manipulação de bits e controle de GPIO.
@@ -76,6 +76,8 @@ https://www.youtube.com/watch?v=KVz5ry-89n8&list=PLO-6CbqPG8oUPetj7I6bLNCjS7Rk9S
 
 Curso de AVR Básico #01 - Introdução
 https://www.youtube.com/watch?v=wiM6_4IC_4o&list=PLMdNWywlSE5QPsEeT_cXisUT366NS3U8R
+
+## Q
 
 ## Atmega 328p
 
