@@ -324,54 +324,6 @@ int main( )
 ```
 
 
-## Lendo Botão com macros
-
-```java
-
-//=====================================================================================	//
-//    LIGANDO E DESLIGANDO UM LED QUANDO UM BOTaO e PRESSIONADO							//
-//===================================================================================== //
-#define F_CPU 16000000UL	/*define a frequ�ncia do microcontrolador 16MHz (necess�rio
-							para usar as rotinas de atraso)*/
-#include <avr/io.h> 	    //definicoes do componente especificado
-#include <util/delay.h>		//biblioteca para as rotinas de _delay_ms() e delay_us()
-
-//Definicoes de macros - para o trabalho com os bits de uma variavel
-
-#define set_bit(Y,bit_x)(Y|=(1<<bit_x))		//ativa o bit x da variavel Y (coloca em 1)
-#define clr_bit(Y,bit_x)(Y&=~(1<<bit_x))	//limpa o bit x da variavel Y (coloca em 0) 
-#define cpl_bit(Y,bit_x)(Y^=(1<<bit_x))		//troca o estado do bit x da variavel Y 
-#define tst_bit(Y,bit_x)(Y&(1<<bit_x))  	//testa o bit x da variavel Y (retorna 0 ou 1)
-
-#define LED   PD2   //LED e o substituto de PD2 na programacao 
-#define BOTAO PD7   //BOTAO e o substituto de PD7 na programacao     	
-//-------------------------------------------------------------------------------------
-int main()
-{
-	DDRD = 0b00000100;	//configura o PORTD, PD2 saida, os demais pinos entradas
-	PORTD= 0b11111111;	/*habilita o pull-up para o botao e apaga o LED (todas as 
-						entradas com pull-ups habilitados)*/
-	
-	while(1)								//laco infinito
-	{
-		if(!tst_bit(PIND,BOTAO))			//se o botao for pressionado executa o if
-		{					
-			while(!tst_bit(PIND,BOTAO));	//fica preso ate soltar o botao
-
-			_delay_ms(10);					//atraso de 10 ms para eliminar o ruido do botao
-
-			if(tst_bit(PORTD,LED))			//se o LED estiver apagado, liga o LED
-				clr_bit(PORTD,LED);			
-			else							//se nao apaga o LED
-				set_bit(PORTD,LED);	
-
-			//o comando cpl_bit(PORTD,LED) pode substituir este laco if-else
-		
-		}//if do botao pressionado
-	
-	}//laco infinito
-}
-```
 
 # Programação com IDE Arduino
 
@@ -444,6 +396,11 @@ int main()
 
 <img width="1214" height="643" alt="image" src="https://github.com/user-attachments/assets/912546e5-8eb2-477e-9cd2-6945574e4c04" />
 
+https://lab.open-roberta.org
+
+<img width="1630" height="770" alt="image" src="https://github.com/user-attachments/assets/94c3c1c2-48e4-4471-b9a7-5461c4383547" />
+
+https://www.tinkercad.com
 
 ## GPIO Digital
 
