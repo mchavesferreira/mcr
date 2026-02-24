@@ -107,7 +107,7 @@ Função:
 
 ## 🔄 Barramentos do Sistema
 
-A comunicação entre os blocos ocorre através de três barramentos principais:
+A comunicação entre os blocos ocorre através de três barramentos principais: Barramento de Endereços, Dados e Controle
 
 ---
 
