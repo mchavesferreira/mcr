@@ -400,14 +400,20 @@ Utilizando frameworks (pacotes de programas) prontos para iniciar uma automaçã
 
 5 - <a href=https://esphome.io/ target=_blank>ESPHome</a> 	
 
-6- https://www.theengs.io/
+6- <a href=https://www.theengs.io>theengs</a>
+
 ### frameworks para raspberry
 
 -OpenHAB https://www.openhab.org/
+
 -Home Assistant https://www.home-assistant.io/
+
 -Domoticz https://www.domoticz.com/
+
 -Jeedom  https://www.jeedom.com/
+
 -Node Red (opens new window)
+
 -FHEM https://fhem.de/
 
    
