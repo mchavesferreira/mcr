@@ -18,13 +18,18 @@
 - 31/03 - Avaliação 1. Conteúdos anteriores: Arquitetura, memória, registradores, programação C para AVR Atmega 328P, registradores de I/O. Display de segmentos.
 - 07/04 - Apresentação de Trabalho T1 - Relatório e Projeto microcontrolado 
 
+#  Arquitetura de funcionamento de um microprocessador genérico
+
+![processador](https://github.com/user-attachments/assets/cd0111e0-3362-433f-9e02-2d62215ecf9f)
+
+
 Exemplos de circuitos básicos em um microprocessador:
 
 https://circuitverse.org/simulator/51702
 
 https://github.com/viniciusNoleto/Electronic_Components_Example-LOGISIM-CIRC/tree/main
 
-- 06/03 -  Arquitetura AVR Atmega 328P, [Mapeamento de Memória](#Mapeamento-de-memória)
+
 
 Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 
@@ -34,7 +39,7 @@ Slide: https://github.com/mchavesferreira/mcr/blob/main/arquitetura.pdf
 
 
 
-#  Arquitetura de funcionamento de um microprocessador genérico
+
 
         ORG 0H        ; Início do programa na memória (Endereço 256)
         LDA #17         ; Carrega o valor 17 no registrador A
@@ -64,8 +69,6 @@ O programa na memória flash seria equivalente a seguinte tabela de exportação
 | 0x000A   | HL        | 7600         | 01110110 00000000      |
 
 
-![processador](https://github.com/user-attachments/assets/cd0111e0-3362-433f-9e02-2d62215ecf9f)
-
 
 ### Arquitetura de von Neumann:
 
@@ -73,20 +76,12 @@ O programa na memória flash seria equivalente a seguinte tabela de exportação
 - O microprocessador executa as instruções sequencialmente.
 - As operações são realizadas na ULA usando os registradores internos.
 
-### Reservas de Endereço para Vetores de Interrupção e Bootloader
+### Arquitetura Havard:
 
-Muitos microprocessadores reservam os primeiros endereços de memória (por exemplo, de 0000H a 00FFH) para vetores de interrupção, tabelas de inicialização e rotinas do sistema.
 
-Um vetor de interrupção contém endereços de sub-rotinas que devem ser executadas quando eventos específicos ocorrem, como interrupções de hardware.
 
-Algumas arquiteturas, especialmente as inspiradas nos primeiros microprocessadores como o Intel 8080, Zilog Z80 e 6502, seguem a convenção de reservar os primeiros endereços para registradores mapeados na memória ou para o sistema operacional.
-
-O código do usuário é normalmente carregado a partir de 0100H para evitar sobrescrever esses dados do sistema.
  
-## Mapeamento-de-memória
- 
-Instruções principais para a movimentação de bytes na memória do Atmega328
-<center><img src=imagens/movimentacao_bits_bytes.png></center>
+
  
 ## Configuração de pinos
 
@@ -151,227 +146,6 @@ Para maximizar o desempenho e o paralelismo, o AVR usa uma arquitetura harvard �
 <center><img src=https:imagens/sistema_reset.png>Lógica Reset</center>
 
 Durante o reset, todos os registradores de E/S são ajustados para seus valores iniciais, e o programa inicia a execução a partir do vetor de reset. Para o Atmel® ATmega328P, a instrução colocada no vetor de reset deve ser uma instrução RJMP – salto relativo – para a rotina de manipulação de reset. Se o programa nunca habilita uma fonte de interrupção, os vetores de interrupção não são usados e o código de programa regular pode ocupar nesses locais. Este também é o caso se o vetor de reset estiver na seção de aplicação enquanto os vetores de interrupção estiverem na seção de inicialização. As portas de E/S do AVR® são imediatamente redefinidas para seu estado inicial quando uma fonte de redefinição fica ativa. Isso não requer que nenhuma fonte de relógio esteja em execução. Após todas as fontes de reset ficarem inativas, um contador de atraso é invocado, estendendo o reset interno. Isso permite que a potência atinja um nível estável antes do início da operação normal. O tempo limite do contador de atraso é definido pelo usuário através dos fusíveis SUT e CKSEL. 
-
-# Programas em ASSEMBLY
-
-## Programa Pisca Led
-
-Aula 10/04/2025
-
-
- ```ruby  
-//--------------------------------------------------------------------------- //
-//		AVR e Arduino: T�cnicas de Projeto, 2a ed. - 2012.					  //	
-//--------------------------------------------------------------------------- //
-
-.equ LED   = PB5  		//LED � o substituto de PB5 na programa��o 
-
-.ORG 0x000				//endere�o de in�cio de escrita do c�digo 
-
-INICIO:
-	LDI R16,0xFF		//carrega R16 com o valor 0xFF
-	OUT DDRB,R16		//configura todos os pinos do PORTB como sa�da
-
-PRINCIPAL:
-     SBI PORTB, LED		//coloca o pino PB5 em 5V
-	 RCALL ATRASO		//chama a sub-rotina de atraso
-	 CBI PORTB, LED 	//coloca o pino PB5 em 0V
-	 RCALL ATRASO		//chama a sub-rotina de atraso
-	 RJMP PRINCIPAL 	//volta para PRINCIPAL
-
-
-ATRASO:					//atraso de aprox. 200ms
-	LDI R19,16	
- volta:		
-	DEC  R17			//decrementa R17, come�a com 0x00
-	BRNE volta 			//enquanto R17 > 0 fica decrementando R17
-	DEC  R18			//decrementa R18, come�a com 0x00
-	BRNE volta			//enquanto R18 > 0 volta decrementar R18
-	DEC  R19			//decrementa R19
-	BRNE volta			//enquanto R19 > 0 vai para volta
-	RET	
-//---------------------------------------------------------------------------
- ```
-
-Programa Pisca Led
-<center><a href=https://wokwi.com/projects/341066839950885460><img src=https://github.com/mchavesferreira/mcr/blob/main/imagens/pisca.png  width=300 height=300 border=0></a></center>
-
- ```ruby  
-; Pisca LED on PB5(Arduino Uno pin 13)
-#define __SFR_OFFSET 0
-
-#include "avr/io.h"  
-
-.global main   ; obrigatorio simulador
-
-.ORG 0x000
-main:
-  LDI R16,0b11111111		//carrega R16 com o valor 0xFF
-	OUT DDRB,R16
-
-principal:
-  sbi   PORTB, 5 ; Seta o pino da porta   
-  call  ATRASO
-  cbi   PORTB, 5   ; Clear(0) o pino da porta   
-  call  ATRASO
-  rjmp principal
-
-ATRASO:
-	LDI R19,80	
-volta:		
-	DEC  R17			//decrementa R17, comeÁa com 0x00
-	BRNE volta 			//enquanto R17 > 0 fica decrementando R17
-	DEC  R18			//decrementa R18, comeÁa com 0x00
-	BRNE volta			//enquanto R18 > 0 volta decrementar R18
-	DEC  R19			//decrementa R19
-	BRNE volta
-  ret
-; Exemplo Pisca Led Avr Projetos
-
-```
-
-
-### Pisca Led com biblioteca
-
-<details><summary>Código Exemplo Pisca Led com utilização de biblioteca para delay</summary>
-<p>
-
-```ruby  
-*/
-//--------------------------------------------------------------------------- //
-//		Fonte: AVR e Arduino: Técnicas de Projeto, 2a ed. - 2012.					  //	
-//--------------------------------------------------------------------------- //
-
-.equ LED   = PB5  		//LED é o substituto de PB5 na programação 
-
-.ORG 0x000				//endereço de início de escrita do código 
-rjmp INICIO
-.include "lib328Pv03.inc"
-INICIO:
-	LDI R16,0xFF		//carrega R16 com o valor 0xFF
-	OUT DDRB,R16		//configura todos os pinos do PORTB como saída
-
-PRINCIPAL:
-      SBI PORTB, LED		//coloca o pino PB5 em 5V
-      ldi delay_time, 2 	; Carrega delay_time com
-      rcall delay_seconds	; Chama rotina de atraso
-	 CBI PORTB, LED 	//coloca o pino PB5 em 0V
-	 RCALL ATRASO		//chama a sub-rotina de atraso
-	 RJMP PRINCIPAL 	//volta para PRINCIPAL
-```
-</p>
-</details> 
-
-Biblioteca: <a href=https://raw.githubusercontent.com/mchavesferreira/mcr/main/programas_livro/lib328Pv03.inc>lib328Pv03.inc</a>
-
-### Programa-Reservatorio
-
-Exemplo de um programa para controle de reservatório.
-
-<BR>Defina pinos de entrada e saída. As entradas com push button aterradas e  pull up ativos. O Programa aguarda “Start” ser pressionado, que liga a  Valvula 1 até que sensor cheio seja acionado. O misturador é acionado  por2 segundos. Esvazia-se o tanque até o sensor vazio ser acionado, retornando ao estado inicial. Considere clock 16Mhz.
-<br><BR>Solução:
-<br>Para que servem e quais são os registradores de I/O de um AVR Atmega?  Os registradores de IO  funcionam para configurar, ler e escrever cada  pino das portas  do microcontrolador, cada bit representa um pino:  DDRx  quando em 0=entrada e 1=saída. PINx para a leitura do pino quando este é  definido com entrada; PORTx escreve na saída se o pino é definido como  saída ou ativa pull-up se o pino é definido como entrada.
-	<Br>
-<details><summary>Ilustração da Solução (clique)</summary>
-<p>
-<br><img src=imagens/oprojeto.jpg>
-<br><img src=imagens/configuracaopinos.jpg>
-<br><img src=imagens/inicio.jpg>
-<br><img src=imagens/principal.jpg>
-<br><img src=imagens/encher.jpg>
-<br><img src=imagens/misturar.jpg>
-<br><img src=imagens/esvaziar.jpg>
-<br><img src=imagens/atraso.jpg>
-</p>
-</details>
-
-<details><summary>Código Solução Controle Reservatório</summary>
-<p>
-
-```ruby 
-//--------------------------------------------------------------------------- //
-// EXEMPLO 					  //	
-//--------------------------------------------------------------------------- //
-
-.ORG 0x000				
-
-INICIO:
-     LDI R19, 0b00000111	//carrega R19 
-     OUT DDRB,R19		//configura todos os pinos
-     LDI R19, 0b00111000
-     OUT PORTB, R19
-; aguarda botao start
-PRINCIPAL:      
-     SBIC PINB,5		
-     RJMP Principal
-     RJMP ENCHER
-
-; Liga válvula aguarda sensor cheio
-ENCHER:
-    SBI PORTB,0
-    SBIC PINB,3
-    RJMP ENCHER
-    RJMP MISTURAR
-
-; desliga V1, liga misturador por 2 seg. 
-MISTURAR:
-    CBI PORTB,0
-    SBI PORTB,2
-    RCALL ATRASO 
-    RCALL ATRASO 
-    CBI PORTB, 2
-    RJMP ESVAZIAR
-
-; Liga válvula 2 aguarda sensor vazio
-ESVAZIAR:
-    SBI PORTB,1
-    SBIC PINB,4
-    RJMP ESVAZIAR
-    CBI PORTB,1
-    RJMP PRINCIPAL
-; .  .    .   .    .    .    .    .   .     .   
-; rotina de atraso 1 segundo. 
-ATRASO:	
-      LDI R19,80	
-volta:		
-      DEC  R17	
-      BRNE volta
-      DEC  R18	
-      BRNE volta
-      DEC  R19
-      BRNE volta
-      RET
-```
-</details>
-
-Simulação:  https://wokwi.com/projects/394247093827346433
-
-![image](https://github.com/mchavesferreira/mcr/assets/63993080/fee83e1b-24d9-4df6-bfa0-f8256ef35413)
-
-
-<h1>Trabalho em Grupo</h1>
-
--Modifique o projeto de simulação anterior para atender este projeto. Envie este link no SUAP Trabalho 1. Utilizando wokwi, SALVE O PROJETO COM LOCK.
-
--Elabore um exemplo de programação utilizando AVR Atmega 328P em assembly para automação de processos da seguinte figura: 
-
--Ao ligar a máquina, aguarda-se pressionar o botão1. Então a válvula V4 é fechada (High) e V1 é acionada por 4 segundos.
-
--A válvula V2 é acionada até que o sensor nível1 seja acionado.
-
--A válvula V3 é acionada por 2 segundos.
-
--O misturador M1 é acionado por 3 segundos.
-
--A válvula V4 é acionada por 2 segundo para esvaziar parcialmente o tanque.
-
--A válvula V2 é acionada por 5 segundos para diluir novamente a solução.
-
--O misturador é acionado por  4 segundos. Em seguida o tanque é esvaziado totalmente, abrindo-se a válvula V4 até o sensor nível 0 seja acionado.
-
--Volta-se ao estado inicial, desligando saídas.
-
-
 
 
 # Programação em Alto Nível, C
@@ -693,6 +467,10 @@ int main()
 	}//laco infinito
 }
 ```
+
+
+
+
 
 ## Maquina de estados
 
