@@ -831,7 +831,7 @@ Utilize o código exemplo para realizar o projeto  utilizando a programação em
 - 
 <BR><h1>Sugestão de lista de compras para montagem de projetos com ESP32</h1>
 <BR>
-<BR>-Esp32  Devkit Esp32-wroom-32 - 30 Pinos - Tipo C
+<BR>-Esp32  Devkit Esp32-recomendado S3 com conector usb - Tipo C
 <BR><img src=imagens/ESP32_tipoC.png width=200 height=200>
 <BR>https://produto.mercadolivre.com.br/MLB-3456778444-esp32-doit-devkit-esp32-wroom-32-30-pinos-tipo-c-_JM
 
