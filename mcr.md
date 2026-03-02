@@ -455,17 +455,26 @@ void setup() {
 
 
 ```java
-void setup() {
-  // initialize digital pin LED_BUILTIN as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
+void setup() { 
+  // Função executada uma única vez ao iniciar o Arduino
+  pinMode(LED_BUILTIN, OUTPUT); 
+  // Configura o LED interno como saída, LED_BUILTIN conectado ao pino 13
 }
 
-// the loop function runs over and over again forever
-void loop() {
-  digitalWrite(LED_BUILTIN, HIGH);   // turn the LED on (HIGH is the voltage level)
-  delay(1000);                       // wait for a second
-  digitalWrite(LED_BUILTIN, LOW);    // turn the LED off by making the voltage LOW
-  delay(1000);                       // wait for a second
+void loop() { 
+  // Função executada repetidamente (loop infinito)
+
+  digitalWrite(LED_BUILTIN, HIGH); 
+  // Liga o LED (nível alto)
+
+  delay(1000); 
+  // Aguarda 1 segundo
+
+  digitalWrite(LED_BUILTIN, LOW); 
+  // Desliga o LED (nível baixo)
+
+  delay(1000); 
+  // Aguarda 1 segundo
 }
 
 
