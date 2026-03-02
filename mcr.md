@@ -290,7 +290,6 @@ int main()
 ```
 <br><a href=https://wokwi.com/projects/363128065545249793>Pisca Led em C</a>
 
-## Pisca LED  Utilizando Macros em C
 
 ## Pisca LED Utilizando operadores
 
@@ -312,6 +311,7 @@ return 0;
 }
 ```
 
+## Pisca LED  Utilizando Macros em C
 Conhecendo o recurso de Macros do compilador para simplificar o código
 
 ```java
