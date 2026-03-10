@@ -484,6 +484,8 @@ Clique para abrir o exemplo de pisca led em Arduino no simulador wokwi
 
 <BR><a href=https://wokwi.com/projects/344891652101374548>Pisca led em Arduino</a>	
 
+<img width="467" height="273" alt="image" src="https://github.com/user-attachments/assets/e9330fdf-c6ce-49f5-86ca-413c61be8fc1" />
+
 <BR><BR>	
 
 #### TAREFA: 
