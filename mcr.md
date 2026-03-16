@@ -491,9 +491,10 @@ Clique para abrir o exemplo de pisca led em Arduino no simulador wokwi
 #### TAREFA: 
 Crie uma conta no Wokwi e altere este exemplo para um semaforo. Salve o exemplo para a próxima aula.
 
-# Aula 
+### Aula 17/03
 
-#### Configurando um pino como entrada com pull-up:
+## Utilizando pinos como entrada com pull-up
+
 
 Utilizando a função digitalRead();
 
@@ -522,6 +523,7 @@ void loop() {
 #define botao 7
 
 int tempo=100;
+int id_selecao=0;
 
 void setup() {
   pinMode(LED, OUTPUT);
@@ -551,29 +553,26 @@ https://wokwi.com/projects/432285716099971073
 ### Programa para debounce de botão
 
 ```java
-int main()
-{
-
-						entradas com pull-ups habilitados)*/
-	while(1)								//laco infinito
-	{
-                //////// pisca led
-                contador++;
-                _delay_ms(1);		
-                if(contador>500) {  contador=0; cpl_bit(PORTD,LEDPISCA);   }
-                //////// pisca led
-
-		if(!tst_bit(PIND,BOTAO))			//se o botao for pressionado executa o if
-		{					
-			while(!tst_bit(PIND,BOTAO));	//fica preso ate soltar o botao
-			_delay_ms(10);					//atraso de 10 ms para eliminar o ruido do botao
-			if(tst_bit(PORTD,LED))			//se o LED estiver apagado, liga o LED
-				clr_bit(PORTD,LED);			
-			else							//se nao apaga o LED
-				set_bit(PORTD,LED);	
-			//o comando cpl_bit(PORTD,LED) pode substituir este laco if-else	
-		}//if do botao pressionado
-	}//laco infinito
+void loop() {
+  // altera o valor da variavel se pressionado
+  if(!digitalRead(botao))  { 
+      while(!digitalRead(botao));
+        if(id_selecao)  {
+                         id_selecao=0;
+                         tempo=100;
+                         delay(50);
+                        } else
+                        {
+                         id_selecao=1;
+                         tempo=500;
+                         delay(50);
+                        }
+                      } 
+  
+  digitalWrite(LED, HIGH);
+  delay(tempo);
+  digitalWrite(LED, LOW);
+  delay(tempo);
 }
 ```
 
