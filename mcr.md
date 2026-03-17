@@ -523,7 +523,7 @@ void loop() {
 #define botao 7
 
 int tempo=100;
-int id_selecao=0;
+
 
 void setup() {
   pinMode(LED, OUTPUT);
@@ -553,17 +553,30 @@ https://wokwi.com/projects/432285716099971073
 ### Programa para debounce de botão
 
 ```java
+
+#define LED 13
+#define botao 7
+
+int tempo=100;
+int id_selecao=0;
+
+
+void setup() {
+  pinMode(LED, OUTPUT);
+  pinMode(botao, INPUT_PULLUP); // definir botao de entrada
+}
+
 void loop() {
   // altera o valor da variavel se pressionado
   if(!digitalRead(botao))  { 
       while(!digitalRead(botao));
-        if(id_selecao)  {
-                         id_selecao=0;
+        if(id_selecao)  {  //essa variável funciona como uma chave (0 ou 1)
+                         id_selecao=0;  // Se id_selecao for verdadeiro (1),
                          tempo=100;
                          delay(50);
                         } else
                         {
-                         id_selecao=1;
+                         id_selecao=1;   //Se id_selecao for verdadeiro (0),
                          tempo=500;
                          delay(50);
                         }
@@ -618,101 +631,117 @@ https://wokwi.com/projects/358828863218714625
 
 ```java
 
-//=====================================================================================	//
-//		Marquina de estados  e controle de fluxos   							//
-
-//=====================================================================================	//
-
-#define F_CPU 16000000UL	//define a frequencia do microcontrolador - 16MHz
-
-#include <avr/io.h> 	    //defini��es do componente especificado
-#include <util/delay.h>		//biblioteca para o uso das rotinas de _delay_ms e _delay_us()
-#include <avr/pgmspace.h>   //para o uso do PROGMEM, grava��o de dados na mem�ria flash
-
-//Definicoeses de macros para o trabalho com bits
-
-#define	set_bit(y,bit)	(y|=(1<<bit))	//coloca em 1 o bit x da vari�vel Y
-#define	clr_bit(y,bit)	(y&=~(1<<bit))	//coloca em 0 o bit x da vari�vel Y
-#define cpl_bit(y,bit) 	(y^=(1<<bit))	//troca o estado l�gico do bit x da vari�vel Y
-#define tst_bit(y,bit) 	(y&(1<<bit))	//retorna 0 ou 1 conforme leitura do bit
+// --------------------
+// Variáveis
+// --------------------
+unsigned int tempo = 0;
+unsigned char estado = 0;
 
 
-// variaveis
-unsigned int tempo=0;
-unsigned char  estado=0;	//declara variavel global
+// --------------------
+// Definição dos pinos
+// --------------------
 
-///  funcoes da maquina de lavar
-
-//descricao dos pinos I/O
 // ENTRADAS
-#define botao1 PC0 // botao mais
-#define botao2 PC1 // botao menos
-#define botao3 PC2 // botao ENTER / STOP processo
+#define botao1 A0   // botão mais
+#define botao2 A1   // botão menos
+#define botao3 A2   // botão ENTER / STOP
+
+// SAÍDAS
+#define LED1 12     // motor agitação
+#define LED2 11     // válvula entrada água
+#define LED3 10     // bomba saída tanque
 
 
-//SAIDAS
-#define LED1 PB4 // motor agitacao
-#define LED2 PB3 // valvula de entrada agua
-#define LED3 PB2 // bomba saida tanque
+// --------------------
+// Setup
+// --------------------
+void setup() {
 
+  pinMode(botao1, INPUT_PULLUP);
+  pinMode(botao2, INPUT_PULLUP);
+  pinMode(botao3, INPUT_PULLUP);
 
-
-
-void etapa0(){
-	       set_bit(PORTB,2);
-	     	if(!tst_bit(PINC,0)) {  clr_bit(PORTB,2);  estado=1; tempo=2000; } //if botao+
-		 	 
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
 }
 
 
-void etapa1(){
-	      set_bit(PORTB,3);
+// --------------------
+// Máquina de estados
+// --------------------
+void loop() {
 
-		 	  if(!tempo) { clr_bit(PORTB,3);   estado=2; tempo=2000; }   //muda de estado 
-			 _delay_ms(1);  // atraso
-			 tempo--;    // decrementa tempo
+  switch(estado) {
+
+    case 0:
+      etapa0();
+      break;
+
+    case 1:
+      etapa1();
+      break;
+
+    case 2:
+      etapa2();
+      break;
+  }
 }
 
-void etapa2(){
 
-        set_bit(PORTB,4);
-		 	  if(!tempo) {  clr_bit(PORTB,4);   estado=0; tempo=2000; }   //muda de estado 
-			  _delay_ms(1);  // atraso
-			   tempo--;    // decrementa tempo
+// --------------------
+// Etapa 0  // muda para etapa 1 quando o botão 1 é pressionado
+// --------------------
+void etapa0() {
+
+  digitalWrite(LED3, HIGH);   // liga bomba
+
+  // botão pressionado (INPUT_PULLUP → LOW)
+  if(!digitalRead(botao1)) {
+
+    digitalWrite(LED3, LOW);  // desliga bomba
+    estado = 1;
+    tempo = 2000;  // tempo que será repassado a próxima etapa 1
+  }
 }
 
-//--------------------------------------------------------------------------------------
-int main()
-{	
- 	//declaracao da vari�vel para armazenagem dos digitos
 
-	DDRB = 0b00111111;			//PORT B saida
-	PORTB= 0;		        	//inicia desligado
-	DDRC = 0b00000000;			//PORT C entrada
-  PORTC= 0b11111111;          //PULL UP portC
-	DDRD = 0xFF;				//PORTD como sa�da (display)
-	PORTD= 0xFF;				//desliga o display
-	UCSR0B = 0x00;				//PD0 e PD1 como I/O gen�rico, para uso no Arduino
+// --------------------
+// Etapa 1 // esta etapa permanecerá o intervalo definido na variavel tempo da etapa anterior
+// --------------------
+void etapa1() {
+
+  digitalWrite(LED2, HIGH);   // liga válvula
+
+  if(!tempo) {
+
+    digitalWrite(LED2, LOW);  // desliga válvula
+    estado = 2;
+    tempo = 2000;
+  }
+
+  delay(1);
+  tempo--;
+}
 
 
-	
-	tempo=1000;   // varial de contagem de tempo
-	while(1) 					//laco infinito
-	{
-		
-		switch(estado)
-		{  //estado inicial
-		    case 0:  etapa0();        break; 
-				case 1:  etapa1();        break; 
-				case 2:  etapa2();        break; 
+// --------------------
+// Etapa 2  // muda para etapa 0 quando o botão 2 é pressionado
+// --------------------
+void etapa2() {
 
-		}
+  digitalWrite(LED1, HIGH);   // liga motor
 
-		
-	}// fim do while
-	
-} // fim do main
-//======================================================================================
+  // botão pressionado (INPUT_PULLUP → LOW)
+  if(!digitalRead(botao2)) {
+
+    digitalWrite(LED1, LOW);  // desliga motor
+    estado = 0;
+  }
+
+
+}
 
 ```
 # ESP32
