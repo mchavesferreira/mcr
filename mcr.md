@@ -507,7 +507,7 @@ void setup() {
 
 void loop() {
   int buttonState = digitalRead(BUTTON_PIN);  // Lê o estado do botão
-  if (buttonState == LOW) {  // Verifica se o botão está sendo pressionado
+  if (!digitalRead(BUTTON_PIN)) {  // Verifica se o botão está sendo pressionado
     // Ação a ser realizada quando o botão está pressionado
   }
 }
@@ -532,7 +532,7 @@ void setup() {
 
 void loop() {
   // altera o valor da variavel se pressionado
-  if(digitalRead(botao)) {tempo=500;} else  {tempo=100; } 
+  if(!digitalRead(botao)) {tempo=500;} else  {tempo=100; } 
   
   digitalWrite(LED, HIGH);
   delay(tempo);
@@ -605,7 +605,7 @@ void loop() {
 A estrutura switch-case é uma técnica eficaz para implementar máquinas de estados em programação de microcontroladores, facilitando o controle de fluxo do programa com base nos valores de uma variável. Aqui está um exemplo simplificado utilizando em uma função:
 ```java
 // Exemplo de máquina de estados usando switch-case
-void stateMachineExample(int state) {
+void exemploestados(int estado) {
     switch(state) {
         case 1:
             // Ação para o estado 1
