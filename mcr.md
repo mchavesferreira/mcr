@@ -506,7 +506,6 @@ void setup() {
 }
 
 void loop() {
-  int buttonState = digitalRead(BUTTON_PIN);  // Lê o estado do botão
   if (!digitalRead(BUTTON_PIN)) {  // Verifica se o botão está sendo pressionado
     // Ação a ser realizada quando o botão está pressionado
   }
