@@ -590,7 +590,7 @@ void loop() {
 
 
 
-
+### Aula 24/03
 
 ## Maquina de estados
 
@@ -745,6 +745,13 @@ void etapa2() {
 }
 
 ```
+
+Elabore o programa e simulação para a próxima aula:
+
+https://github.com/mchavesferreira/mcr/blob/main/projetos_lista/trabalho1.pdf
+
+
+
 # ESP32
 
 # Semaforo com ESP32
