@@ -14,8 +14,8 @@
 - 03/03 - Modelo básico de um programa em C, diretivas, macros e definições, como utilizar o ambiente de desenvolvimento.
 - 10/03 - Programação em alto nível utilizando C para AVR, estrutura básica de programa. Estruturas de Condicionais e repetição. Blocos de declarações (If, for, while, switch).
 - 17/03 - Registradores do ATmega328P, portas digitais, DDRx, PORTx e PINx. Manipulação de bits e controle de GPIO.
-- 24/03 - Código BCD. Utilizando display de 7 segmentos em linguagem C com AVR LibC para o microcontrolador Atmega328P.
-- 31/03 - Avaliação 1. Conteúdos anteriores: Arhttps://packt.link/gbp/9781803237688.
+- 24/03 - Máquina de estados
+- 31/03 - Avaliação 1. Conteúdos anteriores: .
 quitetura, memória, registradores, programação C para AVR Atmega 328P, registradores de I/O. Display de segmentos.
 - 07/04 - Apresentação de Trabalho T1 - Relatório e Projeto microcontrolado 
 
