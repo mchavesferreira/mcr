@@ -14,10 +14,10 @@
 - 03/03 - Modelo básico de um programa em C, diretivas, macros e definições, como utilizar o ambiente de desenvolvimento.
 - 10/03 - Programação em alto nível utilizando C para AVR, estrutura básica de programa. Estruturas de Condicionais e repetição. Blocos de declarações (If, for, while, switch).
 - 17/03 - Registradores do ATmega328P, portas digitais, DDRx, PORTx e PINx. Manipulação de bits e controle de GPIO.
-- 24/03 - Máquina de estados - Trabalho 1
+- 24/03 - Máquina de estados - <a href=https://github.com/mchavesferreira/mcr/blob/main/projetos_lista/trabalho1.pdf>Trabalho 1</a>
 - 31/03 - Avaliação 1. Conteúdos anteriores: .
 quitetura, memória, registradores, programação C para AVR Atmega 328P, registradores de I/O. Display de segmentos.
-- 07/04 - Apresentação de Trabalho T1 - Relatório e Projeto microcontrolado 
+- 07/04 - Montagem em sala de aula Trabalho 1
 
 #  Arquitetura de funcionamento de um microprocessador genérico
 
