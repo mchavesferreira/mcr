@@ -16,7 +16,7 @@
 - 17/03 - Registradores do ATmega328P, portas digitais, DDRx, PORTx e PINx. Manipulação de bits e controle de GPIO.
 - 24/03 - Máquina de estados - <a href=https://github.com/mchavesferreira/mcr/blob/main/projetos_lista/trabalho1.pdf>Trabalho 1</a>
 - 31/03 - Avaliação 1. Conteúdos anteriores: .
-quitetura, memória, registradores, programação C para AVR Atmega 328P, registradores de I/O. Display de segmentos.
+quitetura, memória, registradores, programação C para AVR Atmega 328P, registradores de I/O. Máquina de estados
 - 07/04 - Montagem em sala de aula Trabalho 1
 
 #  Arquitetura de funcionamento de um microprocessador genérico
