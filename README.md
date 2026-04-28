@@ -41,3 +41,6 @@ Trabalho:  30/06/2026
 <BR>-Minimo 5 Leds, resistores, botões Push-buttons
 <BR><img src=imagens/leds_resistor.png  width=200 height=200>
 <BR>
+
+
+ChatGPT: https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados
