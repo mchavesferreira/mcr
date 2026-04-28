@@ -21,12 +21,7 @@
 - [Exemplos de projetos](#Exemplos-de-projetos)
 - [Livros](#Livros-e-referencias)
 
-## ESP32 IoT
 
-<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0><BR>Saiba mais...</a><BR>
-
-<B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
- 
 ## Referências Arduino
 
 <center>  <a href=https://www.arduino.cc/reference/pt/ target=_blank>Arduino Referência de Linguagem C</a> </center><BR>
@@ -363,6 +358,9 @@ Imprimindo e lendo na porta serial (UART)<BR>
 
 
 ## ESP32 IOT
+
+
+
 
 <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0><BR>Saiba mais...</a><BR>
 
