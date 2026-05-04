@@ -88,16 +88,193 @@ void loop() {
 <BR>GPIOs, leitura e escrita em pinos digitais. Simulação: <a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
 
 
+## Arquitetura
+
+<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/arquitetura_esp32.png>
+
+	
+## Exemplos práticos
+
+
+### Pisca Led
+
+https://wokwi.com/projects/339670467067511378
+
+![esp32-led-wiring-diagram](https://github.com/mchavesferreira/mcr/assets/63993080/e9eb1095-144c-46ec-96a2-2628b59b60e2)
+
+#### Pisca-led RGB onboard Esp32S3
+
+https://www.phippselectronics.com/esp32-s3-devkitc-1-blink-onboard-rgb-led/?srsltid=AfmBOoof7fWzIlkYRgw8T0ClmNdsBDHrAUJHE5bU1oa9FyKTfL4wS_5w
+
+	
+## variaveis operadores
+
+Uso de Variáveis, #define e funções próprias para I/0 Arduino
+
+<BR>Variáveis e Operadores</b><BR>  
+
+<BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
+
+
+
+## Tabelas Vetores
+<P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
+<BR>01: <a href=https://wokwi.com/projects/341561728616628819> Mapeamento de pinos ESP32</a>
+
+
+
+
+Uso de 3 led:
+
+https://wokwi.com/projects/411388408286145537
+
+## Comunicação Serial
+
+https://wokwi.com/projects/401871586327571457
+
+Imprimindo e lendo na porta serial (UART)<BR>
+  
+<details><summary>Codigo Serial</summary>
+<p>
+
+```ruby
+   Serial.begin(115200);
+   Serial.println("Please enter your name:");
+   while (!Serial.available()); // Wait for input
+   String name = Serial.readStringUntil('\n');
+   Serial.print("Hello, ");
+   Serial.print(name);
+```
+
+</p>
+</details>
+
+  
+<BR>Simulação: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
+
+<P>Exemplos aplicando porta serial e PWM
+<BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
+
+## Display
+ 
+<BR>Displays LCD, Oled, comunicação I2C
+### LCD 16x2
+  <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
+  <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
+
+### Oled
+ 
+-<a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md> Display Oled</a>
+
+	
+## Leitura analógica
+<bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento. Simulação: <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
+
+## Função millis()
+
+A função `millis()` no Arduino é uma ferramenta poderosa para realizar temporizações sem bloquear a execução do programa. Diferente da função `delay()`, que pausa a execução de todo o código por um período especificado, `millis()` permite que o Arduino continue processando outras tarefas enquanto monitora o tempo.
+
+### Como Funciona
+
+A função `millis()` retorna o número de milissegundos que se passaram desde que o Arduino foi ligado ou reiniciado. Utilizando essa função, é possível implementar temporizações em seu código sem impedir o funcionamento de outras partes do programa.
+
+### Exemplo Prático
+
+Imagine que você quer fazer um LED piscar a cada segundo sem interromper a execução de outras funcionalidades. Isso pode ser feito com `millis()` da seguinte forma:
+
+```ruby
+const int pinoLed = 13; // Pino onde o LED está conectado
+unsigned long tempoAnterior = 0; // Armazena o último momento em que o LED foi alterado
+const long intervalo = 1000; // Intervalo desejado de 1 segundo (1000 milissegundos)
+
+void setup() {
+  pinMode(pinoLed, OUTPUT); // Define o pino do LED como saída
+}
+
+void loop() {
+  unsigned long tempoAtual = millis(); // Captura o tempo atual
+
+  if (tempoAtual - tempoAnterior >= intervalo) {
+    tempoAnterior = tempoAtual; // Atualiza o tempo anterior
+
+    // Altera o estado do LED
+    int estadoLed = digitalRead(pinoLed);
+    digitalWrite(pinoLed, !estadoLed); // Inverte o estado do LED
+  }
+}
+
+```
+	  
+## Interrupção externa
+
+  <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
+<BR>  
+ <br><a href=https://wokwi.com/projects/342234932555285074>Uso de interrupção</a>
+  
+
+# Construindo uma maquina
+
+<BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
+
+
+
+## Exemplos de anos anteriores
+
+<BR><BR>Máquina de macarrão:
+<BR><BR>https://wokwi.com/projects/343824918481207891
+
+<BR><BR>Maquina de bolos:
+<BR><BR>https://wokwi.com/projects/343896310503440979
+
+
+<BR><BR>Máquina de sorvete 1
+<BR><BR>https://wokwi.com/projects/343353681787224660 
+
+
+<BR><BR>Máquina de sorvete 2
+
+<BR><BR> https://wokwi.com/projects/343718518644015698
+<BR><BR>
+
+
+
+
+## ESP32 IOT
+
+
+
+
+<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0><BR>Saiba mais...</a><BR>
+
+<B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
+
+
+## Exemplos de projetos 
+	
+Busque na Internet exemplos para aplicar os conhecimentos sobre a programação com microcontroladores.
+	
+Se o projeto for bem documentado, é possível inscrevê-lo em feira de ciências, realizá-lo como trabalho de conclusão de curso (TCC), apresentá-lo em congressos, revistas e eventos ciêntíficos, ou até criar um produto e registá-lo como uma patente.
+A seguir apresentamos links de eventos e revistas ciêntíficas para colaborar com sua idéia.
+- CONICT  
+	
+    -- Trabalhos apresentados em formato online (<a href=https://www.youtube.com/channel/UC4hDqSkORN1rHfyrIIMu9SA/videos>canal youtube</a>)
+	
+    -- Artigos Conict (<a href=http://ocs.ifsp.edu.br/index.php/conict> Anais </a>)
+ 
+- FECCIF- Feira Estadual de Ciência e Cultura do IFSP (http://feccip.com.br> Pagina</a>)
+
+Outros:
+- Seleção de projetos <a href=https://github.com/mchavesferreira/mcr/blob/81e149b137445a6df07bdaa17b2f0c46f31eff36/dicas%20de%20projetos/Dicas%20para%20projetos.pdf> Dicas de projetos.pdf</a>
+
+	- <a href=https://embarcados.com.br> Embarcados </a> Site de uma comunidade sobre sistemas embarcados
+
+
 
 ## Apostila ESP32
 <BR> <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/ESP32.docx>Apostila</a> em desenvolvimento
 
 <BR> <a href=https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf>Datasheet ESP32</a>
 
-
-## Arquitetura
-
-<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/arquitetura_esp32.png>
 
 https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/schematic-checklist.html#flash-and-psram
 
@@ -212,180 +389,7 @@ Requer cuidado com vazamentos de memória, onde a memória alocada não é liber
 ## Memória não volátil
 
 <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/memorianaovolatil.jpg>
-	
-## Exemplos práticos
 
-
-### Pisca Led
-
-https://wokwi.com/projects/339670467067511378
-
-![esp32-led-wiring-diagram](https://github.com/mchavesferreira/mcr/assets/63993080/e9eb1095-144c-46ec-96a2-2628b59b60e2)
-
-#### Pisca-led RDG Esp32S3
-
-https://www.phippselectronics.com/esp32-s3-devkitc-1-blink-onboard-rgb-led/?srsltid=AfmBOoof7fWzIlkYRgw8T0ClmNdsBDHrAUJHE5bU1oa9FyKTfL4wS_5w
-
-	
-## variaveis operadores
-
-Uso de Variáveis, #define e funções próprias para I/0 Arduino
-
-<BR>Variáveis e Operadores</b><BR>  
-
-<BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
-
-
-
-## Tabelas Vetores
-<P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
-<BR>01: <a href=https://wokwi.com/projects/341561728616628819> Mapeamento de pinos ESP32</a>
-
-
-	
-## Leitura analógica
-<bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento. Simulação: <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
-
-## Função millis()
-
-A função `millis()` no Arduino é uma ferramenta poderosa para realizar temporizações sem bloquear a execução do programa. Diferente da função `delay()`, que pausa a execução de todo o código por um período especificado, `millis()` permite que o Arduino continue processando outras tarefas enquanto monitora o tempo.
-
-### Como Funciona
-
-A função `millis()` retorna o número de milissegundos que se passaram desde que o Arduino foi ligado ou reiniciado. Utilizando essa função, é possível implementar temporizações em seu código sem impedir o funcionamento de outras partes do programa.
-
-### Exemplo Prático
-
-Imagine que você quer fazer um LED piscar a cada segundo sem interromper a execução de outras funcionalidades. Isso pode ser feito com `millis()` da seguinte forma:
-
-```ruby
-const int pinoLed = 13; // Pino onde o LED está conectado
-unsigned long tempoAnterior = 0; // Armazena o último momento em que o LED foi alterado
-const long intervalo = 1000; // Intervalo desejado de 1 segundo (1000 milissegundos)
-
-void setup() {
-  pinMode(pinoLed, OUTPUT); // Define o pino do LED como saída
-}
-
-void loop() {
-  unsigned long tempoAtual = millis(); // Captura o tempo atual
-
-  if (tempoAtual - tempoAnterior >= intervalo) {
-    tempoAnterior = tempoAtual; // Atualiza o tempo anterior
-
-    // Altera o estado do LED
-    int estadoLed = digitalRead(pinoLed);
-    digitalWrite(pinoLed, !estadoLed); // Inverte o estado do LED
-  }
-}
-
-```
-
-Uso de 3 led:
-
-https://wokwi.com/projects/411388408286145537
-
-## Comunicação Serial
-
-https://wokwi.com/projects/401871586327571457
-
-Imprimindo e lendo na porta serial (UART)<BR>
-  
-<details><summary>Codigo Serial</summary>
-<p>
-
-```ruby
-   Serial.begin(115200);
-   Serial.println("Please enter your name:");
-   while (!Serial.available()); // Wait for input
-   String name = Serial.readStringUntil('\n');
-   Serial.print("Hello, ");
-   Serial.print(name);
-```
-
-</p>
-</details>
-
-  
-<BR>Simulação: <a href=https://wokwi.com/projects/341561853822894674>Comunicando através da entrada serial</a>
-<P>Exemplos aplicando porta serial e PWM
-<BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
-
-## Display
- 
-<BR>Displays LCD, Oled, comunicação I2C
-### LCD 16x2
-  <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
-  <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
-
-### Oled
- 
--<a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md> Display Oled</a>
-
-	  
-## Interrupção externa
-
-  <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
-<BR>  
- <br><a href=https://wokwi.com/projects/342234932555285074>Uso de interrupção</a>
-  
-
-# Construindo uma maquina
-
-<BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
-
-
-
-## Exemplos de anos anteriores
-
-<BR><BR>Máquina de macarrão:
-<BR><BR>https://wokwi.com/projects/343824918481207891
-
-<BR><BR>Maquina de bolos:
-<BR><BR>https://wokwi.com/projects/343896310503440979
-
-
-<BR><BR>Máquina de sorvete 1
-<BR><BR>https://wokwi.com/projects/343353681787224660 
-
-
-<BR><BR>Máquina de sorvete 2
-
-<BR><BR> https://wokwi.com/projects/343718518644015698
-<BR><BR>
-
-
-
-
-## ESP32 IOT
-
-
-
-
-<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0><BR>Saiba mais...</a><BR>
-
-<B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
-
-
-## Exemplos de projetos 
-	
-Busque na Internet exemplos para aplicar os conhecimentos sobre a programação com microcontroladores.
-	
-Se o projeto for bem documentado, é possível inscrevê-lo em feira de ciências, realizá-lo como trabalho de conclusão de curso (TCC), apresentá-lo em congressos, revistas e eventos ciêntíficos, ou até criar um produto e registá-lo como uma patente.
-A seguir apresentamos links de eventos e revistas ciêntíficas para colaborar com sua idéia.
-- CONICT  
-	
-    -- Trabalhos apresentados em formato online (<a href=https://www.youtube.com/channel/UC4hDqSkORN1rHfyrIIMu9SA/videos>canal youtube</a>)
-	
-    -- Artigos Conict (<a href=http://ocs.ifsp.edu.br/index.php/conict> Anais </a>)
- 
-- FECCIF- Feira Estadual de Ciência e Cultura do IFSP (http://feccip.com.br> Pagina</a>)
-
-Outros:
-- Seleção de projetos <a href=https://github.com/mchavesferreira/mcr/blob/81e149b137445a6df07bdaa17b2f0c46f31eff36/dicas%20de%20projetos/Dicas%20para%20projetos.pdf> Dicas de projetos.pdf</a>
-
-	- <a href=https://embarcados.com.br> Embarcados </a> Site de uma comunidade sobre sistemas embarcados
-	
 
 ## Linguagens e programação
 <BR>Programando através de blocos
