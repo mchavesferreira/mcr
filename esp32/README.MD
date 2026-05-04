@@ -8,7 +8,6 @@
 - [Funções principais](#Funçoes-principais)
 - [Variáveis e Operadores](#variaveis-operadores)
 - [GPIOs, leitura e escrita em pinos digitais](#gpio-digital)
-- [Tabelas e vetores](#tabelas-vetores)
 - [PWM](#pwm)
 - [Comunicação Serial](#Comunicação-serial)
 - [Display](#Display)
@@ -115,19 +114,6 @@ Uso de Variáveis, #define e funções próprias para I/0 Arduino
 
 <BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
 
-
-
-## Tabelas Vetores
-<P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
-<BR>01: <a href=https://wokwi.com/projects/341561728616628819> Mapeamento de pinos ESP32</a>
-
-
-
-
-Uso de 3 led:
-
-https://wokwi.com/projects/411388408286145537
-
 ## Comunicação Serial
 
 https://wokwi.com/projects/401871586327571457
@@ -204,6 +190,16 @@ void loop() {
 }
 
 ```
+
+
+## Tabelas Vetores
+<P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
+<BR>01: <a href=https://wokwi.com/projects/341561728616628819> Mapeamento de pinos ESP32</a>
+
+
+Uso de 3 led:
+
+https://wokwi.com/projects/411388408286145537
 	  
 ## Interrupção externa
 
