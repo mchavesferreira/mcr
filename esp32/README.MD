@@ -95,11 +95,17 @@ void loop() {
 ## Exemplos práticos
 
 
+
 ### Pisca Led
 
 https://wokwi.com/projects/339670467067511378
 
 ![esp32-led-wiring-diagram](https://github.com/mchavesferreira/mcr/assets/63993080/e9eb1095-144c-46ec-96a2-2628b59b60e2)
+
+
+### Maquina de estados (revisão)
+
+https://wokwi.com/projects/366330976086070273
 
 #### Pisca-led RGB onboard Esp32S3
 
