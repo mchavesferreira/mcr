@@ -8,8 +8,8 @@
 - [Funções principais](#Funçoes-principais)
 - [Variáveis e Operadores](#variaveis-operadores)
 - [GPIOs, leitura e escrita em pinos digitais](#gpio-digital)
-- [PWM](#pwm)
 - [Comunicação Serial](#Comunicação-serial)
+- [PWM](#pwm)
 - [Display](#Display)
 	- [LCD 16x2](#lcd-16x2)
 	- [Oled](#display-oled)
@@ -111,22 +111,13 @@ https://wokwi.com/projects/366330976086070273
 
 https://www.phippselectronics.com/esp32-s3-devkitc-1-blink-onboard-rgb-led/?srsltid=AfmBOoof7fWzIlkYRgw8T0ClmNdsBDHrAUJHE5bU1oa9FyKTfL4wS_5w
 
-	
-## variaveis operadores
-
-Uso de Variáveis, #define e funções próprias para I/0 Arduino
-
-https://docs.arduino.cc/language-reference/pt/#vari%C3%A1veis
-
-<BR>Variáveis e Operadores</b><BR>  
-
-<BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
+## Aula 12//05
 
 ## Comunicação Serial
 
-https://wokwi.com/projects/401871586327571457
-
 Imprimindo e lendo na porta serial (UART)<BR>
+
+https://github.com/mchavesferreira/mcr/blob/main/esp32/serialprint.md
   
 <details><summary>Codigo Serial</summary>
 <p>
@@ -183,6 +174,19 @@ void loop() {
 
 <P>Exemplos aplicando porta serial e PWM
 <BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
+
+## variaveis e operadores
+
+Uso de Variáveis, #define e funções próprias para I/0 Arduino
+
+https://docs.arduino.cc/language-reference/pt/#vari%C3%A1veis
+
+https://github.com/mchavesferreira/mcr/blob/main/esp32/variaveis.md
+
+<BR>Variáveis e Operadores</b><BR>  
+
+<BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
+
 
 ## Display
  
