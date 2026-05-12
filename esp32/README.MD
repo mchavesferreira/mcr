@@ -116,6 +116,8 @@ https://www.phippselectronics.com/esp32-s3-devkitc-1-blink-onboard-rgb-led/?srsl
 
 Uso de Variáveis, #define e funções próprias para I/0 Arduino
 
+https://docs.arduino.cc/language-reference/pt/#vari%C3%A1veis
+
 <BR>Variáveis e Operadores</b><BR>  
 
 <BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
@@ -130,12 +132,47 @@ Imprimindo e lendo na porta serial (UART)<BR>
 <p>
 
 ```ruby
-   Serial.begin(115200);
-   Serial.println("Please enter your name:");
-   while (!Serial.available()); // Wait for input
-   String name = Serial.readStringUntil('\n');
-   Serial.print("Hello, ");
-   Serial.print(name);
+void setup() {
+// Inicializa a comunicação serial UART do ESP32
+// na velocidade de 115200 bits por segundo.
+// Essa comunicação será usada com o Monitor Serial da IDE Arduino.
+Serial.begin(115200);
+
+
+// Envia a mensagem para o Monitor Serial
+// utilizando println(), que imprime o texto
+// e pula automaticamente para a próxima linha.
+Serial.println("Qual é o seu nome? :");
+
+
+// Aguarda até que algum dado seja digitado
+// no Monitor Serial.
+// Serial.available() retorna a quantidade de bytes
+// disponíveis no buffer serial.
+// Enquanto for zero, o programa fica parado neste loop.
+while (!Serial.available());
+
+
+// Lê os caracteres recebidos pela serial
+// até encontrar o caractere '\n' (ENTER).
+// O texto recebido será armazenado
+// na variável String chamada "name".
+String name = Serial.readStringUntil('\n');
+
+
+// Envia o texto "Ola, " para o Monitor Serial
+// sem quebra de linha.
+Serial.print("Ola, ");
+
+
+// Exibe o conteúdo armazenado na variável "name",
+// ou seja, o nome digitado pelo usuário.
+Serial.print(name);
+}
+
+void loop() {
+}
+
 ```
 
 </p>
