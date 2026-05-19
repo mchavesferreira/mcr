@@ -307,46 +307,6 @@ Serial.println(): Imprime dados na porta serial como texto ASCII seguido pelo ca
  ```
 
 
-## Serial1.begin() e Serial2.begin()
-
-Para utilizar as portas Serial1 e Serial2 no ESP32, você pode configurá-las da seguinte maneira:
-
-
- ```ruby
-#include <HardwareSerial.h>
-
-void setup() {
-    // Inicializa Serial1 com 9600 bps
-    Serial1.begin(9600, SERIAL_8N1, RX_PIN, TX_PIN);  // Especifique os pinos RX e TX apropriados
-
-    // Inicializa Serial2 com 115200 bps
-    Serial2.begin(115200, SERIAL_8N1, RX2_PIN, TX2_PIN); // Especifique os pinos RX2 e TX2 apropriados
-}
-
-void loop() {
-    // Se houver dados disponíveis na Serial1, leia e envie para Serial2
-    if (Serial1.available()) {
-        int inByte = Serial1.read();
-        Serial2.write(inByte);
-    }
-
-    // Similarmente, leia de Serial2 e escreva para Serial1
-    if (Serial2.available()) {
-        int inByte = Serial2.read();
-        Serial1.write(inByte);
-    }
-}
-
-
- ```
-
-A biblioteca HardwareSerial.h é uma parte fundamental do framework Arduino, usada para facilitar a comunicação serial através das portas de hardware disponíveis nos microcontroladores. 
-
-
-   - baud_rate: Define a taxa de transmissão em bits por segundo.
-   - config: Configurações de bits de dados, paridade e bits de parada. Por exemplo, SERIAL_8N1 indica 8 bits de dados, sem paridade, 1 bit de parada.
-   - RX_PIN, TX_PIN: Os números dos pinos para receber (RX) e transmitir (TX) dados. No ESP32, esses pinos são flexíveis e podem ser definidos pelo usuário, facilitando a integração com outros módulos e sensores.
-
 ### Função Serial.read()
 
 A função lê dados recebidos na porta serial.
@@ -392,45 +352,58 @@ Para criar um exemplo utilizando a comunicação serial no Arduino onde diferent
     
  ```ruby
 // Definindo os pinos dos LEDs
-int ledPinA = 10;  // LED para o caractere 'A'
-int ledPinS = 9;   // LED para o caractere 'S'
-int ledPinD = 8;   // LED para o caractere 'D'
+int ledPinA = 5;  // LED para o caractere 'A'
+int ledPinS = 4;   // LED para o caractere 'S'
+int ledPinD = 2;   // LED para o caractere 'D'
 
 void setup() {
-  // Inicia a comunicação serial a 9600 bps
-  Serial.begin(9600);
-  
-  // Configura os pinos dos LEDs como saída
-  pinMode(ledPinA, OUTPUT);
-  pinMode(ledPinS, OUTPUT);
-  pinMode(ledPinD, OUTPUT);
-  
-  // Garante que todos os LEDs começam desligados
-  digitalWrite(ledPinA, LOW);
-  digitalWrite(ledPinS, LOW);
-  digitalWrite(ledPinD, LOW);
+ // Inicia a comunicação serial a 9600 bps
+ Serial.begin(9600);
+ 
+ // Configura os pinos dos LEDs como saída
+ pinMode(ledPinA, OUTPUT);
+ pinMode(ledPinS, OUTPUT);
+ pinMode(ledPinD, OUTPUT);
+ 
+ // Garante que todos os LEDs começam desligados
+ digitalWrite(ledPinA, LOW);
+ digitalWrite(ledPinS, LOW);
+ digitalWrite(ledPinD, LOW);
+ Serial.println("Digite uma das opcoes: A, S ou D ");
 }
 
 void loop() {
-  // Verifica se há dados disponíveis para ler na porta serial
-  if (Serial.available() > 0) {
-    // Lê o próximo caractere disponível
-    char receivedChar = Serial.read();
-    
-    // Desliga todos os LEDs para garantir que apenas um fica aceso por vez
-    digitalWrite(ledPinA, LOW);
-    digitalWrite(ledPinS, LOW);
-    digitalWrite(ledPinD, LOW);
-    
-    // Aciona o LED correspondente ao caractere recebido
-    if (receivedChar == 'A') {
-      digitalWrite(ledPinA, HIGH);
-    } else if (receivedChar == 'S') {
-      digitalWrite(ledPinS, HIGH);
-    } else if (receivedChar == 'D') {
-      digitalWrite(ledPinD, HIGH);
-    }
-  }
+ // Verifica se há dados disponíveis para ler na porta serial
+ if (Serial.available() > 0) {
+   // Lê o próximo caractere disponível
+   char receivedChar = Serial.read();
+   
+   // Desliga todos os LEDs para garantir que apenas um fica aceso por vez
+  
+
+    if (receivedChar == 'T') {
+   delay(500);
+      }
+   // Aciona o LED correspondente ao caractere recebido
+   if (receivedChar == 'A') {
+     digitalWrite(ledPinA, HIGH);
+        digitalWrite(ledPinS, LOW);
+      digitalWrite(ledPinD, LOW);
+
+   } else if (receivedChar == 'S') {
+     digitalWrite(ledPinS, HIGH);
+      digitalWrite(ledPinA, LOW);
+        digitalWrite(ledPinD, LOW);
+   } else if (receivedChar == 'D') {
+     digitalWrite(ledPinD, HIGH);
+      digitalWrite(ledPinA, LOW);
+       digitalWrite(ledPinS, LOW);
+
+   }
+
+  
+
+ }
 }
 ```
 </details>
