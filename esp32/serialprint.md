@@ -422,7 +422,7 @@ Utilize o exemplo acima para criar o seguinte projeto com simulação ESP32, sal
 
  - 4 Leds estão ligados respectivamente no pinos GPIO 21, 19, 18 e 5.
  - As 4 letras respectivamente Z, X, C e V acionam respectivamente cada um dos leds, devendo permanecer aceso o led da respectiva letra.
- - As letras estabelecem o tempo quando utilizadas na entrada serial: T <1000ms>, t <500 ms>  e U <100 ms>
+ - As letras T, t e U aos serem digitadas, acionam todos os leds por um período e apagam posteriormente: T <5000ms>, t <2000 ms>  e U <1000 ms>
  - A letra 'S' estabelece que o programa executará a sequência de pinos acionados e tempos
 GPIO21, delay(300) GPIO18 delay(200) GPIO5
 - A letra 'B' apaga todos os leds.
