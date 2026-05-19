@@ -281,9 +281,9 @@ void loop() {
 
  ```
 
-Serial.print(): Imprime dados na porta serial em como texto ASCII (facilmente legível, diferentemente dos valores binários). Essa função pode assumir várias formas. números são impressos usando um caractere ASCII para cada dígito. 
+<b>Serial.print()</b>: Imprime dados na porta serial em como texto ASCII (facilmente legível, diferentemente dos valores binários). Essa função pode assumir várias formas. números são impressos usando um caractere ASCII para cada dígito. 
 
-Serial.println(): Imprime dados na porta serial como texto ASCII seguido pelo caractere de retorno de carruagem (ASCII 13, ou '\r') 
+<b>Serial.println()</b>: Imprime dados na porta serial como texto ASCII seguido pelo caractere de retorno de carruagem (ASCII 13, ou '\r') 
 
 #### Prática implemente o seguinte código e confira o resultado:
 
