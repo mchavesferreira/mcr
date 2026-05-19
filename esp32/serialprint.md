@@ -246,10 +246,23 @@ Tabela de tempos para a mensagem "IFSP" com diferentes baud_rates:
 | 115200          | 0.000078125                | 0.0003125                   |
 
 
-## Programação com IDE-Arduino: 
+## Programação com IDE-Arduino utilizando a porta serial: 
 
 ### Função Serial.begin()
 A função Serial.begin() é usada para inicializar a porta serial0 com uma taxa de transmissão específica (baud rate), configurando a velocidade na qual os dados são enviados e recebidos através da porta serial. Esta função é essencial para estabelecer a comunicação entre o microcontrolador e o computador ou outro dispositivo serial.
+
+
+### Serial.print()
+
+Imprime dados na porta serial em como texto ASCII (facilmente legível, diferentemente dos valores binários). Essa função pode assumir várias formas. números são impressos usando um caractere ASCII para cada dígito. 
+
+### Serial.println()
+
+Imprime dados na porta serial como texto ASCII seguido pelo caractere de retorno de carruagem (ASCII 13, ou '\r') 
+
+### Serial.read()
+
+A função lê dados recebidos na porta serial.
 
 Referência:  https://www.arduino.cc/reference/pt/language/functions/communication/serial/
 
@@ -275,9 +288,8 @@ void loop() {
 
  ```
 
-<b>Serial.print()</b>: Imprime dados na porta serial em como texto ASCII (facilmente legível, diferentemente dos valores binários). Essa função pode assumir várias formas. números são impressos usando um caractere ASCII para cada dígito. 
 
-<b>Serial.println()</b>: Imprime dados na porta serial como texto ASCII seguido pelo caractere de retorno de carruagem (ASCII 13, ou '\r') 
+
 
 #### Prática implemente o seguinte código e confira o resultado:
 
@@ -300,10 +312,6 @@ void loop() {
     Serial.print(1.23456, 4);
  ```
 
-
-### Serial.read()
-
-A função lê dados recebidos na porta serial.
 
  ```ruby
 int incomingByte = 0; // variável para o dado recebido
@@ -372,25 +380,25 @@ void loop() {
  // Verifica se há dados disponíveis para ler na porta serial
  if (Serial.available() > 0) {
    // Lê o próximo caractere disponível
-   char receivedChar = Serial.read();
+   char caracter_recebido = Serial.read();
    
    // Desliga todos os LEDs para garantir que apenas um fica aceso por vez
   
 
-    if (receivedChar == 'T') {
+    if (caracter_recebido == 'T') {
    delay(500);
       }
    // Aciona o LED correspondente ao caractere recebido
-   if (receivedChar == 'A') {
+   if (caracter_recebido == 'A') {
      digitalWrite(ledPinA, HIGH);
         digitalWrite(ledPinS, LOW);
       digitalWrite(ledPinD, LOW);
 
-   } else if (receivedChar == 'S') {
+   } else if (caracter_recebido == 'S') {
      digitalWrite(ledPinS, HIGH);
       digitalWrite(ledPinA, LOW);
         digitalWrite(ledPinD, LOW);
-   } else if (receivedChar == 'D') {
+   } else if (caracter_recebido == 'D') {
      digitalWrite(ledPinD, HIGH);
       digitalWrite(ledPinA, LOW);
        digitalWrite(ledPinS, LOW);
@@ -406,7 +414,7 @@ void loop() {
 
 Exemplo:  https://wokwi.com/projects/397413115618262017
 
-# TAREFA SUAP 09/05/2024:
+# TAREFA SUAP:
 
 Exemplo:  https://wokwi.com/projects/397413115618262017
 
