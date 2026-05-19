@@ -43,13 +43,7 @@ A comunicação entre dois dispositivos UART pode ser simplex, full-duplex ou ha
 
 ## Portas Seriais 
 
-O módulo ESP32 fornece três portas universais de receptores e transmissores assíncronos (UART), como UART0, UART1 e UART2, que funcionam no nível TTL de 3,3 V. Essas três interfaces seriais são suportadas por hardware. Cada um deles expõe 4 pinos: RX, TX, RTS 
-### Serial0 (UART0): 
-Geralmente usado para comunicação USB-to-Serial e programação, conectado à porta USB do ESP32.
-### Serial1 (UART1) e Serial2 (UART2):
-Disponíveis para uso geral, não conectadas por padrão para permitir comunicação livre com periféricos externos.
-
-Por padrão, apenas UART0 e UART2 podem ser usados. Para usar o UART1, temos que redefinir os pinos porque os pinos padrão do UART1, como GPIO9 e GPIO10, estão conectados internamente à memória flash SPI.
+O módulo ESP32 fornece três portas universais de receptores e transmissores assíncronos (UART), como UART0, UART1 e UART2, que funcionam no nível TTL de 3,3 V. Essas três interfaces seriais são suportadas por hardware. Em nossos exemplos, utilizaremos a padrao UART0, conectada a porta USB.
 
 ## Baud Rate
 
@@ -307,7 +301,7 @@ void loop() {
  ```
 
 
-### Função Serial.read()
+### Serial.read()
 
 A função lê dados recebidos na porta serial.
 
@@ -331,7 +325,9 @@ void loop() {
 }
  ```
 
-Serial.available(): Retorna o número de bytes (caracteres) disponíveis para leitura da porta serial. 
+### Serial.available()
+
+Retorna o número de bytes (caracteres) disponíveis para leitura da porta serial. 
 
 ###  Serial.readStringUntil()
 
