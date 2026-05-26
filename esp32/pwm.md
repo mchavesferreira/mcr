@@ -36,7 +36,56 @@ Fontes de Alimentação: Controle de conversores DC-DC.
 ## Pinos disponíveis com saída PWM
 ![Captura de tela 2024-05-15 234802](https://github.com/mchavesferreira/mcr/assets/63993080/b953ab88-53c1-40ef-a830-76fd8ecae712)
 
-## Arduino - Função AnalogWrite()
+
+## Exemplos:
+
+01: <a href=https://wokwi.com/projects/341562296506516051>LED RGB e uso de analog_write() para PWM</a>
+
+### Exemplo de Código Usando analogWrite() para Controlar o Brilho de um LED
+
+```ruby
+const int ledPin = 18;  // Pino do LED
+
+void setup() {
+pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  // Aumenta o brilho do LED
+    for (int dutyCycle = 0; dutyCycle <= 4095; dutyCycle += 100) {
+    analogWrite(led_blue, dutyCycle);
+    delay(50);
+  }
+
+  // Diminui o brilho do LED
+  for (int dutyCycle = 4095; dutyCycle >= 0; dutyCycle -= 100) {
+   analogWrite(led_blue, dutyCycle);
+   delay(50);
+  }
+}
+```
+
+
+<P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>
+<P> 	
+
+
+
+# Duty Cycle em PWM
+
+O **Duty Cycle**, também chamado de **ciclo de trabalho**, representa a porcentagem do tempo em que um sinal PWM permanece em nível alto (*ligado*) durante um período completo do sinal.
+
+Em um sinal PWM (*Pulse Width Modulation*), o período é composto por dois tempos:
+
+- **TON**: tempo em que o sinal permanece em nível alto;
+- **TOFF**: tempo em que o sinal permanece em nível baixo.
+
+O valor do Duty Cycle é calculado pela relação entre o tempo ligado e o período total do sinal.
+
+Ao variar o Duty Cycle, é possível controlar a potência média aplicada à carga sem alterar a tensão de alimentação.
+
+
+## Arduino - Função AnalogWrite() (Abstração)
 
 No ESP32, a função analogWrite() tradicionalmente usada em outras placas Arduino não é diretamente suportada pela biblioteca padrão. No entanto, podemos criar uma função similar utilizando as funções de controle PWM do ESP32 (ledcSetup(), ledcAttachPin(), ledcWrite()).
 
@@ -62,56 +111,6 @@ Se precisar usar mais de um pino PWM, você deve gerenciar diferentes canais PWM
 ### Frequência e Resolução:
 
 A frequência e a resolução podem ser ajustadas conforme a aplicação. A frequência de 5000 Hz e a resolução de 8 bits são comuns para muitas aplicações de LED.
-
-## Exemplos:
-
-01: <a href=https://wokwi.com/projects/341562296506516051>LED RGB e uso de analog_write() para PWM</a>
-
-### Exemplo de Código Usando analogWrite() para Controlar o Brilho de um LED
-
-```ruby
-const int ledPin = 18;  // Pino do LED
-
-void setup() {
-  // Configura o canal PWM
-  //ledcSetup(pwmChannel, freq, resolution);
-  // Associa o pino ao canal PWM
-  //ledcAttachPin(ledPin, pwmChannel);
-}
-
-void loop() {
-  // Aumenta o brilho do LED de 0 a 255
-  for (int dutyCycle = 0; dutyCycle <= 255; dutyCycle++) {
-    analogWrite(ledPin, dutyCycle);
-    delay(10);
-  }
-  // Diminui o brilho do LED de 255 a 0
-  for (int dutyCycle = 255; dutyCycle >= 0; dutyCycle--) {
-    analogWrite(ledPin, dutyCycle);
-    delay(10);
-  }
-}
-```
-
-
-<P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>
-<P> 	
-
-
-
-# Duty Cycle em PWM
-
-O **Duty Cycle**, também chamado de **ciclo de trabalho**, representa a porcentagem do tempo em que um sinal PWM permanece em nível alto (*ligado*) durante um período completo do sinal.
-
-Em um sinal PWM (*Pulse Width Modulation*), o período é composto por dois tempos:
-
-- **TON**: tempo em que o sinal permanece em nível alto;
-- **TOFF**: tempo em que o sinal permanece em nível baixo.
-
-O valor do Duty Cycle é calculado pela relação entre o tempo ligado e o período total do sinal.
-
-Ao variar o Duty Cycle, é possível controlar a potência média aplicada à carga sem alterar a tensão de alimentação.
-
 
 # TAREFA SUAP :
 
