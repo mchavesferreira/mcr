@@ -228,6 +228,7 @@ void loop() {
 }
 
 ```
+<a href=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/figura_millis.png>millis()xdelay()</a>
 
 ## Exemplo de maquina de estados com millis()
 
