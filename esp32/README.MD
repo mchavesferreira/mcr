@@ -108,7 +108,8 @@ void loop() {
 
 https://wokwi.com/projects/339670467067511378
 
-![esp32-led-wiring-diagram](https://github.com/mchavesferreira/mcr/assets/63993080/e9eb1095-144c-46ec-96a2-2628b59b60e2)
+
+<img src=imagens/piscaled.jpg width=300 height=300>
 
 #### Pisca-led RGB onboard Esp32S3
 
