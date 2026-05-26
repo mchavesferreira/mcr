@@ -65,6 +65,7 @@ void loop() {
 }
 ```
 
+Exemplo com 3 leds RGB:  https://wokwi.com/projects/465049101568074753 
 
 <P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>
 <P> 	
@@ -112,8 +113,8 @@ Se precisar usar mais de um pino PWM, você deve gerenciar diferentes canais PWM
 
 A frequência e a resolução podem ser ajustadas conforme a aplicação. A frequência de 5000 Hz e a resolução de 8 bits são comuns para muitas aplicações de LED.
 
-# TAREFA SUAP :
+# TAREFA SUAP 
 
-Confira exemplo 
+
 
 
