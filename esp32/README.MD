@@ -228,7 +228,7 @@ void loop() {
 }
 
 ```
-<a href=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/figura_millis.png>millis()xdelay()</a>
+<a href=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/figura_millis.png> millis() versus delay()</a> - Diferenças sobre o uso
 
 ## Exemplo de maquina de estados com millis()
 
