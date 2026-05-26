@@ -16,8 +16,8 @@
 	- [Oled](#display-oled)
 - [Interrupção Externa](#Interrupção-externa) (09/6)
 - [Exemplos de projetos](#Exemplos-de-projetos) (16/6)
-- Avaliação
-- Entrega de projetos
+- Avaliação (23/6)
+- Entrega de projetos (30/6)
 - [ESP32 IOT](#ESP32-IOT) (3°Bimestre)
  - leitura analógica
 - [Livros](#Livros-e-referencias)
@@ -189,6 +189,7 @@ void loop() {
 ## Aula 26/05
 
 # PWM
+
 Função analogWrite()
 
 
@@ -227,7 +228,9 @@ void loop() {
 
 ```
 
+## Exemplo de maquina de estados com millis()
 
+https://wokwi.com/projects/465046164881436673
 
 ## Aula 02/06
 
@@ -242,28 +245,19 @@ void loop() {
  
 -<a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md> Display Oled</a>
 
+## aula 09/6
 
-## Tabelas Vetores
-<P>Uso de <B>Vetores</B> ou tabelas para organização de variáveis
-<BR>01: <a href=https://wokwi.com/projects/341561728616628819> Mapeamento de pinos ESP32</a>
-
-
-Uso de 3 led:
-
-https://wokwi.com/projects/411388408286145537
-	  
-## Interrupção externa
+# Interrupção externa
 
   <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
 <BR>  
  <br><a href=https://wokwi.com/projects/342234932555285074>Uso de interrupção</a>
   
+## aula 16/6
 
-# Construindo uma maquina
+# Construindo uma maquina 
 
 <BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
-
-
 
 ## Exemplos de anos anteriores
 
@@ -284,38 +278,7 @@ https://wokwi.com/projects/411388408286145537
 <BR><BR>
 
 
-
-
-## ESP32 IOT
-
-
-
-
-<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot><img src=https://raw.githubusercontent.com/mchavesferreira/mcr/main/esp32_iot/imagens/webserver.png width=50% border=0><BR>Saiba mais...</a><BR>
-
-<B> Introdução a internet das coisas </b>: Esp32 como servidor de pagina, protocolo mqtt, uso de frameworks, cloud e outros recursos para aplicações com Internet das Coisas (IOT) através do ESP32.
-
-
-## Exemplos de projetos 
-	
-Busque na Internet exemplos para aplicar os conhecimentos sobre a programação com microcontroladores.
-	
-Se o projeto for bem documentado, é possível inscrevê-lo em feira de ciências, realizá-lo como trabalho de conclusão de curso (TCC), apresentá-lo em congressos, revistas e eventos ciêntíficos, ou até criar um produto e registá-lo como uma patente.
-A seguir apresentamos links de eventos e revistas ciêntíficas para colaborar com sua idéia.
-- CONICT  
-	
-    -- Trabalhos apresentados em formato online (<a href=https://www.youtube.com/channel/UC4hDqSkORN1rHfyrIIMu9SA/videos>canal youtube</a>)
-	
-    -- Artigos Conict (<a href=http://ocs.ifsp.edu.br/index.php/conict> Anais </a>)
- 
-- FECCIF- Feira Estadual de Ciência e Cultura do IFSP (http://feccip.com.br> Pagina</a>)
-
-Outros:
-- Seleção de projetos <a href=https://github.com/mchavesferreira/mcr/blob/81e149b137445a6df07bdaa17b2f0c46f31eff36/dicas%20de%20projetos/Dicas%20para%20projetos.pdf> Dicas de projetos.pdf</a>
-
-	- <a href=https://embarcados.com.br> Embarcados </a> Site de uma comunidade sobre sistemas embarcados
-
-
+# Referências
 
 ## Apostila ESP32
 <BR> <a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/ESP32.docx>Apostila</a> em desenvolvimento
@@ -327,159 +290,7 @@ https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp
 
 https://docs.espressif.com/projects/esp-hardware-design-guidelines/en/latest/esp32/_images/esp32-sche-core.png
 
-## ID do chip
 
-No ESP32, o "ID do chip" (Chip ID) refere-se a um identificador único atribuído ao chip. Esse ID pode ser usado para várias finalidades, incluindo a diferenciação entre múltiplos dispositivos na mesma rede ou para fins de segurança e autenticação.
-
-O ID do chip no ESP32 é tipicamente derivado do endereço MAC do dispositivo, que é único para cada chip. Isso significa que cada ESP32 tem um ID do chip que pode ser considerado único, ajudando a evitar colisões e conflitos em sistemas onde múltiplos dispositivos precisam ser identificados de forma inequívoca.
-
-Para obter o ID do chip em um programa, os desenvolvedores geralmente usam funções específicas da API do ESP-IDF ou do ambiente de desenvolvimento que estão utilizando, como o Arduino. Por exemplo, no ambiente Arduino, você pode usar a função ESP.getEfuseMac() para obter o ID do chip, que retorna o endereço MAC do dispositivo, e então processá-lo conforme necessário para seu uso específico.
-
-Esse ID é especialmente útil em aplicações de Internet das Coisas (IoT), onde a identificação única de cada dispositivo é crucial para a comunicação e controle de rede.
-
-<BR>Como verificar o ID do chip<a href=https://wokwi.com/projects/340959007153848914> Chip ID</a><BR>  
-
-## Video Espressif ESP32-P4 REVERSE ENGINEERING
-
-https://www.youtube.com/watch?v=-Nu0tjDCbbM
-
-
-
-## Memória ESP32 
-
-
-Mapeamento da memória (pagina 7) <a href=https://www.espressif.com/sites/default/files/documentation/esp32_datasheet_en.pdf>memory</a>
-
-### Memória Volátil no ESP32
-
-o ESP32, assim como em outros microcontroladores, a memória volátil é a memória que perde seu conteúdo quando o dispositivo é desligado. A memória volátil mais comum no ESP32 é a SRAM (Static Random Access Memory), que armazena variáveis e dados temporários durante a execução de programas.
-
-<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/memoria.jpg>
-
-No ESP32, a memória volátil é representada pela SRAM, que está dividida em diferentes blocos:
-
-SRAM1: Usada para armazenar dados e instruções do programa em execução.
-
-SRAM2: Usada para operações de alta velocidade e pode ser mapeada tanto para a memória de dados quanto para a memória de instrução.
-
-RTC FAST RAM: Uma pequena porção de SRAM acessível durante os modos de baixo consumo, como o modo deep sleep.
-
-A memória volátil é essencial para o armazenamento temporário de variáveis e dados que mudam durante a execução de um programa.
-
-## Memória Dinâmica vs. Memória Estática
-
-A memória volátil pode ser utilizada de duas formas: dinâmica e estática.
-
-##  Memória Estática (Static Memory)
-
-A memória estática se refere a uma maneira de alocar memória que ocorre em tempo de compilação. No caso do ESP32, quando declaramos uma variável global ou local dentro de uma função sem utilizar alocação dinâmica, essa memória é estática. A principal característica da memória estática é que o tamanho e a alocação são definidos antes do programa ser executado, e ela permanece alocada até o final do programa.
-
-###  Características da memória estática:
-
-Alocada durante o tempo de compilação.
-
-O espaço reservado não muda durante a execução do programa.
-
-Mais eficiente em termos de performance, pois a alocação/desalocação não ocorre durante a execução.
-
-Usada para variáveis globais e variáveis locais fixas.
-
-Exemplo em C:
-
-```ruby
-int contador = 0;  // Variável estática, sempre disponível na memória.
-```
-##  Memória Dinâmica (Dynamic Memory)
-
-A memória dinâmica, por outro lado, é alocada em tempo de execução usando funções como malloc, calloc ou realloc. No ESP32, o uso de memória dinâmica pode ser importante em aplicações que precisam lidar com dados de tamanho variável ou que têm necessidades de memória que mudam durante a execução.
-
-### Características da memória dinâmica:
-
-Alocada em tempo de execução.
-
-O espaço reservado pode mudar dinamicamente durante o programa.
-
-Menos eficiente em termos de performance, pois a alocação e desalocação ocorrem enquanto o programa está sendo executado.
-
-Requer que o desenvolvedor libere a memória manualmente com free().
-
-Exemplo em C:
-
-```ruby
-
-int *buffer;
-buffer = (int *)malloc(10 * sizeof(int));  // Alocação dinâmica de um buffer de 10 inteiros.
-if (buffer != NULL) {
-    // Uso da memória alocada dinamicamente
-}
-free(buffer);  // Liberação da memória.
-```
-
-### Diferenças principais
-
-#### Memória Estática:
-
-A alocação é fixa e conhecida em tempo de compilação.
-
-Usa menos recursos computacionais durante a execução.
-
-Mais previsível em termos de uso de memória.
-
-####  Memória Dinâmica:
-
-Alocada durante a execução, permite maior flexibilidade.
-
-Pode consumir mais recursos durante a execução devido à necessidade de gerenciamento da memória.
-
-Requer cuidado com vazamentos de memória, onde a memória alocada não é liberada corretamente.
-
-## Memória não volátil
-
-<img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/memorianaovolatil.jpg>
-
-
-## Linguagens e programação
-<BR>Programando através de blocos
-### Easycondig
-
-Aprenda a programar o ESP32 para IOT através de videos tutoriais organizado em 3 partes (Stand-alone, Local-Network e Internet)
-http://easycoding.tn/index.php/esp32/  (Videos tutoriais)
-
-http://www.easycoding.tn/esp32/demos/code/  (ambiente de programação)
-
-Exemplo XML com código fonte para websever: https://github.com/mchavesferreira/mcr/blob/main/esp32_iot/easycoding_xml.xml
-
-### codeskool
-
-https://ide.codeskool.cc/
-
-### mpyblockly
-Programação visual em micropython para ESP32
-https://mpyblockly.github.io/mpyblockly/
-
-Brincando com Esp32
-https://mjrobot.org/2017/09/26/iot-feito-facil-brincando-com-o-esp32-no-arduino-ide/
-	
-### Comunicando com google excel
-Unleash the Power of ChatGPTs Code Interpreter: Crafting a Dynamic ESP32 Data Logger with DHT22 and Google Sheets
-https://robu.in/unleash-the-power-of-chatgpts-code-interpreter-crafting-a-dynamic-esp32-data-logger-with-dht22-and-google-sheets/
-	
-## Livros e referencias
-<BR> 
-<img src=https://static.packt-cdn.com/products/9781789956870/cover/smaller> Internet of Things Projects with ESP32, <BR><BR>
-https://download.packt.com/free-ebook/9781789956870,<BR><BR> source code: https://github.com/PacktPublishing/Internet-of-Things-Projects-with-ESP32 <BR><BR>
-https://github.com/PacktPublishing/Developing-IoT-Projects-with-ESP32-2nd-edition<BR>
-https://github.com/PacktPublishing/Internet-of-Things-with-ESP32<BR>
-https://github.com/PacktPublishing/Advanced-ESP32	<BR>
-https://lastminuteengineers.com/getting-started-with-esp32/
-https://lastminuteengineers.com/electronics/esp32-projects/  Tutorial e Projetos com ESP32	<BR>
-	
-Características para ESP32<BR><BR>
-
-  https://www.espressif.com/en/news/espressif-announces-%E2%80%A8esp32-s2-secure-wi-fi-mcu
-<BR><BR> 
-Livros e Codigos fontes<Br><BR>
-https://github.com/PacktPublishing/Advanced-ESP32
 	
 	
 	
