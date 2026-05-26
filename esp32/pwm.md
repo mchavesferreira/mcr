@@ -75,7 +75,13 @@ void loop() {
 }
 ```
 
-Exemplo com 3 leds RGB:  https://wokwi.com/projects/465049101568074753 
+### Exemplo com 3 leds RGB
+
+<img width="400" height="279" alt="exemplo rgb" src="imagens/rgbled.jpg" />
+
+
+
+https://wokwi.com/projects/465049101568074753 
 
 <P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>
 <P> 	
