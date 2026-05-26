@@ -7,21 +7,23 @@
 - [Simulador Online](#simulador-wokwi)
 - [Funções principais](#Funçoes-principais)
 - [Variáveis e Operadores](#variaveis-operadores)
-- [GPIOs, leitura e escrita em pinos digitais](#gpio-digital)
-- [Comunicação Serial](#Comunicação-serial)
-- [PWM](#pwm)
-- [Display](#Display)
+- [GPIOs, leitura e escrita em pinos digitais](#gpio-digital) 
+- [Comunicação Serial](#Comunicação-serial) (19/5)
+- [PWM](#pwm) (26/5)
+- [millis()](#função-millis)
+- [Display](#Display) (02/6)
 	- [LCD 16x2](#lcd-16x2)
 	- [Oled](#display-oled)
-- [Interrupções e Funções de tempo](#tempo)
-	- [millis()](#função-millis)
-	- [Interrupção Externa](#Interrupção-externa)
-- [ESP32 IOT](#ESP32-IOT)
-- [Exemplos de projetos](#Exemplos-de-projetos)
+- [Interrupção Externa](#Interrupção-externa) (09/6)
+- [Exemplos de projetos](#Exemplos-de-projetos) (16/6)
+- Avaliação
+- Entrega de projetos
+- [ESP32 IOT](#ESP32-IOT) (3°Bimestre)
+ - leitura analógica
 - [Livros](#Livros-e-referencias)
 
 
-## Referências Arduino
+# Referências Arduino
 
 <center>  <a href=https://www.arduino.cc/reference/pt/ target=_blank>Arduino Referência de Linguagem C</a> </center><BR>
 
@@ -31,14 +33,21 @@
 <BR> <a href=https://www.blogdarobotica.com/2021/08/24/como-programar-a-placa-esp32-no-arduino-ide>Como gravar o esp32 com Arduino</a>
 <hr>
 
+# variaveis e operadores
 
-## Pinout ESP32
+Uso de Variáveis, #define e funções próprias para I/0 Arduino
 
-<img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>ESP32 pinout>
+https://docs.arduino.cc/language-reference/pt/#vari%C3%A1veis
+
+https://github.com/mchavesferreira/mcr/blob/main/esp32/variaveis.md
+
+# Pinout ESP32
+
+<img src=https://microcontrollerslab.com/wp-content/uploads/2019/02/ESP32-pinout-mapping.png>
 
 <br><a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/pinos.md> Conheça sobre a configuração de pinos </a>
 
-## GPIO Digital
+# GPIO Digital
 
 ### Função digitalWrite()
 
@@ -87,13 +96,12 @@ void loop() {
 <BR>GPIOs, leitura e escrita em pinos digitais. Simulação: <a href=https://wokwi.com/projects/339670467067511378>digitalRead() e digitalWrite()</a>
 
 
-## Arquitetura
+# Arquitetura
 
 <img src=https://raw.githubusercontent.com/mchavesferreira/mcr/refs/heads/main/esp32/imagens/arquitetura_esp32.png>
 
 	
 ## Exemplos práticos
-
 
 
 ### Pisca Led
@@ -102,20 +110,19 @@ https://wokwi.com/projects/339670467067511378
 
 ![esp32-led-wiring-diagram](https://github.com/mchavesferreira/mcr/assets/63993080/e9eb1095-144c-46ec-96a2-2628b59b60e2)
 
+#### Pisca-led RGB onboard Esp32S3
+
+https://www.phippselectronics.com/esp32-s3-devkitc-1-blink-onboard-rgb-led/?srsltid=AfmBOoof7fWzIlkYRgw8T0ClmNdsBDHrAUJHE5bU1oa9FyKTfL4wS_5w
+
+## Aula 12/05
 
 ### Maquina de estados (revisão)
 
 https://wokwi.com/projects/366330976086070273
 
-#### Pisca-led RGB onboard Esp32S3
-
-https://www.phippselectronics.com/esp32-s3-devkitc-1-blink-onboard-rgb-led/?srsltid=AfmBOoof7fWzIlkYRgw8T0ClmNdsBDHrAUJHE5bU1oa9FyKTfL4wS_5w
-
 ## Aula 19/05
 
-### tarefa SUAP
-
-## Comunicação Serial
+# Comunicação Serial
 
 Imprimindo e lendo na porta serial (UART)<BR>
 
@@ -177,35 +184,15 @@ void loop() {
 <P>Exemplos aplicando porta serial e PWM
 <BR>05: <a href=https://wokwi.com/projects/341698810319209042>Leitura de cores utilizando serial</a>.<span size=-2> Autores: Vinicius Viana e  Luis H. Estareli</span>.
 
-## variaveis e operadores
-
-Uso de Variáveis, #define e funções próprias para I/0 Arduino
-
-https://docs.arduino.cc/language-reference/pt/#vari%C3%A1veis
-
-https://github.com/mchavesferreira/mcr/blob/main/esp32/variaveis.md
-
-<BR>Variáveis e Operadores</b><BR>  
-
-<BR>- Uso de HEX, DEC, BIN e OCT  <a href=https://wokwi.com/projects/340328764284076626>print()  </a>
 
 
-## Display
- 
-<BR>Displays LCD, Oled, comunicação I2C
-### LCD 16x2
-  <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
-  <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
+## Aula 26/05
 
-### Oled
- 
--<a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md> Display Oled</a>
+# PWM
+Função analogWrite()
 
-	
-## Leitura analógica
-<bR>02: ADC - Leitura analógica, conversão de valores com funções e a função mapeamento. Simulação: <a href=https://wokwi.com/projects/340963795998343762> analogRead()</a>
 
-## Função millis()
+# Função millis()
 
 A função `millis()` no Arduino é uma ferramenta poderosa para realizar temporizações sem bloquear a execução do programa. Diferente da função `delay()`, que pausa a execução de todo o código por um período especificado, `millis()` permite que o Arduino continue processando outras tarefas enquanto monitora o tempo.
 
@@ -239,6 +226,21 @@ void loop() {
 }
 
 ```
+
+
+
+## Aula 02/06
+
+# Display
+ 
+<BR>Displays LCD, Oled, comunicação I2C
+### LCD 16x2
+  <BR>01 -<a href=https://wokwi.com/projects/342202939017790036> Exemplo LCD 16x2 paralelo</a>
+  <BR>02 -<a href=https://wokwi.com/projects/342199886273315410> Exemplo LCD 16x2 I2C</a>
+
+### Oled
+ 
+-<a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md> Display Oled</a>
 
 
 ## Tabelas Vetores
