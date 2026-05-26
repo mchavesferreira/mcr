@@ -82,7 +82,8 @@ Fontes de Alimentação: Controle de conversores DC-DC.
 
 ## Exemplo de um sinal PWM
 
-![Captura de tela 2024-05-15 234655](https://github.com/mchavesferreira/mcr/assets/63993080/4e8acc44-cb38-40cf-b4f8-5a76b4ce5f42)
+<img src=imagens/pwm_exemplo.png>
+
 
 
 ## Pinos disponíveis com saída PWM
