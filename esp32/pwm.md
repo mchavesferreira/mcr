@@ -44,24 +44,34 @@ Fontes de Alimentação: Controle de conversores DC-DC.
 ### Exemplo de Código Usando analogWrite() para Controlar o Brilho de um LED
 
 ```ruby
-const int ledPin = 18;  // Pino do LED
+// fonte: https://www.arduino.cc/en/Tutorial/BuiltInExamples/Fade
+int led = 12;           // pino PWM ao qual o LED está conectado
+int brightness = 0;    // nível de brilho do LED
+int fadeAmount = 5;    // quantidade de variação do brilho a cada ciclo
 
+// a rotina setup() executa uma vez ao pressionar reset:
 void setup() {
-pinMode(ledPin, OUTPUT);
+  // define o pino 12 como saída:
+  pinMode(led, OUTPUT);
 }
 
+// a rotina loop() executa continuamente em repetição:
 void loop() {
-  // Aumenta o brilho do LED
-    for (int dutyCycle = 0; dutyCycle <= 4095; dutyCycle += 100) {
-    analogWrite(led_blue, dutyCycle);
-    delay(50);
+
+  // ajusta o brilho do LED no pino especificado:
+  analogWrite(led, brightness);
+
+  // altera o brilho para a próxima passagem pelo loop:
+  brightness = brightness + fadeAmount;
+
+  // inverte a direção da variação do brilho
+  // quando atingir os limites mínimo ou máximo:
+  if (brightness <= 0 || brightness >= 255) {
+    fadeAmount = -fadeAmount;
   }
 
-  // Diminui o brilho do LED
-  for (int dutyCycle = 4095; dutyCycle >= 0; dutyCycle -= 100) {
-   analogWrite(led_blue, dutyCycle);
-   delay(50);
-  }
+  // aguarda 30 milissegundos para visualizar o efeito de transição:
+  delay(30);
 }
 ```
 
