@@ -231,6 +231,8 @@ void loop() {
 
 ## Exemplo de maquina de estados com millis()
 
+Tarefa Suap: Acrescente mais uma transição com botão e torne o brilho do led com controle pwm.
+
 https://wokwi.com/projects/465046164881436673
 
 ## Aula 02/06
