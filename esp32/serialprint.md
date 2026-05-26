@@ -448,3 +448,7 @@ GPIO21, delay(300) GPIO18 delay(200) GPIO5
 </details>
 
 Exemplo da comunicação serial: https://wokwi.com/projects/397406587999082497
+
+
+
+Exemplo com pergunta e IF:  https://wokwi.com/projects/398045854579066881
