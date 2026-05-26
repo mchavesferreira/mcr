@@ -93,19 +93,11 @@ void loop() {
 }
 ```
 
-<P>02 - Função Debounce e uso de condição de fluxo IF
-<BR>03: <a href=https://wokwi.com/projects/341562149868405330>Alternando cores em LEDS</a>
- 
-
-
 
 <P><a href=http://www.cdme.im-uff.mat.br/matrix/matrix-html/matrix_color_cube/matrix_color_cube_br.html>Tabela de cores RGB</a>
 <P> 	
 
 
-
-
-Exemplo da comunicação serial: https://wokwi.com/projects/397406587999082497
 
 # Duty Cycle em PWM
 
@@ -117,67 +109,6 @@ Em um sinal PWM (*Pulse Width Modulation*), o período é composto por dois temp
 - **TOFF**: tempo em que o sinal permanece em nível baixo.
 
 O valor do Duty Cycle é calculado pela relação entre o tempo ligado e o período total do sinal.
-
-## Fórmula do Duty Cycle
-
-\[
-Duty\ Cycle (\%) = \frac{TON}{TON + TOFF} \times 100
-\]
-
-Onde:
-
-- **TON** = tempo em nível alto;
-- **TOFF** = tempo em nível baixo.
-
----
-
-# Exemplos
-
-## Duty Cycle de 50%
-
-Quando o sinal permanece metade do tempo ligado e metade desligado:
-
-- TON = 5 ms
-- TOFF = 5 ms
-
-\[
-\frac{5}{5+5} \times 100 = 50\%
-\]
-
-Nesse caso, a carga recebe aproximadamente metade da potência máxima.
-
----
-
-## Duty Cycle de 10%
-
-O sinal fica pouco tempo em nível alto:
-
-- TON = 1 ms
-- TOFF = 9 ms
-
-\[
-\frac{1}{1+9} \times 100 = 10\%
-\]
-
-A potência média entregue à carga será baixa.
-
----
-
-## Duty Cycle de 70%
-
-O sinal permanece ligado durante a maior parte do período:
-
-- TON = 7 ms
-- TOFF = 3 ms
-
-\[
-\frac{7}{7+3} \times 100 = 70\%
-\]
-
-A carga recebe maior potência média.
-
----
-
 
 Ao variar o Duty Cycle, é possível controlar a potência média aplicada à carga sem alterar a tensão de alimentação.
 
