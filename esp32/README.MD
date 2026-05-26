@@ -190,8 +190,9 @@ void loop() {
 
 # PWM
 
-Função analogWrite()
+Gerando sinais analógicos através PWM
 
+https://github.com/mchavesferreira/mcr/blob/main/esp32/pwm.md
 
 # Função millis()
 
