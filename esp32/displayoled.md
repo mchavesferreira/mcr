@@ -170,6 +170,20 @@ Por este código
 
 <img width="428" height="233" alt="image" src="https://github.com/user-attachments/assets/3b28d315-5a56-4816-b15d-5c4e617b67b9" />
 
+### Tarefa SUAP
+
+#### Cronometro Oled
+
+Utilize o exemplo disponivel em wokwi
+
+https://wokwi.com/projects/342195248670179922
+
+A explicação sobre display Oleds para criar um cronometro. Acrescente ao display um botão para iniciar a contagem do tempo e um botão para resetar. Formato 00:00:00 (hora: minuto:segundo)
+
+Lembre-se: crie tres variáveis e coloque as regras sobe o incremento das variaveis hora, minuto e segundos.
+Utilize millis() no lugar de delay()
+
+
 # Utilizando botão com interrupção
 
 O comando `attachInterrupt(pin, função, modo)` serve para vincular uma rotina de serviço de interrupção (ISR) a um pino digital específico. Assim, quando ocorre uma condição definida (como a mudança de nível lógico), o microcontrolador interrompe o fluxo normal do programa e executa imediatamente a função atribuída. Esse recurso é útil para detectar eventos externos com rapidez, como o acionamento de botões, sensores ou sinais de comunicação, sem depender de verificações constantes (*polling*) dentro do `loop()`.
