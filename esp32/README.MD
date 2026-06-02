@@ -13,7 +13,7 @@
 - [millis()](#função-millis)
 - [Display](#Display) (02/6)
 	- [LCD 16x2](#lcd-16x2)
-	- [Oled](#display-oled)
+	- [Oled](#display-oled) (tarefa suap)
 - [Interrupção Externa](#Interrupção-externa) (09/6)
 - [Exemplos de projetos](#Exemplos-de-projetos) (16/6)
 - Avaliação (23/6)
@@ -249,6 +249,20 @@ https://wokwi.com/projects/465046164881436673
 ### Oled
  
 -<a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md> Display Oled</a>
+
+### Tarefa SUAP: 
+
+#### Cronometro Oled
+
+Utilize o exemplo disponivel em wokwi
+
+https://wokwi.com/projects/342195248670179922
+
+e a explicação sobre display Oleds para criar um cronometro. Acrescente ao display um botão para iniciar a contagem do tempo e um botão para resetar. Formato 00:00:00 (hora: minuto:segundo)
+
+Lembre-se: crie tres variáveis e coloque as regras sobe o incremento das variaveis hora, minuto e segundos.
+Utilize millis() no lugar de delay()
+
 
 ## aula 09/6
 
