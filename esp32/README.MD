@@ -250,7 +250,9 @@ https://wokwi.com/projects/465046164881436673
  
 -<a href=https://github.com/mchavesferreira/mcr/blob/main/esp32/displayoled.md> Display Oled</a>
 
-Para ESP32 S3, os pinos alteram para o display I2C: GPIO 8 (SDA) GPIO 9 (SCL)
+Para ESP32 S3, os pinos alteram para o display I2C: 
+#### GPIO 8 (SDA) 
+#### GPIO 9 (SCL)
 
 ### Tarefa SUAP: 
 
