@@ -15,7 +15,7 @@
 	- [LCD 16x2](#lcd-16x2)
 	- [Oled](#display-oled) (tarefa suap)
 - [Interrupção Externa](#Interrupção-externa) (09/6)
-- [Exemplos de projetos](#Exemplos-de-projetos) (16/6)
+- [Exemplo de projeto](#Exemplo-de-projeto) (16/6)
 - Avaliação (23/6)
 - Entrega de projetos (30/6)
 - [ESP32 IOT](#ESP32-IOT) (3°Bimestre)
@@ -313,12 +313,14 @@ No exemplo a seguir, a cada mudança de borda de descida para o pino GPIO_BOTAO,
 
 Exemplo básico de um projeto com display Oled, 3 botões de seleção, uso de máquina de estados.
 
+<a href=https://wokwi.com/projects/466317204103476225>Máquina de Sorverte</a>
+
 Este projeto permite praticar uma aplicação interativa com ESP32, simulando uma máquina de sorvete automatizada. O aluno aprende o uso de **máquina de estados**, em que cada etapa representa uma escolha, como número de bolas, sabor, cobertura e recipiente. Também exercita a **leitura de botões**, o uso do **display OLED** para mensagens e o acionamento de **LEDs** para representar válvulas, motores ou outras cargas. A partir desse exemplo, o aluno pode criar novos projetos, como vending machine, dosador de líquidos, esteira seletora ou painel de controle didático, etc...
 
 
 <img src=imagens/maquinasorverteprojeto1.png>
 
-<a href=https://wokwi.com/projects/466317204103476225>Máquina de Sorverte</a>
+
 <BR><BR>
 
 
