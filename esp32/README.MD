@@ -268,9 +268,18 @@ Utilize millis() no lugar de delay()
 
 # Interrupção externa
 
-  <br>06 -<a href=https://wokwi.com/projects/342203713958445651> Exemplo função Interrupção()</a>
-<BR>  
- <br><a href=https://wokwi.com/projects/342234932555285074>Uso de interrupção</a>
+## Função `funcao_ISR()`
+
+A função `funcao_ISR()` é uma rotina de interrupção executada automaticamente quando ocorre um evento no pino associado ao botão. Nesse caso, o ESP32 não precisa verificar continuamente o estado da entrada no `loop()`, pois a mudança elétrica no pino chama a função no momento em que o evento acontece.
+
+Esse recurso torna o programa mais eficiente, pois o microcontrolador pode continuar executando outras tarefas enquanto aguarda o acionamento externo. Como a interrupção pausa temporariamente o fluxo principal do programa, a função ISR deve ser curta e objetiva, evitando comandos demorados, como escrita em display, comunicação serial extensa ou uso de `delay()`.
+
+Neste exemplo, a interrupção conta acionamentos válidos do botão e utiliza uma verificação de tempo para reduzir o efeito do repique mecânico, conhecido como *debounce*. A mesma lógica poderia ser aplicada em um odômetro de bicicleta, no qual cada pulso gerado por um sensor representa uma volta da roda; conhecendo o comprimento da circunferência da roda, é possível estimar a distância percorrida.
+
+<img src=imagens/bicicletaodometro.png>
+
+ <br><a href=https://wokwi.com/projects/439860789263905793 Exemplo função de Interrupção ISR </a>
+
   
 ## aula 16/6
 
