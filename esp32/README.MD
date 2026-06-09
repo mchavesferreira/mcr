@@ -308,7 +308,7 @@ No exemplo a seguir, a cada mudança de borda de descida para o pino GPIO_BOTAO,
   
 ## aula 16/6
 
-# Construindo uma maquina 
+# Exemplos de projetos 
 
 <BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
 
