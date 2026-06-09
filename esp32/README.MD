@@ -305,7 +305,42 @@ No exemplo a seguir, a cada mudança de borda de descida para o pino GPIO_BOTAO,
 
  <br><a href=https://wokwi.com/projects/439860789263905793> Exemplo função de Interrupção AttachInterrupt </a>
 
-  
+  ## Biblioteca `ezButton`
+
+A biblioteca `ezButton.h` facilita a leitura de botões no ESP32, pois organiza a verificação do acionamento e ajuda a tratar o efeito de *debounce*, evitando que um único toque seja interpretado como vários comandos. Com ela, o botão é criado como um objeto, por exemplo `ezButton button1(2);`, indicando que o botão está ligado ao pino GPIO 2. Dentro do `loop()`, é necessário chamar `button1.loop()` continuamente para que a biblioteca atualize o estado do botão e permita verificar eventos como pressionamento ou liberação.
+
+```cpp
+#include <ezButton.h>
+
+// Cria um objeto chamado button1 associado ao pino GPIO 2
+ezButton button1(2);
+
+void setup() {
+  Serial.begin(9600);
+
+  // Define o tempo de debounce em milissegundos
+  // Ajuda a evitar leituras falsas causadas pelo repique mecânico do botão
+  button1.setDebounceTime(50);
+}
+
+void loop() {
+  // Atualiza internamente o estado do botão
+  // Essa função deve ser chamada sempre dentro do loop()
+  button1.loop();
+
+  // Verifica se o botão foi pressionado
+  if (button1.isPressed()) {
+    Serial.println("Botao pressionado");
+  }
+
+  // Verifica se o botão foi solto
+  if (button1.isReleased()) {
+    Serial.println("Botao solto");
+  }
+}
+```
+
+
 ## aula 16/6
 
 # Exemplo de projeto 
