@@ -268,17 +268,42 @@ Utilize millis() no lugar de delay()
 
 # Interrupção externa
 
-## Função `funcao_ISR()`
+## Função `attachInterrupt()`
 
-A função `funcao_ISR()` é uma rotina de interrupção executada automaticamente quando ocorre um evento no pino associado ao botão. Nesse caso, o ESP32 não precisa verificar continuamente o estado da entrada no `loop()`, pois a mudança elétrica no pino chama a função no momento em que o evento acontece.
+A função `attachInterrupt()` é utilizada para associar uma interrupção externa a um pino do microcontrolador. Com ela, o ESP32 passa a monitorar uma mudança elétrica nesse pino e, quando a condição definida acontece, uma função escolhida pelo programador é executada automaticamente.
 
-Esse recurso torna o programa mais eficiente, pois o microcontrolador pode continuar executando outras tarefas enquanto aguarda o acionamento externo. Como a interrupção pausa temporariamente o fluxo principal do programa, a função ISR deve ser curta e objetiva, evitando comandos demorados, como escrita em display, comunicação serial extensa ou uso de `delay()`.
+Sua estrutura geral é:
 
-Neste exemplo, a interrupção conta acionamentos válidos do botão e utiliza uma verificação de tempo para reduzir o efeito do repique mecânico, conhecido como *debounce*. A mesma lógica poderia ser aplicada em um odômetro de bicicleta, no qual cada pulso gerado por um sensor representa uma volta da roda; conhecendo o comprimento da circunferência da roda, é possível estimar a distância percorrida.
+```cpp
+attachInterrupt(pino, funcao, modo);
+```
+
+O primeiro parâmetro indica o pino que será monitorado. O segundo parâmetro indica qual função será chamada quando a interrupção ocorrer. Essa função pode receber qualquer nome válido em C/C++, como `funcao_ISR`, `contadorPulso`, `leituraSensor` ou outro nome escolhido pelo programador. O terceiro parâmetro define o tipo de mudança no sinal que irá disparar a interrupção.
+
+No exemplo do odômetro de bicicleta, a interrupção pode ser usada para contar os pulsos gerados por um sensor magnético. Cada vez que o ímã preso ao aro da roda passa próximo ao sensor, ocorre uma mudança no sinal elétrico. Essa mudança pode ser detectada pelo ESP32 por meio da função `attachInterrupt()`, permitindo contar giros ou frações de giro da roda sem precisar verificar continuamente o sensor dentro do `loop()`.
+
+### Modos de disparo da interrupção
+
+| Modo      | Quando a interrupção ocorre                                                       | Exemplo de uso                                                                   |
+| --------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| `RISING`  | Quando o sinal muda de nível baixo para nível alto                                | Detectar a chegada de um pulso positivo                                          |
+| `FALLING` | Quando o sinal muda de nível alto para nível baixo                                | Detectar o fim de um pulso ou acionamento com pull-up                            |
+| `CHANGE`  | Quando o sinal muda de estado, tanto de baixo para alto quanto de alto para baixo | Detectar qualquer mudança no sinal                                               |
+| `LOW`     | Enquanto o pino permanece em nível baixo                                          | Usos específicos em que o nível baixo deve manter a interrupção ativa            |
+| `HIGH`    | Enquanto o pino permanece em nível alto                                           | Disponível apenas em algumas placas, não é o modo mais comum em exemplos básicos |
+
+Para sensores digitais, botões e aplicações como contagem de pulsos, os modos mais usados são `RISING`, `FALLING` e `CHANGE`. A escolha depende do comportamento elétrico do sensor e do momento em que se deseja registrar o evento.
 
 <img src=imagens/bicicletaodometro.png>
 
- <br><a href=https://wokwi.com/projects/439860789263905793 Exemplo função de Interrupção ISR </a>
+No exemplo a seguir, a cada mudança de borda de descida para o pino GPIO_BOTAO, a rotina funcao_ISR é chamada.
+
+```java
+  pinMode(GPIO_BOTAO, INPUT_PULLUP);
+  attachInterrupt(GPIO_BOTAO, funcao_ISR, RISING);
+```
+
+ <br><a href=https://wokwi.com/projects/439860789263905793 Exemplo função de Interrupção AttachInterrupt </a>
 
   
 ## aula 16/6
