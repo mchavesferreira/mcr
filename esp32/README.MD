@@ -303,7 +303,7 @@ No exemplo a seguir, a cada mudança de borda de descida para o pino GPIO_BOTAO,
   attachInterrupt(GPIO_BOTAO, funcao_ISR, RISING);
 ```
 
- <br><a href=https://wokwi.com/projects/439860789263905793 Exemplo função de Interrupção AttachInterrupt </a>
+ <br><a href=https://wokwi.com/projects/439860789263905793> Exemplo função de Interrupção AttachInterrupt </a>
 
   
 ## aula 16/6
