@@ -312,22 +312,9 @@ No exemplo a seguir, a cada mudança de borda de descida para o pino GPIO_BOTAO,
 
 <BR><BR>Exemplos de projetos de máquinas (estados). Vamos modificar estes projetos exemplos sem uso de delay().  
 
-## Exemplos de anos anteriores
+Exemplo básico de um projeto com display Oled, 3 botões de seleção, uso de máquina de estados.
 
-<BR><BR>Máquina de macarrão:
-<BR><BR>https://wokwi.com/projects/343824918481207891
-
-<BR><BR>Maquina de bolos:
-<BR><BR>https://wokwi.com/projects/343896310503440979
-
-
-<BR><BR>Máquina de sorvete 1
-<BR><BR>https://wokwi.com/projects/343353681787224660 
-
-
-<BR><BR>Máquina de sorvete 2
-
-<BR><BR> https://wokwi.com/projects/343718518644015698
+<a href=https://wokwi.com/projects/466317204103476225>Máquina de Sorverte</a>
 <BR><BR>
 
 
