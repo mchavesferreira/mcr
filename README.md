@@ -7,8 +7,9 @@
 
 Prova: 23/06/2026
 
-Trabalho:  30/06/2026
+Trabalho:  30/06/2026 
 
+Peso Bimestre: Prova (60%) + Trabalho montado (30%) + Tarefas (10%)
 <B><h1>- <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32> Aulas ESP32 </A></h1>
 
 
