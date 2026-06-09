@@ -348,7 +348,7 @@ void loop() {
 
 Exemplo básico de um projeto com display Oled, 3 botões de seleção, uso de máquina de estados.
 
-<a href=https://wokwi.com/projects/466317204103476225>Máquina de Sorverte</a>
+<a href=https://wokwi.com/projects/466317204103476225>Máquina de Sorvete</a>
 
 Este projeto permite praticar uma aplicação interativa com ESP32, simulando uma máquina de sorvete automatizada. O aluno aprende o uso de **máquina de estados**, em que cada etapa representa uma escolha, como número de bolas, sabor, cobertura e recipiente. Também exercita a **leitura de botões**, o uso do **display OLED** para mensagens e o acionamento de **LEDs** para representar válvulas, motores ou outras cargas. A partir desse exemplo, o aluno pode criar novos projetos, como vending machine, dosador de líquidos, esteira seletora ou painel de controle didático, etc...
 
