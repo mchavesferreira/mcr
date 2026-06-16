@@ -362,6 +362,41 @@ Este projeto permite praticar uma aplicação interativa com ESP32, simulando um
 
 <BR><BR>
 
+## Requisitos do projeto
+
+<img src=imagens/projeto2.png>
+
+Maquina microntrolada Esp32 com protótipagem em protoboard (PROJETO FÍSICO)
+
+Trabalho individual ou em dupla. Postar individualmente citando a dupla. O trabalho deve ser entregue em formato digital com simulação e um pequeno texto explicando sua funcionalidade.
+
+-Envio do codigo nesta aba do SUAP, apenas se ocorrer um erro, enviar para email, arquivos fontes e texto resumo. (2,0)
+
+Crie uma máquina personalizada (não será considerado máquina de lavar e sorveteria) atenda os seguintes critérios e ponderações:
+
+- apresente no mínimo 03 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo); (2,0 pontos)
+
+- ajustes de pelo menos 02 valores inteiros; (1,0 pontos)
+
+- utilize pelo menos 02 leds como saídas; (1,0 pontos)
+
+- utilize pelo menos 01 saída pwm (1,0 pontos)
+
+- perguntas e respostas devem utilizar display Oled e botões (exemplos para botões: + - 1 2 3 Y N enter) 
+
+- As duplas não podem ter trabalhos "clones", criatividade, complexidade e dificuldades serão pontuados; (3,0)
+
+- Enviar o link na área trabalhos (suap). TODOS INTEGRANTES de cada integrante da dupla deve postar no suap
+
+
+Link de exemplo inicial: https://wokwi.com/projects/466317204103476225 que ilustra o funcionamento de uma sorveteria 
+
+Orientações para o código. Utilize switch()/case para estruturar seu projeto;
+
+A utilização de funções deixam o código limpo e facilmente compreensível
+
+Variáveis que serão utilizadas em funções diferentes devem ser globais. Variáveis locais são sempre recomendadas para economia de memória RAM.
+
 
 # Referências
 
