@@ -376,7 +376,7 @@ Crie uma máquina personalizada (não será considerado máquina de lavar e sorv
 
 - apresente no mínimo 03 perguntas entre (sim x não) ou ajustes de valores (exemplo tempo); (2,0 pontos)
 
-- ajustes de pelo menos 02 valores inteiros; (1,0 pontos)
+- ajustes de pelo menos 01 valores inteiros (Exemplo quantidade de produto); (1,0 pontos)
 
 - utilize pelo menos 02 leds como saídas; (1,0 pontos)
 
