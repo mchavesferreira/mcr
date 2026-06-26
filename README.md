@@ -43,5 +43,10 @@ Peso Bimestre: Prova (60%) + Trabalho montado (30%) + Tarefas (10%)
 <BR><img src=imagens/leds_resistor.png  width=200 height=200>
 <BR>
 
+## Simuladores
+
+https://velxio.dev/example/esp32c3-http-server
+
+
 
 ChatGPT: https://chatgpt.com/g/g-TFvuISQH5-professor-dos-embarcados
