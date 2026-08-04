@@ -73,8 +73,70 @@ https://wokwi.com/projects/401871586327571457
 ## Conversor Anaógico Digital
 <BR></BR><b></b>Aula prática uma entrada analógica</b>
 
-<BR><img src=esp32/adcesp32.png width=300 height=300><BR>
+# Princípio da entrada analógica no ESP32
 
+A entrada analógica do ESP32 permite medir uma tensão elétrica variável e convertê-la em um valor numérico que pode ser utilizado pelo programa.
+
+Essa conversão é realizada por um **conversor analógico-digital**, denominado **ADC** — *Analog-to-Digital Converter*.
+
+## Funcionamento básico
+
+O ADC recebe uma tensão aplicada a um pino analógico e a transforma em um número inteiro.
+
+Nos ESP32, a resolução normalmente utilizada é de **12 bits**. Isso significa que o conversor pode representar a tensão por meio de:
+
+[
+2^{12} = 4096
+]
+
+valores diferentes.
+
+Assim, o resultado da leitura varia de:
+
+```text
+0 a 4095
+```
+
+De forma simplificada:
+
+|             Tensão aplicada | Valor digital aproximado |
+| --------------------------: | -----------------------: |
+|                         0 V |                        0 |
+|  Metade da faixa de medição |                     2048 |
+| Máximo da faixa configurada |                     4095 |
+
+A conversão pode ser representada aproximadamente por:
+
+[
+ADC = \frac{V_{IN}}{V_{MAX}} \times 4095
+]
+
+Onde:
+
+* (ADC) é o valor digital obtido;
+* (V_{IN}) é a tensão aplicada ao pino;
+* (V_{MAX}) é a tensão máxima da faixa configurada;
+* (4095) é o maior valor representável em 12 bits.
+
+
+
+| Característica                              | ESP32-WROOM-32                                      | ESP32-S3                                   |
+| ------------------------------------------- | --------------------------------------------------- | ------------------------------------------ |
+| Resolução usual do ADC                      | 12 bits: 0 a 4095                                   | 12 bits: 0 a 4095                          |
+| Faixa de pinos do ADC1                      | GPIO32 a GPIO39                                     | GPIO1 a GPIO10                             |
+| Faixa de pinos do ADC2                      | GPIO0, 2, 4, 12–15 e 25–27                          | GPIO11 a GPIO20                            |
+| **Pinos preferenciais**                     | **GPIO32, 33, 34, 35, 36 e 39**                     | **GPIO4, 5, 6, 7, 8, 9 e 10**              |
+| **Melhores escolhas gerais**                | **GPIO34, 35, 36 e 39**                             | **GPIO4, 5, 6 e 7**                        |
+| Pinos somente de entrada                    | GPIO34, 35, 36 e 39                                 | Não há equivalentes somente de entrada     |
+| Pinos a evitar                              | GPIO0, 2, 12 e 15 por participarem da inicialização | GPIO3 por ser pino de inicialização        |
+| Pinos a evitar com USB                      | Não se aplica à USB nativa                          | GPIO19 e GPIO20                            |
+| Uso com Wi-Fi                               | Preferir obrigatoriamente o ADC1                    | Preferir o ADC1 para simplificar o projeto |
+| Tensão máxima no GPIO                       | 3,3 V                                               | 3,3 V                                      |
+| **Entrada analógica principal recomendada** | **GPIO34**                                          | **GPIO4**                                  |
+
+
+<BR><img src=esp32/adcesp32.png width=300 height=300><BR>
+<br><img src=esp32/imagens/pinout_esp32s3.jpg width=300 height=300><BR>
 ### Lend um canal AD 
 ```ruby
 int valoranalogico = 0;
