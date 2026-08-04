@@ -19,7 +19,7 @@
 - Avaliação (23/6)
 - Entrega de projetos (30/6)
 - [ESP32 IOT](#ESP32-IOT) (3°Bimestre)
-- [Leitura Analógica] (#leitura-analógica) (4/8)
+- [Leitura Analógica](#leitura-analógica) (4/8)
 - [Livros](#Livros-e-referencias)
 
 
