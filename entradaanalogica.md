@@ -110,13 +110,6 @@ A conversão pode ser representada aproximadamente por:
 <img width="612" height="272" alt="image" src="https://github.com/user-attachments/assets/c4d37990-42da-4d25-9ab3-d6aae0e081e2" />
 
 
-Onde:
-
-* (ADC) é o valor digital obtido;
-* (V_{IN}) é a tensão aplicada ao pino;
-* (V_{MAX}) é a tensão máxima da faixa configurada;
-* (4095) é o maior valor representável em 12 bits.
-
 
 
 | Característica                              | ESP32-WROOM-32                                      | ESP32-S3                                   |
