@@ -85,9 +85,8 @@ O ADC recebe uma tensão aplicada a um pino analógico e a transforma em um núm
 
 Nos ESP32, a resolução normalmente utilizada é de **12 bits**. Isso significa que o conversor pode representar a tensão por meio de:
 
-[
-2^{12} = 4096
-]
+<img width="135" height="55" alt="image" src="https://github.com/user-attachments/assets/c4ba5899-7d28-42c2-825d-a814d60797af" />
+
 
 valores diferentes.
 
