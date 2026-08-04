@@ -107,9 +107,8 @@ De forma simplificada:
 
 A conversão pode ser representada aproximadamente por:
 
-[
-ADC = \frac{V_{IN}}{V_{MAX}} \times 4095
-]
+<img width="612" height="272" alt="image" src="https://github.com/user-attachments/assets/c4d37990-42da-4d25-9ab3-d6aae0e081e2" />
+
 
 Onde:
 
