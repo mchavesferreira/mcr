@@ -19,7 +19,7 @@
 - Avaliação (23/6)
 - Entrega de projetos (30/6)
 - [ESP32 IOT](#ESP32-IOT) (3°Bimestre)
- - leitura analógica
+- Leitura Analógica (#leitura-analógica) (4/8)
 - [Livros](#Livros-e-referencias)
 
 
@@ -397,6 +397,11 @@ A utilização de funções deixam o código limpo e facilmente compreensível
 
 Variáveis que serão utilizadas em funções diferentes devem ser globais. Variáveis locais são sempre recomendadas para economia de memória RAM.
 
+# 04/08/2026
+
+# Leitura Analógica 
+
+https://github.com/mchavesferreira/mcr/blob/main/entradaanalogica.md
 
 # Referências
 
