@@ -25,8 +25,8 @@ WebServer server(80);
 // This routine is executed when you open its IP in browser
 //===============================================================
 void handleRoot() {
- String s = MAIN_page; //Read HTML contents
- server.send(200, "text/html", s); //Send web page
+ String pagina = MAIN_page_html; //Read HTML contents
+ server.send(200, "text/html", pagina); //Send web page
 }
 //==============================================================
 //                  SETUP
