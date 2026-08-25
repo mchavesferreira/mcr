@@ -1,12 +1,11 @@
 /*
- * Hello world web server
- * circuits4you.com
+ * Cria uma rede wifi com esp32
  */
 // Carregar biblioteca Wifi
 #include <WiFi.h>
 #include <WebServer.h>
 
-#include "index.h" //Our HTML webpage contents
+#include "index.h" //O conteúdo da nossa página da web em HTML
 
 //SSID and Password of your WiFi router
 const char* ssid = "poemas";
@@ -22,11 +21,11 @@ IPAddress subnet(255, 255, 255, 0);
 WebServer server(80);
 
 //===============================================================
-// This routine is executed when you open its IP in browser
+// Esta rotina é executada quando você abre o IP dela no navegador.
 //===============================================================
 void handleRoot() {
- String pagina = MAIN_page_html; //Read HTML contents
- server.send(200, "text/html", pagina); //Send web page
+ String pagina = MAIN_page_html; //variavel com conteudo html
+ server.send(200, "text/html", pagina); //Enviar web page
 }
 //==============================================================
 //                  SETUP
@@ -34,27 +33,27 @@ void handleRoot() {
 void setup(void){
   Serial.begin(115200);
   
-//  WiFi.begin(ssid, password);     //Connect to your WiFi router
+//  WiFi.softAP(ssid, password);     //Cria a rede wifi com senha
   WiFi.softAP(ssid);
 
 //  WiFi.softAPConfig(local_ip, gateway, subnet);
   Serial.println("");
  
-  //If connection successful show IP address in serial monitor
+  //Se a conexão for bem-sucedida, exiba o endereço IP no monitor serial.
   Serial.println("");
   Serial.print("Connected to ");
   Serial.println(ssid);
   Serial.print("IP address: ");
-  Serial.println(WiFi.localIP());  //IP address assigned to your ESP
+  Serial.println(WiFi.localIP());  //Endereço IP atribuído ao seu ESP
  
-  server.on("/", handleRoot);      //Which routine to handle at root location
+  server.on("/", handleRoot);      //Qual rotina tratar no local raiz
 
-  server.begin();                  //Start server
+  server.begin();                  //Iniciar servidor
   Serial.println("HTTP server started");
 }
 //==============================================================
 //                     LOOP
 //==============================================================
 void loop(void){
-  server.handleClient();          //Handle client requests
+  server.handleClient();          //Atender às solicitações dos clientes
 }
