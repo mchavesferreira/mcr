@@ -1,4 +1,4 @@
-const char MAIN_page_htm[] PROGMEM = R"=====(
+const char MAIN_page_html[] PROGMEM = R"=====(
 <HTML>
 	<HEAD>
 			<TITLE> Luís Váz de Camões </TITLE>
