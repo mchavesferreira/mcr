@@ -39,9 +39,7 @@ void setup(void){
 
 //  WiFi.softAPConfig(local_ip, gateway, subnet);
   Serial.println("");
-
-  
-
+ 
   //If connection successful show IP address in serial monitor
   Serial.println("");
   Serial.print("Connected to ");
