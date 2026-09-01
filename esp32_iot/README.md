@@ -151,6 +151,10 @@ O conceito de "web server com AJAX" em uma aplicação ESP32 refere-se à criaç
 
 <BR>
  O valores são substituidos nos "ID" a cada intervalo de tempo, buscando a String de uma url no próprio microcontrolador.
+
+ ## Ajax com botões
+
+    <BR><ahttps://github.com/mchavesferreira/mcr/tree/main/esp32_iot/ajax_botoes>Botões e analogico</a>
  
 # Internet das Coisas (IoT)
 
