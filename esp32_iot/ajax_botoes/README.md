@@ -1,230 +1,75 @@
-# Funcionamento do AJAX no projeto com ESP32
+# AJAX no ESP32
 
-## 1. Objetivo
+## Objetivo
 
-Neste projeto, o ESP32 funciona como um pequeno **servidor Web**.  
-Uma página HTML armazenada no próprio microcontrolador é enviada ao navegador do usuário.
+Neste projeto, o ESP32 funciona como um **servidor Web**. A página HTML permite:
 
-A página permite:
+* visualizar as entradas analógicas dos GPIOs 32, 33 e 34;
+* atualizar os valores automaticamente;
+* ligar e desligar uma saída digital;
+* realizar essas ações sem recarregar toda a página.
 
-- visualizar os valores analógicos dos GPIOs 32, 33 e 34;
-- atualizar esses valores automaticamente;
-- receber mensagens enviadas pelo ESP32;
-- ligar uma saída digital;
-- desligar uma saída digital.
-
-A principal característica do projeto é que essas operações acontecem **sem recarregar completamente a página Web**.
-
-Isso é realizado utilizando **AJAX**.
+Isso é feito utilizando **AJAX**.
 
 ---
 
-# 2. O que é AJAX?
+## O que é AJAX?
 
 AJAX significa:
 
 **Asynchronous JavaScript and XML**
 
-ou, em português:
+Ele permite que o navegador envie requisições ao ESP32 e atualize apenas uma parte da página.
 
-**JavaScript Assíncrono e XML**.
-
-Apesar do nome mencionar XML, atualmente AJAX pode ser utilizado para receber vários tipos de dados, como:
-
-- texto;
-- JSON;
-- XML;
-- HTML;
-- valores numéricos.
-
-Neste projeto, o ESP32 retorna principalmente **texto simples**, como:
+Por exemplo:
 
 ```text
-2450
+Navegador → GET /readADC → ESP32 → valor ADC → navegador
 ```
 
-ou:
-
-```text
-LIGADO
-```
-
-O AJAX permite que o navegador envie uma requisição ao ESP32 e receba apenas o dado necessário, sem precisar carregar novamente todo o arquivo HTML.
+Assim, somente o dado necessário é transmitido.
 
 ---
 
-# 3. Funcionamento geral
+## Servidor Web no ESP32
 
-O sistema pode ser representado da seguinte forma:
-
-```text
-┌─────────────────────────┐
-│       Navegador         │
-│                         │
-│ HTML + CSS + JavaScript │
-└────────────┬────────────┘
-             │
-             │ Requisição HTTP
-             │ AJAX
-             ▼
-┌─────────────────────────┐
-│          ESP32          │
-│                         │
-│      WebServer          │
-└────────────┬────────────┘
-             │
-             ▼
-      Leitura ou ação
-             │
-             ▼
-┌─────────────────────────┐
-│ GPIO / ADC / Variáveis  │
-└─────────────────────────┘
-```
-
-O navegador solicita informações ao ESP32 por meio de diferentes URLs.
-
-Exemplos:
-
-```text
-/readADC
-/readgpio1
-/readgpio2
-/msgoled
-/ligar
-/desligar
-```
-
-Cada URL é associada a uma função no programa do ESP32.
-
----
-
-# 4. Servidor Web no ESP32
-
-O programa utiliza a biblioteca:
-
-```cpp
-#include <WebServer.h>
-```
-
-e cria um servidor HTTP na porta 80:
+O servidor é criado com:
 
 ```cpp
 WebServer server(80);
 ```
 
-A porta 80 é a porta padrão utilizada pelo protocolo HTTP.
-
-Assim, quando o navegador acessa:
-
-```text
-http://IP_DO_ESP32/
-```
-
-o navegador estabelece uma comunicação HTTP com o ESP32.
-
----
-
-# 5. Página principal
-
-No programa principal existe a função:
-
-```cpp
-void handleRoot() {
-  String s = MAIN_page;
-  server.send(200, "text/html", s);
-}
-```
-
-A rota correspondente é registrada com:
+As URLs são associadas a funções:
 
 ```cpp
 server.on("/", handleRoot);
-```
 
-Quando o navegador solicita:
+server.on("/readADC", handleADC);
 
-```text
-/
-```
+server.on("/readgpio1", handlegpio1);
 
-o ESP32 executa:
+server.on("/readgpio2", handlegpio2);
 
-```cpp
-handleRoot()
-```
+server.on("/ligar", handleLigar);
 
-e retorna a página HTML armazenada na variável:
-
-```cpp
-MAIN_page
-```
-
-que está no arquivo:
-
-```text
-index.h
-```
-
----
-
-# 6. Atualização sem refresh
-
-Sem AJAX, para visualizar um novo valor do ADC seria necessário atualizar toda a página.
-
-O processo seria:
-
-```text
-Navegador
-    ↓
-Solicita página completa
-    ↓
-ESP32 envia HTML completo
-    ↓
-Navegador redesenha a página
-```
-
-Com AJAX, somente o valor necessário é solicitado.
-
-Por exemplo:
-
-```text
-Navegador
-    ↓
-GET /readADC
-    ↓
-ESP32 lê GPIO 32
-    ↓
-ESP32 responde "2478"
-    ↓
-JavaScript altera apenas o valor mostrado na tela
-```
-
-Isso torna a comunicação mais rápida e reduz a quantidade de dados transmitidos.
-
----
-
-# 7. XMLHttpRequest
-
-Neste projeto, o AJAX é implementado utilizando o objeto JavaScript:
-
-```javascript
-XMLHttpRequest
+server.on("/desligar", handleDesligar);
 ```
 
 Por exemplo:
 
-```javascript
-var xhttp = new XMLHttpRequest();
+```cpp
+server.on("/readADC", handleADC);
 ```
 
-Esse objeto permite que o JavaScript faça uma requisição HTTP ao ESP32.
+significa:
+
+> Quando o navegador solicitar `/readADC`, execute `handleADC()`.
 
 ---
 
-# 8. Exemplo: leitura do GPIO 32
+## Leitura do ADC
 
-A função JavaScript utilizada é:
+No JavaScript:
 
 ```javascript
 function getData() {
@@ -237,9 +82,7 @@ function getData() {
 
       document.getElementById("ADCValue").innerHTML =
       this.responseText;
-
     }
-
   };
 
   xhttp.open("GET", "/readADC", true);
@@ -248,153 +91,27 @@ function getData() {
 }
 ```
 
-Vamos analisar cada parte.
-
----
-
-## 8.1 Criação da requisição
-
-```javascript
-var xhttp = new XMLHttpRequest();
-```
-
-Cria um objeto responsável pela comunicação HTTP.
-
----
-
-## 8.2 Monitoramento da resposta
-
-```javascript
-xhttp.onreadystatechange = function() {
-```
-
-Essa função é executada sempre que o estado da requisição muda.
-
----
-
-## 8.3 Verificação da resposta
-
-```javascript
-if (this.readyState == 4 && this.status == 200)
-```
-
-Existem duas verificações importantes.
-
-### readyState
-
-O valor:
-
-```text
-4
-```
-
-significa que a requisição foi concluída.
-
-Os principais valores de `readyState` são:
-
-| Valor | Significado |
-|---:|---|
-| 0 | requisição ainda não inicializada |
-| 1 | conexão configurada |
-| 2 | requisição recebida pelo servidor |
-| 3 | resposta sendo recebida |
-| 4 | operação concluída |
-
-### status
-
-O valor:
-
-```text
-200
-```
-
-é um código HTTP que significa:
-
-```text
-OK
-```
-
-Portanto:
-
-```javascript
-if (this.readyState == 4 && this.status == 200)
-```
-
-significa:
-
-> Se a requisição terminou corretamente e o servidor respondeu com sucesso.
-
----
-
-# 9. Solicitando uma URL ao ESP32
-
 A linha:
 
 ```javascript
 xhttp.open("GET", "/readADC", true);
 ```
 
-configura a requisição.
+configura uma requisição HTTP do tipo `GET`.
 
-Os parâmetros são:
-
-```javascript
-xhttp.open(metodo, URL, assincrono);
-```
-
-Neste projeto:
-
-```javascript
-"GET"
-```
-
-é o método HTTP utilizado.
-
-```javascript
-"/readADC"
-```
-
-é a URL solicitada.
-
-```javascript
-true
-```
-
-indica que a comunicação será assíncrona.
-
----
-
-# 10. Enviando a requisição
-
-Depois de configurar a requisição, ela é enviada com:
+A linha:
 
 ```javascript
 xhttp.send();
 ```
 
-Nesse momento o navegador envia aproximadamente:
-
-```text
-GET /readADC HTTP/1.1
-```
-
-para o ESP32.
+envia a requisição ao ESP32.
 
 ---
 
-# 11. Tratamento da requisição no ESP32
+## Resposta do ESP32
 
-No `setup()` existe:
-
-```cpp
-server.on("/readADC", handleADC);
-```
-
-Isso significa:
-
-> Quando o navegador solicitar `/readADC`, execute a função `handleADC()`.
-
-A função é:
+O ESP32 recebe a solicitação e executa:
 
 ```cpp
 void handleADC() {
@@ -407,67 +124,19 @@ void handleADC() {
 }
 ```
 
-O ESP32:
+O valor do ADC é enviado ao navegador como texto.
 
-1. realiza a leitura analógica;
-2. converte o valor para uma `String`;
-3. responde ao navegador.
-
----
-
-# 12. Resposta HTTP do ESP32
-
-A instrução:
-
-```cpp
-server.send(200, "text/plain", adcValue);
-```
-
-possui três parâmetros principais:
-
-```cpp
-server.send(codigo, tipo, conteudo);
-```
-
-Neste exemplo:
-
-```cpp
-200
-```
-
-significa:
+Exemplo:
 
 ```text
-HTTP OK
-```
-
-O parâmetro:
-
-```cpp
-"text/plain"
-```
-
-indica que o conteúdo enviado é texto simples.
-
-E:
-
-```cpp
-adcValue
-```
-
-contém o valor convertido do ADC.
-
-Uma resposta poderia ser:
-
-```text
-2876
+2785
 ```
 
 ---
 
-# 13. Atualização de apenas um elemento da página
+## Atualização da página
 
-Depois que o valor retorna ao navegador, o JavaScript executa:
+Quando a resposta chega, o JavaScript executa:
 
 ```javascript
 document.getElementById("ADCValue").innerHTML =
@@ -480,33 +149,15 @@ Na página existe:
 <span id="ADCValue"></span>
 ```
 
-O JavaScript localiza esse elemento utilizando:
+Somente esse elemento é alterado.
 
-```javascript
-document.getElementById("ADCValue")
-```
-
-e altera apenas o seu conteúdo.
-
-Se o ESP32 respondeu:
-
-```text
-2876
-```
-
-o navegador passa a exibir:
-
-```text
-GPIO 32: 2876
-```
-
-sem carregar novamente toda a página.
+A página inteira não é recarregada.
 
 ---
 
-# 14. Atualização automática usando setInterval()
+## Atualização automática
 
-As leituras analógicas são atualizadas utilizando:
+As entradas analógicas são atualizadas a cada 2 segundos:
 
 ```javascript
 setInterval(function() {
@@ -518,158 +169,37 @@ setInterval(function() {
 }, 2000);
 ```
 
-O valor:
-
-```text
-2000
-```
-
-está em milissegundos.
-
 Portanto:
 
 ```text
 2000 ms = 2 segundos
 ```
 
-A cada 2 segundos são chamadas as funções:
-
-```javascript
-getData();
-getgpio1();
-getgpio2();
-```
-
-Assim, o navegador solicita automaticamente os valores dos três ADCs.
-
 ---
 
-# 15. Fluxo completo da leitura do GPIO 32
+## Botões LIGAR e DESLIGAR
 
-O processo completo é:
-
-```text
-A cada 2 segundos
-       │
-       ▼
-JavaScript chama getData()
-       │
-       ▼
-Cria XMLHttpRequest
-       │
-       ▼
-GET /readADC
-       │
-       ▼
-ESP32 recebe requisição
-       │
-       ▼
-handleADC()
-       │
-       ▼
-analogRead(32)
-       │
-       ▼
-server.send(...)
-       │
-       ▼
-Navegador recebe o valor
-       │
-       ▼
-responseText
-       │
-       ▼
-innerHTML
-       │
-       ▼
-Valor aparece na página
-```
-
----
-
-# 16. Leitura dos GPIOs 33 e 34
-
-O funcionamento das outras entradas analógicas é semelhante.
-
-Para o GPIO 33:
-
-```javascript
-xhttp.open("GET", "/readgpio1", true);
-```
-
-No ESP32:
-
-```cpp
-server.on("/readgpio1", handlegpio1);
-```
-
-A função executada é:
-
-```cpp
-void handlegpio1() {
-
-  int b = analogRead(33);
-
-  String adcValue = String(b);
-
-  server.send(200, "text/plain", adcValue);
-}
-```
-
-Para o GPIO 34:
-
-```javascript
-xhttp.open("GET", "/readgpio2", true);
-```
-
-No ESP32:
-
-```cpp
-server.on("/readgpio2", handlegpio2);
-```
-
----
-
-# 17. Botão LIGAR
-
-O botão HTML é definido como:
+O botão:
 
 ```html
-<button class="botaoLigar" onclick="ligarSaida()">
+<button onclick="ligarSaida()">
   LIGAR
 </button>
 ```
 
-Quando o usuário clica no botão, é chamada:
-
-```javascript
-ligarSaida()
-```
-
-A função realiza:
+chama uma função JavaScript que envia:
 
 ```javascript
 xhttp.open("GET", "/ligar", true);
-xhttp.send();
 ```
 
-O navegador solicita:
+O ESP32 recebe:
 
 ```text
-/ligar
+GET /ligar
 ```
 
----
-
-# 18. Rota /ligar no ESP32
-
-No ESP32:
-
-```cpp
-server.on("/ligar", handleLigar);
-```
-
-Ao receber a requisição, é executada:
+e executa:
 
 ```cpp
 void handleLigar() {
@@ -680,72 +210,7 @@ void handleLigar() {
 }
 ```
 
-A saída digital é colocada em nível lógico alto:
-
-```cpp
-HIGH
-```
-
-Depois o ESP32 responde:
-
-```text
-LIGADO
-```
-
----
-
-# 19. Atualizando o estado da saída
-
-A resposta é recebida pelo JavaScript:
-
-```javascript
-document.getElementById("estadoSaida").innerHTML =
-this.responseText;
-```
-
-Na página existe:
-
-```html
-<span id="estadoSaida">DESLIGADO</span>
-```
-
-Depois do clique, esse elemento passa a apresentar:
-
-```text
-LIGADO
-```
-
----
-
-# 20. Botão DESLIGAR
-
-O botão:
-
-```html
-<button class="botaoDesligar" onclick="desligarSaida()">
-  DESLIGAR
-</button>
-```
-
-chama:
-
-```javascript
-desligarSaida()
-```
-
-que solicita:
-
-```text
-/desligar
-```
-
-No ESP32:
-
-```cpp
-server.on("/desligar", handleDesligar);
-```
-
-A função:
+Para desligar:
 
 ```cpp
 void handleDesligar() {
@@ -756,164 +221,41 @@ void handleDesligar() {
 }
 ```
 
-coloca a saída em nível lógico baixo.
-
 ---
 
-# 21. Fluxo do botão LIGAR
+## Fluxo geral
 
 ```text
-Usuário clica em LIGAR
-          │
-          ▼
-onclick="ligarSaida()"
-          │
-          ▼
+Página Web
+    │
+    ▼
 JavaScript
-          │
-          ▼
-GET /ligar
-          │
-          ▼
+    │
+    ▼
+AJAX / HTTP GET
+    │
+    ▼
 ESP32 WebServer
-          │
-          ▼
-handleLigar()
-          │
-          ▼
-digitalWrite(GPIO, HIGH)
-          │
-          ▼
-Resposta "LIGADO"
-          │
-          ▼
-JavaScript recebe responseText
-          │
-          ▼
-Atualiza estadoSaida
+    │
+    ▼
+Função correspondente
+    │
+    ├── analogRead()
+    │
+    └── digitalWrite()
+    │
+    ▼
+Resposta HTTP
+    │
+    ▼
+JavaScript atualiza a página
 ```
 
 ---
 
-# 22. Comparação: página tradicional e AJAX
+## Papel de `server.handleClient()`
 
-## Página tradicional
-
-```text
-Usuário solicita informação
-        ↓
-Servidor gera página completa
-        ↓
-HTML completo é transmitido
-        ↓
-Página inteira é atualizada
-```
-
-## Utilizando AJAX
-
-```text
-JavaScript solicita apenas um dado
-        ↓
-Servidor responde apenas aquele dado
-        ↓
-JavaScript altera somente parte da página
-```
-
-Isso reduz:
-
-- tráfego de rede;
-- tempo de atualização;
-- processamento;
-- quantidade de dados enviados pelo ESP32.
-
----
-
-# 23. Por que AJAX é interessante em sistemas embarcados?
-
-Microcontroladores possuem recursos limitados quando comparados a computadores convencionais.
-
-O ESP32 possui limitações de:
-
-- memória RAM;
-- processamento;
-- armazenamento;
-- largura de banda;
-- número simultâneo de conexões.
-
-Por isso, transmitir somente as informações necessárias é vantajoso.
-
-AJAX permite construir interfaces Web relativamente dinâmicas sem exigir que o ESP32 gere repetidamente uma página inteira.
-
----
-
-# 24. Estrutura cliente-servidor
-
-Neste projeto existem dois elementos principais.
-
-## Cliente
-
-O navegador Web.
-
-Exemplos:
-
-```text
-Chrome
-Firefox
-Edge
-Safari
-```
-
-O cliente executa:
-
-- HTML;
-- CSS;
-- JavaScript;
-- AJAX.
-
-## Servidor
-
-O ESP32.
-
-Ele executa:
-
-- leitura dos ADCs;
-- controle das saídas;
-- processamento das rotas HTTP;
-- envio das respostas.
-
----
-
-# 25. Relação entre URL e função
-
-Cada URL solicitada pelo navegador está associada a uma função no ESP32.
-
-| URL | Função ESP32 | Operação |
-|---|---|---|
-| `/` | `handleRoot()` | envia a página Web |
-| `/readADC` | `handleADC()` | lê GPIO 32 |
-| `/readgpio1` | `handlegpio1()` | lê GPIO 33 |
-| `/readgpio2` | `handlegpio2()` | lê GPIO 34 |
-| `/msgoled` | `handlemsgoled()` | envia uma mensagem |
-| `/ligar` | `handleLigar()` | liga a saída |
-| `/desligar` | `handleDesligar()` | desliga a saída |
-
-Esse mapeamento é realizado com:
-
-```cpp
-server.on(URL, funcao);
-```
-
-Por exemplo:
-
-```cpp
-server.on("/ligar", handleLigar);
-```
-
----
-
-# 26. O papel de server.handleClient()
-
-Dentro do `loop()` existe:
+No programa principal:
 
 ```cpp
 void loop() {
@@ -930,131 +272,58 @@ A função:
 server.handleClient();
 ```
 
-verifica constantemente se algum navegador enviou uma nova requisição HTTP.
-
-Quando uma requisição chega, o servidor identifica a URL e executa a função correspondente.
-
-Por isso essa instrução precisa ser executada repetidamente.
+verifica continuamente se chegou uma nova requisição HTTP.
 
 ---
 
-# 27. Conceito de comunicação assíncrona
+## Principais conceitos
 
-No comando:
+Este projeto permite estudar:
 
-```javascript
-xhttp.open("GET", "/readADC", true);
-```
-
-o último parâmetro:
-
-```javascript
-true
-```
-
-indica funcionamento assíncrono.
-
-Isso significa que o navegador não precisa interromper toda a execução da página enquanto aguarda a resposta do ESP32.
-
-Enquanto a requisição é processada, a interface continua funcionando.
-
-Quando a resposta chega, a função:
-
-```javascript
-onreadystatechange
-```
-
-é executada.
+* ESP32 como servidor Web;
+* protocolo HTTP;
+* método `GET`;
+* HTML;
+* JavaScript;
+* AJAX;
+* `XMLHttpRequest`;
+* atualização dinâmica da página;
+* leitura de ADC;
+* controle de GPIO;
+* arquitetura cliente-servidor.
 
 ---
 
-# 28. Resumo do projeto
+## Resumo
 
-O funcionamento geral pode ser resumido em cinco etapas:
+O AJAX permite que o navegador troque pequenas quantidades de dados com o ESP32 sem recarregar toda a página.
 
-```text
-1. JavaScript gera a requisição
-              ↓
-2. AJAX envia GET para o ESP32
-              ↓
-3. WebServer identifica a rota
-              ↓
-4. ESP32 executa a função
-              ↓
-5. Resposta altera parte da página
-```
-
-Exemplo:
+Exemplo de leitura:
 
 ```text
 getData()
-    ↓
+   ↓
 GET /readADC
-    ↓
+   ↓
 handleADC()
-    ↓
+   ↓
 analogRead(32)
-    ↓
-"2456"
-    ↓
-ADCValue.innerHTML = "2456"
+   ↓
+valor ADC
+   ↓
+atualização do HTML
 ```
 
----
-
-# 29. Conceitos estudados neste experimento
-
-Este projeto permite estudar simultaneamente vários conceitos importantes:
-
-- arquitetura cliente-servidor;
-- servidor Web embarcado;
-- protocolo HTTP;
-- método HTTP GET;
-- códigos de resposta HTTP;
-- HTML;
-- CSS;
-- JavaScript;
-- AJAX;
-- XMLHttpRequest;
-- atualização dinâmica do DOM;
-- temporização com `setInterval()`;
-- conversão analógico-digital;
-- GPIO;
-- controle remoto de saídas digitais;
-- sistemas embarcados conectados à rede.
-
----
-
-# 30. Conclusão
-
-O AJAX permite criar uma interface Web dinâmica para o ESP32 sem a necessidade de atualizar completamente a página a cada nova leitura ou comando.
-
-No projeto apresentado, o navegador funciona como cliente e o ESP32 como servidor.
-
-O JavaScript envia requisições HTTP utilizando `XMLHttpRequest`, enquanto o ESP32 identifica cada URL através da função:
-
-```cpp
-server.on()
-```
-
-As leituras dos ADCs são enviadas periodicamente ao navegador e os comandos dos botões são convertidos em requisições HTTP.
-
-Dessa maneira, o projeto demonstra de forma prática a integração entre:
+Exemplo de comando:
 
 ```text
-HTML
-   +
-CSS
-   +
-JavaScript
-   +
-AJAX
-   +
-HTTP
-   +
-ESP32
-   +
-GPIO / ADC
+Botão LIGAR
+   ↓
+GET /ligar
+   ↓
+handleLigar()
+   ↓
+digitalWrite(SAIDA, HIGH)
 ```
 
-criando uma pequena **Interface Homem-Máquina Web embarcada**.
+Dessa forma, o ESP32 pode fornecer uma interface Web simples e dinâmica para monitoramento e controle de entradas e saídas.
