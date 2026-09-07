@@ -27,6 +27,12 @@
 
 <a href =https://github.com/mchavesferreira/mcr/tree/main/esp32_iot> Acesse aqui sobre iot</a>
 
+01/09
+
+# Web controle
+
+<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/ajax_botoes>Web server com botões</a>
+
 # Referências Arduino
 
 <center>  <a href=https://www.arduino.cc/reference/pt/ target=_blank>Arduino Referência de Linguagem C</a> </center><BR>
