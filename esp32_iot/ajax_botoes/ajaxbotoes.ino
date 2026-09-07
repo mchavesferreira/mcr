@@ -2,7 +2,7 @@
  * ESP32 AJAX Demo
  * Updates and Gets data from webpage without page refresh
  * https://circuits4you.com
- * Adaptação: Marcos Chaves jun/2023
+ * Adaptação: Marcos Chaves jun/2026
  *
  * Acrescentado:
  * - Botão LIGAR
