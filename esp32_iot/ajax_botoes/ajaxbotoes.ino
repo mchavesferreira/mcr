@@ -88,6 +88,14 @@ void handlegpio2() {
   server.send(200, "text/plain", adcValue);
 }
 
+//===============================================================
+// mensagem
+//===============================================================
+void handlemsgoled() {
+ String s = "Mensagem exemplo";
+ server.send(200, "text/html", s); //envia para webpage
+
+}
 
 
 //===============================================================
@@ -211,8 +219,9 @@ void setup(void) {
 
   server.on("/readgpio2", handlegpio2);
 
+  server.on("/msgoled", handlemsgoled);
 
-  // Novas rotas de controle
+  //  rotas de controle
 
   server.on("/ligar", handleLigar);
 
