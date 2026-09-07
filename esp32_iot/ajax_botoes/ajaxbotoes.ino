@@ -22,22 +22,6 @@
 
 #define SAIDA 25
 
-//--------------------------------------------------------------
-// Vetor para armazenar as frases
-//--------------------------------------------------------------
-
-const String frases[] PROGMEM = {
-  "Você é capaz!",
-  "Nunca desista!",
-  "Acredite em si mesmo!",
-  "Persista e conquiste!",
-  "Todo esforço vale a pena!",
-  "Supere seus limites!",
-  "Pense positivo!",
-  "Sonhe grande!",
-  "Seja resiliente!",
-  "Faça Acontecer!"
-};
 
 WebServer server(80);
 
@@ -104,22 +88,6 @@ void handlegpio2() {
   server.send(200, "text/plain", adcValue);
 }
 
-
-//===============================================================
-// Mensagem
-//===============================================================
-
-void handlemsgoled() {
-
-  String s = frases[i];
-
-  server.send(200, "text/plain", s);
-
-  i++;
-
-  if (i >= 10)
-    i = 0;
-}
 
 
 //===============================================================
@@ -242,8 +210,6 @@ void setup(void) {
   server.on("/readgpio1", handlegpio1);
 
   server.on("/readgpio2", handlegpio2);
-
-  server.on("/msgoled", handlemsgoled);
 
 
   // Novas rotas de controle
