@@ -39,6 +39,8 @@ As duplas não poderão apresentar trabalhos clones. Todos os integrantes dever�
 
 Exemplo inicial: https://wokwi.com/projects/466317204103476225
 
+https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/projeto3bimestre
+
 **Peso do bimestre:** Prova (50%) + Trabalho montado (50%) 
 
 
