@@ -3,17 +3,16 @@
 
 <BR>1° Bimestre/2026 <h1>- <a href=https://github.com/mchavesferreira/mcr/blob/main/mcr.md> Aulas Atmega 328P</a></h1>, linguagens: C e Assembly
 
-2° Bimestre/2026
 
-Prova: 23/06/2026
-
-Trabalho:  30/06/2026 
-
-Peso Bimestre: Prova (60%) + Trabalho montado (30%) + Tarefas (10%)
 <B><h1>- <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32> Aulas ESP32 </A></h1>
 
+3° Bimestre/2026
 
+Prova: 22/09/2026
 
+Trabalho:  29/09/2026 
+
+Peso Bimestre: Prova (50%) + Trabalho montado (50%) 
 
 - 
 <BR><h1>Sugestão de lista de compras para montagem de projetos com ESP32</h1>
