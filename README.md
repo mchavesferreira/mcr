@@ -12,7 +12,7 @@ Prova: 22/09/2026
 
 Trabalho:  29/09/2026 
 
-Peso Bimestre: Prova (50%) + Trabalho montado (50%) 
+Peso Bimestre: Prova (40%) + Trabalho montado (60%) 
 
 - 
 <BR><h1>Sugestão de lista de compras para montagem de projetos com ESP32</h1>
