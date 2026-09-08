@@ -33,6 +33,15 @@
 
 <a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/ajax_botoes>Web server com botões</a>
 
+08/09/2026
+
+# Projeto para 3° Bimestre
+
+Aperfeiçoe seu projeto realizado no segundo semestre, utilizando maquina de estados, mas agora substitua os botões físicos por uma interface web.
+
+<a href=https://github.com/mchavesferreira/mcr/tree/main/esp32_iot/projeto3bimestre>Este exemplo de sorveteria</a> poderá servir de base para controlar a máquina de pedidos utilizando pagina web e atualização sem refresh.
+
+
 # Referências Arduino
 
 <center>  <a href=https://www.arduino.cc/reference/pt/ target=_blank>Arduino Referência de Linguagem C</a> </center><BR>
