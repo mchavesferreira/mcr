@@ -1,5 +1,8 @@
 ## Recursos da interface e do firmware do potenciostato didático
 
+https://chatgpt.com/s/t_6ad53ddb53008191a816770421ce80ca
+
+
 A interface desenvolvida em **Node-RED Dashboard 2.0** permite configurar, acompanhar e registrar ensaios de voltametria cíclica realizados pelo potenciostato microcontrolado. O usuário pode definir os principais parâmetros experimentais, incluindo **potencial inicial, potenciais de vértice, potencial final, passo de tensão, velocidade de varredura, número de ciclos, tempo de estabilização inicial, intervalo entre aquisições e número de amostras utilizadas na leitura do ADC**.
 
 A interface também permite a seleção manual de uma das **quatro faixas de transimpedância** do equipamento. Cada faixa é associada à sua região experimentalmente validada, permitindo impedir a configuração de tensões incompatíveis com a faixa escolhida. O ganho 0 é destinado às menores correntes e apresenta a maior sensibilidade, enquanto os ganhos 1, 2 e 3 permitem progressivamente ampliar a faixa dinâmica do instrumento.
