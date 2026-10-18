@@ -317,3 +317,6 @@ Os ganhos 1, 2 e 3 apresentaram coeficientes de determinação superiores a 0,99
 para correntes da ordem de dezenas de nanoampères.
 
 Dessa forma, os resultados experimentais sustentam o emprego de uma estratégia de múltiplas faixas de ganho no potenciostato, permitindo conciliar **ampla faixa dinâmica** e **alta sensibilidade**, além de oferecer uma base experimental para a implementação futura de autorange e para investigações voltamétricas envolvendo diferentes níveis de concentração.
+
+
+https://chatgpt.com/s/t_6ad539dba1f08191a31a3c36a75181e0
