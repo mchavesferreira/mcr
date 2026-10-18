@@ -1,0 +1,963 @@
+[
+  {
+    "id": "tab_cv4g",
+    "type": "tab",
+    "label": "Voltametria Cíclica - 4 Ganhos",
+    "disabled": false,
+    "info": "Controle do potenciostato didático, gráfico em tempo real e armazenamento MySQL."
+  },
+  {
+    "id": "ui_base_cv4g",
+    "type": "ui-base",
+    "name": "Potenciostato Didático",
+    "path": "/dashboard",
+    "includeClientData": true,
+    "acceptsClientConfig": [
+      "ui-control",
+      "ui-notification",
+      "ui-text",
+      "ui-template"
+    ],
+    "showPathInSidebar": false,
+    "headerContent": "page",
+    "navigationStyle": "default",
+    "titleBarStyle": "default"
+  },
+  {
+    "id": "ui_theme_cv4g",
+    "type": "ui-theme",
+    "name": "Tema Potenciostato",
+    "colors": {
+      "surface": "#ffffff",
+      "primary": "#1976D2",
+      "bgPage": "#f2f4f7",
+      "groupBg": "#ffffff",
+      "groupOutline": "#d6d9de"
+    },
+    "sizes": {
+      "pagePadding": "12px",
+      "groupGap": "12px",
+      "groupBorderRadius": "8px",
+      "widgetGap": "12px",
+      "density": "default"
+    }
+  },
+  {
+    "id": "ui_page_cv4g",
+    "type": "ui-page",
+    "name": "Voltametria Cíclica",
+    "ui": "ui_base_cv4g",
+    "path": "/voltametria-ciclica",
+    "icon": "show_chart",
+    "layout": "grid",
+    "theme": "ui_theme_cv4g",
+    "breakpoints": [
+      {
+        "name": "Default",
+        "px": "0",
+        "cols": "3"
+      },
+      {
+        "name": "Tablet",
+        "px": "576",
+        "cols": "6"
+      },
+      {
+        "name": "Desktop",
+        "px": "1024",
+        "cols": "12"
+      }
+    ],
+    "order": 1,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "grp_cfg_cv4g",
+    "type": "ui-group",
+    "name": "Configuração do ensaio",
+    "page": "ui_page_cv4g",
+    "width": "6",
+    "height": "1",
+    "order": 1,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "grp_state_cv4g",
+    "type": "ui-group",
+    "name": "Estado / leitura instantânea",
+    "page": "ui_page_cv4g",
+    "width": "6",
+    "height": "1",
+    "order": 2,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "grp_chart_cv4g",
+    "type": "ui-group",
+    "name": "Voltamograma em tempo real",
+    "page": "ui_page_cv4g",
+    "width": "12",
+    "height": "1",
+    "order": 3,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "grp_db_cv4g",
+    "type": "ui-group",
+    "name": "Registro experimental",
+    "page": "ui_page_cv4g",
+    "width": "12",
+    "height": "1",
+    "order": 4,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "mqtt_broker_cv4g",
+    "type": "mqtt-broker",
+    "name": "Broker Potenciostato",
+    "broker": "rpiot.com.br",
+    "port": "1883",
+    "clientid": "nodered-potenciostato-cv",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "60",
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willPayload": "",
+    "willMsg": {}
+  },
+  {
+    "id": "mysql_cfg_cv4g",
+    "type": "MySQLdatabase",
+    "name": "MySQL Voltamétrico",
+    "host": "127.0.0.1",
+    "port": "3306",
+    "db": "voltametrico",
+    "tz": "local",
+    "charset": "UTF8MB4"
+  },
+  {
+    "id": "form_cv4g",
+    "type": "ui-form",
+    "z": "tab_cv4g",
+    "name": "Parâmetros CV",
+    "group": "grp_cfg_cv4g",
+    "label": "Parâmetros da voltametria cíclica",
+    "order": 1,
+    "width": 6,
+    "height": 0,
+    "options": [
+      {
+        "label": "Nome da amostra",
+        "key": "sample_name",
+        "type": "text",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "Observações",
+        "key": "notes",
+        "type": "text",
+        "required": false,
+        "rows": null
+      },
+      {
+        "label": "Tensão inicial (mV)",
+        "key": "vStart_mv",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Vértice 1 (mV)",
+        "key": "vVertex1_mv",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Vértice 2 (mV)",
+        "key": "vVertex2_mv",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Tensão final (mV)",
+        "key": "vEnd_mv",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Passo (mV)",
+        "key": "step_mv",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Velocidade de varredura (mV/s)",
+        "key": "scan_rate_mv_s",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Repetições / ciclos",
+        "key": "cycles",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Quiet time (ms)",
+        "key": "quiet_time_ms",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Intervalo mínimo entre pontos (ms)",
+        "key": "sample_interval_ms",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Tempo de acomodação (ms)",
+        "key": "settle_ms",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Amostras ADC por ponto",
+        "key": "adc_samples",
+        "type": "number",
+        "required": true,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "sample_name": "Amostra 1",
+      "notes": "",
+      "vStart_mv": -500,
+      "vVertex1_mv": 500,
+      "vVertex2_mv": -500,
+      "vEnd_mv": 0,
+      "step_mv": 10,
+      "scan_rate_mv_s": 100,
+      "cycles": 1,
+      "quiet_time_ms": 2000,
+      "sample_interval_ms": 50,
+      "settle_ms": 20,
+      "adc_samples": 16
+    },
+    "payload": "",
+    "submit": "INICIAR VOLTAMETRIA",
+    "cancel": "",
+    "resetOnSubmit": false,
+    "topic": "cv",
+    "topicType": "str",
+    "splitLayout": "50-50",
+    "className": "",
+    "passthru": false,
+    "dropdownOptions": [],
+    "x": 170,
+    "y": 120,
+    "wires": [
+      [
+        "fn_start_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "drop_gain_cv4g",
+    "type": "ui-dropdown",
+    "z": "tab_cv4g",
+    "group": "grp_cfg_cv4g",
+    "name": "Seleção de ganho",
+    "label": "Faixa de ganho / TIA",
+    "tooltip": "Escolha manual da faixa de transimpedância.",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "passthru": true,
+    "multiple": false,
+    "chips": false,
+    "clearable": false,
+    "options": [
+      {
+        "label": "G0 - 10 MΩ | máxima sensibilidade | -0,859 a +1,137 V",
+        "value": 0,
+        "type": "num"
+      },
+      {
+        "label": "G1 - 14,98 kΩ | maior corrente | -1,272 a +2,935 V",
+        "value": 1,
+        "type": "num"
+      },
+      {
+        "label": "G2 - 147,78 kΩ | uso geral | -2,499 a +2,938 V",
+        "value": 2,
+        "type": "num"
+      },
+      {
+        "label": "G3 - 1,667 MΩ | alta sensibilidade | -2,499 a +2,939 V",
+        "value": 3,
+        "type": "num"
+      }
+    ],
+    "payload": "",
+    "topic": "gain",
+    "topicType": "str",
+    "className": "",
+    "x": 170,
+    "y": 210,
+    "wires": [
+      [
+        "fn_gain_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "fn_gain_cv4g",
+    "type": "function",
+    "z": "tab_cv4g",
+    "name": "Guardar ganho / informar faixa",
+    "func": "const g = Number(msg.payload);\nflow.set(\"cv_gain\", g);\n\nconst ranges = {\n  0: \"G0: -859 a +1137 mV | aproximadamente -60,9 a +80,6 nA | máxima sensibilidade\",\n  1: \"G1: -1272 a +2935 mV | aproximadamente -135 a +311 nA | maiores correntes\",\n  2: \"G2: -2499 a +2938 mV | aproximadamente -265 a +312 nA | uso geral\",\n  3: \"G3: -2499 a +2939 mV | aproximadamente -265 a +312 nA | alta sensibilidade\"\n};\n\nreturn {payload:ranges[g] || \"Ganho inválido\"};",
+    "outputs": 1,
+    "x": 430,
+    "y": 210,
+    "wires": [
+      [
+        "txt_range_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "txt_range_cv4g",
+    "type": "ui-text",
+    "z": "tab_cv4g",
+    "group": "grp_cfg_cv4g",
+    "order": 3,
+    "width": 6,
+    "height": 1,
+    "name": "Faixa recomendada",
+    "label": "Faixa validada",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 14,
+    "color": "#555555",
+    "className": "",
+    "x": 700,
+    "y": 210,
+    "wires": []
+  },
+  {
+    "id": "drop_save_cv4g",
+    "type": "ui-dropdown",
+    "z": "tab_cv4g",
+    "group": "grp_db_cv4g",
+    "name": "Salvar MySQL",
+    "label": "Salvar dados no MySQL",
+    "tooltip": "",
+    "order": 1,
+    "width": 4,
+    "height": 1,
+    "passthru": true,
+    "multiple": false,
+    "chips": false,
+    "clearable": false,
+    "options": [
+      {
+        "label": "Sim",
+        "value": 1,
+        "type": "num"
+      },
+      {
+        "label": "Não",
+        "value": 0,
+        "type": "num"
+      }
+    ],
+    "payload": "",
+    "topic": "save_mysql",
+    "topicType": "str",
+    "className": "",
+    "x": 160,
+    "y": 930,
+    "wires": [
+      [
+        "fn_saveflag_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "fn_saveflag_cv4g",
+    "type": "function",
+    "z": "tab_cv4g",
+    "name": "Guardar opção MySQL",
+    "func": "flow.set('save_mysql', Number(msg.payload) === 1); return null;",
+    "outputs": 1,
+    "x": 420,
+    "y": 930,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "fn_start_cv4g",
+    "type": "function",
+    "z": "tab_cv4g",
+    "name": "Validar + START + sessão MySQL",
+    "func": "const f = msg.payload || {};\nconst gain = Number(flow.get(\"cv_gain\") ?? 2);\nconst save = flow.get(\"save_mysql\") !== false;\n\nconst ranges = {\n    0:{min:-859,max:1137},\n    1:{min:-1272,max:2935},\n    2:{min:-2499,max:2938},\n    3:{min:-2499,max:2939}\n};\n\nconst p = {\n    sample_name: String(f.sample_name || \"Amostra\"),\n    notes: String(f.notes || \"\"),\n    vStart_mv: Number(f.vStart_mv),\n    vVertex1_mv: Number(f.vVertex1_mv),\n    vVertex2_mv: Number(f.vVertex2_mv),\n    vEnd_mv: Number(f.vEnd_mv),\n    step_mv: Number(f.step_mv),\n    scan_rate_mv_s: Number(f.scan_rate_mv_s),\n    cycles: Number(f.cycles),\n    quiet_time_ms: Number(f.quiet_time_ms),\n    sample_interval_ms: Number(f.sample_interval_ms),\n    settle_ms: Number(f.settle_ms),\n    adc_samples: Number(f.adc_samples),\n    gain: gain\n};\n\nfor (const [k,v] of Object.entries(p)) {\n    if (typeof v === \"number\" && !Number.isFinite(v)) {\n        node.error(\"Valor inválido em \" + k);\n        return [null,null,null];\n    }\n}\n\nif (p.step_mv <= 0 || p.scan_rate_mv_s <= 0 || p.cycles < 1) {\n    node.error(\"step, scan rate e cycles devem ser maiores que zero.\");\n    return [null,null,null];\n}\n\nconst r = ranges[gain];\nfor (const key of [\"vStart_mv\",\"vVertex1_mv\",\"vVertex2_mv\",\"vEnd_mv\"]) {\n    if (p[key] < r.min || p[key] > r.max) {\n        node.error(`${key}=${p[key]} mV está fora da faixa validada do ganho ${gain}: ${r.min} a ${r.max} mV`);\n        return [null,null,null];\n    }\n}\n\n// ID simples e rastreável\nconst runId =\n    \"CV-\" +\n    Date.now().toString(36).toUpperCase() +\n    \"-\" +\n    Math.floor(Math.random()*0xFFFF).toString(16).toUpperCase().padStart(4,\"0\");\n\nflow.set(\"current_run_id\", runId);\nflow.set(\"chart_points\", []);\n\nconst command = {\n    cmd:\"START\",\n    run_id:runId,\n    vStart_mv:p.vStart_mv,\n    vVertex1_mv:p.vVertex1_mv,\n    vVertex2_mv:p.vVertex2_mv,\n    vEnd_mv:p.vEnd_mv,\n    step_mv:p.step_mv,\n    scan_rate_mv_s:p.scan_rate_mv_s,\n    cycles:p.cycles,\n    quiet_time_ms:p.quiet_time_ms,\n    sample_interval_ms:p.sample_interval_ms,\n    settle_ms:p.settle_ms,\n    adc_samples:p.adc_samples,\n    gain:p.gain\n};\n\nconst mqtt = {\n    topic:\"ic/potenciostato/comando\",\n    payload:JSON.stringify(command),\n    qos:0,\n    retain:false\n};\n\nconst clear = {\n    payload:[],\n    action:\"replace\"\n};\n\nlet db = null;\n\nif (save) {\n    db = {\n        topic:`INSERT INTO cv_runs\n        (run_id,nome_amostra,observacoes,v_start_mv,v_vertex1_mv,v_vertex2_mv,v_end_mv,\n         step_mv,scan_rate_mv_s,cycles,gain_initial,quiet_time_ms,sample_interval_ms,\n         settle_ms,adc_samples,status)\n        VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,\n        payload:[\n            runId,p.sample_name,p.notes,\n            p.vStart_mv,p.vVertex1_mv,p.vVertex2_mv,p.vEnd_mv,\n            p.step_mv,p.scan_rate_mv_s,p.cycles,p.gain,\n            p.quiet_time_ms,p.sample_interval_ms,p.settle_ms,p.adc_samples,\n            \"starting\"\n        ]\n    };\n}\n\nreturn [mqtt, clear, db];",
+    "outputs": 3,
+    "x": 450,
+    "y": 120,
+    "wires": [
+      [
+        "mqtt_out_cv4g"
+      ],
+      [
+        "chart_cv4g"
+      ],
+      [
+        "mysql_run_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "btn_stop_cv4g",
+    "type": "ui-button",
+    "z": "tab_cv4g",
+    "group": "grp_cfg_cv4g",
+    "name": "STOP",
+    "label": "PARAR ENSAIO",
+    "order": 4,
+    "width": 3,
+    "height": 1,
+    "emulateClick": false,
+    "tooltip": "Interrompe imediatamente a varredura.",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "stop",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"STOP\"}",
+    "payloadType": "str",
+    "topic": "ic/potenciostato/comando",
+    "topicType": "str",
+    "buttonColor": "",
+    "textColor": "",
+    "iconColor": "",
+    "enableClick": true,
+    "enablePointerdown": false,
+    "pointerdownPayload": "",
+    "pointerdownPayloadType": "str",
+    "enablePointerup": false,
+    "pointerupPayload": "",
+    "pointerupPayloadType": "str",
+    "x": 150,
+    "y": 280,
+    "wires": [
+      [
+        "mqtt_out_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "btn_zero_cv4g",
+    "type": "ui-button",
+    "z": "tab_cv4g",
+    "group": "grp_cfg_cv4g",
+    "name": "ZERO",
+    "label": "ZERO mV",
+    "order": 5,
+    "width": 3,
+    "height": 1,
+    "emulateClick": false,
+    "tooltip": "Ajusta o potencial para 0 mV.",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "restart_alt",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"ZERO\"}",
+    "payloadType": "str",
+    "topic": "ic/potenciostato/comando",
+    "topicType": "str",
+    "buttonColor": "",
+    "textColor": "",
+    "iconColor": "",
+    "enableClick": true,
+    "enablePointerdown": false,
+    "pointerdownPayload": "",
+    "pointerdownPayloadType": "str",
+    "enablePointerup": false,
+    "pointerupPayload": "",
+    "pointerupPayloadType": "str",
+    "x": 150,
+    "y": 330,
+    "wires": [
+      [
+        "mqtt_out_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "mqtt_out_cv4g",
+    "type": "mqtt out",
+    "z": "tab_cv4g",
+    "name": "Comando potenciostato",
+    "topic": "",
+    "qos": "",
+    "retain": "",
+    "respTopic": "",
+    "contentType": "",
+    "userProps": "",
+    "correl": "",
+    "expiry": "",
+    "broker": "mqtt_broker_cv4g",
+    "x": 760,
+    "y": 130,
+    "wires": []
+  },
+  {
+    "id": "mqtt_status_cv4g",
+    "type": "mqtt in",
+    "z": "tab_cv4g",
+    "name": "Status potenciostato",
+    "topic": "ic/potenciostato/status",
+    "qos": "0",
+    "datatype": "auto-detect",
+    "broker": "mqtt_broker_cv4g",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 150,
+    "y": 410,
+    "wires": [
+      [
+        "fn_status_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "fn_status_cv4g",
+    "type": "function",
+    "z": "tab_cv4g",
+    "name": "Interpretar status + finalizar sessão",
+    "func": "let d = msg.payload;\n\nif (typeof d === \"string\") {\n    try { d = JSON.parse(d); }\n    catch(e) { d = {status:String(msg.payload), detail:\"\"}; }\n}\n\nconst s = String(d.status || d.state || \"unknown\");\nconst detail = String(d.detail || \"\");\n\nlet color = \"#607D8B\";\nif (s === \"running\") color = \"#2E7D32\";\nelse if (s === \"quiet\") color = \"#FB8C00\";\nelse if (s === \"completed\") color = \"#1565C0\";\nelse if (s === \"aborted\" || s.startsWith(\"error\")) color = \"#C62828\";\n\nconst ui = {\n    payload:{\n        status:s,\n        detail:detail,\n        color:color,\n        cycle:d.cycle,\n        sample_index:d.sample_index,\n        point_period_ms:d.point_period_ms\n    }\n};\n\nlet db = null;\nconst save = flow.get(\"save_mysql\") !== false;\nconst runId = d.run_id || flow.get(\"current_run_id\");\n\nif (save && runId && [\"completed\",\"aborted\",\"error_config\",\"error_json\"].includes(s)) {\n    db = {\n        topic:\"UPDATE cv_runs SET status=?, finished_at=NOW(3) WHERE run_id=?\",\n        payload:[s,runId]\n    };\n}\nelse if (save && runId && [\"running\",\"quiet\"].includes(s)) {\n    db = {\n        topic:\"UPDATE cv_runs SET status=? WHERE run_id=?\",\n        payload:[s,runId]\n    };\n}\n\nreturn [ui, db];",
+    "outputs": 2,
+    "x": 430,
+    "y": 410,
+    "wires": [
+      [
+        "tpl_status_cv4g",
+        "txt_status_cv4g"
+      ],
+      [
+        "mysql_run_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "tpl_status_cv4g",
+    "type": "ui-template",
+    "z": "tab_cv4g",
+    "group": "grp_state_cv4g",
+    "page": "",
+    "ui": "",
+    "name": "LED status",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "head": "",
+    "format": "<template>\n  <div style=\"display:flex;align-items:center;gap:12px;padding:8px\">\n    <div :style=\"{width:'22px',height:'22px',borderRadius:'50%',backgroundColor:msg?.payload?.color || '#607D8B',boxShadow:'0 0 10px '+(msg?.payload?.color || '#607D8B')}\"></div>\n    <div>\n      <div style=\"font-size:18px;font-weight:600\">{{ msg?.payload?.status || 'sem status' }}</div>\n      <div style=\"font-size:12px;opacity:.75\">{{ msg?.payload?.detail || '' }}</div>\n    </div>\n  </div>\n</template>",
+    "storeOutMessages": true,
+    "passthru": true,
+    "resendOnRefresh": true,
+    "templateScope": "local",
+    "className": "",
+    "x": 710,
+    "y": 390,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "txt_status_cv4g",
+    "type": "ui-text",
+    "z": "tab_cv4g",
+    "group": "grp_state_cv4g",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "name": "Detalhes estado",
+    "label": "Estado",
+    "format": "ciclo={{msg.payload.cycle}} | ponto={{msg.payload.sample_index}} | período={{msg.payload.point_period_ms}} ms",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 14,
+    "color": "#555555",
+    "className": "",
+    "x": 720,
+    "y": 430,
+    "wires": []
+  },
+  {
+    "id": "mqtt_read_cv4g",
+    "type": "mqtt in",
+    "z": "tab_cv4g",
+    "name": "Leituras CV",
+    "topic": "ic/potenciostato/leitura",
+    "qos": "0",
+    "datatype": "auto-detect",
+    "broker": "mqtt_broker_cv4g",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 130,
+    "y": 540,
+    "wires": [
+      [
+        "fn_read_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "fn_read_cv4g",
+    "type": "function",
+    "z": "tab_cv4g",
+    "name": "Processar leitura + gráfico + MySQL",
+    "func": "let d = msg.payload;\n\nif (typeof d === \"string\") {\n    try { d = JSON.parse(d); }\n    catch(e) {\n        node.warn(\"JSON inválido: \" + msg.payload);\n        return [null,null,null,null,null,null,null,null];\n    }\n}\n\nconst v = Number(d.potential_est_mv);\nconst i = Number(d.current_nA);\n\nif (!Number.isFinite(v) || !Number.isFinite(i)) {\n    node.warn(\"Leitura inválida: \" + JSON.stringify(d));\n    return [null,null,null,null,null,null,null,null];\n}\n\nlet pts = flow.get(\"chart_points\") || [];\n\npts.push({\n    series:\"Ciclo \" + Number(d.cycle || 1),\n    x:v,\n    y:i\n});\n\nif (pts.length > 12000)\n    pts = pts.slice(-12000);\n\nflow.set(\"chart_points\", pts);\n\nconst chart = {\n    payload:pts,\n    action:\"replace\"\n};\n\nconst potential = {payload:v.toFixed(2)};\nconst current   = {payload:i.toFixed(3)};\nconst ads       = {payload:Number(d.ads_v).toFixed(5)};\nconst gain      = {payload:d.gain};\nconst cycle     = {payload:d.cycle};\nconst quality   = {payload:`${d.quality} | σ=${Number(d.adc_raw_std).toFixed(1)} RAW`};\n\nlet db = null;\n\nif (flow.get(\"save_mysql\") !== false) {\n    db = {\n        topic:`INSERT INTO cv_samples\n        (run_id,sample_index,elapsed_ms,cycle_no,segment_id,segment_name,\n         potential_set_mv,potential_est_mv,dac_raw,gain_no,rtia_nominal_ohm,\n         adc_raw_mean,adc_raw_min,adc_raw_max,adc_raw_std,ads_v,\n         current_na,current_ua,quality,rssi_dbm)\n         VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)`,\n        payload:[\n            d.run_id,\n            d.sample_index,\n            d.elapsed_ms,\n            d.cycle,\n            d.segment_id,\n            d.segment,\n            d.potential_set_mv,\n            d.potential_est_mv,\n            d.dac_raw,\n            d.gain,\n            d.rtia_nominal_ohm,\n            d.adc_raw_mean,\n            d.adc_raw_min,\n            d.adc_raw_max,\n            d.adc_raw_std,\n            d.ads_v,\n            d.current_nA,\n            d.current_uA,\n            d.quality,\n            d.rssi_dbm\n        ]\n    };\n}\n\nreturn [\n    chart,\n    potential,\n    current,\n    ads,\n    gain,\n    cycle,\n    quality,\n    db\n];",
+    "outputs": 8,
+    "x": 400,
+    "y": 540,
+    "wires": [
+      [
+        "chart_cv4g"
+      ],
+      [
+        "txt_potential_cv4g"
+      ],
+      [
+        "txt_current_cv4g"
+      ],
+      [
+        "txt_ads_cv4g"
+      ],
+      [
+        "txt_gain_cv4g"
+      ],
+      [
+        "txt_cycle_cv4g"
+      ],
+      [
+        "txt_quality_cv4g"
+      ],
+      [
+        "mysql_sample_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "txt_potential_cv4g",
+    "type": "ui-text",
+    "z": "tab_cv4g",
+    "group": "grp_state_cv4g",
+    "order": 3,
+    "width": 3,
+    "height": 1,
+    "name": "Potencial",
+    "label": "Potencial",
+    "format": "{{msg.payload}} mV",
+    "layout": "row-spread",
+    "style": true,
+    "font": "",
+    "fontSize": 20,
+    "color": "#1565C0",
+    "className": "",
+    "x": 700,
+    "y": 500,
+    "wires": []
+  },
+  {
+    "id": "txt_current_cv4g",
+    "type": "ui-text",
+    "z": "tab_cv4g",
+    "group": "grp_state_cv4g",
+    "order": 4,
+    "width": 3,
+    "height": 1,
+    "name": "Corrente",
+    "label": "Corrente",
+    "format": "{{msg.payload}} nA",
+    "layout": "row-spread",
+    "style": true,
+    "font": "",
+    "fontSize": 20,
+    "color": "#6A1B9A",
+    "className": "",
+    "x": 700,
+    "y": 540,
+    "wires": []
+  },
+  {
+    "id": "txt_ads_cv4g",
+    "type": "ui-text",
+    "z": "tab_cv4g",
+    "group": "grp_state_cv4g",
+    "order": 5,
+    "width": 3,
+    "height": 1,
+    "name": "VADS",
+    "label": "Entrada ADS1115",
+    "format": "{{msg.payload}} V",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#555555",
+    "className": "",
+    "x": 690,
+    "y": 580,
+    "wires": []
+  },
+  {
+    "id": "txt_gain_cv4g",
+    "type": "ui-text",
+    "z": "tab_cv4g",
+    "group": "grp_state_cv4g",
+    "order": 6,
+    "width": 3,
+    "height": 1,
+    "name": "Ganho ativo",
+    "label": "Ganho",
+    "format": "G{{msg.payload}}",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#555555",
+    "className": "",
+    "x": 700,
+    "y": 620,
+    "wires": []
+  },
+  {
+    "id": "txt_cycle_cv4g",
+    "type": "ui-text",
+    "z": "tab_cv4g",
+    "group": "grp_state_cv4g",
+    "order": 7,
+    "width": 3,
+    "height": 1,
+    "name": "Ciclo",
+    "label": "Ciclo",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#555555",
+    "className": "",
+    "x": 690,
+    "y": 660,
+    "wires": []
+  },
+  {
+    "id": "txt_quality_cv4g",
+    "type": "ui-text",
+    "z": "tab_cv4g",
+    "group": "grp_state_cv4g",
+    "order": 8,
+    "width": 3,
+    "height": 1,
+    "name": "Qualidade",
+    "label": "Qualidade ADC",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 14,
+    "color": "#C62828",
+    "className": "",
+    "x": 700,
+    "y": 700,
+    "wires": []
+  },
+  {
+    "id": "chart_cv4g",
+    "type": "ui-chart",
+    "z": "tab_cv4g",
+    "group": "grp_chart_cv4g",
+    "name": "Voltamograma",
+    "label": "Voltametria Cíclica — Corrente × Potencial",
+    "order": 1,
+    "chartType": "line",
+    "category": "series",
+    "categoryType": "property",
+    "xAxisLabel": "Potencial (mV)",
+    "xAxisProperty": "x",
+    "xAxisPropertyType": "property",
+    "xAxisType": "linear",
+    "xAxisFormat": "",
+    "xAxisFormatType": "auto",
+    "yAxisLabel": "Corrente (nA)",
+    "yAxisProperty": "y",
+    "ymin": "",
+    "ymax": "",
+    "action": "replace",
+    "stackSeries": false,
+    "pointShape": "circle",
+    "pointRadius": 1,
+    "showLegend": true,
+    "removeOlder": 0,
+    "removeOlderUnit": "3600",
+    "removeOlderPoints": "",
+    "colors": [
+      "#1976D2",
+      "#FF9800",
+      "#2E7D32",
+      "#C62828",
+      "#7B1FA2"
+    ],
+    "textColor": [
+      "#555555"
+    ],
+    "textColorDefault": true,
+    "gridColor": [
+      "#e0e0e0"
+    ],
+    "gridColorDefault": true,
+    "width": 12,
+    "height": 8,
+    "className": "",
+    "x": 700,
+    "y": 760,
+    "wires": [
+      []
+    ]
+  },
+  {
+    "id": "mysql_run_cv4g",
+    "type": "mysql",
+    "z": "tab_cv4g",
+    "mydb": "mysql_cfg_cv4g",
+    "name": "MySQL - ensaios",
+    "x": 770,
+    "y": 910,
+    "wires": [
+      [
+        "debug_db_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "mysql_sample_cv4g",
+    "type": "mysql",
+    "z": "tab_cv4g",
+    "mydb": "mysql_cfg_cv4g",
+    "name": "MySQL - amostras",
+    "x": 760,
+    "y": 960,
+    "wires": [
+      [
+        "debug_db_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "debug_db_cv4g",
+    "type": "debug",
+    "z": "tab_cv4g",
+    "name": "MySQL retorno",
+    "active": false,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 1000,
+    "y": 935,
+    "wires": []
+  },
+  {
+    "id": "inject_init_cv4g",
+    "type": "inject",
+    "z": "tab_cv4g",
+    "name": "Inicializar dashboard",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 150,
+    "y": 50,
+    "wires": [
+      [
+        "fn_init_cv4g"
+      ]
+    ]
+  },
+  {
+    "id": "fn_init_cv4g",
+    "type": "function",
+    "z": "tab_cv4g",
+    "name": "Defaults dashboard",
+    "func": "flow.set(\"cv_gain\",2);\nflow.set(\"save_mysql\",true);\nflow.set(\"chart_points\",[]);\nreturn [\n  {payload:2},\n  {payload:1}\n];",
+    "outputs": 2,
+    "x": 390,
+    "y": 50,
+    "wires": [
+      [
+        "drop_gain_cv4g"
+      ],
+      [
+        "drop_save_cv4g"
+      ]
+    ]
+  }
+]

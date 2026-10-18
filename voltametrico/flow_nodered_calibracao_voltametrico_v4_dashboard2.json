@@ -1,0 +1,1020 @@
+[
+  {
+    "id": "flow_cal_v4",
+    "type": "tab",
+    "label": "Calibração Voltamétrico V4",
+    "disabled": false,
+    "info": "Calibração DAC RAW->tensão da carga e ADC RAW->tensão externa/corrente teórica."
+  },
+  {
+    "id": "ui_base_cal_v4",
+    "type": "ui-base",
+    "name": "Voltamétrico Calibração",
+    "path": "/dashboard",
+    "includeClientData": true,
+    "acceptsClientConfig": [
+      "ui-control",
+      "ui-notification",
+      "ui-text",
+      "ui-template"
+    ],
+    "showPathInSidebar": false,
+    "headerContent": "page",
+    "navigationStyle": "default",
+    "titleBarStyle": "default"
+  },
+  {
+    "id": "ui_theme_cal_v4",
+    "type": "ui-theme",
+    "name": "Tema Calibração",
+    "colors": {
+      "surface": "#ffffff",
+      "primary": "#1976D2",
+      "bgPage": "#f2f4f7",
+      "groupBg": "#ffffff",
+      "groupOutline": "#d6d9de"
+    },
+    "sizes": {
+      "pagePadding": "12px",
+      "groupGap": "12px",
+      "groupBorderRadius": "8px",
+      "widgetGap": "12px",
+      "density": "default"
+    }
+  },
+  {
+    "id": "ui_page_cal_v4",
+    "type": "ui-page",
+    "name": "Calibração Voltamétrico",
+    "ui": "ui_base_cal_v4",
+    "path": "/calibracao-voltametrico",
+    "icon": "tune",
+    "layout": "grid",
+    "theme": "ui_theme_cal_v4",
+    "breakpoints": [
+      {
+        "name": "Default",
+        "px": "0",
+        "cols": "3"
+      },
+      {
+        "name": "Tablet",
+        "px": "576",
+        "cols": "6"
+      },
+      {
+        "name": "Desktop",
+        "px": "1024",
+        "cols": "12"
+      }
+    ],
+    "order": 1,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "grp_dac_v4",
+    "type": "ui-group",
+    "name": "DAC RAW / ganho",
+    "page": "ui_page_cal_v4",
+    "width": "6",
+    "height": "1",
+    "order": 1,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "grp_adc_v4",
+    "type": "ui-group",
+    "name": "Telemetria ADC",
+    "page": "ui_page_cal_v4",
+    "width": "6",
+    "height": "1",
+    "order": 2,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "grp_dummy_v4",
+    "type": "ui-group",
+    "name": "Dummy cell",
+    "page": "ui_page_cal_v4",
+    "width": "6",
+    "height": "1",
+    "order": 3,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "grp_record_v4",
+    "type": "ui-group",
+    "name": "Registrar ponto de calibração",
+    "page": "ui_page_cal_v4",
+    "width": "6",
+    "height": "1",
+    "order": 4,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "grp_fit_v4",
+    "type": "ui-group",
+    "name": "Regressões calculadas",
+    "page": "ui_page_cal_v4",
+    "width": "12",
+    "height": "1",
+    "order": 5,
+    "showTitle": true,
+    "className": "",
+    "visible": "true",
+    "disabled": "false"
+  },
+  {
+    "id": "mqtt_broker_cal_v4",
+    "type": "mqtt-broker",
+    "name": "Broker Potenciostato",
+    "broker": "rpiot.com.br",
+    "port": "1883",
+    "clientid": "nodered-voltametrico-cal-v4",
+    "autoConnect": true,
+    "usetls": false,
+    "protocolVersion": "4",
+    "keepalive": "60",
+    "cleansession": true,
+    "autoUnsubscribe": true,
+    "birthTopic": "",
+    "birthQos": "0",
+    "birthPayload": "",
+    "birthMsg": {},
+    "closeTopic": "",
+    "closeQos": "0",
+    "closePayload": "",
+    "closeMsg": {},
+    "willTopic": "",
+    "willQos": "0",
+    "willPayload": "",
+    "willMsg": {}
+  },
+  {
+    "id": "slider_dacraw_v4",
+    "type": "ui-slider",
+    "z": "flow_cal_v4",
+    "group": "grp_dac_v4",
+    "name": "DAC RAW",
+    "label": "DAC RAW (0...4095)",
+    "tooltip": "Comando direto do MCP4725, sem pré-calibração.",
+    "order": 1,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "outs": "end",
+    "topic": "dac_raw",
+    "topicType": "str",
+    "thumbLabel": true,
+    "showTicks": "always",
+    "min": 0,
+    "max": 4095,
+    "step": 1,
+    "className": "",
+    "x": 150,
+    "y": 100,
+    "wires": [
+      [
+        "fn_send_raw_v4"
+      ]
+    ]
+  },
+  {
+    "id": "drop_gain_cal_v4",
+    "type": "ui-dropdown",
+    "z": "flow_cal_v4",
+    "group": "grp_dac_v4",
+    "name": "Ganho TIA",
+    "label": "RTIA",
+    "tooltip": "Somente uma chave ADG444 é fechada por vez.",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "passthru": false,
+    "multiple": false,
+    "chips": false,
+    "clearable": false,
+    "options": [
+      {
+        "label": "0 - 10 MΩ (nenhuma chave)",
+        "value": 0,
+        "type": "num"
+      },
+      {
+        "label": "1 - 15 kΩ || 10 MΩ",
+        "value": 1,
+        "type": "num"
+      },
+      {
+        "label": "2 - 150 kΩ || 10 MΩ",
+        "value": 2,
+        "type": "num"
+      },
+      {
+        "label": "3 - 2 MΩ || 10 MΩ",
+        "value": 3,
+        "type": "num"
+      }
+    ],
+    "payload": "",
+    "topic": "gain",
+    "topicType": "str",
+    "className": "",
+    "x": 150,
+    "y": 150,
+    "wires": [
+      [
+        "fn_send_gain_v4"
+      ]
+    ]
+  },
+  {
+    "id": "fn_send_raw_v4",
+    "type": "function",
+    "z": "flow_cal_v4",
+    "name": "Enviar DAC RAW",
+    "func": "const raw = Math.max(0, Math.min(4095, Math.round(Number(msg.payload))));\nflow.set(\"dac_raw\", raw);\nconst gain = flow.get(\"gain\") ?? 0;\n\nmsg.topic = \"ic/potenciostato/calibracao/comando\";\nmsg.payload = JSON.stringify({cmd:\"SET_RAW\", dac_raw:raw, gain:Number(gain)});\nmsg.qos = 0;\nmsg.retain = false;\nreturn msg;",
+    "outputs": 1,
+    "x": 400,
+    "y": 100,
+    "wires": [
+      [
+        "mqtt_out_cal_v4"
+      ]
+    ]
+  },
+  {
+    "id": "fn_send_gain_v4",
+    "type": "function",
+    "z": "flow_cal_v4",
+    "name": "Enviar ganho",
+    "func": "const gain = Number(msg.payload);\nflow.set(\"gain\", gain);\nconst raw = flow.get(\"dac_raw\") ?? 2048;\n\nmsg.topic = \"ic/potenciostato/calibracao/comando\";\nmsg.payload = JSON.stringify({cmd:\"SET_RAW\", dac_raw:Number(raw), gain:gain});\nmsg.qos = 0;\nmsg.retain = false;\nreturn msg;",
+    "outputs": 1,
+    "x": 390,
+    "y": 150,
+    "wires": [
+      [
+        "mqtt_out_cal_v4"
+      ]
+    ]
+  },
+  {
+    "id": "btn_raw0_v4",
+    "type": "ui-button",
+    "z": "flow_cal_v4",
+    "group": "grp_dac_v4",
+    "name": "RAW 0",
+    "label": "RAW 0",
+    "order": 3,
+    "width": 2,
+    "height": 1,
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "0",
+    "payloadType": "num",
+    "topic": "dac_raw",
+    "topicType": "str",
+    "buttonColor": "",
+    "textColor": "",
+    "iconColor": "",
+    "enableClick": true,
+    "enablePointerdown": false,
+    "pointerdownPayload": "",
+    "pointerdownPayloadType": "str",
+    "enablePointerup": false,
+    "pointerupPayload": "",
+    "pointerupPayloadType": "str",
+    "x": 130,
+    "y": 210,
+    "wires": [
+      [
+        "slider_dacraw_v4"
+      ]
+    ]
+  },
+  {
+    "id": "btn_raw2048_v4",
+    "type": "ui-button",
+    "z": "flow_cal_v4",
+    "group": "grp_dac_v4",
+    "name": "RAW 2048",
+    "label": "RAW 2048",
+    "order": 4,
+    "width": 2,
+    "height": 1,
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "2048",
+    "payloadType": "num",
+    "topic": "dac_raw",
+    "topicType": "str",
+    "buttonColor": "",
+    "textColor": "",
+    "iconColor": "",
+    "enableClick": true,
+    "enablePointerdown": false,
+    "pointerdownPayload": "",
+    "pointerdownPayloadType": "str",
+    "enablePointerup": false,
+    "pointerupPayload": "",
+    "pointerupPayloadType": "str",
+    "x": 140,
+    "y": 250,
+    "wires": [
+      [
+        "slider_dacraw_v4"
+      ]
+    ]
+  },
+  {
+    "id": "btn_raw4095_v4",
+    "type": "ui-button",
+    "z": "flow_cal_v4",
+    "group": "grp_dac_v4",
+    "name": "RAW 4095",
+    "label": "RAW 4095",
+    "order": 5,
+    "width": 2,
+    "height": 1,
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "",
+    "iconPosition": "left",
+    "payload": "4095",
+    "payloadType": "num",
+    "topic": "dac_raw",
+    "topicType": "str",
+    "buttonColor": "",
+    "textColor": "",
+    "iconColor": "",
+    "enableClick": true,
+    "enablePointerdown": false,
+    "pointerdownPayload": "",
+    "pointerdownPayloadType": "str",
+    "enablePointerup": false,
+    "pointerupPayload": "",
+    "pointerupPayloadType": "str",
+    "x": 140,
+    "y": 290,
+    "wires": [
+      [
+        "slider_dacraw_v4"
+      ]
+    ]
+  },
+  {
+    "id": "btn_read_cal_v4",
+    "type": "ui-button",
+    "z": "flow_cal_v4",
+    "group": "grp_dac_v4",
+    "name": "Ler agora",
+    "label": "LER AGORA",
+    "order": 6,
+    "width": 3,
+    "height": 1,
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "visibility",
+    "iconPosition": "left",
+    "payload": "{\"cmd\":\"READ\"}",
+    "payloadType": "str",
+    "topic": "ic/potenciostato/calibracao/comando",
+    "topicType": "str",
+    "buttonColor": "",
+    "textColor": "",
+    "iconColor": "",
+    "enableClick": true,
+    "enablePointerdown": false,
+    "pointerdownPayload": "",
+    "pointerdownPayloadType": "str",
+    "enablePointerup": false,
+    "pointerupPayload": "",
+    "pointerupPayloadType": "str",
+    "x": 140,
+    "y": 330,
+    "wires": [
+      [
+        "mqtt_out_cal_v4"
+      ]
+    ]
+  },
+  {
+    "id": "mqtt_out_cal_v4",
+    "type": "mqtt out",
+    "z": "flow_cal_v4",
+    "name": "Comando calibração",
+    "topic": "",
+    "qos": "",
+    "retain": "",
+    "respTopic": "",
+    "contentType": "",
+    "userProps": "",
+    "correl": "",
+    "expiry": "",
+    "broker": "mqtt_broker_cal_v4",
+    "x": 660,
+    "y": 130,
+    "wires": []
+  },
+  {
+    "id": "mqtt_read_cal_v4",
+    "type": "mqtt in",
+    "z": "flow_cal_v4",
+    "name": "Telemetria calibração",
+    "topic": "ic/potenciostato/calibracao/leitura",
+    "qos": "0",
+    "datatype": "auto-detect",
+    "broker": "mqtt_broker_cal_v4",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 150,
+    "y": 410,
+    "wires": [
+      [
+        "fn_parse_cal_v4"
+      ]
+    ]
+  },
+  {
+    "id": "fn_parse_cal_v4",
+    "type": "function",
+    "z": "flow_cal_v4",
+    "name": "Separar telemetria",
+    "func": "let d = msg.payload;\nif (typeof d === \"string\") {\n    try { d = JSON.parse(d); }\n    catch(e) { node.warn(\"JSON inválido: \" + msg.payload); return [null,null,null,null,null,null,null,null]; }\n}\n\nflow.set(\"latest_telemetry\", d);\n\nreturn [\n    {payload:d.dac_raw},\n    {payload:Number(d.dac_v_theory).toFixed(6)},\n    {payload:Number(d.adc_raw_mean).toFixed(2)},\n    {payload:d.adc_raw_min},\n    {payload:d.adc_raw_max},\n    {payload:Number(d.adc_raw_std).toFixed(2)},\n    {payload:Number(d.adc_v).toFixed(6)},\n    {payload:Math.round(Number(d.rtia_ohm))}\n];",
+    "outputs": 8,
+    "x": 410,
+    "y": 410,
+    "wires": [
+      [
+        "txt_dacraw_cal_v4"
+      ],
+      [
+        "txt_dacv_cal_v4"
+      ],
+      [
+        "txt_adcmean_cal_v4"
+      ],
+      [
+        "txt_adcmin_cal_v4"
+      ],
+      [
+        "txt_adcmax_cal_v4"
+      ],
+      [
+        "txt_adcstd_cal_v4"
+      ],
+      [
+        "txt_adcv_cal_v4"
+      ],
+      [
+        "txt_rtia_cal_v4"
+      ]
+    ]
+  },
+  {
+    "id": "txt_dacraw_cal_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_adc_v4",
+    "order": 1,
+    "width": 3,
+    "height": 1,
+    "name": "DAC RAW atual",
+    "label": "DAC RAW",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "style": true,
+    "font": "",
+    "fontSize": 20,
+    "color": "#1565C0",
+    "className": "",
+    "x": 700,
+    "y": 350,
+    "wires": []
+  },
+  {
+    "id": "txt_dacv_cal_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_adc_v4",
+    "order": 2,
+    "width": 3,
+    "height": 1,
+    "name": "DAC V teórico",
+    "label": "Pino DAC teórico",
+    "format": "{{msg.payload}} V",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#717171",
+    "className": "",
+    "x": 710,
+    "y": 390,
+    "wires": []
+  },
+  {
+    "id": "txt_adcmean_cal_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_adc_v4",
+    "order": 3,
+    "width": 3,
+    "height": 1,
+    "name": "ADC RAW médio",
+    "label": "ADC RAW médio",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "style": true,
+    "font": "",
+    "fontSize": 20,
+    "color": "#C62828",
+    "className": "",
+    "x": 710,
+    "y": 430,
+    "wires": []
+  },
+  {
+    "id": "txt_adcmin_cal_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_adc_v4",
+    "order": 4,
+    "width": 3,
+    "height": 1,
+    "name": "ADC min",
+    "label": "ADC RAW min",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#717171",
+    "className": "",
+    "x": 700,
+    "y": 470,
+    "wires": []
+  },
+  {
+    "id": "txt_adcmax_cal_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_adc_v4",
+    "order": 5,
+    "width": 3,
+    "height": 1,
+    "name": "ADC max",
+    "label": "ADC RAW max",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#717171",
+    "className": "",
+    "x": 700,
+    "y": 510,
+    "wires": []
+  },
+  {
+    "id": "txt_adcstd_cal_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_adc_v4",
+    "order": 6,
+    "width": 3,
+    "height": 1,
+    "name": "ADC desvio",
+    "label": "ADC σ (RAW)",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "style": true,
+    "font": "",
+    "fontSize": 18,
+    "color": "#F57C00",
+    "className": "",
+    "x": 700,
+    "y": 550,
+    "wires": []
+  },
+  {
+    "id": "txt_adcv_cal_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_adc_v4",
+    "order": 7,
+    "width": 3,
+    "height": 1,
+    "name": "ADC V calculado",
+    "label": "ADC calculado",
+    "format": "{{msg.payload}} V",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#717171",
+    "className": "",
+    "x": 720,
+    "y": 590,
+    "wires": []
+  },
+  {
+    "id": "txt_rtia_cal_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_adc_v4",
+    "order": 8,
+    "width": 3,
+    "height": 1,
+    "name": "RTIA",
+    "label": "RTIA efetiva",
+    "format": "{{msg.payload}} Ω",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#717171",
+    "className": "",
+    "x": 690,
+    "y": 630,
+    "wires": []
+  },
+  {
+    "id": "form_rcell_v4",
+    "type": "ui-form",
+    "z": "flow_cal_v4",
+    "name": "Configurar dummy cell",
+    "group": "grp_dummy_v4",
+    "label": "Resistência conhecida da carga",
+    "order": 1,
+    "width": 6,
+    "height": 0,
+    "options": [
+      {
+        "label": "R da carga (MΩ)",
+        "key": "rcell_mohm",
+        "type": "number",
+        "required": true,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "rcell_mohm": 9.426
+    },
+    "payload": "",
+    "submit": "ATUALIZAR CARGA",
+    "cancel": "",
+    "resetOnSubmit": false,
+    "topic": "rcell",
+    "topicType": "str",
+    "splitLayout": "50-50",
+    "className": "",
+    "passthru": false,
+    "dropdownOptions": [],
+    "x": 170,
+    "y": 690,
+    "wires": [
+      [
+        "fn_rcell_v4"
+      ]
+    ]
+  },
+  {
+    "id": "fn_rcell_v4",
+    "type": "function",
+    "z": "flow_cal_v4",
+    "name": "Guardar R carga",
+    "func": "const mohm = Number(msg.payload?.rcell_mohm);\nif (!Number.isFinite(mohm) || mohm <= 0) {\n    node.warn(\"R da carga inválida.\");\n    return null;\n}\nflow.set(\"rcell_ohm\", mohm * 1e6);\nmsg.payload = mohm.toFixed(6) + \" MΩ\";\nreturn msg;",
+    "outputs": 1,
+    "x": 420,
+    "y": 690,
+    "wires": [
+      [
+        "txt_rcell_v4"
+      ]
+    ]
+  },
+  {
+    "id": "txt_rcell_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_dummy_v4",
+    "order": 2,
+    "width": 6,
+    "height": 1,
+    "name": "R carga ativa",
+    "label": "Carga ativa",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "style": true,
+    "font": "",
+    "fontSize": 18,
+    "color": "#2E7D32",
+    "className": "",
+    "x": 690,
+    "y": 690,
+    "wires": []
+  },
+  {
+    "id": "form_measure_v4",
+    "type": "ui-form",
+    "z": "flow_cal_v4",
+    "name": "Medidas externas",
+    "group": "grp_record_v4",
+    "label": "Leituras do multímetro externo",
+    "order": 1,
+    "width": 6,
+    "height": 0,
+    "options": [
+      {
+        "label": "Tensão medida sobre a carga (mV)",
+        "key": "load_mv",
+        "type": "number",
+        "required": true,
+        "rows": null
+      },
+      {
+        "label": "Tensão medida na entrada do ADS1115 (V)",
+        "key": "ads_input_v",
+        "type": "number",
+        "required": true,
+        "rows": null
+      }
+    ],
+    "formValue": {
+      "load_mv": 0,
+      "ads_input_v": 0
+    },
+    "payload": "",
+    "submit": "REGISTRAR PONTO",
+    "cancel": "",
+    "resetOnSubmit": false,
+    "topic": "calibracao",
+    "topicType": "str",
+    "splitLayout": "50-50",
+    "className": "",
+    "passthru": false,
+    "dropdownOptions": [],
+    "x": 170,
+    "y": 790,
+    "wires": [
+      [
+        "fn_record_fit_v4"
+      ]
+    ]
+  },
+  {
+    "id": "fn_record_fit_v4",
+    "type": "function",
+    "z": "flow_cal_v4",
+    "name": "Registrar + regressões",
+    "func": "const d = flow.get(\"latest_telemetry\");\nif (!d) {\n    node.warn(\"Ainda não há telemetria do ESP32.\");\n    return [null,null,null];\n}\n\nconst load_mv = Number(msg.payload?.load_mv);\nconst ads_input_v = Number(msg.payload?.ads_input_v);\nconst rcell = Number(flow.get(\"rcell_ohm\") ?? 9426000);\n\nif (!Number.isFinite(load_mv) || !Number.isFinite(ads_input_v) || !(rcell > 0)) {\n    node.warn(\"Medidas ou resistência inválidas.\");\n    return [null,null,null];\n}\n\n// Corrente conhecida pela carga resistiva.\n// nA = (mV/1000)/R * 1e9\nconst current_nA = (load_mv * 1e6) / rcell;\n\nconst rec = {\n    timestamp: Date.now(),\n    dac_raw: Number(d.dac_raw),\n    dac_v_theory: Number(d.dac_v_theory),\n\n    load_mv: load_mv,\n    rcell_ohm: rcell,\n    current_theory_nA: current_nA,\n\n    ads_input_v: ads_input_v,\n    adc_raw_mean: Number(d.adc_raw_mean),\n    adc_raw_min: Number(d.adc_raw_min),\n    adc_raw_max: Number(d.adc_raw_max),\n    adc_raw_std: Number(d.adc_raw_std),\n    adc_v_firmware: Number(d.adc_v),\n\n    gain: Number(d.gain),\n    rtia_ohm: Number(d.rtia_ohm)\n};\n\nlet pts = flow.get(\"calibration_points\") || [];\npts.push(rec);\nflow.set(\"calibration_points\", pts);\n\nfunction linreg(arr, xkey, ykey) {\n    const valid = arr.filter(p => Number.isFinite(Number(p[xkey])) && Number.isFinite(Number(p[ykey])));\n    const n = valid.length;\n    if (n < 2) return null;\n\n    let sx=0, sy=0, sxx=0, sxy=0;\n    for (const p of valid) {\n        const x=Number(p[xkey]), y=Number(p[ykey]);\n        sx += x; sy += y; sxx += x*x; sxy += x*y;\n    }\n\n    const den = n*sxx - sx*sx;\n    if (Math.abs(den) < 1e-18) return null;\n\n    const a = (n*sxy - sx*sy) / den;\n    const b = (sy - a*sx) / n;\n    const ybar = sy/n;\n\n    let ssres=0, sstot=0;\n    for (const p of valid) {\n        const x=Number(p[xkey]), y=Number(p[ykey]);\n        const yh=a*x+b;\n        ssres += (y-yh)*(y-yh);\n        sstot += (y-ybar)*(y-ybar);\n    }\n\n    const r2 = sstot > 0 ? 1 - ssres/sstot : 1;\n    return {n,a,b,r2};\n}\n\n// 1) calibração do caminho de saída: mV carga = a * DAC_RAW + b\nconst fitDAC = linreg(pts, \"dac_raw\", \"load_mv\");\n\n// 2) calibração do próprio ADC: V externo = a * ADC_RAW + b\nconst fitADC = linreg(pts, \"adc_raw_mean\", \"ads_input_v\");\n\n// Corrente é dependente do ganho do TIA.\n// Regressões abaixo usam somente os pontos do ganho atual.\nconst gainPts = pts.filter(p => Number(p.gain) === Number(rec.gain));\n\n// 3) corrente teórica versus tensão analógica que realmente entra no ADS1115\nconst fitIV = linreg(gainPts, \"ads_input_v\", \"current_theory_nA\");\n\n// 4) calibração direta para firmware: corrente teórica versus ADC RAW\nconst fitIRaw = linreg(gainPts, \"adc_raw_mean\", \"current_theory_nA\");\n\nconst summary = {\n    total_points: pts.length,\n    gain: rec.gain,\n    gain_points: gainPts.length,\n\n    dac_voltage_fit: fitDAC,\n    adc_voltage_fit: fitADC,\n    current_vs_ads_voltage_fit: fitIV,\n    current_vs_adc_raw_fit: fitIRaw\n};\n\nflow.set(\"calibration_summary\", summary);\n\nlet text = \"\";\nif (fitDAC) {\n    text += `DAC -> carga: Vload_mV = ${fitDAC.a.toFixed(6)}*DACraw + ${fitDAC.b.toFixed(3)}   R²=${fitDAC.r2.toFixed(6)}   n=${fitDAC.n}\\n`;\n    if (Math.abs(fitDAC.a) > 1e-12) {\n        text += `RAW estimado para Vload=0: ${(-fitDAC.b/fitDAC.a).toFixed(2)}\\n`;\n    }\n}\nif (fitADC) {\n    text += `ADC -> Ventrada: Vads = ${fitADC.a.toExponential(8)}*ADCraw + ${fitADC.b.toFixed(6)}   R²=${fitADC.r2.toFixed(6)}   n=${fitADC.n}\\n`;\n}\nif (fitIV) {\n    text += `Ganho ${rec.gain}: I_nA = ${fitIV.a.toFixed(6)}*Vads + ${fitIV.b.toFixed(6)}   R²=${fitIV.r2.toFixed(6)}   n=${fitIV.n}\\n`;\n}\nif (fitIRaw) {\n    text += `Ganho ${rec.gain}: I_nA = ${fitIRaw.a.toExponential(8)}*ADCraw + ${fitIRaw.b.toFixed(6)}   R²=${fitIRaw.r2.toFixed(6)}   n=${fitIRaw.n}`;\n}\n\nreturn [\n    {payload:rec},\n    {payload:text || \"São necessários pelo menos 2 pontos para a regressão.\"},\n    {payload:JSON.stringify(rec)}\n];",
+    "outputs": 3,
+    "x": 430,
+    "y": 790,
+    "wires": [
+      [
+        "debug_point_v4"
+      ],
+      [
+        "txt_fit_v4"
+      ],
+      [
+        "txt_lastpoint_v4"
+      ]
+    ]
+  },
+  {
+    "id": "txt_lastpoint_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_record_v4",
+    "order": 2,
+    "width": 6,
+    "height": 2,
+    "name": "Último ponto",
+    "label": "Último registro",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 12,
+    "color": "#555555",
+    "className": "",
+    "x": 700,
+    "y": 830,
+    "wires": []
+  },
+  {
+    "id": "txt_fit_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_fit_v4",
+    "order": 1,
+    "width": 12,
+    "height": 4,
+    "name": "Regressões",
+    "label": "Equações atuais",
+    "format": "{{msg.payload}}",
+    "layout": "col-center",
+    "style": true,
+    "font": "monospace",
+    "fontSize": 15,
+    "color": "#263238",
+    "className": "",
+    "x": 700,
+    "y": 780,
+    "wires": []
+  },
+  {
+    "id": "debug_point_v4",
+    "type": "debug",
+    "z": "flow_cal_v4",
+    "name": "Ponto de calibração",
+    "active": true,
+    "tosidebar": true,
+    "console": false,
+    "tostatus": false,
+    "complete": "payload",
+    "targetType": "msg",
+    "statusVal": "",
+    "statusType": "auto",
+    "x": 700,
+    "y": 740,
+    "wires": []
+  },
+  {
+    "id": "btn_clear_cal_v4",
+    "type": "ui-button",
+    "z": "flow_cal_v4",
+    "group": "grp_record_v4",
+    "name": "Limpar calibração",
+    "label": "LIMPAR PONTOS",
+    "order": 3,
+    "width": 3,
+    "height": 1,
+    "emulateClick": false,
+    "tooltip": "",
+    "color": "",
+    "bgcolor": "",
+    "className": "",
+    "icon": "delete",
+    "iconPosition": "left",
+    "payload": "clear",
+    "payloadType": "str",
+    "topic": "",
+    "topicType": "str",
+    "buttonColor": "",
+    "textColor": "",
+    "iconColor": "",
+    "enableClick": true,
+    "enablePointerdown": false,
+    "pointerdownPayload": "",
+    "pointerdownPayloadType": "str",
+    "enablePointerup": false,
+    "pointerupPayload": "",
+    "pointerupPayloadType": "str",
+    "x": 170,
+    "y": 880,
+    "wires": [
+      [
+        "fn_clear_cal_v4"
+      ]
+    ]
+  },
+  {
+    "id": "fn_clear_cal_v4",
+    "type": "function",
+    "z": "flow_cal_v4",
+    "name": "Limpar registros",
+    "func": "flow.set(\"calibration_points\", []);\nflow.set(\"calibration_summary\", null);\nmsg.payload = \"Pontos apagados. Nova calibração iniciada.\";\nreturn msg;",
+    "outputs": 1,
+    "x": 420,
+    "y": 880,
+    "wires": [
+      [
+        "txt_fit_v4"
+      ]
+    ]
+  },
+  {
+    "id": "mqtt_status_cal_v4",
+    "type": "mqtt in",
+    "z": "flow_cal_v4",
+    "name": "Status",
+    "topic": "ic/potenciostato/calibracao/status",
+    "qos": "0",
+    "datatype": "auto-detect",
+    "broker": "mqtt_broker_cal_v4",
+    "nl": false,
+    "rap": true,
+    "rh": 0,
+    "inputs": 0,
+    "x": 120,
+    "y": 950,
+    "wires": [
+      [
+        "txt_status_cal_v4"
+      ]
+    ]
+  },
+  {
+    "id": "txt_status_cal_v4",
+    "type": "ui-text",
+    "z": "flow_cal_v4",
+    "group": "grp_dac_v4",
+    "order": 7,
+    "width": 6,
+    "height": 1,
+    "name": "Status",
+    "label": "Status",
+    "format": "{{msg.payload}}",
+    "layout": "row-spread",
+    "style": false,
+    "font": "",
+    "fontSize": 16,
+    "color": "#717171",
+    "className": "",
+    "x": 340,
+    "y": 950,
+    "wires": []
+  },
+  {
+    "id": "inject_init_cal_v4",
+    "type": "inject",
+    "z": "flow_cal_v4",
+    "name": "Inicializar",
+    "props": [
+      {
+        "p": "payload"
+      }
+    ],
+    "repeat": "",
+    "crontab": "",
+    "once": true,
+    "onceDelay": 1,
+    "topic": "",
+    "payload": "",
+    "payloadType": "date",
+    "x": 110,
+    "y": 40,
+    "wires": [
+      [
+        "fn_init_cal_v4"
+      ]
+    ]
+  },
+  {
+    "id": "fn_init_cal_v4",
+    "type": "function",
+    "z": "flow_cal_v4",
+    "name": "Defaults",
+    "func": "flow.set(\"dac_raw\",2048);\nflow.set(\"gain\",0);\nflow.set(\"rcell_ohm\",9426000);\nflow.set(\"calibration_points\",[]);\nreturn [\n    {payload:2048},\n    {payload:0},\n    {payload:{rcell_mohm:9.426}}\n];",
+    "outputs": 3,
+    "x": 310,
+    "y": 40,
+    "wires": [
+      [
+        "slider_dacraw_v4"
+      ],
+      [
+        "drop_gain_cal_v4"
+      ],
+      [
+        "form_rcell_v4"
+      ]
+    ]
+  }
+]
